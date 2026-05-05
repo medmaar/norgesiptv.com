@@ -1,251 +1,383 @@
 <!DOCTYPE html>
 <html lang="nb-NO">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NorgesIPTV – Beste IPTV i Norge 2025 | 4K HD Live TV</title>
-  <meta name="description" content="NorgesIPTV – Premium IPTV-tjeneste i Norge med 4K-kvalitet. Over 25 000 kanaler, 100 000+ filmer og serier. NRK, TV2, Viaplay, sport og mer. Prøv gratis i 24 timer!" />
-  <meta name="keywords" content="iptv norge, beste iptv, norges iptv, iptv 4k norge, norsk iptv, iptv abonnement norge, live tv norge, iptv tjeneste, nrk iptv, tv2 iptv, viaplay iptv, eliteserien iptv, premier league iptv" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://norgesiptv.com/" />
-  <meta property="og:title" content="NorgesIPTV – Beste IPTV i Norge 2025" />
-  <meta property="og:description" content="Premium norsk IPTV med 4K-kvalitet. 25 000+ kanaler, 100 000+ filmer. Prøv gratis!" />
-  <meta property="og:url" content="https://norgesiptv.com/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="nb_NO" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"NorgesIPTV","url":"https://norgesiptv.com","description":"Norges beste IPTV-tjeneste med 4K-kvalitet, 25 000+ kanaler og 100 000+ filmer og serier.","areaServed":"NO"}</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>NorgesIPTV – Beste IPTV i Norge 2025 | 4K HD Live TV</title>
+<meta name="description" content="NorgesIPTV – Premium IPTV-tjeneste i Norge med 4K-kvalitet. Over 25 000 kanaler, 100 000+ filmer og serier. NRK, TV2, Viaplay, sport og mer. Prøv gratis i 24 timer!"/>
+<meta name="keywords" content="iptv norge, beste iptv, norges iptv, iptv 4k norge, norsk iptv, iptv abonnement norge, live tv norge, nrk iptv, tv2 iptv, viaplay iptv, eliteserien iptv, premier league iptv"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://norgesiptv.com/"/>
+<meta property="og:title" content="NorgesIPTV – Beste IPTV i Norge 2025"/>
+<meta property="og:description" content="Premium norsk IPTV med 4K-kvalitet. 25 000+ kanaler, 100 000+ filmer. Prøv gratis!"/>
+<meta property="og:url" content="https://norgesiptv.com/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="nb_NO"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"NorgesIPTV","url":"https://norgesiptv.com","description":"Norges beste IPTV-tjeneste med 4K-kvalitet, 25 000+ kanaler og 100 000+ filmer og serier.","areaServed":"NO","offers":[{"@type":"Offer","name":"1 Måned IPTV","price":"99","priceCurrency":"NOK"},{"@type":"Offer","name":"12 Måneder IPTV","price":"499","priceCurrency":"NOK"}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
 <style>
+/* ── RESET ── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:#040810;color:#F0F4FF;overflow-x:hidden;line-height:1.6}
+body{font-family:'Josefin Sans',sans-serif;background:#06090f;color:#eef2ff;overflow-x:hidden;line-height:1.5}
 a{text-decoration:none;color:inherit}
 ul{list-style:none}
-button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+button{font-family:'Josefin Sans',sans-serif;cursor:pointer;border:none;background:none;color:inherit}
+img{max-width:100%;display:block}
+
+/* ── TOKENS ── */
 :root{
-  --bg:#040810;--bg2:#070d1a;--bg3:#0d1526;
-  --s:rgba(255,255,255,0.04);--s2:rgba(255,255,255,0.07);
-  --b:rgba(255,255,255,0.09);
-  --a:#C8F000;--a2:#00D4FF;--a3:#FF3C6E;
-  --t:#F0F4FF;--t2:#8B9BBC;--t3:#4E5C78;
-  --r:14px;--rl:20px;
-  --mw:1180px;--px:clamp(1.2rem,4vw,2.5rem);
+  --bg:#06090f;
+  --bg2:#0b1120;
+  --bg3:#101828;
+  --card:rgba(255,255,255,0.035);
+  --card2:rgba(255,255,255,0.065);
+  --br:rgba(255,255,255,0.08);
+  --br2:rgba(255,255,255,0.13);
+  --lime:#c6f135;
+  --cyan:#14d9f5;
+  --red:#ff4060;
+  --t1:#eef2ff;
+  --t2:#8896b8;
+  --t3:#445070;
+  --r:12px;
+  --rl:18px;
+  --W:1160px;
 }
-/* glows */
-.gl{position:fixed;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0}
-.gl1{width:500px;height:500px;background:rgba(200,240,0,0.06);top:-150px;right:-100px;animation:gf 9s ease-in-out infinite}
-.gl2{width:400px;height:400px;background:rgba(0,212,255,0.05);bottom:25%;left:-100px;animation:gf 9s 3s ease-in-out infinite}
-@keyframes gf{0%,100%{transform:translateY(0)}50%{transform:translateY(-28px)}}
-/* layout */
-.w{max-width:var(--mw);margin:0 auto;padding:0 var(--px)}
-.sec{padding:88px 0;position:relative;z-index:1}
-/* nav */
-.nav{position:fixed;top:0;left:0;right:0;height:66px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--px);background:rgba(4,8,16,0.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--b);z-index:1000;transition:background 0.3s}
-.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.35rem;letter-spacing:-0.02em}
-.logo span{color:var(--a)}
-.nl{display:flex;align-items:center;gap:1.8rem}
-.nl a{font-size:0.86rem;font-weight:500;color:var(--t2);transition:color 0.2s}
-.nl a:hover{color:var(--t)}
-.nb{background:var(--a)!important;color:#040810!important;padding:0.42rem 1.05rem;border-radius:100px;font-weight:700!important;font-size:0.83rem!important;transition:box-shadow 0.2s,transform 0.2s!important}
-.nb:hover{box-shadow:0 0 18px rgba(200,240,0,0.45);transform:scale(1.04)}
-.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
-.ham span{display:block;width:22px;height:2px;background:var(--t);border-radius:2px;transition:0.3s}
-.mob{display:none;position:fixed;top:66px;left:0;right:0;bottom:0;background:rgba(4,8,16,0.97);backdrop-filter:blur(20px);z-index:999;flex-direction:column;padding:2rem var(--px);gap:0}
-.mob.open{display:flex}
-.mob a{padding:0.95rem 0;border-bottom:1px solid var(--b);font-size:1rem;font-weight:500;color:var(--t2);transition:color 0.2s}
-.mob a:hover{color:var(--a)}
-.mob .mbtn{margin-top:1.5rem;background:var(--a);color:#040810;text-align:center;padding:0.82rem;border-radius:10px;font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;border-bottom:none!important}
-/* buttons */
-.bp{display:inline-flex;align-items:center;gap:0.45rem;background:var(--a);color:#040810;font-family:'Syne',sans-serif;font-weight:700;font-size:0.93rem;padding:0.82rem 1.7rem;border-radius:100px;transition:box-shadow 0.25s,transform 0.25s;white-space:nowrap}
-.bp:hover{box-shadow:0 0 26px rgba(200,240,0,0.4);transform:translateY(-2px)}
-.bg{display:inline-flex;align-items:center;gap:0.45rem;background:var(--s2);color:var(--t);font-weight:500;font-size:0.93rem;padding:0.82rem 1.7rem;border-radius:100px;border:1px solid var(--b);transition:background 0.25s,border-color 0.25s;white-space:nowrap}
-.bg:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.18)}
-/* section labels */
-.tag{display:inline-flex;align-items:center;gap:0.45rem;font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--a);margin-bottom:0.75rem}
-.tag::before{content:'';width:16px;height:2px;background:var(--a);border-radius:2px;flex-shrink:0}
-h2{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;line-height:1.15;letter-spacing:-0.025em;margin-bottom:0.9rem}
-.gr{background:linear-gradient(90deg,var(--a) 0%,var(--a2) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.sd{font-size:0.97rem;color:var(--t2);max-width:540px;line-height:1.7;font-weight:300}
-/* HERO */
-.hero{padding-top:110px;padding-bottom:72px;min-height:100vh;display:flex;align-items:center;position:relative;z-index:1}
-.hi{display:grid;grid-template-columns:1fr 1fr;gap:2.8rem;align-items:center;max-width:var(--mw);margin:0 auto;padding:0 var(--px);width:100%}
-.hbadge{display:inline-flex;align-items:center;gap:0.4rem;background:rgba(200,240,0,0.1);border:1px solid rgba(200,240,0,0.2);border-radius:100px;padding:0.32rem 0.85rem;font-size:0.76rem;font-weight:600;color:var(--a);margin-bottom:1.1rem}
-.hbadge .dot{width:5px;height:5px;border-radius:50%;background:var(--a);animation:bl 2s ease-in-out infinite}
-@keyframes bl{0%,100%{opacity:1}50%{opacity:0.3}}
-.hero h1{font-family:'Syne',sans-serif;font-size:2.8rem;font-weight:800;line-height:1.1;letter-spacing:-0.03em;margin-bottom:1.1rem}
-.hero h1 .hh{background:linear-gradient(90deg,var(--a),var(--a2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hdesc{font-size:0.97rem;color:var(--t2);max-width:460px;line-height:1.75;font-weight:300;margin-bottom:1.8rem}
-.hctas{display:flex;gap:0.8rem;flex-wrap:wrap;margin-bottom:2.2rem}
-.hstats{display:flex;gap:1.8rem;flex-wrap:wrap}
-.hstat .num{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;line-height:1}
-.hstat .num em{color:var(--a);font-style:normal}
-.hstat .lbl{font-size:0.72rem;color:var(--t3);margin-top:0.15rem}
-/* hero visual */
-.hv{position:relative}
-.tv{background:var(--bg3);border:1px solid var(--b);border-radius:16px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,0.5)}
-.tvbar{height:32px;background:rgba(255,255,255,0.03);border-bottom:1px solid var(--b);display:flex;align-items:center;padding:0 0.9rem;gap:5px}
-.td{width:9px;height:9px;border-radius:50%}
-.tdr{background:#FF5F56}.tdy{background:#FFBD2E}.tdg{background:#27C93F}
-.tvb{padding:1.1rem;display:flex;flex-direction:column;gap:0.65rem}
-.crow{display:flex;align-items:center;gap:0.85rem;padding:0.82rem 0.9rem;background:linear-gradient(135deg,rgba(200,240,0,0.07),rgba(0,212,255,0.04));border:1px solid rgba(200,240,0,0.14);border-radius:10px}
-.cico{font-size:1.5rem;flex-shrink:0}
-.cname{font-family:'Syne',sans-serif;font-weight:700;font-size:0.84rem;margin-bottom:0.18rem}
-.clive{display:inline-flex;align-items:center;gap:0.28rem;font-size:0.65rem;color:var(--a3);font-weight:700;text-transform:uppercase;letter-spacing:0.05em}
-.clive::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--a3);animation:bl 1.5s infinite}
-.c4k{margin-left:auto;background:var(--a);color:#040810;font-family:'Syne',sans-serif;font-weight:800;font-size:0.6rem;padding:0.18rem 0.5rem;border-radius:4px}
-.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:0.65rem}
-.ccard{padding:0.72rem 0.82rem;background:var(--s);border:1px solid var(--b);border-radius:9px;transition:border-color 0.2s,background 0.2s}
-.ccard:hover{border-color:rgba(200,240,0,0.22);background:var(--s2)}
-.ccard .cname{font-size:0.78rem;margin-bottom:0.22rem}
-.bs{font-size:0.6rem;font-weight:700;padding:0.14rem 0.42rem;border-radius:3px}
-.bsp{background:rgba(200,240,0,0.1);color:var(--a)}
-.bhd{background:rgba(0,212,255,0.1);color:var(--a2)}
-.blv{color:var(--a3);font-size:0.62rem;font-weight:700;display:flex;align-items:center;gap:0.22rem}
-.blv::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--a3);animation:bl 1.5s infinite}
-/* float pills */
-.fp{position:absolute;background:var(--bg3);border:1px solid var(--b);border-radius:11px;padding:0.65rem 0.95rem;font-size:0.75rem;box-shadow:0 12px 36px rgba(0,0,0,0.4);z-index:2}
-.fp1{top:-16px;left:-28px;animation:ff 4s ease-in-out infinite}
-.fp2{bottom:-16px;right:-20px;animation:ff 4s 2s ease-in-out infinite}
+
+/* ── AMBIENT GLOW ── */
+.amb{position:fixed;border-radius:50%;filter:blur(110px);pointer-events:none;z-index:0;animation:amb 10s ease-in-out infinite}
+.amb1{width:560px;height:560px;background:rgba(198,241,53,0.055);top:-180px;right:-80px}
+.amb2{width:420px;height:420px;background:rgba(20,217,245,0.045);bottom:20%;left:-120px;animation-delay:-4s}
+@keyframes amb{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-35px) scale(1.04)}}
+
+/* ── LAYOUT ── */
+.w{max-width:var(--W);margin:0 auto;padding:0 clamp(1rem,4vw,2.5rem)}
+
+/* ── NAV ── */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:999;
+  height:62px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 clamp(1rem,4vw,2.5rem);
+  background:rgba(6,9,15,0.82);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--br);
+  transition:background .3s;
+}
+.logo{font-size:1.25rem;font-weight:700;letter-spacing:-.5px;color:var(--t1)}
+.logo b{color:var(--lime);font-weight:700}
+.nlinks{display:flex;align-items:center;gap:1.6rem}
+.nlinks a{font-size:.8rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--t2);transition:color .2s}
+.nlinks a:hover{color:var(--t1)}
+.nbtn{
+  background:var(--lime);color:#06090f;
+  padding:.38rem 1.1rem;border-radius:100px;
+  font-size:.78rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;
+  transition:box-shadow .2s,transform .2s;
+  color:#06090f!important;
+}
+.nbtn:hover{box-shadow:0 0 20px rgba(198,241,53,.5);transform:scale(1.04)}
+.ham{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:6px}
+.ham span{display:block;width:20px;height:2px;background:var(--t1);border-radius:2px;transition:.3s}
+.mmenu{display:none;position:fixed;inset:62px 0 0 0;background:rgba(6,9,15,.97);backdrop-filter:blur(20px);z-index:998;flex-direction:column;padding:2rem clamp(1rem,4vw,2.5rem)}
+.mmenu.open{display:flex}
+.mmenu a{padding:.85rem 0;border-bottom:1px solid var(--br);font-size:.95rem;font-weight:600;letter-spacing:.04em;color:var(--t2);transition:color .2s;text-transform:uppercase}
+.mmenu a:hover{color:var(--lime)}
+.mmenu .mmbtn{margin-top:1.5rem;background:var(--lime);color:#06090f;text-align:center;padding:.82rem;border-radius:10px;font-weight:700;letter-spacing:.03em;border-bottom:none!important;font-size:.95rem}
+
+/* ── BUTTONS ── */
+.btn-lime{
+  display:inline-flex;align-items:center;gap:.4rem;
+  background:var(--lime);color:#06090f;
+  font-family:'Josefin Sans',sans-serif;font-weight:700;font-size:.88rem;letter-spacing:.03em;text-transform:uppercase;
+  padding:.78rem 1.7rem;border-radius:100px;
+  transition:box-shadow .25s,transform .25s;
+  white-space:nowrap;
+}
+.btn-lime:hover{box-shadow:0 0 28px rgba(198,241,53,.45);transform:translateY(-2px)}
+.btn-out{
+  display:inline-flex;align-items:center;gap:.4rem;
+  background:transparent;color:var(--t1);
+  font-family:'Josefin Sans',sans-serif;font-weight:600;font-size:.88rem;letter-spacing:.03em;text-transform:uppercase;
+  padding:.78rem 1.7rem;border-radius:100px;
+  border:1px solid var(--br2);
+  transition:background .25s,border-color .25s;
+  white-space:nowrap;
+}
+.btn-out:hover{background:var(--card2);border-color:rgba(255,255,255,.2)}
+
+/* ── SECTION HELPERS ── */
+.sec{padding:80px 0;position:relative;z-index:1}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.45rem;
+  font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--lime);margin-bottom:.75rem;
+}
+.eyebrow::before{content:'';width:14px;height:2px;background:var(--lime);border-radius:2px}
+h2{
+  font-size:1.85rem;font-weight:700;letter-spacing:-.02em;line-height:1.15;
+  margin-bottom:.85rem;
+}
+.gr{background:linear-gradient(90deg,var(--lime) 0%,var(--cyan) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.subdesc{font-size:.9rem;color:var(--t2);max-width:520px;line-height:1.7;font-weight:400}
+
+/* ── HERO ── */
+.hero{
+  padding-top:62px;/* nav height */
+  min-height:100vh;
+  display:flex;align-items:center;
+  position:relative;z-index:1;
+}
+.hgrid{
+  display:grid;
+  grid-template-columns:480px 1fr;
+  gap:2.5rem;
+  align-items:center;
+  max-width:var(--W);
+  margin:0 auto;
+  padding:0 clamp(1rem,4vw,2.5rem);
+  width:100%;
+}
+/* left */
+.hbadge{
+  display:inline-flex;align-items:center;gap:.4rem;
+  background:rgba(198,241,53,.1);border:1px solid rgba(198,241,53,.22);
+  border-radius:100px;padding:.3rem .9rem;
+  font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--lime);margin-bottom:1.1rem;
+}
+.hbadge .dot{width:5px;height:5px;border-radius:50%;background:var(--lime);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+.hero h1{
+  font-size:2.55rem;font-weight:700;letter-spacing:-.025em;line-height:1.12;
+  margin-bottom:1rem;
+}
+.hero h1 .lime{color:var(--lime)}
+.hero h1 .teal{color:var(--cyan)}
+.hdesc{
+  font-size:.9rem;color:var(--t2);line-height:1.75;font-weight:400;
+  max-width:420px;margin-bottom:1.8rem;
+}
+.hbtns{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:2.2rem}
+.hstats{display:flex;gap:2rem}
+.hstat .n{font-size:1.55rem;font-weight:700;letter-spacing:-.02em;color:var(--t1)}
+.hstat .n em{color:var(--lime);font-style:normal}
+.hstat .l{font-size:.68rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--t3);margin-top:.1rem}
+
+/* right – tv panel */
+.hpanel{position:relative}
+.tvbox{
+  background:var(--bg3);
+  border:1px solid var(--br);
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 24px 64px rgba(0,0,0,.55);
+}
+.tvtop{
+  height:30px;background:rgba(255,255,255,.03);
+  border-bottom:1px solid var(--br);
+  display:flex;align-items:center;padding:0 .85rem;gap:5px;
+}
+.dot3{width:8px;height:8px;border-radius:50%}
+.dr{background:#ff5f57}.dy{background:#febc2e}.dg{background:#28c840}
+.tvbody{padding:1rem;display:flex;flex-direction:column;gap:.6rem}
+.ch-main{
+  display:flex;align-items:center;gap:.85rem;
+  padding:.82rem .9rem;
+  background:linear-gradient(135deg,rgba(198,241,53,.08),rgba(20,217,245,.05));
+  border:1px solid rgba(198,241,53,.15);
+  border-radius:10px;
+}
+.ch-em{font-size:1.4rem;flex-shrink:0}
+.ch-nm{font-size:.84rem;font-weight:700;letter-spacing:.01em;margin-bottom:.18rem;color:var(--t1)}
+.ch-lv{
+  display:inline-flex;align-items:center;gap:.25rem;
+  font-size:.62rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--red);
+}
+.ch-lv::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--red);animation:blink 1.4s infinite}
+.ch-4k{margin-left:auto;background:var(--lime);color:#06090f;font-weight:700;font-size:.58rem;letter-spacing:.04em;padding:.16rem .5rem;border-radius:4px}
+.ch-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.ch-card{
+  padding:.72rem .8rem;
+  background:var(--card);border:1px solid var(--br);border-radius:9px;
+  transition:border-color .2s,background .2s;
+}
+.ch-card:hover{border-color:rgba(198,241,53,.22);background:var(--card2)}
+.ch-ico{font-size:1.1rem;margin-bottom:.28rem}
+.ch-nm2{font-size:.78rem;font-weight:700;color:var(--t1);margin-bottom:.22rem}
+.bsp{display:inline-block;background:rgba(198,241,53,.1);color:var(--lime);font-size:.58rem;font-weight:700;padding:.13rem .42rem;border-radius:3px;letter-spacing:.04em}
+.bhd{display:inline-block;background:rgba(20,217,245,.1);color:var(--cyan);font-size:.58rem;font-weight:700;padding:.13rem .42rem;border-radius:3px;letter-spacing:.04em}
+.blv{
+  display:inline-flex;align-items:center;gap:.22rem;
+  font-size:.6rem;font-weight:700;letter-spacing:.04em;color:var(--red);
+}
+.blv::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--red);animation:blink 1.4s infinite}
+/* float badges */
+.fbadge{
+  position:absolute;
+  background:var(--bg3);border:1px solid var(--br2);border-radius:10px;
+  padding:.6rem .95rem;box-shadow:0 10px 30px rgba(0,0,0,.45);z-index:2;
+}
+.fb1{top:-14px;left:-24px;animation:ff 4s ease-in-out infinite}
+.fb2{bottom:-14px;right:-18px;animation:ff 4s 2s ease-in-out infinite}
 @keyframes ff{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
-.fpl{color:var(--t3);font-size:0.62rem;margin-bottom:0.18rem}
-.fpv{font-family:'Syne',sans-serif;font-weight:700;color:var(--t);font-size:0.78rem}
-.fpv .ac{color:var(--a)}
-/* ticker */
-.tick{position:relative;z-index:1;padding:1.8rem 0;border-top:1px solid var(--b);border-bottom:1px solid var(--b);overflow:hidden}
-.tickl{text-align:center;font-size:0.68rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--t3);margin-bottom:1.1rem}
-.tickt{display:flex;gap:0.75rem;width:max-content;animation:tk 35s linear infinite}
-.tickt:hover{animation-play-state:paused}
+.fbl{font-size:.6rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--t3);margin-bottom:.18rem}
+.fbv{font-size:.78rem;font-weight:700;color:var(--t1)}
+.fbv .ac{color:var(--lime)}
+
+/* ── TICKER ── */
+.ticker{position:relative;z-index:1;padding:1.6rem 0;border-top:1px solid var(--br);border-bottom:1px solid var(--br);overflow:hidden}
+.ticker-label{text-align:center;font-size:.64rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--t3);margin-bottom:1rem}
+.ticker-wrap{overflow:hidden}
+.ticker-track{display:flex;gap:.7rem;width:max-content;animation:tk 38s linear infinite}
+.ticker-track:hover{animation-play-state:paused}
 @keyframes tk{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.ti{display:flex;align-items:center;gap:0.45rem;padding:0.42rem 0.95rem;background:var(--s);border:1px solid var(--b);border-radius:100px;font-size:0.8rem;font-weight:500;color:var(--t2);white-space:nowrap}
-.tid{width:5px;height:5px;border-radius:50%;background:var(--a);flex-shrink:0}
-/* features */
-.fg{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2.8rem}
-.fc{background:var(--s);border:1px solid var(--b);border-radius:var(--rl);padding:1.7rem;transition:transform 0.3s,border-color 0.3s}
-.fc:hover{transform:translateY(-4px);border-color:rgba(200,240,0,0.2)}
-.fc.w{grid-column:1/3;display:flex;gap:1.8rem;align-items:flex-start}
-.fib{width:46px;height:46px;border-radius:11px;background:rgba(200,240,0,0.08);border:1px solid rgba(200,240,0,0.14);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;margin-bottom:0.9rem}
-.fc h3{font-family:'Syne',sans-serif;font-size:0.97rem;font-weight:700;margin-bottom:0.45rem;letter-spacing:-0.01em}
-.fc p{font-size:0.85rem;color:var(--t2);line-height:1.65;font-weight:300}
-.sm{display:grid;grid-template-columns:1fr 1fr;gap:0.65rem;min-width:175px;flex-shrink:0}
-.smb{text-align:center;padding:0.95rem 0.75rem;background:var(--bg3);border:1px solid var(--b);border-radius:9px}
-.smn{font-family:'Syne',sans-serif;font-size:1.35rem;font-weight:800;line-height:1}
-.sml{font-size:0.62rem;color:var(--t3);margin-top:0.22rem}
-/* pricing */
-.pg{display:grid;grid-template-columns:repeat(4,1fr);gap:0.95rem;margin-top:2.8rem;align-items:start}
-.pc{background:var(--s);border:1px solid var(--b);border-radius:var(--rl);padding:1.7rem 1.4rem;transition:transform 0.3s;position:relative}
-.pc:hover{transform:translateY(-5px)}
-.pc.hot{background:linear-gradient(155deg,rgba(200,240,0,0.07) 0%,rgba(0,212,255,0.04) 100%);border-color:rgba(200,240,0,0.28);transform:scale(1.02)}
-.pc.hot:hover{transform:scale(1.02) translateY(-5px)}
-.pbadge{position:absolute;top:0.9rem;right:0.9rem;background:var(--a);color:#040810;font-family:'Syne',sans-serif;font-weight:800;font-size:0.58rem;letter-spacing:0.04em;text-transform:uppercase;padding:0.22rem 0.58rem;border-radius:4px}
-.pper{font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--t3);margin-bottom:0.75rem}
-.pprice{display:flex;align-items:baseline;gap:0.18rem;margin-bottom:0.28rem}
-.pcur{font-size:0.85rem;color:var(--t2)}
-.pnum{font-family:'Syne',sans-serif;font-size:2.4rem;font-weight:800;line-height:1;color:var(--t)}
-.pnum.hn{color:var(--a)}
-.porig{font-size:0.75rem;color:var(--t3);text-decoration:line-through;margin-bottom:0.38rem;min-height:1.05em}
-.psave{display:inline-block;background:rgba(200,240,0,0.1);color:var(--a);font-size:0.66rem;font-weight:700;padding:0.18rem 0.52rem;border-radius:4px;margin-bottom:1.3rem}
-.pf{display:flex;flex-direction:column;gap:0.6rem;margin-bottom:1.6rem}
-.pf li{display:flex;align-items:flex-start;gap:0.55rem;font-size:0.82rem;color:var(--t2);font-weight:300;line-height:1.4}
-.pf li::before{content:'✓';width:16px;height:16px;min-width:16px;background:rgba(200,240,0,0.1);color:var(--a);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:0.62rem;font-weight:900;margin-top:1px}
-.bby{display:block;text-align:center;padding:0.76rem;border-radius:9px;font-family:'Syne',sans-serif;font-weight:700;font-size:0.88rem;border:1px solid var(--b);color:var(--t2);background:var(--s2);transition:all 0.25s}
-.bby:hover{background:rgba(255,255,255,0.1);color:var(--t)}
-.bby.hb{background:var(--a);color:#040810;border-color:transparent;box-shadow:0 0 18px rgba(200,240,0,0.2)}
-.bby.hb:hover{box-shadow:0 0 32px rgba(200,240,0,0.4);transform:translateY(-2px)}
-/* channels */
-.ctabs{display:flex;gap:0.45rem;flex-wrap:wrap;margin-bottom:1.8rem}
-.tab{padding:0.42rem 1rem;border-radius:100px;font-size:0.8rem;font-weight:600;border:1px solid var(--b);background:transparent;color:var(--t2);transition:all 0.2s}
-.tab:hover,.tab.on{background:var(--a);color:#040810;border-color:transparent}
-.chl{display:grid;grid-template-columns:repeat(auto-fill,minmax(125px,1fr));gap:0.6rem}
-.cp{display:flex;align-items:center;gap:0.5rem;padding:0.56rem 0.85rem;background:var(--s);border:1px solid var(--b);border-radius:9px;font-size:0.78rem;font-weight:500;color:var(--t2);transition:all 0.2s;white-space:nowrap;overflow:hidden}
-.cp:hover{border-color:rgba(200,240,0,0.25);color:var(--t);transform:scale(1.03)}
-.cf{font-size:0.95rem;flex-shrink:0}
-/* sports */
-.spg{display:grid;grid-template-columns:repeat(4,1fr);gap:0.95rem;margin-top:2.8rem}
-.spc{background:var(--s);border:1px solid var(--b);border-radius:var(--rl);padding:1.7rem 1.3rem;text-align:center;transition:all 0.3s}
-.spc:hover{transform:translateY(-4px);border-color:rgba(200,240,0,0.2)}
-.spi{font-size:1.9rem;display:block;margin-bottom:0.75rem}
-.spn{font-family:'Syne',sans-serif;font-weight:700;font-size:0.88rem;margin-bottom:0.22rem}
-.sps{font-size:0.73rem;color:var(--t3)}
-/* how */
+.ti{display:flex;align-items:center;gap:.42rem;padding:.38rem .9rem;background:var(--card);border:1px solid var(--br);border-radius:100px;font-size:.76rem;font-weight:600;letter-spacing:.03em;color:var(--t2);white-space:nowrap}
+.ti-dot{width:4px;height:4px;border-radius:50%;background:var(--lime);flex-shrink:0}
+
+/* ── FEATURE CARDS ── */
+.fg{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.8rem}
+.fc{background:var(--card);border:1px solid var(--br);border-radius:var(--rl);padding:1.6rem;transition:transform .3s,border-color .3s}
+.fc:hover{transform:translateY(-4px);border-color:rgba(198,241,53,.2)}
+.fc.wide{grid-column:1/3;display:flex;gap:1.6rem;align-items:flex-start}
+.ficon{width:42px;height:42px;border-radius:10px;background:rgba(198,241,53,.08);border:1px solid rgba(198,241,53,.14);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;margin-bottom:.9rem}
+.fc h3{font-size:.9rem;font-weight:700;letter-spacing:.01em;margin-bottom:.42rem;color:var(--t1)}
+.fc p{font-size:.82rem;color:var(--t2);line-height:1.65;font-weight:400}
+.fstats{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;min-width:168px;flex-shrink:0}
+.fsb{text-align:center;padding:.85rem .65rem;background:var(--bg3);border:1px solid var(--br);border-radius:9px}
+.fsn{font-size:1.3rem;font-weight:700;letter-spacing:-.02em;line-height:1}
+.fsl{font-size:.6rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--t3);margin-top:.22rem}
+
+/* ── CHANNEL TABS ── */
+.ctabs{display:flex;gap:.42rem;flex-wrap:wrap;margin-bottom:1.6rem}
+.ctab{padding:.38rem .95rem;border-radius:100px;font-size:.76rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;border:1px solid var(--br);background:transparent;color:var(--t2);transition:all .2s}
+.ctab:hover,.ctab.on{background:var(--lime);color:#06090f;border-color:transparent}
+.chlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:.55rem}
+.cpill{display:flex;align-items:center;gap:.45rem;padding:.52rem .8rem;background:var(--card);border:1px solid var(--br);border-radius:9px;font-size:.76rem;font-weight:600;color:var(--t2);transition:all .2s;white-space:nowrap;overflow:hidden}
+.cpill:hover{border-color:rgba(198,241,53,.25);color:var(--t1);transform:scale(1.03)}
+.cflag{font-size:.9rem;flex-shrink:0}
+
+/* ── SPORT ── */
+.spg{display:grid;grid-template-columns:repeat(4,1fr);gap:.95rem;margin-top:2.8rem}
+.spc{background:var(--card);border:1px solid var(--br);border-radius:var(--rl);padding:1.6rem 1.3rem;text-align:center;transition:all .3s}
+.spc:hover{transform:translateY(-4px);border-color:rgba(198,241,53,.2)}
+.spi{font-size:1.8rem;display:block;margin-bottom:.72rem}
+.spn{font-size:.84rem;font-weight:700;letter-spacing:.01em;margin-bottom:.2rem;color:var(--t1)}
+.sps{font-size:.7rem;font-weight:600;letter-spacing:.04em;color:var(--t3)}
+
+/* ── PRICING ── */
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;margin-top:2.8rem;align-items:start}
+.pcard{background:var(--card);border:1px solid var(--br);border-radius:var(--rl);padding:1.6rem 1.35rem;transition:transform .3s;position:relative}
+.pcard:hover{transform:translateY(-5px)}
+.pcard.hot{background:linear-gradient(155deg,rgba(198,241,53,.07) 0%,rgba(20,217,245,.04) 100%);border-color:rgba(198,241,53,.28);transform:scale(1.02)}
+.pcard.hot:hover{transform:scale(1.02) translateY(-5px)}
+.pbadge{position:absolute;top:.85rem;right:.85rem;background:var(--lime);color:#06090f;font-size:.56rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:.2rem .55rem;border-radius:4px}
+.pper{font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--t3);margin-bottom:.72rem}
+.ppr{display:flex;align-items:baseline;gap:.18rem;margin-bottom:.28rem}
+.pcur{font-size:.82rem;color:var(--t2);font-weight:600}
+.pnum{font-size:2.4rem;font-weight:700;letter-spacing:-.03em;line-height:1;color:var(--t1)}
+.pnum.hl{color:var(--lime)}
+.porig{font-size:.72rem;color:var(--t3);text-decoration:line-through;margin-bottom:.35rem;min-height:1em}
+.psave{display:inline-block;background:rgba(198,241,53,.1);color:var(--lime);font-size:.64rem;font-weight:700;letter-spacing:.04em;padding:.17rem .5rem;border-radius:4px;margin-bottom:1.3rem}
+.pfeats{display:flex;flex-direction:column;gap:.58rem;margin-bottom:1.6rem}
+.pfeats li{display:flex;align-items:flex-start;gap:.52rem;font-size:.8rem;color:var(--t2);font-weight:400;line-height:1.4}
+.pfeats li::before{content:'✓';width:15px;height:15px;min-width:15px;background:rgba(198,241,53,.1);color:var(--lime);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:.58rem;font-weight:900;margin-top:1px}
+.bbuy{display:block;text-align:center;padding:.74rem;border-radius:9px;font-family:'Josefin Sans',sans-serif;font-weight:700;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;border:1px solid var(--br);color:var(--t2);background:var(--card2);transition:all .25s}
+.bbuy:hover{background:rgba(255,255,255,.1);color:var(--t1)}
+.bbuy.hbtn{background:var(--lime);color:#06090f;border-color:transparent;box-shadow:0 0 16px rgba(198,241,53,.2)}
+.bbuy.hbtn:hover{box-shadow:0 0 30px rgba(198,241,53,.4);transform:translateY(-2px)}
+
+/* ── HOW IT WORKS ── */
 .hwg{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;margin-top:3.5rem;position:relative}
-.hwg::after{content:'';position:absolute;top:34px;left:calc(50%/3 + 33px);right:calc(50%/3 + 33px);height:1px;background:linear-gradient(90deg,var(--a),var(--a2));opacity:0.2}
+.hwg::after{content:'';position:absolute;top:32px;left:calc(50%/3 + 30px);right:calc(50%/3 + 30px);height:1px;background:linear-gradient(90deg,var(--lime),var(--cyan));opacity:.18}
 .hws{text-align:center}
-.hwn{width:68px;height:68px;border-radius:50%;background:var(--s);border:1px solid var(--b);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-size:1.35rem;font-weight:800;color:var(--a);margin:0 auto 1.3rem;position:relative;z-index:1}
-.hws h3{font-family:'Syne',sans-serif;font-size:0.97rem;font-weight:700;margin-bottom:0.55rem}
-.hws p{font-size:0.85rem;color:var(--t2);line-height:1.65;font-weight:300}
-/* devices */
+.hwnum{width:64px;height:64px;border-radius:50%;background:var(--card);border:1px solid var(--br);display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:700;color:var(--lime);margin:0 auto 1.2rem;position:relative;z-index:1}
+.hws h3{font-size:.88rem;font-weight:700;letter-spacing:.02em;margin-bottom:.5rem;color:var(--t1)}
+.hws p{font-size:.8rem;color:var(--t2);line-height:1.65;font-weight:400}
+
+/* ── DEVICES ── */
 .dvg{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-top:2.8rem}
-.dvl{display:flex;flex-direction:column;gap:0.85rem}
-.dvi{display:flex;align-items:center;gap:0.95rem;padding:0.95rem 1.2rem;background:var(--s);border:1px solid var(--b);border-radius:var(--r);transition:all 0.3s}
-.dvi:hover{border-color:rgba(200,240,0,0.2);transform:translateX(5px)}
-.dvic{font-size:1.5rem;flex-shrink:0}
-.dvn{font-family:'Syne',sans-serif;font-weight:700;font-size:0.88rem;margin-bottom:0.13rem}
-.dvs{font-size:0.73rem;color:var(--t3)}
-.scr{aspect-ratio:16/10;background:var(--bg3);border:1px solid var(--b);border-radius:16px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;font-size:3rem;box-shadow:0 20px 55px rgba(0,0,0,0.4)}
-.slv{position:absolute;top:0.9rem;right:0.9rem;background:var(--a);color:#040810;font-family:'Syne',sans-serif;font-weight:800;font-size:0.62rem;padding:0.22rem 0.55rem;border-radius:5px}
-.sqs{position:absolute;bottom:0.9rem;left:0.9rem;display:flex;gap:0.38rem}
-.sq{background:rgba(200,240,0,0.12);color:var(--a);font-size:0.58rem;font-weight:700;padding:0.18rem 0.42rem;border-radius:3px}
-/* testimonials */
-.tstg{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2.8rem}
-.tstc{background:var(--s);border:1px solid var(--b);border-radius:var(--rl);padding:1.7rem;transition:all 0.3s}
-.tstc:hover{transform:translateY(-4px);border-color:rgba(0,212,255,0.2)}
-.tstr{color:var(--a);font-size:0.88rem;letter-spacing:2px;margin-bottom:0.85rem}
-.tstt{font-size:0.85rem;color:var(--t2);line-height:1.7;margin-bottom:1.2rem;font-style:italic;font-weight:300}
-.tsta{display:flex;align-items:center;gap:0.75rem}
-.tav{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--a),var(--a2));display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:0.78rem;color:#040810;flex-shrink:0}
-.tnm{font-family:'Syne',sans-serif;font-weight:700;font-size:0.86rem;margin-bottom:0.08rem}
-.tlc{font-size:0.7rem;color:var(--t3)}
-/* guarantee */
-.guar{padding:65px 0;position:relative;z-index:1}
-.ginn{max-width:var(--mw);margin:0 auto;padding:2.8rem var(--px);background:linear-gradient(135deg,rgba(200,240,0,0.06),rgba(0,212,255,0.04));border:1px solid rgba(200,240,0,0.15);border-radius:22px;display:flex;align-items:center;gap:2.2rem}
-.gico{font-size:3.2rem;flex-shrink:0}
-.gtxt h2{font-size:1.8rem;margin-bottom:0.55rem}
-.gtxt p{font-size:0.93rem;color:var(--t2);max-width:570px;font-weight:300;line-height:1.7;margin-bottom:1.3rem}
-/* faq */
-.fqg{display:grid;grid-template-columns:1fr 1fr;gap:0.85rem;margin-top:2.8rem}
-.fqi{background:var(--s);border:1px solid var(--b);border-radius:var(--r);overflow:hidden;transition:border-color 0.25s}
-.fqi.open{border-color:rgba(200,240,0,0.22)}
-.fqq{width:100%;display:flex;justify-content:space-between;align-items:center;padding:1.1rem 1.2rem;background:transparent;color:var(--t);font-size:0.88rem;font-weight:500;text-align:left;gap:0.75rem;cursor:pointer}
-.fqtg{width:20px;height:20px;min-width:20px;border-radius:4px;background:var(--s2);display:flex;align-items:center;justify-content:center;font-size:0.95rem;color:var(--a);transition:transform 0.25s}
+.dvlist{display:flex;flex-direction:column;gap:.78rem}
+.dvitem{display:flex;align-items:center;gap:.95rem;padding:.9rem 1.15rem;background:var(--card);border:1px solid var(--br);border-radius:var(--r);transition:all .3s}
+.dvitem:hover{border-color:rgba(198,241,53,.2);transform:translateX(5px)}
+.dvico{font-size:1.5rem;flex-shrink:0}
+.dvn{font-size:.84rem;font-weight:700;letter-spacing:.01em;margin-bottom:.12rem;color:var(--t1)}
+.dvs{font-size:.7rem;font-weight:600;letter-spacing:.04em;color:var(--t3)}
+.screen{aspect-ratio:16/10;background:var(--bg3);border:1px solid var(--br);border-radius:16px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;font-size:3.2rem;box-shadow:0 18px 50px rgba(0,0,0,.45)}
+.scrlv{position:absolute;top:.85rem;right:.85rem;background:var(--lime);color:#06090f;font-size:.6rem;font-weight:700;letter-spacing:.04em;padding:.2rem .52rem;border-radius:5px}
+.scrqs{position:absolute;bottom:.85rem;left:.85rem;display:flex;gap:.35rem}
+.scrq{background:rgba(198,241,53,.12);color:var(--lime);font-size:.56rem;font-weight:700;letter-spacing:.04em;padding:.16rem .4rem;border-radius:3px}
+
+/* ── TESTIMONIALS ── */
+.tstg{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.8rem}
+.tstc{background:var(--card);border:1px solid var(--br);border-radius:var(--rl);padding:1.6rem;transition:all .3s}
+.tstc:hover{transform:translateY(-4px);border-color:rgba(20,217,245,.2)}
+.tstar{color:var(--lime);font-size:.85rem;letter-spacing:2px;margin-bottom:.82rem}
+.ttxt{font-size:.82rem;color:var(--t2);line-height:1.7;margin-bottom:1.2rem;font-style:italic;font-weight:400}
+.tauth{display:flex;align-items:center;gap:.7rem}
+.tav{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--lime),var(--cyan));display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;color:#06090f;flex-shrink:0}
+.tnm{font-size:.82rem;font-weight:700;letter-spacing:.01em;color:var(--t1);margin-bottom:.08rem}
+.tlc{font-size:.68rem;font-weight:600;letter-spacing:.04em;color:var(--t3)}
+
+/* ── GUARANTEE ── */
+.guar{padding:60px 0;position:relative;z-index:1}
+.ginn{max-width:var(--W);margin:0 auto;padding:2.6rem clamp(1rem,4vw,2.5rem);background:linear-gradient(135deg,rgba(198,241,53,.06),rgba(20,217,245,.04));border:1px solid rgba(198,241,53,.15);border-radius:20px;display:flex;align-items:center;gap:2rem}
+.gico{font-size:3rem;flex-shrink:0}
+.gtxt h2{font-size:1.7rem;margin-bottom:.52rem}
+.gtxt p{font-size:.86rem;color:var(--t2);max-width:560px;font-weight:400;line-height:1.7;margin-bottom:1.3rem}
+
+/* ── FAQ ── */
+.fqg{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:2.8rem}
+.fqi{background:var(--card);border:1px solid var(--br);border-radius:var(--r);overflow:hidden;transition:border-color .25s}
+.fqi.open{border-color:rgba(198,241,53,.22)}
+.fqq{width:100%;display:flex;justify-content:space-between;align-items:center;padding:1.05rem 1.15rem;background:transparent;color:var(--t1);font-size:.84rem;font-weight:600;letter-spacing:.02em;text-align:left;gap:.7rem;cursor:pointer}
+.fqtg{width:19px;height:19px;min-width:19px;border-radius:4px;background:var(--card2);display:flex;align-items:center;justify-content:center;font-size:.9rem;color:var(--lime);transition:transform .25s}
 .fqi.open .fqtg{transform:rotate(45deg)}
-.fqa{padding:0 1.2rem 1.1rem;font-size:0.83rem;color:var(--t2);line-height:1.7;font-weight:300;display:none}
+.fqa{padding:0 1.15rem 1.05rem;font-size:.8rem;color:var(--t2);line-height:1.7;font-weight:400;display:none}
 .fqi.open .fqa{display:block}
-/* cta */
-.ctabot{padding:88px var(--px);text-align:center;position:relative;z-index:1}
-.ctabot h2{font-size:2.2rem;margin-bottom:0.9rem}
-.ctabot p{font-size:0.97rem;color:var(--t2);margin-bottom:1.8rem;font-weight:300}
-.ctabs2{display:flex;gap:0.8rem;justify-content:center;flex-wrap:wrap}
-/* footer */
-footer{border-top:1px solid var(--b);padding:3.2rem var(--px) 1.8rem;position:relative;z-index:1}
-.ftg{max-width:var(--mw);margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:2.2rem;margin-bottom:2.2rem}
-.fbr p{font-size:0.82rem;color:var(--t3);margin:0.75rem 0 1.2rem;line-height:1.7;max-width:260px}
-.fsoc{display:flex;gap:0.6rem}
-.fsb{width:32px;height:32px;border-radius:6px;background:var(--s);border:1px solid var(--b);display:flex;align-items:center;justify-content:center;font-size:0.82rem;transition:all 0.2s}
-.fsb:hover{background:var(--s2);border-color:rgba(200,240,0,0.2)}
-.fcl h4{font-family:'Syne',sans-serif;font-weight:700;font-size:0.83rem;margin-bottom:0.9rem}
-.fls{display:flex;flex-direction:column;gap:0.52rem}
-.fls a{font-size:0.8rem;color:var(--t3);transition:color 0.2s}
-.fls a:hover{color:var(--t)}
-.fct{font-size:0.8rem;color:var(--t3);line-height:1.85}
-.fct a{color:var(--a2)}
-.fbot{max-width:var(--mw);margin:0 auto;padding-top:1.8rem;border-top:1px solid var(--b);display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:var(--t3);flex-wrap:wrap;gap:0.75rem}
-.flg{display:flex;gap:1.2rem;flex-wrap:wrap}
-.flg a{color:var(--t3);transition:color 0.2s}
-.flg a:hover{color:var(--t)}
-/* scroll reveal */
-.rv{opacity:0;transform:translateY(22px);transition:opacity 0.6s ease,transform 0.6s ease}
+
+/* ── CTA ── */
+.ctabot{padding:88px clamp(1rem,4vw,2.5rem);text-align:center;position:relative;z-index:1}
+.ctabot h2{font-size:2.1rem;margin-bottom:.9rem}
+.ctabot p{font-size:.9rem;color:var(--t2);margin-bottom:1.8rem;font-weight:400}
+.ctabtns{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
+
+/* ── FOOTER ── */
+footer{border-top:1px solid var(--br);padding:3rem clamp(1rem,4vw,2.5rem) 1.8rem;position:relative;z-index:1}
+.ftg{max-width:var(--W);margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:2rem;margin-bottom:2rem}
+.fbr p{font-size:.78rem;color:var(--t3);margin:.72rem 0 1.15rem;line-height:1.7;max-width:250px;font-weight:400}
+.fsoc{display:flex;gap:.55rem}
+.fsb{width:30px;height:30px;border-radius:6px;background:var(--card);border:1px solid var(--br);display:flex;align-items:center;justify-content:center;font-size:.8rem;transition:all .2s}
+.fsb:hover{background:var(--card2);border-color:rgba(198,241,53,.2)}
+.fcol h4{font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.88rem;color:var(--t1)}
+.fls{display:flex;flex-direction:column;gap:.5rem}
+.fls a{font-size:.76rem;font-weight:400;color:var(--t3);transition:color .2s}
+.fls a:hover{color:var(--t1)}
+.fct{font-size:.76rem;color:var(--t3);line-height:1.88;font-weight:400}
+.fct a{color:var(--cyan)}
+.fbot{max-width:var(--W);margin:0 auto;padding-top:1.6rem;border-top:1px solid var(--br);display:flex;justify-content:space-between;align-items:center;font-size:.72rem;color:var(--t3);flex-wrap:wrap;gap:.7rem;font-weight:600;letter-spacing:.03em}
+.flg{display:flex;gap:1.1rem;flex-wrap:wrap}
+.flg a{color:var(--t3);transition:color .2s}
+.flg a:hover{color:var(--t1)}
+
+/* ── SCROLL REVEAL ── */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .rv.in{opacity:1;transform:translateY(0)}
-/* responsive */
-@media(max-width:1100px){
-  .pg{grid-template-columns:repeat(2,1fr)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1060px){
+  .hgrid{grid-template-columns:1fr 1fr}
+  .hero h1{font-size:2.1rem}
+  .pgrid{grid-template-columns:repeat(2,1fr)}
   .fg{grid-template-columns:repeat(2,1fr)}
-  .fc.w{grid-column:1/-1}
+  .fc.wide{grid-column:1/-1}
 }
-@media(max-width:900px){
-  .hi{grid-template-columns:1fr}
-  .hv{display:none}
+@media(max-width:860px){
+  .hgrid{grid-template-columns:1fr}
+  .hpanel{display:none}
   .spg{grid-template-columns:repeat(2,1fr)}
   .dvg{grid-template-columns:1fr}
   .tstg{grid-template-columns:1fr 1fr}
@@ -253,161 +385,172 @@ footer{border-top:1px solid var(--b);padding:3.2rem var(--px) 1.8rem;position:re
   .ftg{grid-template-columns:1fr 1fr}
   .ginn{flex-direction:column;text-align:center}
   .gtxt p{margin:0 auto 1.3rem}
-  h2{font-size:1.8rem}
-  .hero h1{font-size:2.2rem}
+  h2{font-size:1.6rem}
+  .hero h1{font-size:2rem}
 }
-@media(max-width:680px){
-  .nl{display:none}
+@media(max-width:640px){
+  .nlinks{display:none}
   .ham{display:flex}
   .fg{grid-template-columns:1fr}
-  .fc.w{flex-direction:column}
+  .fc.wide{flex-direction:column}
   .hwg{grid-template-columns:1fr}
   .hwg::after{display:none}
   .tstg{grid-template-columns:1fr}
-  .pg{grid-template-columns:1fr}
+  .pgrid{grid-template-columns:1fr}
   .spg{grid-template-columns:repeat(2,1fr)}
   .ftg{grid-template-columns:1fr}
-  .hero h1{font-size:1.9rem}
-  h2{font-size:1.6rem}
-  .ctabot h2{font-size:1.8rem}
+  .hero h1{font-size:1.8rem}
+  h2{font-size:1.5rem}
+  .ctabot h2{font-size:1.7rem}
   .hstats{gap:1.2rem}
+  .hero{min-height:auto;padding-top:80px;padding-bottom:50px}
 }
 </style>
 </head>
 <body>
-<div class="gl gl1" aria-hidden="true"></div>
-<div class="gl gl2" aria-hidden="true"></div>
+<div class="amb amb1" aria-hidden="true"></div>
+<div class="amb amb2" aria-hidden="true"></div>
 
-<!-- NAV -->
+<!-- ══ NAV ══════════════════════════════════════════ -->
 <nav class="nav" id="nav">
-  <a href="/" class="logo">Norges<span>IPTV</span></a>
-  <div class="nl">
+  <a href="/" class="logo">Norges<b>IPTV</b></a>
+  <div class="nlinks">
     <a href="#kanaler">Kanaler</a>
     <a href="#priser">Priser</a>
     <a href="#sport">Sport</a>
     <a href="#enheter">Enheter</a>
     <a href="#faq">FAQ</a>
-    <a href="#priser" class="nb">Prøv 24t gratis</a>
+    <a href="#priser" class="nbtn">Prøv 24t gratis</a>
   </div>
-  <div class="ham" id="ham" onclick="toggleNav()" aria-label="Meny">
-    <span></span><span></span><span></span>
-  </div>
+  <div class="ham" id="ham" onclick="tNav()" aria-label="Meny"><span></span><span></span><span></span></div>
 </nav>
-<div class="mob" id="mob">
-  <a href="#kanaler" onclick="closeNav()">📺 Kanaler</a>
-  <a href="#priser" onclick="closeNav()">💰 Priser</a>
-  <a href="#sport" onclick="closeNav()">⚽ Sport</a>
-  <a href="#enheter" onclick="closeNav()">📱 Enheter</a>
-  <a href="#faq" onclick="closeNav()">❓ FAQ</a>
-  <a href="#priser" class="mbtn" onclick="closeNav()">▶ Prøv 24t gratis</a>
+<div class="mmenu" id="mmenu">
+  <a href="#kanaler" onclick="cNav()">📺 Kanaler</a>
+  <a href="#priser" onclick="cNav()">💰 Priser</a>
+  <a href="#sport" onclick="cNav()">⚽ Sport</a>
+  <a href="#enheter" onclick="cNav()">📱 Enheter</a>
+  <a href="#faq" onclick="cNav()">❓ FAQ</a>
+  <a href="#priser" class="mmbtn" onclick="cNav()">▶ Prøv 24t gratis</a>
 </div>
 
-<!-- HERO -->
+<!-- ══ HERO ══════════════════════════════════════════ -->
 <main>
 <section class="hero" aria-label="Introduksjon">
-  <div class="hi">
+  <div class="hgrid">
+    <!-- LEFT -->
     <div>
       <div class="hbadge"><span class="dot"></span>🇳🇴 Norges #1 IPTV-leverandør 2025</div>
-      <h1>Se Alt Du Elsker<br />i <span class="hh">4K HD</span><br />– Uten Kabel</h1>
+      <h1>
+        Se Alt Du Elsker<br>
+        i <span class="lime">4K</span> <span class="teal">HD</span><br>
+        – Uten Kabel
+      </h1>
       <p class="hdesc">Over 25 000 norske og internasjonale kanaler, 100 000+ filmer og serier – direkte på din TV, mobil eller PC. Uten parabol. Uten binding.</p>
-      <div class="hctas">
-        <a href="#priser" class="bp">▶ Start Gratis Prøveperiode</a>
-        <a href="#kanaler" class="bg">Se kanalliste →</a>
+      <div class="hbtns">
+        <a href="#priser" class="btn-lime">▶ Start Gratis Prøveperiode</a>
+        <a href="#kanaler" class="btn-out">Se kanalliste →</a>
       </div>
       <div class="hstats">
-        <div class="hstat"><div class="num">25<em>k+</em></div><div class="lbl">Live kanaler</div></div>
-        <div class="hstat"><div class="num">100<em>k+</em></div><div class="lbl">Filmer &amp; serier</div></div>
-        <div class="hstat"><div class="num">99<em>%</em></div><div class="lbl">Oppetid</div></div>
+        <div class="hstat"><div class="n">25<em>k+</em></div><div class="l">Live kanaler</div></div>
+        <div class="hstat"><div class="n">100<em>k+</em></div><div class="l">Filmer &amp; serier</div></div>
+        <div class="hstat"><div class="n">99<em>%</em></div><div class="l">Oppetid</div></div>
       </div>
     </div>
-    <div class="hv" aria-hidden="true">
-      <div class="fp fp1"><div class="fpl">Spiller nå</div><div class="fpv">⚽ <span class="ac">Eliteserien</span> – Live 4K</div></div>
-      <div class="tv">
-        <div class="tvbar"><div class="td tdr"></div><div class="td tdy"></div><div class="td tdg"></div></div>
-        <div class="tvb">
-          <div class="crow">
-            <span class="cico">📺</span>
-            <div><div class="cname">NRK 1</div><div class="clive">LIVE nå</div></div>
-            <div class="c4k">4K</div>
+    <!-- RIGHT -->
+    <div class="hpanel" aria-hidden="true">
+      <div class="fbadge fb1">
+        <div class="fbl">Spiller nå</div>
+        <div class="fbv">⚽ <span class="ac">Eliteserien</span> – Live 4K</div>
+      </div>
+      <div class="tvbox">
+        <div class="tvtop"><div class="dot3 dr"></div><div class="dot3 dy"></div><div class="dot3 dg"></div></div>
+        <div class="tvbody">
+          <div class="ch-main">
+            <span class="ch-em">📺</span>
+            <div><div class="ch-nm">NRK 1</div><div class="ch-lv">LIVE NÅ</div></div>
+            <div class="ch-4k">4K</div>
           </div>
-          <div class="cgrid">
-            <div class="ccard"><div style="font-size:1.2rem;margin-bottom:0.3rem">🎬</div><div class="cname">TV 2</div><div class="blv">LIVE</div></div>
-            <div class="ccard"><div style="font-size:1.2rem;margin-bottom:0.3rem">🏆</div><div class="cname">Viaplay</div><span class="bs bsp">Sport</span></div>
-            <div class="ccard"><div style="font-size:1.2rem;margin-bottom:0.3rem">🌍</div><div class="cname">Discovery+</div><div class="blv">LIVE</div></div>
-            <div class="ccard"><div style="font-size:1.2rem;margin-bottom:0.3rem">🎭</div><div class="cname">BBC World</div><span class="bs bhd">HD</span></div>
+          <div class="ch-grid">
+            <div class="ch-card"><div class="ch-ico">🎬</div><div class="ch-nm2">TV 2</div><div class="blv">LIVE</div></div>
+            <div class="ch-card"><div class="ch-ico">🏆</div><div class="ch-nm2">Viaplay</div><span class="bsp">Sport</span></div>
+            <div class="ch-card"><div class="ch-ico">🌍</div><div class="ch-nm2">Discovery+</div><div class="blv">LIVE</div></div>
+            <div class="ch-card"><div class="ch-ico">🎭</div><div class="ch-nm2">BBC World</div><span class="bhd">HD</span></div>
           </div>
         </div>
       </div>
-      <div class="fp fp2"><div class="fpl">Aktive brukere</div><div class="fpv"><span class="ac">10 000+</span> tilfredse kunder</div></div>
+      <div class="fbadge fb2">
+        <div class="fbl">Aktive brukere</div>
+        <div class="fbv"><span class="ac">10 000+</span> tilfredse kunder</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- TICKER -->
-<div class="tick" aria-hidden="true">
-  <div class="tickl">Inkluderte kanaler</div>
-  <div style="overflow:hidden">
-    <div class="tickt">
-      <div class="ti"><span class="tid"></span>NRK 1</div><div class="ti"><span class="tid"></span>NRK 2</div><div class="ti"><span class="tid"></span>NRK 3</div><div class="ti"><span class="tid"></span>TV 2</div><div class="ti"><span class="tid"></span>TV 2 Sport</div><div class="ti"><span class="tid"></span>Viaplay</div><div class="ti"><span class="tid"></span>V Sport 1</div><div class="ti"><span class="tid"></span>V Sport 2</div><div class="ti"><span class="tid"></span>TV Norge</div><div class="ti"><span class="tid"></span>MAX</div><div class="ti"><span class="tid"></span>C More</div><div class="ti"><span class="tid"></span>BBC One</div><div class="ti"><span class="tid"></span>CNN</div><div class="ti"><span class="tid"></span>Discovery+</div><div class="ti"><span class="tid"></span>Eurosport</div><div class="ti"><span class="tid"></span>Canal Sport</div><div class="ti"><span class="tid"></span>Eliteserien</div><div class="ti"><span class="tid"></span>Premier League</div>
-      <div class="ti"><span class="tid"></span>NRK 1</div><div class="ti"><span class="tid"></span>NRK 2</div><div class="ti"><span class="tid"></span>NRK 3</div><div class="ti"><span class="tid"></span>TV 2</div><div class="ti"><span class="tid"></span>TV 2 Sport</div><div class="ti"><span class="tid"></span>Viaplay</div><div class="ti"><span class="tid"></span>V Sport 1</div><div class="ti"><span class="tid"></span>V Sport 2</div><div class="ti"><span class="tid"></span>TV Norge</div><div class="ti"><span class="tid"></span>MAX</div><div class="ti"><span class="tid"></span>C More</div><div class="ti"><span class="tid"></span>BBC One</div><div class="ti"><span class="tid"></span>CNN</div><div class="ti"><span class="tid"></span>Discovery+</div><div class="ti"><span class="tid"></span>Eurosport</div><div class="ti"><span class="tid"></span>Canal Sport</div><div class="ti"><span class="tid"></span>Eliteserien</div><div class="ti"><span class="tid"></span>Premier League</div>
+<!-- ══ TICKER ════════════════════════════════════════ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-label">Inkluderte kanaler</div>
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <div class="ti"><span class="ti-dot"></span>NRK 1</div><div class="ti"><span class="ti-dot"></span>NRK 2</div><div class="ti"><span class="ti-dot"></span>NRK 3</div><div class="ti"><span class="ti-dot"></span>TV 2</div><div class="ti"><span class="ti-dot"></span>TV 2 Sport</div><div class="ti"><span class="ti-dot"></span>Viaplay</div><div class="ti"><span class="ti-dot"></span>V Sport 1</div><div class="ti"><span class="ti-dot"></span>V Sport 2</div><div class="ti"><span class="ti-dot"></span>TV Norge</div><div class="ti"><span class="ti-dot"></span>MAX</div><div class="ti"><span class="ti-dot"></span>C More</div><div class="ti"><span class="ti-dot"></span>BBC One</div><div class="ti"><span class="ti-dot"></span>CNN</div><div class="ti"><span class="ti-dot"></span>Discovery+</div><div class="ti"><span class="ti-dot"></span>Eurosport</div><div class="ti"><span class="ti-dot"></span>Canal Sport</div><div class="ti"><span class="ti-dot"></span>Eliteserien</div><div class="ti"><span class="ti-dot"></span>Premier League</div>
+      <div class="ti"><span class="ti-dot"></span>NRK 1</div><div class="ti"><span class="ti-dot"></span>NRK 2</div><div class="ti"><span class="ti-dot"></span>NRK 3</div><div class="ti"><span class="ti-dot"></span>TV 2</div><div class="ti"><span class="ti-dot"></span>TV 2 Sport</div><div class="ti"><span class="ti-dot"></span>Viaplay</div><div class="ti"><span class="ti-dot"></span>V Sport 1</div><div class="ti"><span class="ti-dot"></span>V Sport 2</div><div class="ti"><span class="ti-dot"></span>TV Norge</div><div class="ti"><span class="ti-dot"></span>MAX</div><div class="ti"><span class="ti-dot"></span>C More</div><div class="ti"><span class="ti-dot"></span>BBC One</div><div class="ti"><span class="ti-dot"></span>CNN</div><div class="ti"><span class="ti-dot"></span>Discovery+</div><div class="ti"><span class="ti-dot"></span>Eurosport</div><div class="ti"><span class="ti-dot"></span>Canal Sport</div><div class="ti"><span class="ti-dot"></span>Eliteserien</div><div class="ti"><span class="ti-dot"></span>Premier League</div>
     </div>
   </div>
 </div>
 
-<!-- FEATURES -->
+<!-- ══ FEATURES ══════════════════════════════════════ -->
 <section class="sec" id="funksjoner" aria-labelledby="fh">
   <div class="w">
-    <div class="rv"><div class="tag">Hvorfor NorgesIPTV</div><h2 id="fh">Alt du trenger –<br /><span class="gr">ingenting du ikke vil ha</span></h2><p class="sd">Premium IPTV bygget spesielt for norske brukere. Stabil, rask og enkel å bruke.</p></div>
+    <div class="rv"><div class="eyebrow">Hvorfor NorgesIPTV</div><h2 id="fh">Alt du trenger –<br><span class="gr">ingenting du ikke vil ha</span></h2><p class="subdesc">Premium IPTV bygget spesielt for norske brukere. Stabil, rask og enkel å bruke.</p></div>
     <div class="fg">
-      <div class="fc w rv">
+      <div class="fc wide rv">
         <div>
-          <div class="fib">🎯</div>
+          <div class="ficon">🎯</div>
           <h3>25 000+ Kanaler – Null Frysing</h3>
-          <p>Ultra-rask IPTV-server med 99,9 % oppetid leverer krystallklar 4K- og HD-streaming uten bufring, frysing eller avbrudd – dedikerte norske servere.</p>
+          <p>Ultra-rask IPTV-server med 99,9 % oppetid leverer krystallklar 4K- og HD-streaming uten bufring eller avbrudd. Dedikerte norske servere for best mulig ytelse.</p>
         </div>
-        <div class="sm">
-          <div class="smb"><div class="smn" style="color:var(--a)">25k+</div><div class="sml">Kanaler</div></div>
-          <div class="smb"><div class="smn" style="color:var(--a2)">4K</div><div class="sml">Kvalitet</div></div>
-          <div class="smb"><div class="smn" style="color:var(--a3)">99%</div><div class="sml">Oppetid</div></div>
-          <div class="smb"><div class="smn">24/7</div><div class="sml">Support</div></div>
+        <div class="fstats">
+          <div class="fsb"><div class="fsn" style="color:var(--lime)">25k+</div><div class="fsl">Kanaler</div></div>
+          <div class="fsb"><div class="fsn" style="color:var(--cyan)">4K</div><div class="fsl">Kvalitet</div></div>
+          <div class="fsb"><div class="fsn" style="color:var(--red)">99%</div><div class="fsl">Oppetid</div></div>
+          <div class="fsb"><div class="fsn">24/7</div><div class="fsl">Support</div></div>
         </div>
       </div>
-      <div class="fc rv"><div class="fib">🎬</div><h3>100 000+ Filmer &amp; Serier</h3><p>Størst VOD-bibliotek med norske og utenlandske filmer og serier. Alltid oppdatert med de siste utgivelsene.</p></div>
-      <div class="fc rv"><div class="fib">⚡</div><h3>Øyeblikkelig Aktivering</h3><p>Konto aktiveres innen minutter etter betaling. Start å se favorittinnholdet ditt med en gang.</p></div>
-      <div class="fc rv"><div class="fib">📱</div><h3>Alle Enheter Støttes</h3><p>Smart TV, Android, iOS, Fire Stick, MAG-boks, PC, Mac – alle enheter støttes med enkel oppsett.</p></div>
-      <div class="fc rv"><div class="fib">🛡️</div><h3>30-Dagers Garanti</h3><p>Ikke fornøyd? Full pengene-tilbake-garanti de første 30 dagene. Ingen spørsmål stilt.</p></div>
-      <div class="fc rv"><div class="fib">🎧</div><h3>24/7 Norsk Support</h3><p>Dedikert norsktalende kundestøtte hele døgnet via chat, e-post og WhatsApp.</p></div>
+      <div class="fc rv"><div class="ficon">🎬</div><h3>100 000+ Filmer &amp; Serier</h3><p>Størst VOD-bibliotek med norske og utenlandske filmer og serier. Alltid oppdatert med de siste utgivelsene.</p></div>
+      <div class="fc rv"><div class="ficon">⚡</div><h3>Øyeblikkelig Aktivering</h3><p>Konto aktiveres innen minutter etter betaling. Start å se favorittinnholdet ditt med en gang.</p></div>
+      <div class="fc rv"><div class="ficon">📱</div><h3>Alle Enheter Støttes</h3><p>Smart TV, Android, iOS, Fire Stick, MAG-boks, PC, Mac – alle enheter støttes med enkel oppsett.</p></div>
+      <div class="fc rv"><div class="ficon">🛡️</div><h3>30-Dagers Garanti</h3><p>Ikke fornøyd? Full pengene-tilbake-garanti de første 30 dagene. Ingen spørsmål stilt.</p></div>
+      <div class="fc rv"><div class="ficon">🎧</div><h3>24/7 Norsk Support</h3><p>Dedikert norsktalende kundestøtte hele døgnet via chat, e-post og WhatsApp.</p></div>
     </div>
   </div>
 </section>
 
-<!-- CHANNELS -->
+<!-- ══ CHANNELS ══════════════════════════════════════ -->
 <section class="sec" id="kanaler" aria-labelledby="ch">
   <div class="w">
-    <div class="rv"><div class="tag">Kanalliste</div><h2 id="ch">Alle kanalene du<br /><span class="gr">allerede elsker</span></h2><p class="sd" style="margin-bottom:1.8rem">Fra norske favoritter til internasjonale kanaler. Alt inkludert i ett abonnement.</p></div>
+    <div class="rv"><div class="eyebrow">Kanalliste</div><h2 id="ch">Alle kanalene du<br><span class="gr">allerede elsker</span></h2><p class="subdesc" style="margin-bottom:1.6rem">Fra norske favoritter til internasjonale kanaler. Alt inkludert i ett abonnement.</p></div>
     <div class="ctabs rv">
-      <button class="tab on" onclick="fCh('no',this)">🇳🇴 Norsk</button>
-      <button class="tab" onclick="fCh('sp',this)">⚽ Sport</button>
-      <button class="tab" onclick="fCh('nd',this)">🌐 Nordisk</button>
-      <button class="tab" onclick="fCh('in',this)">🌍 Internasjonal</button>
-      <button class="tab" onclick="fCh('fm',this)">🎬 Film &amp; TV</button>
-      <button class="tab" onclick="fCh('bn',this)">👶 Barn</button>
+      <button class="ctab on" onclick="fCh('no',this)">🇳🇴 Norsk</button>
+      <button class="ctab" onclick="fCh('sp',this)">⚽ Sport</button>
+      <button class="ctab" onclick="fCh('nd',this)">🌐 Nordisk</button>
+      <button class="ctab" onclick="fCh('in',this)">🌍 Internasjonal</button>
+      <button class="ctab" onclick="fCh('fm',this)">🎬 Film &amp; TV</button>
+      <button class="ctab" onclick="fCh('bn',this)">👶 Barn</button>
     </div>
-    <div class="chl" id="chl">
-      <div class="cp" data-c="no"><span class="cf">🇳🇴</span>NRK 1</div><div class="cp" data-c="no"><span class="cf">🇳🇴</span>NRK 2</div><div class="cp" data-c="no"><span class="cf">🇳🇴</span>NRK 3</div><div class="cp" data-c="no"><span class="cf">🇳🇴</span>NRK Super</div><div class="cp" data-c="no"><span class="cf">🇳🇴</span>TV 2</div><div class="cp" data-c="no"><span class="cf">🇳🇴</span>TV 2 Zebra</div><div class="cp" data-c="no"><span class="cf">🇳🇴</span>TV Norge</div><div class="cp" data-c="no"><span class="cf">🇳🇴</span>FEM</div><div class="cp" data-c="no"><span class="cf">🇳🇴</span>MAX</div><div class="cp" data-c="no"><span class="cf">🇳🇴</span>VG TV</div>
-      <div class="cp" data-c="sp"><span class="cf">⚽</span>TV 2 Sport 1</div><div class="cp" data-c="sp"><span class="cf">⚽</span>TV 2 Sport 2</div><div class="cp" data-c="sp"><span class="cf">🏆</span>Viaplay</div><div class="cp" data-c="sp"><span class="cf">🏆</span>V Sport 1</div><div class="cp" data-c="sp"><span class="cf">🏆</span>V Sport 2</div><div class="cp" data-c="sp"><span class="cf">🏆</span>V Sport 3</div><div class="cp" data-c="sp"><span class="cf">🎾</span>Eurosport 1</div><div class="cp" data-c="sp"><span class="cf">🎾</span>Eurosport 2</div><div class="cp" data-c="sp"><span class="cf">⚽</span>Canal Sport</div><div class="cp" data-c="sp"><span class="cf">🏊</span>Sport 1</div>
-      <div class="cp" data-c="nd"><span class="cf">🇸🇪</span>SVT 1</div><div class="cp" data-c="nd"><span class="cf">🇸🇪</span>SVT 2</div><div class="cp" data-c="nd"><span class="cf">🇸🇪</span>TV4</div><div class="cp" data-c="nd"><span class="cf">🇩🇰</span>DR 1</div><div class="cp" data-c="nd"><span class="cf">🇩🇰</span>TV2 DK</div><div class="cp" data-c="nd"><span class="cf">🇫🇮</span>Yle 1</div><div class="cp" data-c="nd"><span class="cf">🇫🇮</span>MTV3</div><div class="cp" data-c="nd"><span class="cf">🌐</span>C More</div>
-      <div class="cp" data-c="in"><span class="cf">🇬🇧</span>BBC One</div><div class="cp" data-c="in"><span class="cf">🇬🇧</span>BBC Two</div><div class="cp" data-c="in"><span class="cf">🇺🇸</span>CNN</div><div class="cp" data-c="in"><span class="cf">🇺🇸</span>Fox News</div><div class="cp" data-c="in"><span class="cf">🌍</span>Al Jazeera</div><div class="cp" data-c="in"><span class="cf">🌍</span>DW</div>
-      <div class="cp" data-c="fm"><span class="cf">🎬</span>Discovery+</div><div class="cp" data-c="fm"><span class="cf">🎬</span>National Geographic</div><div class="cp" data-c="fm"><span class="cf">🎬</span>TLC</div><div class="cp" data-c="fm"><span class="cf">🎬</span>History</div><div class="cp" data-c="fm"><span class="cf">😄</span>Comedy Central</div><div class="cp" data-c="fm"><span class="cf">🎬</span>Paramount</div>
-      <div class="cp" data-c="bn"><span class="cf">👶</span>NRK Super</div><div class="cp" data-c="bn"><span class="cf">👶</span>Cartoon Network</div><div class="cp" data-c="bn"><span class="cf">👶</span>Disney Channel</div><div class="cp" data-c="bn"><span class="cf">👶</span>Nick Jr.</div>
+    <div class="chlist" id="chl">
+      <div class="cpill" data-c="no"><span class="cflag">🇳🇴</span>NRK 1</div><div class="cpill" data-c="no"><span class="cflag">🇳🇴</span>NRK 2</div><div class="cpill" data-c="no"><span class="cflag">🇳🇴</span>NRK 3</div><div class="cpill" data-c="no"><span class="cflag">🇳🇴</span>NRK Super</div><div class="cpill" data-c="no"><span class="cflag">🇳🇴</span>TV 2</div><div class="cpill" data-c="no"><span class="cflag">🇳🇴</span>TV 2 Zebra</div><div class="cpill" data-c="no"><span class="cflag">🇳🇴</span>TV Norge</div><div class="cpill" data-c="no"><span class="cflag">🇳🇴</span>FEM</div><div class="cpill" data-c="no"><span class="cflag">🇳🇴</span>MAX</div><div class="cpill" data-c="no"><span class="cflag">🇳🇴</span>VG TV</div>
+      <div class="cpill" data-c="sp"><span class="cflag">⚽</span>TV 2 Sport 1</div><div class="cpill" data-c="sp"><span class="cflag">⚽</span>TV 2 Sport 2</div><div class="cpill" data-c="sp"><span class="cflag">🏆</span>Viaplay</div><div class="cpill" data-c="sp"><span class="cflag">🏆</span>V Sport 1</div><div class="cpill" data-c="sp"><span class="cflag">🏆</span>V Sport 2</div><div class="cpill" data-c="sp"><span class="cflag">🏆</span>V Sport 3</div><div class="cpill" data-c="sp"><span class="cflag">🎾</span>Eurosport 1</div><div class="cpill" data-c="sp"><span class="cflag">🎾</span>Eurosport 2</div><div class="cpill" data-c="sp"><span class="cflag">⚽</span>Canal Sport</div><div class="cpill" data-c="sp"><span class="cflag">🏊</span>Sport 1</div>
+      <div class="cpill" data-c="nd"><span class="cflag">🇸🇪</span>SVT 1</div><div class="cpill" data-c="nd"><span class="cflag">🇸🇪</span>SVT 2</div><div class="cpill" data-c="nd"><span class="cflag">🇸🇪</span>TV4</div><div class="cpill" data-c="nd"><span class="cflag">🇩🇰</span>DR 1</div><div class="cpill" data-c="nd"><span class="cflag">🇩🇰</span>TV2 DK</div><div class="cpill" data-c="nd"><span class="cflag">🇫🇮</span>Yle 1</div><div class="cpill" data-c="nd"><span class="cflag">🇫🇮</span>MTV3</div><div class="cpill" data-c="nd"><span class="cflag">🌐</span>C More</div>
+      <div class="cpill" data-c="in"><span class="cflag">🇬🇧</span>BBC One</div><div class="cpill" data-c="in"><span class="cflag">🇬🇧</span>BBC Two</div><div class="cpill" data-c="in"><span class="cflag">🇺🇸</span>CNN</div><div class="cpill" data-c="in"><span class="cflag">🇺🇸</span>Fox News</div><div class="cpill" data-c="in"><span class="cflag">🌍</span>Al Jazeera</div><div class="cpill" data-c="in"><span class="cflag">🌍</span>DW</div>
+      <div class="cpill" data-c="fm"><span class="cflag">🎬</span>Discovery+</div><div class="cpill" data-c="fm"><span class="cflag">🎬</span>National Geographic</div><div class="cpill" data-c="fm"><span class="cflag">🎬</span>TLC</div><div class="cpill" data-c="fm"><span class="cflag">🎬</span>History</div><div class="cpill" data-c="fm"><span class="cflag">😄</span>Comedy Central</div><div class="cpill" data-c="fm"><span class="cflag">🎬</span>Paramount</div>
+      <div class="cpill" data-c="bn"><span class="cflag">👶</span>NRK Super</div><div class="cpill" data-c="bn"><span class="cflag">👶</span>Cartoon Network</div><div class="cpill" data-c="bn"><span class="cflag">👶</span>Disney Channel</div><div class="cpill" data-c="bn"><span class="cflag">👶</span>Nick Jr.</div>
     </div>
   </div>
 </section>
 
-<!-- SPORT -->
+<!-- ══ SPORT ══════════════════════════════════════════ -->
 <section class="sec" id="sport" aria-labelledby="sph">
   <div class="w">
-    <div class="rv"><div class="tag">Sport i 4K</div><h2 id="sph">Aldri gå glipp av<br /><span class="gr">en eneste kamp</span></h2><p class="sd">Se alle de store ligaene live i krystallklar 4K.</p></div>
+    <div class="rv"><div class="eyebrow">Sport i 4K</div><h2 id="sph">Aldri gå glipp av<br><span class="gr">en eneste kamp</span></h2><p class="subdesc">Se alle de store ligaene live i krystallklar 4K.</p></div>
     <div class="spg">
       <div class="spc rv"><span class="spi">⚽</span><div class="spn">Eliteserien</div><div class="sps">Norsk toppfotball live</div></div>
       <div class="spc rv"><span class="spi">🏆</span><div class="spn">Premier League</div><div class="sps">Alle 380 kamper</div></div>
@@ -421,107 +564,111 @@ footer{border-top:1px solid var(--b);padding:3.2rem var(--px) 1.8rem;position:re
   </div>
 </section>
 
-<!-- PRICING -->
+<!-- ══ PRICING ════════════════════════════════════════ -->
 <section class="sec" id="priser" aria-labelledby="prh">
   <div class="w">
-    <div class="rv" style="text-align:center"><div class="tag" style="justify-content:center">Priser</div><h2 id="prh">Velg ditt<br /><span class="gr">abonnement</span></h2><p class="sd" style="margin:0 auto">Ingen skjulte kostnader. Ingen binding. Avbestill når som helst.</p></div>
-    <div class="pg">
-      <div class="pc rv">
+    <div class="rv" style="text-align:center"><div class="eyebrow" style="justify-content:center">Priser</div><h2 id="prh">Velg ditt<br><span class="gr">abonnement</span></h2><p class="subdesc" style="margin:0 auto">Ingen skjulte kostnader. Ingen binding. Avbestill når som helst.</p></div>
+    <div class="pgrid">
+      <div class="pcard rv">
         <div class="pper">24 Timer</div>
-        <div class="pprice"><span class="pcur">kr</span><span class="pnum">29</span></div>
+        <div class="ppr"><span class="pcur">kr</span><span class="pnum">29</span></div>
         <div class="porig" style="opacity:0">–</div>
-        <ul class="pf"><li>Gratis prøveperiode</li><li>Alle kanaler inkludert</li><li>4K og HD kvalitet</li><li>Alle enheter</li><li>24/7 support</li></ul>
-        <a href="mailto:post@norgesiptv.com?subject=Bestilling 24t" class="bby">Bestill nå</a>
+        <ul class="pfeats"><li>Gratis prøveperiode</li><li>Alle kanaler inkludert</li><li>4K og HD kvalitet</li><li>Alle enheter</li><li>24/7 support</li></ul>
+        <a href="mailto:post@norgesiptv.com?subject=Bestilling 24t" class="bbuy">Bestill nå</a>
       </div>
-      <div class="pc rv">
+      <div class="pcard rv">
         <div class="pper">1 Måned</div>
-        <div class="pprice"><span class="pcur">kr</span><span class="pnum">99</span></div>
+        <div class="ppr"><span class="pcur">kr</span><span class="pnum">99</span></div>
         <div class="porig" style="opacity:0">–</div>
-        <ul class="pf"><li>25 000+ kanaler</li><li>100 000+ filmer &amp; serier</li><li>4K og HD kvalitet</li><li>Alle enheter</li><li>24/7 support</li><li>Spar 10%</li></ul>
-        <a href="mailto:post@norgesiptv.com?subject=Bestilling 1 mnd" class="bby">Bestill nå</a>
+        <ul class="pfeats"><li>25 000+ kanaler</li><li>100 000+ filmer &amp; serier</li><li>4K og HD kvalitet</li><li>Alle enheter</li><li>24/7 support</li><li>Spar 10%</li></ul>
+        <a href="mailto:post@norgesiptv.com?subject=Bestilling 1 mnd" class="bbuy">Bestill nå</a>
       </div>
-      <div class="pc hot rv">
+      <div class="pcard hot rv">
         <div class="pbadge">Mest Populær</div>
         <div class="pper">6 Måneder</div>
-        <div class="pprice"><span class="pcur">kr</span><span class="pnum hn">349</span></div>
+        <div class="ppr"><span class="pcur">kr</span><span class="pnum hl">349</span></div>
         <div class="porig">Ordinær pris: kr 594</div>
         <div class="psave">Spar 41% – Kr 245 rabatt</div>
-        <ul class="pf"><li>25 000+ kanaler</li><li>100 000+ filmer &amp; serier</li><li>4K og HD kvalitet</li><li>Alle enheter</li><li>Prioritert 24/7 support</li><li>Gratis Ibo Pro-aktivering</li><li>30-dagers garanti</li></ul>
-        <a href="mailto:post@norgesiptv.com?subject=Bestilling 6 mnd" class="bby hb">Bestill nå</a>
+        <ul class="pfeats"><li>25 000+ kanaler</li><li>100 000+ filmer &amp; serier</li><li>4K og HD kvalitet</li><li>Alle enheter</li><li>Prioritert 24/7 support</li><li>Gratis Ibo Pro-aktivering</li><li>30-dagers garanti</li></ul>
+        <a href="mailto:post@norgesiptv.com?subject=Bestilling 6 mnd" class="bbuy hbtn">Bestill nå</a>
       </div>
-      <div class="pc rv">
+      <div class="pcard rv">
         <div class="pper">12 Måneder</div>
-        <div class="pprice"><span class="pcur">kr</span><span class="pnum">499</span></div>
+        <div class="ppr"><span class="pcur">kr</span><span class="pnum">499</span></div>
         <div class="porig">Ordinær pris: kr 1 188</div>
         <div class="psave">Spar 58% – Beste verdi!</div>
-        <ul class="pf"><li>25 000+ kanaler</li><li>100 000+ filmer &amp; serier</li><li>4K og HD kvalitet</li><li>Alle enheter</li><li>VIP 24/7 support</li><li>Gratis Ibo Pro-aktivering</li><li>30-dagers garanti</li><li>Prioritert server</li></ul>
-        <a href="mailto:post@norgesiptv.com?subject=Bestilling 12 mnd" class="bby">Bestill nå</a>
+        <ul class="pfeats"><li>25 000+ kanaler</li><li>100 000+ filmer &amp; serier</li><li>4K og HD kvalitet</li><li>Alle enheter</li><li>VIP 24/7 support</li><li>Gratis Ibo Pro-aktivering</li><li>30-dagers garanti</li><li>Prioritert server</li></ul>
+        <a href="mailto:post@norgesiptv.com?subject=Bestilling 12 mnd" class="bbuy">Bestill nå</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- HOW -->
+<!-- ══ HOW ════════════════════════════════════════════ -->
 <section class="sec" id="oppsett" aria-labelledby="hwh">
   <div class="w">
-    <div class="rv" style="text-align:center"><div class="tag" style="justify-content:center">Enkel oppsett</div><h2 id="hwh">Kom i gang på<br /><span class="gr">3 enkle steg</span></h2></div>
+    <div class="rv" style="text-align:center"><div class="eyebrow" style="justify-content:center">Enkel oppsett</div><h2 id="hwh">Kom i gang på<br><span class="gr">3 enkle steg</span></h2></div>
     <div class="hwg">
-      <div class="hws rv"><div class="hwn">1</div><h3>Velg abonnement</h3><p>Velg den planen som passer deg best. Alle planer inkluderer alle kanaler og innhold.</p></div>
-      <div class="hws rv"><div class="hwn">2</div><h3>Motta kontodetaljer</h3><p>Innen minutter etter betaling mottar du brukernavn og passord på e-post eller WhatsApp.</p></div>
-      <div class="hws rv"><div class="hwn">3</div><h3>Start å se!</h3><p>Logg inn med din foretrukne IPTV-app og nyt 25 000+ kanaler med en gang.</p></div>
+      <div class="hws rv"><div class="hwnum">1</div><h3>Velg abonnement</h3><p>Velg den planen som passer deg best. Alle planer inkluderer alle kanaler og innhold.</p></div>
+      <div class="hws rv"><div class="hwnum">2</div><h3>Motta kontodetaljer</h3><p>Innen minutter etter betaling mottar du brukernavn og passord på e-post eller WhatsApp.</p></div>
+      <div class="hws rv"><div class="hwnum">3</div><h3>Start å se!</h3><p>Logg inn med din foretrukne IPTV-app og nyt 25 000+ kanaler med en gang.</p></div>
     </div>
   </div>
 </section>
 
-<!-- DEVICES -->
+<!-- ══ DEVICES ════════════════════════════════════════ -->
 <section class="sec" id="enheter" aria-labelledby="dvh">
   <div class="w">
-    <div class="rv"><div class="tag">Kompatible enheter</div><h2 id="dvh">Fungerer på<br /><span class="gr">alle dine enheter</span></h2></div>
+    <div class="rv"><div class="eyebrow">Kompatible enheter</div><h2 id="dvh">Fungerer på<br><span class="gr">alle dine enheter</span></h2></div>
     <div class="dvg">
-      <div class="dvl">
-        <div class="dvi rv"><span class="dvic">📺</span><div><div class="dvn">Smart TV</div><div class="dvs">Samsung, LG, Sony, Philips og mer</div></div></div>
-        <div class="dvi rv"><span class="dvic">🔥</span><div><div class="dvn">Amazon Fire Stick / TV</div><div class="dvs">Enkel oppsett med IPTV Smarters</div></div></div>
-        <div class="dvi rv"><span class="dvic">📱</span><div><div class="dvn">Android &amp; iOS</div><div class="dvs">Mobil, nettbrett og Chromecast</div></div></div>
-        <div class="dvi rv"><span class="dvic">💻</span><div><div class="dvn">Windows &amp; Mac</div><div class="dvs">VLC, Kodi, IPTV Smarters Pro</div></div></div>
-        <div class="dvi rv"><span class="dvic">📦</span><div><div class="dvn">MAG-boks / Formuler</div><div class="dvs">Alle populære IPTV-bokser støttes</div></div></div>
+      <div class="dvlist">
+        <div class="dvitem rv"><span class="dvico">📺</span><div><div class="dvn">Smart TV</div><div class="dvs">Samsung, LG, Sony, Philips og mer</div></div></div>
+        <div class="dvitem rv"><span class="dvico">🔥</span><div><div class="dvn">Amazon Fire Stick / TV</div><div class="dvs">Enkel oppsett med IPTV Smarters</div></div></div>
+        <div class="dvitem rv"><span class="dvico">📱</span><div><div class="dvn">Android &amp; iOS</div><div class="dvs">Mobil, nettbrett og Chromecast</div></div></div>
+        <div class="dvitem rv"><span class="dvico">💻</span><div><div class="dvn">Windows &amp; Mac</div><div class="dvs">VLC, Kodi, IPTV Smarters Pro</div></div></div>
+        <div class="dvitem rv"><span class="dvico">📦</span><div><div class="dvn">MAG-boks / Formuler</div><div class="dvs">Alle populære IPTV-bokser støttes</div></div></div>
       </div>
       <div class="rv">
-        <div class="scr"><span>📺</span><div class="slv">Live 4K</div><div class="sqs"><span class="sq">4K</span><span class="sq">UHD</span><span class="sq">HDR</span><span class="sq">Dolby</span></div></div>
+        <div class="screen">
+          <span>📺</span>
+          <div class="scrlv">Live 4K</div>
+          <div class="scrqs"><span class="scrq">4K</span><span class="scrq">UHD</span><span class="scrq">HDR</span><span class="scrq">Dolby</span></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
+<!-- ══ TESTIMONIALS ═══════════════════════════════════ -->
 <section class="sec" aria-labelledby="tsth">
   <div class="w">
-    <div class="rv" style="text-align:center"><div class="tag" style="justify-content:center">Kundeanmeldelser</div><h2 id="tsth">Hva sier våre<br /><span class="gr">fornøyde kunder?</span></h2></div>
+    <div class="rv" style="text-align:center"><div class="eyebrow" style="justify-content:center">Kundeanmeldelser</div><h2 id="tsth">Hva sier våre<br><span class="gr">fornøyde kunder?</span></h2></div>
     <div class="tstg">
-      <div class="tstc rv"><div class="tstr">★★★★★</div><p class="tstt">"Jeg har brukt NorgesIPTV i over ett år. 4K på Eliteserien er en helt annen opplevelse. Aldri hatt frysing!"</p><div class="tsta"><div class="tav">AH</div><div><div class="tnm">Anders Halvorsen</div><div class="tlc">Oslo, Norge</div></div></div></div>
-      <div class="tstc rv"><div class="tstr">★★★★★</div><p class="tstt">"Endelig en IPTV-tjeneste som faktisk fungerer! Satte det opp på Fire Stick på 5 minutter. Barna elsker barnekanalene."</p><div class="tsta"><div class="tav">LB</div><div><div class="tnm">Lise Berg</div><div class="tlc">Bergen, Norge</div></div></div></div>
-      <div class="tstc rv"><div class="tstr">★★★★★</div><p class="tstt">"Kansellerte RiksTV og sparer kr 800/mnd. Mye mer innhold for en brøkdel av prisen. Støtten er lynrask!"</p><div class="tsta"><div class="tav">MK</div><div><div class="tnm">Morten Kjeldsen</div><div class="tlc">Trondheim, Norge</div></div></div></div>
+      <div class="tstc rv"><div class="tstar">★★★★★</div><p class="ttxt">"Jeg har brukt NorgesIPTV i over ett år. 4K på Eliteserien er en helt annen opplevelse. Aldri hatt frysing!"</p><div class="tauth"><div class="tav">AH</div><div><div class="tnm">Anders Halvorsen</div><div class="tlc">Oslo, Norge</div></div></div></div>
+      <div class="tstc rv"><div class="tstar">★★★★★</div><p class="ttxt">"Endelig en IPTV-tjeneste som faktisk fungerer! Satte det opp på Fire Stick på 5 minutter. Barna elsker barnekanalene."</p><div class="tauth"><div class="tav">LB</div><div><div class="tnm">Lise Berg</div><div class="tlc">Bergen, Norge</div></div></div></div>
+      <div class="tstc rv"><div class="tstar">★★★★★</div><p class="ttxt">"Kansellerte RiksTV og sparer kr 800/mnd. Mye mer innhold for en brøkdel av prisen. Støtten er lynrask!"</p><div class="tauth"><div class="tav">MK</div><div><div class="tnm">Morten Kjeldsen</div><div class="tlc">Trondheim, Norge</div></div></div></div>
     </div>
   </div>
 </section>
 
-<!-- GUARANTEE -->
+<!-- ══ GUARANTEE ══════════════════════════════════════ -->
 <div class="guar">
   <div class="ginn rv">
     <span class="gico">🛡️</span>
     <div class="gtxt">
       <h2>30-dagers <span class="gr">pengene tilbake</span> garanti</h2>
       <p>Vi er så sikre på at du vil elske NorgesIPTV at vi tilbyr full refusjon de første 30 dagene. Risikofritt. Ingen spørsmål stilt.</p>
-      <a href="#priser" class="bp">Kom i gang nå →</a>
+      <a href="#priser" class="btn-lime">Kom i gang nå →</a>
     </div>
   </div>
 </div>
 
-<!-- FAQ -->
+<!-- ══ FAQ ════════════════════════════════════════════ -->
 <section class="sec" id="faq" aria-labelledby="fqh">
   <div class="w">
-    <div class="rv" style="text-align:center"><div class="tag" style="justify-content:center">FAQ</div><h2 id="fqh">Ofte stilte<br /><span class="gr">spørsmål</span></h2></div>
+    <div class="rv" style="text-align:center"><div class="eyebrow" style="justify-content:center">FAQ</div><h2 id="fqh">Ofte stilte<br><span class="gr">spørsmål</span></h2></div>
     <div class="fqg">
-      <div class="fqi"><button class="fqq" onclick="tFaq(this)" aria-expanded="false">Hva er NorgesIPTV?<span class="fqtg">+</span></button><div class="fqa">NorgesIPTV er Norges ledende IPTV-leverandør med over 25 000 live kanaler og 100 000+ filmer og serier i 4K og HD-kvalitet via internett – ingen parabol eller kabel nødvendig.</div></div>
+      <div class="fqi"><button class="fqq" onclick="tFaq(this)" aria-expanded="false">Hva er NorgesIPTV?<span class="fqtg">+</span></button><div class="fqa">NorgesIPTV er Norges ledende IPTV-leverandør med over 25 000 live kanaler og 100 000+ filmer og serier i 4K og HD-kvalitet – ingen parabol eller kabel nødvendig.</div></div>
       <div class="fqi"><button class="fqq" onclick="tFaq(this)" aria-expanded="false">Trenger jeg parabol eller kabel-TV?<span class="fqtg">+</span></button><div class="fqa">Nei! Du trenger kun en internettforbindelse (min. 10 Mbps for HD, 25 Mbps for 4K) og en kompatibel enhet. Ingen installasjon av hardware nødvendig.</div></div>
       <div class="fqi"><button class="fqq" onclick="tFaq(this)" aria-expanded="false">Hvilke enheter støttes?<span class="fqtg">+</span></button><div class="fqa">Vi støtter Smart TV (Samsung, LG, Sony), Android-bokser, Amazon Fire Stick, iOS og Android mobil/nettbrett, PC (Windows/Mac) via Kodi eller VLC, og MAG/Formuler-bokser.</div></div>
       <div class="fqi"><button class="fqq" onclick="tFaq(this)" aria-expanded="false">Fungerer tjenesten i hele Norge?<span class="fqtg">+</span></button><div class="fqa">Ja, NorgesIPTV fungerer i hele Norge og Norden. Så lenge du har stabil internettforbindelse kan du se på alle enheter, overalt.</div></div>
@@ -533,25 +680,25 @@ footer{border-top:1px solid var(--b);padding:3.2rem var(--px) 1.8rem;position:re
   </div>
 </section>
 
-<!-- CTA -->
+<!-- ══ CTA ════════════════════════════════════════════ -->
 <div class="ctabot">
   <div class="rv">
-    <div class="tag" style="justify-content:center">Klar til å starte?</div>
-    <h2>Se <span class="gr">alt du elsker</span><br />fra kr 99/mnd</h2>
+    <div class="eyebrow" style="justify-content:center">Klar til å starte?</div>
+    <h2>Se <span class="gr">alt du elsker</span><br>fra kr 99/mnd</h2>
     <p>Bli med 10 000+ nordmenn som allerede nyter Norges beste IPTV-tjeneste.</p>
-    <div class="ctabs2">
-      <a href="#priser" class="bp">▶ Bestill abonnement</a>
-      <a href="mailto:post@norgesiptv.com?subject=24t prove" class="bg">Prøv 24t gratis</a>
+    <div class="ctabtns">
+      <a href="#priser" class="btn-lime">▶ Bestill abonnement</a>
+      <a href="mailto:post@norgesiptv.com?subject=24t prove" class="btn-out">Prøv 24t gratis</a>
     </div>
   </div>
 </div>
 </main>
 
-<!-- FOOTER -->
+<!-- ══ FOOTER ══════════════════════════════════════════ -->
 <footer role="contentinfo">
   <div class="ftg">
     <div class="fbr">
-      <a href="/" class="logo">Norges<span>IPTV</span></a>
+      <a href="/" class="logo">Norges<b>IPTV</b></a>
       <p>Norges beste IPTV-leverandør med 25 000+ kanaler og 100 000+ filmer og serier i 4K og HD-kvalitet.</p>
       <div class="fsoc">
         <a href="#" class="fsb" aria-label="Facebook">f</a>
@@ -559,9 +706,9 @@ footer{border-top:1px solid var(--b);padding:3.2rem var(--px) 1.8rem;position:re
         <a href="https://wa.me/212778586696" class="fsb" aria-label="WhatsApp">💬</a>
       </div>
     </div>
-    <div class="fcl"><h4>Tjenester</h4><ul class="fls"><li><a href="#kanaler">Kanalliste</a></li><li><a href="#priser">Priser</a></li><li><a href="#sport">Sport</a></li><li><a href="#enheter">Enheter</a></li><li><a href="#oppsett">Installasjon</a></li></ul></div>
-    <div class="fcl"><h4>Informasjon</h4><ul class="fls"><li><a href="#faq">FAQ</a></li><li><a href="/personvern.html">Personvern</a></li><li><a href="/vilkar.html">Vilkår for bruk</a></li><li><a href="/refusjon.html">Refusjonspolicy</a></li><li><a href="/dmca.html">DMCA</a></li></ul></div>
-    <div class="fcl"><h4>Kontakt oss</h4><div class="fct">📧 <a href="mailto:post@norgesiptv.com">post@norgesiptv.com</a><br /><br />💬 WhatsApp support<br />Man–søn: 08:00–23:00<br /><br />🇳🇴 Norsktalende kundeservice</div></div>
+    <div class="fcol"><h4>Tjenester</h4><ul class="fls"><li><a href="#kanaler">Kanalliste</a></li><li><a href="#priser">Priser</a></li><li><a href="#sport">Sport</a></li><li><a href="#enheter">Enheter</a></li><li><a href="#oppsett">Installasjon</a></li></ul></div>
+    <div class="fcol"><h4>Informasjon</h4><ul class="fls"><li><a href="#faq">FAQ</a></li><li><a href="/personvern.html">Personvern</a></li><li><a href="/vilkar.html">Vilkår for bruk</a></li><li><a href="/refusjon.html">Refusjonspolicy</a></li><li><a href="/dmca.html">DMCA</a></li></ul></div>
+    <div class="fcol"><h4>Kontakt oss</h4><div class="fct">📧 <a href="mailto:post@norgesiptv.com">post@norgesiptv.com</a><br><br>💬 WhatsApp support<br>Man–søn: 08:00–23:00<br><br>🇳🇴 Norsktalende kundeservice</div></div>
   </div>
   <div class="fbot">
     <span>© 2025 NorgesIPTV. Alle rettigheter forbeholdt.</span>
@@ -570,33 +717,41 @@ footer{border-top:1px solid var(--b);padding:3.2rem var(--px) 1.8rem;position:re
 </footer>
 
 <script>
-function toggleNav(){document.getElementById('mob').classList.toggle('open')}
-function closeNav(){document.getElementById('mob').classList.remove('open')}
+function tNav(){document.getElementById('mmenu').classList.toggle('open')}
+function cNav(){document.getElementById('mmenu').classList.remove('open')}
 document.addEventListener('click',function(e){
-  const m=document.getElementById('mob'),h=document.getElementById('ham');
+  var m=document.getElementById('mmenu'),h=document.getElementById('ham');
   if(m.classList.contains('open')&&!m.contains(e.target)&&!h.contains(e.target))m.classList.remove('open');
 });
 window.addEventListener('scroll',function(){
-  document.getElementById('nav').style.background=window.scrollY>60?'rgba(4,8,16,0.97)':'rgba(4,8,16,0.88)';
+  document.getElementById('nav').style.background=
+    window.scrollY>60?'rgba(6,9,15,0.97)':'rgba(6,9,15,0.82)';
 },{passive:true});
-const obs=new IntersectionObserver((es)=>{
-  es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}});
-},{threshold:0.08,rootMargin:'0px 0px -36px 0px'});
-document.querySelectorAll('.rv').forEach((el,i)=>{
+/* reveal */
+var obs=new IntersectionObserver(function(es){
+  es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}});
+},{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.rv').forEach(function(el,i){
   el.style.transitionDelay=(i%4)*0.07+'s';
   obs.observe(el);
 });
+/* faq */
 function tFaq(btn){
-  const i=btn.closest('.fqi'),o=i.classList.contains('open');
-  document.querySelectorAll('.fqi.open').forEach(x=>{x.classList.remove('open');x.querySelector('.fqq').setAttribute('aria-expanded','false')});
-  if(!o){i.classList.add('open');btn.setAttribute('aria-expanded','true')}
+  var item=btn.closest('.fqi'),open=item.classList.contains('open');
+  document.querySelectorAll('.fqi.open').forEach(function(x){x.classList.remove('open');x.querySelector('.fqq').setAttribute('aria-expanded','false');});
+  if(!open){item.classList.add('open');btn.setAttribute('aria-expanded','true')}
 }
+/* channel tabs */
 function fCh(cat,btn){
-  document.querySelectorAll('.tab').forEach(b=>b.classList.remove('on'));
+  document.querySelectorAll('.ctab').forEach(function(b){b.classList.remove('on')});
   btn.classList.add('on');
-  document.querySelectorAll('.cp').forEach(p=>{p.style.display=p.dataset.c===cat?'flex':'none'});
+  document.querySelectorAll('.cpill').forEach(function(p){
+    p.style.display=p.dataset.c===cat?'flex':'none';
+  });
 }
-document.querySelectorAll('.cp').forEach(p=>{if(p.dataset.c!=='no')p.style.display='none'});
+document.querySelectorAll('.cpill').forEach(function(p){
+  if(p.dataset.c!=='no')p.style.display='none';
+});
 </script>
 </body>
 </html>
