@@ -1,0 +1,1857 @@
+<!DOCTYPE html>
+<html lang="nb-NO">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NorgesIPTV – Beste IPTV i Norge 2025 | 4K HD Live TV</title>
+  <meta name="description" content="NorgesIPTV – Premium IPTV-tjeneste i Norge med 4K-kvalitet. Over 25 000 kanaler, 100 000+ filmer og serier. NRK, TV2, Viaplay, sport og mer. Prøv gratis i 24 timer!" />
+  <meta name="keywords" content="iptv norge, beste iptv, norges iptv, iptv 4k norge, norsk iptv, iptv abonnement norge, live tv norge, iptv tjeneste, nrk iptv, tv2 iptv, viaplay iptv, eliteserien iptv, premier league iptv" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://norgesiptv.com/" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="NorgesIPTV – Beste IPTV i Norge 2025" />
+  <meta property="og:description" content="Premium norsk IPTV med 4K-kvalitet. 25 000+ kanaler, 100 000+ filmer. Prøv gratis!" />
+  <meta property="og:url" content="https://norgesiptv.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="nb_NO" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "NorgesIPTV",
+    "url": "https://norgesiptv.com",
+    "description": "Norges beste IPTV-tjeneste med 4K-kvalitet, 25 000+ kanaler og 100 000+ filmer og serier.",
+    "areaServed": "NO",
+    "serviceType": "IPTV-tjeneste",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "1 Måned IPTV",
+        "price": "99",
+        "priceCurrency": "NOK",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "12 Måneder IPTV",
+        "price": "499",
+        "priceCurrency": "NOK",
+        "availability": "https://schema.org/InStock"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #040810;
+      --bg2: #070d1a;
+      --bg3: #0a1225;
+      --surface: rgba(255,255,255,0.04);
+      --surface2: rgba(255,255,255,0.07);
+      --border: rgba(255,255,255,0.08);
+      --accent: #E8FF3C;
+      --accent2: #3CE8FF;
+      --accent3: #FF3C6E;
+      --text: #F0F4FF;
+      --text2: #8B97B8;
+      --text3: #5B6880;
+      --grad: linear-gradient(135deg, #E8FF3C 0%, #3CE8FF 100%);
+      --grad2: linear-gradient(135deg, #3CE8FF 0%, #3C6EFF 100%);
+      --radius: 16px;
+      --radius-lg: 24px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* ─── NOISE OVERLAY ─── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.35;
+    }
+
+    /* ─── GLOW ORBS ─── */
+    .orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+      z-index: 0;
+      animation: orbFloat 8s ease-in-out infinite;
+    }
+    .orb-1 { width: 600px; height: 600px; background: rgba(232,255,60,0.06); top: -200px; right: -100px; animation-delay: 0s; }
+    .orb-2 { width: 500px; height: 500px; background: rgba(60,232,255,0.05); bottom: 20%; left: -150px; animation-delay: -3s; }
+    .orb-3 { width: 400px; height: 400px; background: rgba(60,110,255,0.06); top: 40%; right: 10%; animation-delay: -6s; }
+
+    @keyframes orbFloat {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-40px) scale(1.05); }
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 0 5%;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(4,8,16,0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      transition: all 0.3s;
+    }
+
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+    .nav-logo span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text2);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+      letter-spacing: 0.01em;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    .btn-nav {
+      background: var(--accent);
+      color: #040810 !important;
+      padding: 0.5rem 1.2rem;
+      border-radius: 100px;
+      font-weight: 700 !important;
+      transition: all 0.2s !important;
+    }
+    .btn-nav:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(232,255,60,0.4); }
+
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: 0.3s; }
+
+    /* ─── HERO ─── */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 5% 80px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      max-width: 1300px;
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(232,255,60,0.1);
+      border: 1px solid rgba(232,255,60,0.2);
+      border-radius: 100px;
+      padding: 0.4rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      animation: fadeInUp 0.6s ease both;
+    }
+    .hero-badge::before { content: '●'; font-size: 0.5rem; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+      animation: fadeInUp 0.6s 0.1s ease both;
+    }
+    h1 .highlight {
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-desc {
+      font-size: 1.15rem;
+      color: var(--text2);
+      max-width: 520px;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+      animation: fadeInUp 0.6s 0.2s ease both;
+      font-weight: 300;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+      animation: fadeInUp 0.6s 0.3s ease both;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--accent);
+      color: #040810;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.9rem 2rem;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: all 0.3s;
+      box-shadow: 0 0 30px rgba(232,255,60,0.25);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 50px rgba(232,255,60,0.5);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--surface2);
+      color: var(--text);
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.9rem 2rem;
+      border-radius: 100px;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      transition: all 0.3s;
+    }
+    .btn-secondary:hover { background: var(--surface); border-color: rgba(255,255,255,0.15); }
+
+    .hero-stats {
+      display: flex;
+      gap: 2.5rem;
+      animation: fadeInUp 0.6s 0.4s ease both;
+    }
+    .hero-stat .num {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--text);
+    }
+    .hero-stat .num span { color: var(--accent); }
+    .hero-stat .label { font-size: 0.8rem; color: var(--text3); margin-top: 0.1rem; }
+
+    /* Hero Visual */
+    .hero-visual {
+      position: relative;
+      animation: fadeInRight 0.8s 0.3s ease both;
+    }
+    .tv-frame {
+      position: relative;
+      background: var(--bg3);
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: 0 40px 100px rgba(0,0,0,0.6), 0 0 0 1px var(--border);
+    }
+    .tv-bar {
+      height: 36px;
+      background: rgba(255,255,255,0.03);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+      gap: 6px;
+    }
+    .tv-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .tv-dot:nth-child(1) { background: var(--accent3); }
+    .tv-dot:nth-child(2) { background: var(--accent); }
+    .tv-dot:nth-child(3) { background: var(--accent2); }
+    .tv-content {
+      padding: 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+    }
+    .channel-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+      transition: all 0.3s;
+    }
+    .channel-card:hover { background: var(--surface2); border-color: rgba(232,255,60,0.2); transform: scale(1.02); }
+    .channel-card.featured {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: linear-gradient(135deg, rgba(232,255,60,0.07), rgba(60,232,255,0.05));
+      border-color: rgba(232,255,60,0.15);
+    }
+    .ch-icon { font-size: 2rem; }
+    .ch-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.2rem; }
+    .ch-live { font-size: 0.7rem; color: var(--accent3); font-weight: 600; display: flex; align-items: center; gap: 0.3rem; }
+    .ch-live::before { content: '●'; animation: pulse 1.5s infinite; font-size: 0.5rem; }
+    .ch-badge { font-size: 0.65rem; color: var(--accent); background: rgba(232,255,60,0.1); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 600; }
+    .quality-badge {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      background: var(--accent);
+      color: #040810;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 0.75rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 8px;
+    }
+
+    /* Float cards */
+    .float-card {
+      position: absolute;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 0.8rem 1.2rem;
+      font-size: 0.8rem;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+    .float-card-1 { top: -20px; left: -40px; animation: floatCard 4s ease-in-out infinite; }
+    .float-card-2 { bottom: -20px; right: -30px; animation: floatCard 4s 2s ease-in-out infinite; }
+    .float-label { color: var(--text3); font-size: 0.7rem; margin-bottom: 0.3rem; }
+    .float-val { font-family: 'Syne', sans-serif; font-weight: 700; color: var(--text); }
+    .float-val .accent { color: var(--accent); }
+
+    @keyframes floatCard { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    @keyframes fadeInUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes fadeInRight { from{opacity:0;transform:translateX(40px)} to{opacity:1;transform:translateX(0)} }
+
+    /* ─── CHANNEL LOGOS TICKER ─── */
+    .ticker-section {
+      position: relative;
+      z-index: 1;
+      padding: 3rem 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .ticker-label {
+      text-align: center;
+      color: var(--text3);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+    .ticker-wrap { overflow: hidden; }
+    .ticker-track {
+      display: flex;
+      gap: 3rem;
+      width: max-content;
+      animation: ticker 30s linear infinite;
+    }
+    .ticker-track:hover { animation-play-state: paused; }
+    .ticker-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: var(--text2);
+      font-family: 'Syne', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      padding: 0.5rem 1.2rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      transition: all 0.3s;
+    }
+    .ticker-item:hover { color: var(--text); border-color: rgba(232,255,60,0.3); }
+    .ticker-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+    @keyframes ticker { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+    /* ─── SECTIONS ─── */
+    section { position: relative; z-index: 1; }
+
+    .section-inner {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 5%;
+    }
+
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .section-tag::before { content: ''; width: 20px; height: 2px; background: var(--accent); border-radius: 2px; }
+
+    h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.2rem;
+    }
+    h2 .grad { background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+    .section-desc { font-size: 1.05rem; color: var(--text2); max-width: 600px; line-height: 1.7; font-weight: 300; }
+
+    /* ─── FEATURES GRID ─── */
+    .features-section { padding: 100px 0; }
+
+    .features-intro { margin-bottom: 4rem; }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      transition: all 0.4s;
+      position: relative;
+      overflow: hidden;
+    }
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--grad);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    .feature-card:hover { transform: translateY(-4px); border-color: rgba(232,255,60,0.25); }
+    .feature-card:hover::before { opacity: 0.03; }
+
+    .feature-card.large { grid-column: 1 / 3; display: flex; gap: 2rem; align-items: flex-start; }
+
+    .feature-icon {
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+      display: block;
+    }
+    .feature-icon-wrap {
+      width: 56px; height: 56px;
+      background: rgba(232,255,60,0.08);
+      border: 1px solid rgba(232,255,60,0.15);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      margin-bottom: 1.2rem;
+    }
+    h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.01em;
+    }
+    .feature-desc { font-size: 0.9rem; color: var(--text2); line-height: 1.6; font-weight: 300; }
+
+    /* ─── PRICING ─── */
+    .pricing-section { padding: 100px 0; }
+    .pricing-intro { text-align: center; margin-bottom: 4rem; }
+    .pricing-intro .section-desc { margin: 0 auto; }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.2rem;
+      align-items: start;
+    }
+
+    .price-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.8rem;
+      transition: all 0.4s;
+      position: relative;
+      overflow: hidden;
+    }
+    .price-card:hover { transform: translateY(-6px); }
+
+    .price-card.featured {
+      background: linear-gradient(160deg, rgba(232,255,60,0.08) 0%, rgba(60,232,255,0.05) 100%);
+      border-color: rgba(232,255,60,0.3);
+      transform: scale(1.03);
+    }
+    .price-card.featured:hover { transform: scale(1.03) translateY(-6px); }
+
+    .price-badge {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.2rem;
+      background: var(--accent);
+      color: #040810;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 0.65rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.7rem;
+      border-radius: 6px;
+    }
+
+    .price-period {
+      font-size: 0.8rem;
+      color: var(--text3);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .price-amount {
+      display: flex;
+      align-items: baseline;
+      gap: 0.3rem;
+      margin-bottom: 0.4rem;
+    }
+    .price-curr { font-size: 1rem; color: var(--text2); }
+    .price-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1;
+      color: var(--text);
+    }
+    .price-num.highlight { color: var(--accent); }
+    .price-orig {
+      font-size: 0.8rem;
+      color: var(--text3);
+      text-decoration: line-through;
+      margin-bottom: 1.5rem;
+    }
+    .price-save {
+      display: inline-block;
+      background: rgba(232,255,60,0.12);
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+      margin-bottom: 1.5rem;
+    }
+
+    .price-features { list-style: none; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 0.8rem; }
+    .price-features li {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-size: 0.88rem;
+      color: var(--text2);
+      font-weight: 300;
+    }
+    .price-features li::before {
+      content: '✓';
+      width: 18px; height: 18px;
+      background: rgba(232,255,60,0.12);
+      color: var(--accent);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+
+    .btn-price {
+      display: block;
+      text-align: center;
+      padding: 0.85rem;
+      border-radius: 12px;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.3s;
+      border: 1px solid var(--border);
+      color: var(--text2);
+      background: var(--surface2);
+    }
+    .btn-price:hover { background: var(--surface); color: var(--text); }
+    .btn-price.featured-btn {
+      background: var(--accent);
+      color: #040810;
+      border-color: transparent;
+      box-shadow: 0 0 30px rgba(232,255,60,0.2);
+    }
+    .btn-price.featured-btn:hover { box-shadow: 0 0 50px rgba(232,255,60,0.4); transform: translateY(-2px); }
+
+    /* ─── CHANNELS ─── */
+    .channels-section { padding: 100px 0; }
+    .channels-intro { margin-bottom: 3rem; }
+
+    .channels-tabs {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      padding: 0.5rem 1.2rem;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text2);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .tab-btn:hover, .tab-btn.active {
+      background: var(--accent);
+      color: #040810;
+      border-color: transparent;
+    }
+
+    .channels-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 0.8rem;
+    }
+
+    .ch-pill {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.7rem 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text2);
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .ch-pill:hover { border-color: rgba(232,255,60,0.25); color: var(--text); transform: scale(1.03); }
+    .ch-flag { font-size: 1.1rem; }
+
+    /* ─── SPORTS ─── */
+    .sports-section { padding: 100px 0; }
+    .sports-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .sport-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s;
+    }
+    .sport-card:hover { transform: translateY(-4px); border-color: rgba(232,255,60,0.2); }
+    .sport-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+    .sport-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.95rem; margin-bottom: 0.3rem; }
+    .sport-leagues { font-size: 0.78rem; color: var(--text3); }
+
+    /* ─── HOW IT WORKS ─── */
+    .how-section { padding: 100px 0; }
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 4rem;
+      position: relative;
+    }
+    .how-grid::before {
+      content: '';
+      position: absolute;
+      top: 36px;
+      left: calc(16.66% + 20px);
+      right: calc(16.66% + 20px);
+      height: 1px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      opacity: 0.3;
+    }
+    .how-step {
+      text-align: center;
+      position: relative;
+    }
+    .how-num {
+      width: 72px; height: 72px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Syne', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin: 0 auto 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .how-step h3 { margin-bottom: 0.7rem; }
+    .how-step p { font-size: 0.9rem; color: var(--text2); line-height: 1.6; font-weight: 300; }
+
+    /* ─── DEVICES ─── */
+    .devices-section { padding: 100px 0; }
+    .devices-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin-top: 4rem;
+    }
+    .device-list { display: flex; flex-direction: column; gap: 1rem; }
+    .device-item {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      padding: 1.2rem 1.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: all 0.3s;
+    }
+    .device-item:hover { border-color: rgba(232,255,60,0.2); transform: translateX(6px); }
+    .device-ico { font-size: 1.8rem; }
+    .device-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.95rem; margin-bottom: 0.2rem; }
+    .device-sub { font-size: 0.8rem; color: var(--text3); }
+
+    .devices-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .big-screen {
+      width: 100%;
+      aspect-ratio: 16/10;
+      background: var(--bg3);
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .screen-content {
+      font-size: 4rem;
+      opacity: 0.3;
+    }
+    .screen-badge {
+      position: absolute;
+      top: 1rem; right: 1rem;
+      background: var(--accent);
+      color: #040810;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 0.7rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 8px;
+    }
+    .screen-quality {
+      position: absolute;
+      bottom: 1rem; left: 1rem;
+      display: flex;
+      gap: 0.5rem;
+    }
+    .sq { background: rgba(232,255,60,0.12); color: var(--accent); font-size: 0.65rem; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 4px; }
+
+    /* ─── TESTIMONIALS ─── */
+    .testimonials-section { padding: 100px 0; }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 4rem;
+    }
+    .testi-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      transition: all 0.3s;
+    }
+    .testi-card:hover { transform: translateY(-4px); border-color: rgba(60,232,255,0.2); }
+    .testi-stars { color: var(--accent); font-size: 1rem; letter-spacing: 2px; margin-bottom: 1rem; }
+    .testi-text { font-size: 0.92rem; color: var(--text2); line-height: 1.7; margin-bottom: 1.5rem; font-style: italic; font-weight: 300; }
+    .testi-author { display: flex; align-items: center; gap: 0.8rem; }
+    .testi-avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: var(--grad);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 0.85rem;
+      color: #040810;
+    }
+    .testi-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.9rem; }
+    .testi-loc { font-size: 0.75rem; color: var(--text3); }
+
+    /* ─── FAQ ─── */
+    .faq-section { padding: 100px 0; }
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 4rem;
+    }
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: border-color 0.3s;
+    }
+    .faq-item.open { border-color: rgba(232,255,60,0.2); }
+    .faq-q {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.3rem 1.5rem;
+      background: transparent;
+      border: none;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-align: left;
+      cursor: pointer;
+      gap: 1rem;
+    }
+    .faq-toggle {
+      width: 24px; height: 24px;
+      border-radius: 6px;
+      background: var(--surface2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1rem;
+      color: var(--accent);
+      transition: transform 0.3s;
+    }
+    .faq-item.open .faq-toggle { transform: rotate(45deg); }
+    .faq-a {
+      padding: 0 1.5rem 1.3rem;
+      font-size: 0.88rem;
+      color: var(--text2);
+      line-height: 1.7;
+      font-weight: 300;
+      display: none;
+    }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ─── GUARANTEE ─── */
+    .guarantee-section {
+      padding: 80px 0;
+    }
+    .guarantee-inner {
+      background: linear-gradient(135deg, rgba(232,255,60,0.06), rgba(60,232,255,0.04));
+      border: 1px solid rgba(232,255,60,0.15);
+      border-radius: 32px;
+      padding: 4rem;
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+    .guarantee-icon { font-size: 4rem; flex-shrink: 0; }
+    .guarantee-text h2 { font-size: 2.2rem; margin-bottom: 0.8rem; }
+    .guarantee-text p { color: var(--text2); font-size: 1rem; max-width: 600px; font-weight: 300; }
+
+    /* ─── CTA BANNER ─── */
+    .cta-section { padding: 100px 5%; text-align: center; }
+    .cta-inner {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .cta-section h2 { font-size: clamp(2.2rem, 5vw, 3.5rem); margin-bottom: 1.2rem; }
+    .cta-section p { color: var(--text2); font-size: 1.1rem; margin-bottom: 2.5rem; font-weight: 300; }
+    .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 4rem 5% 2rem;
+      position: relative;
+      z-index: 1;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 3rem;
+      max-width: 1300px;
+      margin: 0 auto 3rem;
+    }
+    .footer-brand p { font-size: 0.88rem; color: var(--text3); margin: 1rem 0 1.5rem; line-height: 1.7; max-width: 280px; }
+    .footer-socials { display: flex; gap: 0.8rem; }
+    .social-btn {
+      width: 36px; height: 36px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .social-btn:hover { background: var(--surface2); border-color: rgba(232,255,60,0.2); }
+    .footer-col h4 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.9rem; margin-bottom: 1.2rem; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-links a { text-decoration: none; color: var(--text3); font-size: 0.85rem; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-contact { font-size: 0.85rem; color: var(--text3); line-height: 1.8; }
+    .footer-contact a { color: var(--accent2); text-decoration: none; }
+    .footer-bottom {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--text3);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-legal { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .footer-legal a { color: var(--text3); text-decoration: none; transition: color 0.2s; }
+    .footer-legal a:hover { color: var(--text); }
+
+    /* ─── SCROLL ANIMATIONS ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ─── MOBILE NAV ─── */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      top: 72px;
+      background: rgba(4,8,16,0.97);
+      backdrop-filter: blur(20px);
+      z-index: 999;
+      padding: 2rem 5%;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: 1.1rem;
+      font-weight: 500;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid var(--border);
+      transition: color 0.2s;
+    }
+    .mobile-menu a:hover { color: var(--accent); }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 1100px) {
+      .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+      .features-grid { grid-template-columns: 1fr 1fr; }
+      .feature-card.large { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .sports-grid { grid-template-columns: repeat(2, 1fr); }
+      .devices-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr 1fr; }
+      .faq-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .guarantee-inner { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .features-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .sports-grid { grid-template-columns: repeat(2, 1fr); }
+      .how-grid { grid-template-columns: 1fr; }
+      .how-grid::before { display: none; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .feature-card.large { flex-direction: column; }
+      .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Glow Orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <!-- ─── NAVIGATION ─── -->
+  <nav id="navbar">
+    <a href="/" class="nav-logo">Norges<span>IPTV</span></a>
+    <ul class="nav-links">
+      <li><a href="#kanaler">Kanaler</a></li>
+      <li><a href="#priser">Priser</a></li>
+      <li><a href="#sport">Sport</a></li>
+      <li><a href="#enheter">Enheter</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#priser" class="btn-nav">Prøv 24t gratis</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Meny">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#kanaler" onclick="toggleMenu()">Kanaler</a>
+    <a href="#priser" onclick="toggleMenu()">Priser</a>
+    <a href="#sport" onclick="toggleMenu()">Sport</a>
+    <a href="#enheter" onclick="toggleMenu()">Enheter</a>
+    <a href="#faq" onclick="toggleMenu()">FAQ</a>
+    <a href="#priser" class="btn-primary" style="text-align:center;margin-top:1rem" onclick="toggleMenu()">Prøv 24t gratis</a>
+  </div>
+
+  <!-- ─── HERO ─── -->
+  <section class="hero" aria-label="Introduksjon">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">🇳🇴 Norges #1 IPTV-leverandør 2025</div>
+        <h1>
+          Se Alt Du<br />
+          Elsker i <span class="highlight">4K HD</span><br />
+          – Uten Kabel
+        </h1>
+        <p class="hero-desc">
+          Over 25 000 norske og internasjonale kanaler, 100 000+ filmer og serier – direkte på din TV, mobil eller PC. Uten paraboll. Uten binding.
+        </p>
+        <div class="hero-ctas">
+          <a href="#priser" class="btn-primary">
+            ▶ Start Gratis Prøveperiode
+          </a>
+          <a href="#kanaler" class="btn-secondary">
+            Se kanalliste →
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="num">25<span>k+</span></div>
+            <div class="label">Live kanaler</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">100<span>k+</span></div>
+            <div class="label">Filmer & serier</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">99<span>%</span></div>
+            <div class="label">Oppetid</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="float-card float-card-1">
+          <div class="float-label">Nå spiller</div>
+          <div class="float-val">⚽ <span class="accent">Eliteserien</span> – Live 4K</div>
+        </div>
+        <div class="tv-frame">
+          <div class="tv-bar">
+            <div class="tv-dot"></div>
+            <div class="tv-dot"></div>
+            <div class="tv-dot"></div>
+          </div>
+          <div class="tv-content">
+            <div class="channel-card featured">
+              <div class="ch-icon">📺</div>
+              <div>
+                <div class="ch-name">NRK 1</div>
+                <div class="ch-live">LIVE nå</div>
+              </div>
+              <div class="ch-badge">4K</div>
+            </div>
+            <div class="channel-card">
+              <div class="ch-icon">🎬</div>
+              <div class="ch-name">TV 2</div>
+              <div class="ch-live">LIVE</div>
+            </div>
+            <div class="channel-card">
+              <div class="ch-icon">🏆</div>
+              <div class="ch-name">Viaplay</div>
+              <div class="ch-badge">Sport</div>
+            </div>
+            <div class="channel-card">
+              <div class="ch-icon">🎭</div>
+              <div class="ch-name">Discovery+</div>
+              <div class="ch-live">LIVE</div>
+            </div>
+            <div class="channel-card">
+              <div class="ch-icon">🌍</div>
+              <div class="ch-name">BBC World</div>
+              <div class="ch-badge">HD</div>
+            </div>
+          </div>
+          <div class="quality-badge">4K UHD</div>
+        </div>
+        <div class="float-card float-card-2">
+          <div class="float-label">Aktive brukere</div>
+          <div class="float-val"><span class="accent">10 000+</span> tilfredse kunder</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CHANNEL TICKER ─── -->
+  <div class="ticker-section" aria-hidden="true">
+    <div class="ticker-label">Inkluderte kanaler</div>
+    <div class="ticker-wrap">
+      <div class="ticker-track">
+        <div class="ticker-item"><span class="ticker-dot"></span>NRK 1</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>NRK 2</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>NRK 3</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>TV 2</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>TV 2 Sport</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>Viaplay</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>V Sport 1</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>V Sport 2</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>TV Norge</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>MAX</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>C More</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>BBC One</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>CNN</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>Discovery</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>National Geo</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>Eurosport</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>Canal Sport</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>TVNorge</div>
+        <!-- duplicate for infinite loop -->
+        <div class="ticker-item"><span class="ticker-dot"></span>NRK 1</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>NRK 2</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>NRK 3</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>TV 2</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>TV 2 Sport</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>Viaplay</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>V Sport 1</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>V Sport 2</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>TV Norge</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>MAX</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>C More</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>BBC One</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>CNN</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>Discovery</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>National Geo</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>Eurosport</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>Canal Sport</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>TVNorge</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── FEATURES ─── -->
+  <section class="features-section" id="funksjoner" aria-labelledby="features-heading">
+    <div class="section-inner">
+      <div class="features-intro reveal">
+        <div class="section-tag">Hvorfor NorgesIPTV</div>
+        <h2 id="features-heading">Alt du trenger,<br /><span class="grad">ingenting du ikke vil ha</span></h2>
+        <p class="section-desc">Premium IPTV bygget spesielt for norske brukere. Stabil, rask og enkel å bruke.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card large reveal">
+          <div>
+            <div class="feature-icon-wrap">🎯</div>
+            <h3>25 000+ Kanaler – Ingen Frysing</h3>
+            <p class="feature-desc">Vår ultra-raske IPTV-server med 99,9 % oppetid leverer krystallklar 4K- og HD-streaming uten bufring, frysing eller avbrudd. Dedikerte norske servere for best mulig ytelse.</p>
+          </div>
+          <div style="flex-shrink:0;display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;min-width:200px">
+            <div style="text-align:center;padding:1.2rem;background:var(--surface);border-radius:12px;border:1px solid var(--border)">
+              <div style="font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;color:var(--accent)">25k+</div>
+              <div style="font-size:0.7rem;color:var(--text3);margin-top:0.3rem">Kanaler</div>
+            </div>
+            <div style="text-align:center;padding:1.2rem;background:var(--surface);border-radius:12px;border:1px solid var(--border)">
+              <div style="font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;color:var(--accent2)">4K</div>
+              <div style="font-size:0.7rem;color:var(--text3);margin-top:0.3rem">Kvalitet</div>
+            </div>
+            <div style="text-align:center;padding:1.2rem;background:var(--surface);border-radius:12px;border:1px solid var(--border)">
+              <div style="font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;color:var(--accent3)">99%</div>
+              <div style="font-size:0.7rem;color:var(--text3);margin-top:0.3rem">Oppetid</div>
+            </div>
+            <div style="text-align:center;padding:1.2rem;background:var(--surface);border-radius:12px;border:1px solid var(--border)">
+              <div style="font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;color:var(--text)">24/7</div>
+              <div style="font-size:0.7rem;color:var(--text3);margin-top:0.3rem">Support</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon-wrap">🎬</div>
+          <h3>100 000+ Filmer & Serier</h3>
+          <p class="feature-desc">Nyeste og beste VOD-bibliotek med norske og utenlandske filmer og serier. Alltid oppdatert med de siste utgivelsene.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon-wrap">⚡</div>
+          <h3>Øyeblikkelig Aktivering</h3>
+          <p class="feature-desc">Konto aktiveres innen minutter etter betaling. Du starter å se på favorittinnholdet ditt med en gang.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon-wrap">📱</div>
+          <h3>Alle Enheter Støttes</h3>
+          <p class="feature-desc">Smart TV, Android, iOS, Fire Stick, MAG-boks, PC, Mac – alle enheter støttes med enkel oppsett.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon-wrap">🛡️</div>
+          <h3>30-Dagers Garanti</h3>
+          <p class="feature-desc">Ikke fornøyd? Vi tilbyr full pengene-tilbake-garanti de første 30 dagene. Ingen spørsmål stilt.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon-wrap">🎧</div>
+          <h3>24/7 Norsk Support</h3>
+          <p class="feature-desc">Dedikert norsktalende kundestøtte tilgjengelig hele døgnet via chat, e-post og WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CHANNELS ─── -->
+  <section class="channels-section" id="kanaler" aria-labelledby="channels-heading">
+    <div class="section-inner">
+      <div class="channels-intro reveal">
+        <div class="section-tag">Kanalliste</div>
+        <h2 id="channels-heading">Alle kanaler du<br /><span class="grad">allerede elsker</span></h2>
+        <p class="section-desc">Fra norske favoritter til internasjonale kanaler. Alt er inkludert i ett abonnement.</p>
+      </div>
+      <div class="channels-tabs">
+        <button class="tab-btn active" onclick="filterChannels('norsk', this)">🇳🇴 Norsk</button>
+        <button class="tab-btn" onclick="filterChannels('sport', this)">⚽ Sport</button>
+        <button class="tab-btn" onclick="filterChannels('nordisk', this)">🌐 Nordisk</button>
+        <button class="tab-btn" onclick="filterChannels('internasjonal', this)">🌍 Internasjonal</button>
+        <button class="tab-btn" onclick="filterChannels('film', this)">🎬 Film & TV</button>
+        <button class="tab-btn" onclick="filterChannels('barn', this)">👶 Barn</button>
+      </div>
+      <div class="channels-grid" id="channelsGrid">
+        <!-- Norsk -->
+        <div class="ch-pill" data-cat="norsk"><span class="ch-flag">🇳🇴</span> NRK 1</div>
+        <div class="ch-pill" data-cat="norsk"><span class="ch-flag">🇳🇴</span> NRK 2</div>
+        <div class="ch-pill" data-cat="norsk"><span class="ch-flag">🇳🇴</span> NRK 3</div>
+        <div class="ch-pill" data-cat="norsk"><span class="ch-flag">🇳🇴</span> TV 2</div>
+        <div class="ch-pill" data-cat="norsk"><span class="ch-flag">🇳🇴</span> TV Norge</div>
+        <div class="ch-pill" data-cat="norsk"><span class="ch-flag">🇳🇴</span> NRK Super</div>
+        <div class="ch-pill" data-cat="norsk"><span class="ch-flag">🇳🇴</span> TV 2 Zebra</div>
+        <div class="ch-pill" data-cat="norsk"><span class="ch-flag">🇳🇴</span> FEM</div>
+        <div class="ch-pill" data-cat="norsk"><span class="ch-flag">🇳🇴</span> VG TV</div>
+        <div class="ch-pill" data-cat="norsk"><span class="ch-flag">🇳🇴</span> Nettavisen</div>
+        <!-- Sport -->
+        <div class="ch-pill" data-cat="sport"><span class="ch-flag">⚽</span> TV 2 Sport 1</div>
+        <div class="ch-pill" data-cat="sport"><span class="ch-flag">⚽</span> TV 2 Sport 2</div>
+        <div class="ch-pill" data-cat="sport"><span class="ch-flag">🏆</span> Viaplay</div>
+        <div class="ch-pill" data-cat="sport"><span class="ch-flag">🏆</span> V Sport 1</div>
+        <div class="ch-pill" data-cat="sport"><span class="ch-flag">🏆</span> V Sport 2</div>
+        <div class="ch-pill" data-cat="sport"><span class="ch-flag">🏆</span> V Sport 3</div>
+        <div class="ch-pill" data-cat="sport"><span class="ch-flag">🎾</span> Eurosport 1</div>
+        <div class="ch-pill" data-cat="sport"><span class="ch-flag">🎾</span> Eurosport 2</div>
+        <div class="ch-pill" data-cat="sport"><span class="ch-flag">⚽</span> Canal Sport</div>
+        <div class="ch-pill" data-cat="sport"><span class="ch-flag">🏊</span> Sport 1</div>
+        <!-- Nordisk -->
+        <div class="ch-pill" data-cat="nordisk"><span class="ch-flag">🇸🇪</span> SVT 1</div>
+        <div class="ch-pill" data-cat="nordisk"><span class="ch-flag">🇸🇪</span> SVT 2</div>
+        <div class="ch-pill" data-cat="nordisk"><span class="ch-flag">🇸🇪</span> TV4</div>
+        <div class="ch-pill" data-cat="nordisk"><span class="ch-flag">🇩🇰</span> DR 1</div>
+        <div class="ch-pill" data-cat="nordisk"><span class="ch-flag">🇩🇰</span> TV2 DK</div>
+        <div class="ch-pill" data-cat="nordisk"><span class="ch-flag">🇫🇮</span> Yle 1</div>
+        <div class="ch-pill" data-cat="nordisk"><span class="ch-flag">🇫🇮</span> MTV3</div>
+        <div class="ch-pill" data-cat="nordisk"><span class="ch-flag">🌐</span> C More</div>
+        <!-- Internasjonal -->
+        <div class="ch-pill" data-cat="internasjonal"><span class="ch-flag">🇬🇧</span> BBC One</div>
+        <div class="ch-pill" data-cat="internasjonal"><span class="ch-flag">🇬🇧</span> BBC Two</div>
+        <div class="ch-pill" data-cat="internasjonal"><span class="ch-flag">🇺🇸</span> CNN</div>
+        <div class="ch-pill" data-cat="internasjonal"><span class="ch-flag">🇺🇸</span> Fox News</div>
+        <div class="ch-pill" data-cat="internasjonal"><span class="ch-flag">🌍</span> Al Jazeera</div>
+        <div class="ch-pill" data-cat="internasjonal"><span class="ch-flag">🌍</span> DW</div>
+        <!-- Film & TV -->
+        <div class="ch-pill" data-cat="film"><span class="ch-flag">🎬</span> MAX</div>
+        <div class="ch-pill" data-cat="film"><span class="ch-flag">🎬</span> Discovery+</div>
+        <div class="ch-pill" data-cat="film"><span class="ch-flag">🎬</span> National Geographic</div>
+        <div class="ch-pill" data-cat="film"><span class="ch-flag">🎬</span> TLC</div>
+        <div class="ch-pill" data-cat="film"><span class="ch-flag">🎬</span> History</div>
+        <div class="ch-pill" data-cat="film"><span class="ch-flag">😄</span> Comedy Central</div>
+        <!-- Barn -->
+        <div class="ch-pill" data-cat="barn"><span class="ch-flag">👶</span> NRK Super</div>
+        <div class="ch-pill" data-cat="barn"><span class="ch-flag">👶</span> Cartoon Network</div>
+        <div class="ch-pill" data-cat="barn"><span class="ch-flag">👶</span> Disney Channel</div>
+        <div class="ch-pill" data-cat="barn"><span class="ch-flag">👶</span> Nick Jr.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SPORT ─── -->
+  <section class="sports-section" id="sport" aria-labelledby="sport-heading">
+    <div class="section-inner">
+      <div class="reveal">
+        <div class="section-tag">Sport i 4K</div>
+        <h2 id="sport-heading">Aldri gå glipp av<br /><span class="grad">en eneste kamp</span></h2>
+        <p class="section-desc">Se alle de store ligaene og turneringene live i krystallklar 4K-kvalitet.</p>
+      </div>
+      <div class="sports-grid">
+        <div class="sport-card reveal">
+          <span class="sport-icon">⚽</span>
+          <div class="sport-name">Eliteserien</div>
+          <div class="sport-leagues">Norsk toppfotball live</div>
+        </div>
+        <div class="sport-card reveal">
+          <span class="sport-icon">🏆</span>
+          <div class="sport-name">Premier League</div>
+          <div class="sport-leagues">Alle 380 kamper</div>
+        </div>
+        <div class="sport-card reveal">
+          <span class="sport-icon">⭐</span>
+          <div class="sport-name">Champions League</div>
+          <div class="sport-leagues">Europas beste</div>
+        </div>
+        <div class="sport-card reveal">
+          <span class="sport-icon">🇪🇸</span>
+          <div class="sport-name">La Liga</div>
+          <div class="sport-leagues">Spansk toppfotball</div>
+        </div>
+        <div class="sport-card reveal">
+          <span class="sport-icon">🇩🇪</span>
+          <div class="sport-name">Bundesliga</div>
+          <div class="sport-leagues">Tysk fotball</div>
+        </div>
+        <div class="sport-card reveal">
+          <span class="sport-icon">🇮🇹</span>
+          <div class="sport-name">Serie A</div>
+          <div class="sport-leagues">Italiensk toppfotball</div>
+        </div>
+        <div class="sport-card reveal">
+          <span class="sport-icon">🏒</span>
+          <div class="sport-name">NHL</div>
+          <div class="sport-leagues">Ishockey live</div>
+        </div>
+        <div class="sport-card reveal">
+          <span class="sport-icon">🎾</span>
+          <div class="sport-name">Grand Slam</div>
+          <div class="sport-leagues">Tennis & mer</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PRICING ─── -->
+  <section class="pricing-section" id="priser" aria-labelledby="pricing-heading">
+    <div class="section-inner">
+      <div class="pricing-intro reveal">
+        <div class="section-tag">Priser</div>
+        <h2 id="pricing-heading">Velg ditt<br /><span class="grad">abonnement</span></h2>
+        <p class="section-desc">Ingen skjulte kostnader. Ingen binding. Avbestill når som helst.</p>
+      </div>
+      <div class="pricing-grid">
+
+        <div class="price-card reveal">
+          <div class="price-period">24 Timer</div>
+          <div class="price-amount">
+            <span class="price-curr">kr</span>
+            <span class="price-num">29</span>
+          </div>
+          <div class="price-orig" style="visibility:hidden">kr 29</div>
+          <ul class="price-features">
+            <li>Gratis prøveperiode</li>
+            <li>Alle kanaler inkludert</li>
+            <li>4K og HD kvalitet</li>
+            <li>Alle enheter</li>
+            <li>24/7 support</li>
+          </ul>
+          <a href="mailto:post@norgesiptv.com?subject=Bestilling 24t prøve" class="btn-price">Bestill nå</a>
+        </div>
+
+        <div class="price-card reveal">
+          <div class="price-period">1 Måned</div>
+          <div class="price-amount">
+            <span class="price-curr">kr</span>
+            <span class="price-num">99</span>
+          </div>
+          <div class="price-orig" style="visibility:hidden">–</div>
+          <ul class="price-features">
+            <li>25 000+ kanaler</li>
+            <li>100 000+ VOD</li>
+            <li>4K og HD kvalitet</li>
+            <li>Alle enheter</li>
+            <li>24/7 support</li>
+            <li>Spar 10%</li>
+          </ul>
+          <a href="mailto:post@norgesiptv.com?subject=Bestilling 1 mnd" class="btn-price">Bestill nå</a>
+        </div>
+
+        <div class="price-card featured reveal">
+          <div class="price-badge">Mest Populær</div>
+          <div class="price-period">6 Måneder</div>
+          <div class="price-amount">
+            <span class="price-curr">kr</span>
+            <span class="price-num highlight">349</span>
+          </div>
+          <div class="price-orig">Ordinær pris: kr 594</div>
+          <div class="price-save">Spar 41% – Kr 245 rabatt</div>
+          <ul class="price-features">
+            <li>25 000+ kanaler</li>
+            <li>100 000+ VOD</li>
+            <li>4K og HD kvalitet</li>
+            <li>Alle enheter</li>
+            <li>24/7 prioritert support</li>
+            <li>Gratis Ibo Pro-aktivering</li>
+            <li>30-dagers garanti</li>
+          </ul>
+          <a href="mailto:post@norgesiptv.com?subject=Bestilling 6 mnd" class="btn-price featured-btn">Bestill nå</a>
+        </div>
+
+        <div class="price-card reveal">
+          <div class="price-period">12 Måneder</div>
+          <div class="price-amount">
+            <span class="price-curr">kr</span>
+            <span class="price-num">499</span>
+          </div>
+          <div class="price-orig">Ordinær pris: kr 1188</div>
+          <div class="price-save">Spar 58% – Beste verdi!</div>
+          <ul class="price-features">
+            <li>25 000+ kanaler</li>
+            <li>100 000+ VOD</li>
+            <li>4K og HD kvalitet</li>
+            <li>Alle enheter</li>
+            <li>24/7 VIP support</li>
+            <li>Gratis Ibo Pro-aktivering</li>
+            <li>30-dagers garanti</li>
+            <li>Prioritert server</li>
+          </ul>
+          <a href="mailto:post@norgesiptv.com?subject=Bestilling 12 mnd" class="btn-price">Bestill nå</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── HOW IT WORKS ─── -->
+  <section class="how-section" id="oppsett" aria-labelledby="how-heading">
+    <div class="section-inner">
+      <div class="reveal" style="text-align:center;margin-bottom:0">
+        <div class="section-tag" style="justify-content:center">Enkel oppsett</div>
+        <h2 id="how-heading">Kom i gang på<br /><span class="grad">3 enkle steg</span></h2>
+      </div>
+      <div class="how-grid">
+        <div class="how-step reveal">
+          <div class="how-num">1</div>
+          <h3>Velg abonnement</h3>
+          <p>Velg den planen som passer deg best. Alle planer inkluderer alle kanaler og innhold.</p>
+        </div>
+        <div class="how-step reveal">
+          <div class="how-num">2</div>
+          <h3>Motta kontodetaljer</h3>
+          <p>Innen minutter etter betaling mottar du brukernavn og passord på e-post eller WhatsApp.</p>
+        </div>
+        <div class="how-step reveal">
+          <div class="how-num">3</div>
+          <h3>Start å se!</h3>
+          <p>Logg inn med din foretrukne IPTV-app og nyt 25 000+ kanaler med en gang.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── DEVICES ─── -->
+  <section class="devices-section" id="enheter" aria-labelledby="devices-heading">
+    <div class="section-inner">
+      <div class="devices-grid">
+        <div>
+          <div class="reveal">
+            <div class="section-tag">Kompatible enheter</div>
+            <h2 id="devices-heading">Fungerer på<br /><span class="grad">alle dine enheter</span></h2>
+            <p class="section-desc" style="margin-bottom:2rem">Sett opp NorgesIPTV på hvilken som helst enhet du allerede eier.</p>
+          </div>
+          <div class="device-list">
+            <div class="device-item reveal">
+              <span class="device-ico">📺</span>
+              <div>
+                <div class="device-name">Smart TV</div>
+                <div class="device-sub">Samsung, LG, Sony, Philips og mer</div>
+              </div>
+            </div>
+            <div class="device-item reveal">
+              <span class="device-ico">🔥</span>
+              <div>
+                <div class="device-name">Amazon Fire Stick / TV</div>
+                <div class="device-sub">Enkel oppsett med IPTV Smarters</div>
+              </div>
+            </div>
+            <div class="device-item reveal">
+              <span class="device-ico">📱</span>
+              <div>
+                <div class="device-name">Android & iOS</div>
+                <div class="device-sub">Mobil, nettbrett og Chromecast</div>
+              </div>
+            </div>
+            <div class="device-item reveal">
+              <span class="device-ico">💻</span>
+              <div>
+                <div class="device-name">Windows & Mac</div>
+                <div class="device-sub">VLC, Kodi, IPTV Smarters Pro</div>
+              </div>
+            </div>
+            <div class="device-item reveal">
+              <span class="device-ico">📦</span>
+              <div>
+                <div class="device-name">MAG-boks / Formuler</div>
+                <div class="device-sub">Alle populære IPTV-bokser støttes</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="devices-visual reveal">
+          <div class="big-screen">
+            <div class="screen-content">📺</div>
+            <div class="screen-badge">Live 4K</div>
+            <div class="screen-quality">
+              <span class="sq">4K</span>
+              <span class="sq">UHD</span>
+              <span class="sq">HDR</span>
+              <span class="sq">Dolby</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TESTIMONIALS ─── -->
+  <section class="testimonials-section" aria-labelledby="testi-heading">
+    <div class="section-inner">
+      <div class="reveal" style="text-align:center">
+        <div class="section-tag" style="justify-content:center">Kundeanmeldelser</div>
+        <h2 id="testi-heading">Hva sier våre<br /><span class="grad">fornøyde kunder?</span></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testi-card reveal">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Jeg har brukt NorgesIPTV i over ett år. Bildekvaliteten er fantastisk – 4K på Eliteserien er en helt annen opplevelse. Aldri hatt frysing!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar">AH</div>
+            <div>
+              <div class="testi-name">Anders Halvorsen</div>
+              <div class="testi-loc">Oslo, Norge</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Endelig en IPTV-tjeneste som faktisk fungerer! Satte det opp på Fire Stick på 5 minutter. Superenkel å bruke og barna elsker barnekanaler."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">LB</div>
+            <div>
+              <div class="testi-name">Lise Berg</div>
+              <div class="testi-loc">Bergen, Norge</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Kansellerte RiksTV og sparer kr 800 i måneden. Får mye mer innhold for en brøkdel av prisen. Kundestøtten er lynrask og hjelpsomme!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar">MK</div>
+            <div>
+              <div class="testi-name">Morten Kjeldsen</div>
+              <div class="testi-loc">Trondheim, Norge</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── GUARANTEE ─── -->
+  <section class="guarantee-section" aria-label="Pengene tilbake garanti">
+    <div class="guarantee-inner reveal">
+      <span class="guarantee-icon">🛡️</span>
+      <div class="guarantee-text">
+        <h2>30-dagers <span class="grad">pengene tilbake</span> garanti</h2>
+        <p>Vi er så sikre på at du vil elske NorgesIPTV at vi tilbyr full refusjon de første 30 dagene. Bestill trygt – risikofritt. Ingen spørsmål stilt.</p>
+        <a href="#priser" class="btn-primary" style="margin-top:1.5rem;display:inline-flex">Kom i gang nå →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FAQ ─── -->
+  <section class="faq-section" id="faq" aria-labelledby="faq-heading">
+    <div class="section-inner">
+      <div class="reveal" style="text-align:center;margin-bottom:0">
+        <div class="section-tag" style="justify-content:center">FAQ</div>
+        <h2 id="faq-heading">Ofte stilte<br /><span class="grad">spørsmål</span></h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Hva er NorgesIPTV?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-a">NorgesIPTV er Norges ledende IPTV-leverandør med over 25 000 live kanaler og 100 000+ filmer og serier i 4K og HD-kvalitet. Vi leverer stabil streaming direkte via internett – ingen parabol eller kabel nødvendig.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Trenger jeg parabol eller kabel-TV?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-a">Nei! Du trenger kun en internettforbindelse (minimum 10 Mbps for HD, 25 Mbps for 4K) og en kompatibel enhet. Ingen installasjon av hardware er nødvendig.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Hvilke enheter støttes?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-a">Vi støtter Smart TV (Samsung, LG, Sony), Android-bokser, Amazon Fire Stick, iOS og Android mobil/nettbrett, PC (Windows/Mac) via Kodi eller VLC, og MAG/Formuler-bokser.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Fungerer tjenesten i hele Norge?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-a">Ja, NorgesIPTV fungerer i hele Norge og Norden. Så lenge du har en stabil internettforbindelse kan du se på alle enheter, overalt.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Hvor raskt aktiveres abonnementet?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-a">Abonnementet aktiveres vanligvis innen 15-30 minutter etter betaling. Du mottar brukernavn og passord via e-post eller WhatsApp, sammen med installasjonsveiledning.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Hva er inkludert i abonnementet?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-a">Alle abonnementer inkluderer 25 000+ live kanaler (norske, nordiske og internasjonale), 100 000+ filmer og serier, 4K/HD-kvalitet, EPG (elektronisk programguide), og 24/7 support.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Kan jeg se Eliteserien og Premier League?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-a">Absolutt! Vi dekker alle store ligaer inkludert Eliteserien, Premier League, Champions League, La Liga, Bundesliga, Serie A, og mye mer – alt i 4K der det er tilgjengelig.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            Er det en pengene-tilbake-garanti?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-a">Ja! Vi tilbyr 30-dagers pengene-tilbake-garanti. Hvis du av en eller annen grunn ikke er fornøyd, refunderer vi hele beløpet uten spørsmål.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA ─── -->
+  <section class="cta-section" aria-label="Bestill nå">
+    <div class="cta-inner reveal">
+      <div class="section-tag" style="justify-content:center">Klar til å starte?</div>
+      <h2>Se <span class="grad">alt du elsker</span><br />fra kr 99/mnd</h2>
+      <p>Bli med 10 000+ nordmenn som allerede nyter Norges beste IPTV-tjeneste.</p>
+      <div class="cta-btns">
+        <a href="#priser" class="btn-primary">▶ Bestill abonnement</a>
+        <a href="mailto:post@norgesiptv.com?subject=Prøveperiode" class="btn-secondary">Prøv 24t gratis</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo" style="display:inline-block;margin-bottom:0.5rem">Norges<span>IPTV</span></a>
+        <p>Norges beste IPTV-leverandør med 25 000+ kanaler, 100 000+ filmer og serier i 4K og HD-kvalitet. Stabilt, raskt og enkelt.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" aria-label="Facebook">f</a>
+          <a href="#" class="social-btn" aria-label="Instagram">📷</a>
+          <a href="#" class="social-btn" aria-label="WhatsApp">💬</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Tjenester</h4>
+        <ul class="footer-links">
+          <li><a href="#kanaler">Kanalliste</a></li>
+          <li><a href="#priser">Priser</a></li>
+          <li><a href="#sport">Sport</a></li>
+          <li><a href="#enheter">Enheter</a></li>
+          <li><a href="#oppsett">Installasjon</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Informasjon</h4>
+        <ul class="footer-links">
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="/personvern.html">Personvern</a></li>
+          <li><a href="/vilkar.html">Vilkår for bruk</a></li>
+          <li><a href="/refusjon.html">Refusjonspolicy</a></li>
+          <li><a href="/dmca.html">DMCA</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontakt oss</h4>
+        <div class="footer-contact">
+          📧 <a href="mailto:post@norgesiptv.com">post@norgesiptv.com</a><br /><br />
+          💬 WhatsApp support<br />
+          Mandag–søndag: 08:00–23:00<br /><br />
+          🇳🇴 Norsktalende kundeservice
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 NorgesIPTV. Alle rettigheter forbeholdt.</span>
+      <div class="footer-legal">
+        <a href="/personvern.html">Personvern</a>
+        <a href="/vilkar.html">Vilkår</a>
+        <a href="/refusjon.html">Refusjon</a>
+        <a href="/dmca.html">DMCA</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ─── MOBILE MENU ───
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const ham = document.getElementById('hamburger');
+      menu.classList.toggle('open');
+      ham.classList.toggle('active');
+    }
+
+    // ─── SCROLL REVEAL ───
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // ─── FAQ TOGGLE ───
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      } else {
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    // ─── CHANNEL FILTER ───
+    function filterChannels(cat, btn) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.ch-pill').forEach(pill => {
+        pill.style.display = pill.dataset.cat === cat ? 'flex' : 'none';
+      });
+    }
+    // Show norsk by default
+    document.querySelectorAll('.ch-pill').forEach(pill => {
+      if (pill.dataset.cat !== 'norsk') pill.style.display = 'none';
+    });
+
+    // ─── NAVBAR SCROLL ───
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      nav.style.background = window.scrollY > 50
+        ? 'rgba(4,8,16,0.95)'
+        : 'rgba(4,8,16,0.8)';
+    });
+
+    // ─── STAGGERED REVEALS ───
+    document.querySelectorAll('.features-grid .feature-card, .pricing-grid .price-card, .sports-grid .sport-card, .testimonials-grid .testi-card').forEach((el, i) => {
+      el.style.transitionDelay = `${(i % 4) * 0.1}s`;
+    });
+  </script>
+</body>
+</html>
