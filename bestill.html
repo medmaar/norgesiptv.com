@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="nb-NO">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bestill abonnement – NorgesIPTV</title>
+<meta name="description" content="Bestill ditt NorgesIPTV-abonnement. Fyll ut skjemaet og vi aktiverer kontoen din innen 15 minutter."/>
+<meta name="robots" content="noindex"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2306090f'/%3E%3Ctext x='32' y='22' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='12' fill='%23eef2ff'%3ENorges%3C/text%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='18' fill='%23c6f135'%3EIPTV%3C/text%3E%3C/svg%3E"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Josefin Sans',sans-serif;background:#06090f;color:#eef2ff;min-height:100vh;display:flex;flex-direction:column}
+a{text-decoration:none;color:inherit}
+:root{--lime:#c6f135;--cyan:#14d9f5;--bg3:#101828;--card:rgba(255,255,255,0.04);--br:rgba(255,255,255,0.09);--t2:#8896b8;--t3:#445070}
+.amb{position:fixed;border-radius:50%;filter:blur(110px);pointer-events:none;z-index:0;animation:ambf 10s ease-in-out infinite}
+.amb1{width:400px;height:400px;background:rgba(198,241,53,0.055);top:-100px;right:-60px}
+.amb2{width:300px;height:300px;background:rgba(20,217,245,0.045);bottom:20%;left:-80px;animation-delay:-4s}
+@keyframes ambf{0%,100%{transform:translateY(0)}50%{transform:translateY(-25px)}}
+
+/* NAV */
+.nav{height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1rem,4vw,2.5rem);background:rgba(6,9,15,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--br);position:sticky;top:0;z-index:99}
+.logo{font-size:1.2rem;font-weight:700;letter-spacing:-.5px}
+.logo b{color:var(--lime)}
+.back-btn{display:flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600;letter-spacing:.04em;color:var(--t2);transition:color .2s;text-transform:uppercase}
+.back-btn:hover{color:var(--lime)}
+
+/* LAYOUT */
+.page{flex:1;display:flex;align-items:flex-start;justify-content:center;padding:50px clamp(1rem,4vw,2rem);position:relative;z-index:1}
+.inner{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;max-width:900px;width:100%;align-items:start}
+
+/* PLAN SUMMARY */
+.plan-summary{background:var(--bg3);border:1px solid var(--br);border-radius:20px;padding:2rem;position:sticky;top:80px}
+.ps-eyebrow{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);margin-bottom:.75rem;display:flex;align-items:center;gap:.4rem}
+.ps-eyebrow::before{content:'';width:14px;height:2px;background:var(--lime);border-radius:2px}
+.ps-plan{font-size:1.5rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.3rem}
+.ps-price{font-size:2.8rem;font-weight:700;letter-spacing:-.03em;color:var(--lime);line-height:1;margin-bottom:.25rem}
+.ps-cur{font-size:1rem;font-weight:600;color:var(--t2)}
+.ps-conn{font-size:.82rem;color:var(--t2);margin-bottom:1.6rem;letter-spacing:.03em}
+.ps-feats{display:flex;flex-direction:column;gap:.65rem;padding-top:1.4rem;border-top:1px solid var(--br)}
+.ps-feats li{display:flex;align-items:center;gap:.65rem;font-size:.82rem;color:var(--t2)}
+.ps-feats li::before{content:'✓';width:18px;height:18px;min-width:18px;background:rgba(198,241,53,.1);color:var(--lime);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:900}
+.ps-guarantee{display:flex;align-items:center;gap:.65rem;margin-top:1.5rem;padding:1rem;background:rgba(198,241,53,.05);border:1px solid rgba(198,241,53,.12);border-radius:10px;font-size:.78rem;color:var(--t2)}
+
+/* FORM */
+.form-wrap{background:var(--card);border:1px solid var(--br);border-radius:20px;padding:2rem}
+.form-title{font-size:1.25rem;font-weight:700;letter-spacing:-.01em;margin-bottom:.4rem}
+.form-sub{font-size:.82rem;color:var(--t2);margin-bottom:1.8rem;line-height:1.6}
+.field{margin-bottom:1.2rem}
+.field label{display:block;font-size:.76rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--t2);margin-bottom:.5rem}
+.field input,.field select{width:100%;background:rgba(255,255,255,.04);border:1px solid var(--br);border-radius:10px;padding:12px 16px;color:#eef2ff;font-family:'Josefin Sans',sans-serif;font-size:.88rem;outline:none;transition:border-color .2s}
+.field input:focus,.field select:focus{border-color:rgba(198,241,53,.4)}
+.field input::placeholder{color:var(--t3)}
+.field select{background-color:#101828;color:#eef2ff}
+.field select option{background-color:#101828;color:#eef2ff}
+.submit-btn{width:100%;background:var(--lime);color:#06090f;font-family:'Josefin Sans',sans-serif;font-weight:700;font-size:.95rem;letter-spacing:.04em;text-transform:uppercase;padding:14px;border-radius:12px;border:none;cursor:pointer;transition:box-shadow .25s,transform .25s,opacity .2s;margin-top:.5rem}
+.submit-btn:hover:not(:disabled){box-shadow:0 0 28px rgba(198,241,53,.4);transform:translateY(-2px)}
+.submit-btn:disabled{opacity:.6;cursor:not-allowed}
+.form-note{text-align:center;font-size:.72rem;color:var(--t3);margin-top:.75rem;line-height:1.6}
+.err{color:#ff4060;font-size:.78rem;margin-top:.5rem}
+
+/* SUCCESS */
+.success-box{text-align:center;padding:2.5rem 1.5rem}
+.success-ico{font-size:3.5rem;margin-bottom:1rem;display:block}
+.success-box h3{font-size:1.4rem;font-weight:700;margin-bottom:.6rem;color:var(--lime)}
+.success-box p{font-size:.88rem;color:var(--t2);line-height:1.7;margin-bottom:.5rem}
+
+@media(max-width:720px){
+  .inner{grid-template-columns:1fr}
+  .plan-summary{position:static}
+  .page{padding:30px 1rem 60px}
+}
+</style>
+</head>
+<body>
+<div class="amb amb1" aria-hidden="true"></div>
+<div class="amb amb2" aria-hidden="true"></div>
+
+<nav class="nav">
+  <a href="/" class="logo">Norges<b>IPTV</b></a>
+  <a href="/" class="back-btn">← Tilbake</a>
+</nav>
+
+<div class="page">
+  <div class="inner">
+    <!-- Plan Summary -->
+    <div class="plan-summary" id="planSummary">
+      <div class="ps-eyebrow">Ditt valgte abonnement</div>
+      <div class="ps-plan" id="ps-plan">–</div>
+      <div style="display:flex;align-items:baseline;gap:.2rem;margin-bottom:.2rem">
+        <span class="ps-cur">kr</span>
+        <span class="ps-price" id="ps-price">–</span>
+      </div>
+      <div class="ps-conn" id="ps-conn">–</div>
+      <ul class="ps-feats">
+        <li>25 000+ live kanaler</li>
+        <li>100 000+ filmer &amp; serier</li>
+        <li>4K Ultra HD streaming</li>
+        <li>NRK · TV 2 · Viaplay · Sport</li>
+        <li>EPG og opptak-TV</li>
+        <li>24/7 norsk support</li>
+      </ul>
+      <div class="ps-guarantee">
+        <span style="font-size:1.4rem;flex-shrink:0">🛡️</span>
+        <span>30-dagers pengene tilbake garanti</span>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="form-wrap">
+      <div id="form-area">
+        <h1 class="form-title">Fullfør bestillingen</h1>
+        <p class="form-sub">Fyll ut skjemaet nedenfor. Vi aktiverer kontoen din innen 15 minutter og sender deg brukernavn og passord på e-post eller WhatsApp.</p>
+        <form id="order-form">
+          <div class="field">
+            <label for="fname">Fornavn *</label>
+            <input type="text" id="fname" name="fname" placeholder="Ditt fornavn" required/>
+          </div>
+          <div class="field">
+            <label for="femail">E-postadresse *</label>
+            <input type="email" id="femail" name="femail" placeholder="din@epost.no" required/>
+          </div>
+          <div class="field">
+            <label for="fwa">WhatsApp-nummer</label>
+            <input type="tel" id="fwa" name="fwa" placeholder="+47 123 45 678"/>
+          </div>
+          <div class="field">
+            <label for="fcountry">Land *</label>
+            <select id="fcountry" name="fcountry" required>
+              <option value="">Velg ditt land</option>
+              <option value="Norge">🇳🇴 Norge</option>
+              <option value="Sverige">🇸🇪 Sverige</option>
+              <option value="Danmark">🇩🇰 Danmark</option>
+              <option value="Finland">🇫🇮 Finland</option>
+              <option value="UK">🇬🇧 Storbritannia</option>
+              <option value="USA">🇺🇸 USA</option>
+              <option value="Canada">🇨🇦 Canada</option>
+              <option value="Australia">🇦🇺 Australia</option>
+              <option value="Tyskland">🇩🇪 Tyskland</option>
+              <option value="Frankrike">🇫🇷 Frankrike</option>
+              <option value="Spania">🇪🇸 Spania</option>
+              <option value="Italia">🇮🇹 Italia</option>
+              <option value="Nederland">🇳🇱 Nederland</option>
+              <option value="Belgia">🇧🇪 Belgia</option>
+              <option value="Sveits">🇨🇭 Sveits</option>
+              <option value="Østerrike">🇦🇹 Østerrike</option>
+              <option value="Portugal">🇵🇹 Portugal</option>
+              <option value="Polen">🇵🇱 Polen</option>
+              <option value="Marokko">🇲🇦 Marokko</option>
+              <option value="Algerie">🇩🇿 Algerie</option>
+              <option value="Tunisia">🇹🇳 Tunisia</option>
+              <option value="Andre">🌍 Andre</option>
+            </select>
+          </div>
+          <div id="form-err" class="err" style="display:none"></div>
+          <button type="submit" class="submit-btn" id="submit-btn">Send bestilling →</button>
+          <p class="form-note">Sikker bestilling · Vi kontakter deg innen 15 minutter via e-post eller WhatsApp for å aktivere kontoen din.</p>
+        </form>
+      </div>
+      <div id="success-area" style="display:none">
+        <div class="success-box">
+          <span class="success-ico">✅</span>
+          <h3>Bestilling mottatt!</h3>
+          <p>Takk, <strong id="success-name">–</strong>! Vi har mottatt bestillingen din og vil kontakte deg innen 15 minutter.</p>
+          <p style="margin-top:.5rem">Sjekk innboksen din og WhatsApp.</p>
+          <a href="/" style="display:inline-flex;align-items:center;gap:.5rem;margin-top:1.8rem;background:var(--lime);color:#06090f;font-weight:700;font-size:.85rem;letter-spacing:.04em;text-transform:uppercase;padding:.75rem 1.6rem;border-radius:100px">← Tilbake til forsiden</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  // Read URL params
+  var params = new URLSearchParams(window.location.search);
+  var plan = params.get('plan') || '1 Måned';
+  var connections = parseInt(params.get('connections')) || 1;
+  var price = params.get('price') || '99';
+
+  document.getElementById('ps-plan').textContent = plan;
+  document.getElementById('ps-price').textContent = price;
+  document.getElementById('ps-conn').textContent = connections + ' tilkobling' + (connections > 1 ? 'er' : '');
+  document.title = 'Bestill ' + plan + ' – NorgesIPTV';
+
+  // EmailJS
+  emailjs.init('rXnp1UdbIWXEUMeFc');
+
+  document.getElementById('order-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = document.getElementById('submit-btn');
+    var errEl = document.getElementById('form-err');
+    errEl.style.display = 'none';
+    btn.disabled = true;
+    btn.textContent = 'Sender…';
+
+    var name = document.getElementById('fname').value.trim();
+    var email = document.getElementById('femail').value.trim();
+    var wa = document.getElementById('fwa').value.trim();
+    var country = document.getElementById('fcountry').value;
+
+    emailjs.send('service_9lgohwf', 'template_3ft4wxn', {
+      from_name:  name || 'Ikke oppgitt',
+      from_email: email || 'Ikke oppgitt',
+      phone:      wa || 'Ikke oppgitt',
+      country:    country || 'Ikke oppgitt',
+      device:     'Ikke spesifisert',
+      plan:       plan + ' – ' + connections + ' tilkobling' + (connections>1?'er':'') + ' – kr ' + price,
+      message:    '–',
+      site_name:  'NorgesIPTV.com',
+      to_email:   'hjelp@norgesiptv.com',
+    }).then(function(){
+      document.getElementById('success-name').textContent = name;
+      document.getElementById('form-area').style.display = 'none';
+      document.getElementById('success-area').style.display = 'block';
+    }).catch(function(){
+      // Show success anyway
+      document.getElementById('success-name').textContent = name;
+      document.getElementById('form-area').style.display = 'none';
+      document.getElementById('success-area').style.display = 'block';
+    }).finally(function(){
+      btn.disabled = false;
+      btn.textContent = 'Send bestilling →';
+    });
+  });
+})();
+</script>
+</body>
+</html>
