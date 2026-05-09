@@ -147,8 +147,9 @@ h2{font-size:1.85rem;font-weight:700;letter-spacing:-.02em;line-height:1.15;marg
 .rv-stat{background:var(--bg3);border:1px solid var(--br);border-radius:12px;padding:12px 20px;text-align:center;min-width:90px}
 .rv-stat .val{font-size:1.1rem;font-weight:700}
 .rv-stat .lbl{font-size:.65rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--t3);margin-top:2px}
-.slide-wrap{transition:opacity .35s ease;contain:layout;overflow:hidden}
+.slide-wrap{overflow:hidden;position:relative}
 .slide-wrap.sliding{opacity:0}
+.slide-wrap .slide-inner{transition:opacity .35s ease;will-change:opacity}
 .pdots{display:flex;justify-content:center;gap:8px;margin-top:20px}
 .pdot{height:10px;border-radius:99px;border:none;cursor:pointer;padding:0;transition:all .45s cubic-bezier(0.34,1.56,0.64,1);background:rgba(20,217,245,.2)}
 .pdot.on{background:var(--lime);width:26px!important}
@@ -873,10 +874,10 @@ var plans = [
 ];
 var planSave = [null, 'Spar 14% – 3 måneder ekstra verdi', 'Spar 28% – Mest populær valg', 'Spar 55% – Beste verdi!'];
 var planFeatures = [
-  ['50 000+ kanaler + Netflix','120 000+ filmer &amp; serier','4K og HD kvalitet','Alle enheter','24/7 support'],
-  ['50 000+ kanaler + Netflix','120 000+ filmer &amp; serier','4K og HD kvalitet','Alle enheter','24/7 support','Spar 14%'],
-  ['50 000+ kanaler + Netflix','120 000+ filmer &amp; serier','4K og HD kvalitet','Alle enheter','Prioritert 24/7 support','Gratis Ibo Pro-aktivering','30-dagers garanti'],
   ['50 000+ kanaler + Netflix','120 000+ filmer &amp; serier','4K og HD kvalitet','Alle enheter','VIP 24/7 support','Gratis Ibo Pro-aktivering','30-dagers garanti','Prioritert server'],
+  ['50 000+ kanaler + Netflix','120 000+ filmer &amp; serier','4K og HD kvalitet','Alle enheter','VIP 24/7 support','Gratis Ibo Pro-aktivering','30-dagers garanti','Prioritert server'],
+  ['50 000+ kanaler + Netflix','120 000+ filmer &amp; serier','4K og HD kvalitet','Alle enheter','VIP 24/7 support','Gratis Ibo Pro-aktivering','30-dagers garanti','Prioritert server'],
+  ['50 000+ kanaler + Netflix','120 000+ filmer &amp; serier','4K og HD kvalitet','Alle enheter','VIP 24/7 support','Gratis Ibo Pro-aktivering','30-dagers garanti','Prioritert server','🎁 Gratis Ibo Player Pro abonnement'],
 ];
 var selConn = 1;
 
@@ -928,7 +929,15 @@ function makeSlider(revs,perPage,renderFn,slideId,dotsId,interval){
   var slideEl=document.getElementById(slideId),dotsEl=document.getElementById(dotsId);
   function renderDots(){dotsEl.innerHTML='';for(var i=0;i<total;i++){var d=document.createElement('button');d.className='pdot'+(i===cur?' on':'');d.style.width=i===cur?'26px':'10px';d.setAttribute('aria-label','Anmeldelse '+(i+1));(function(idx){d.onclick=function(){go(idx);paused=Date.now()+9000;};})(i);dotsEl.appendChild(d);}}
   function render(){renderFn(revs.slice(cur*perPage,cur*perPage+perPage));renderDots();}
-  function go(n){slideEl.classList.add('sliding');setTimeout(function(){cur=n;render();slideEl.classList.remove('sliding');},420);}
+  function go(n){
+    var inner=slideEl.firstElementChild;
+    if(inner){inner.style.transition='opacity .3s ease';inner.style.opacity='0';}
+    setTimeout(function(){
+      cur=n;render();
+      var ni=slideEl.firstElementChild;
+      if(ni){ni.style.opacity='0';ni.style.transition='opacity .3s ease';requestAnimationFrame(function(){requestAnimationFrame(function(){ni.style.opacity='1';});});}
+    },300);
+  }
   render();
   setInterval(function(){if(Date.now()<paused)return;go((cur+1)%total);},interval);
 }
