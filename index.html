@@ -216,10 +216,10 @@ h2{font-size:1.85rem;font-weight:700;letter-spacing:-.02em;line-height:1.15;marg
 .ficon{width:42px;height:42px;border-radius:10px;background:rgba(198,241,53,.08);border:1px solid rgba(198,241,53,.14);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;margin-bottom:.9rem}
 .fc h3{font-size:.9rem;font-weight:700;margin-bottom:.42rem}
 .fc p{font-size:.82rem;color:var(--t2);line-height:1.65}
-.fstats{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;width:100%}
-.fsb{text-align:center;padding:.85rem .65rem;background:var(--bg3);border:1px solid var(--br);border-radius:9px}
-.fsn{font-size:1.3rem;font-weight:700;line-height:1}
-.fsl{font-size:.6rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--t3);margin-top:.22rem}
+.fstats{display:grid;grid-template-columns:repeat(4,1fr);gap:.55rem;width:100%;margin-top:.2rem}
+.fsb{text-align:center;padding:.9rem .6rem;background:var(--bg3);border:1px solid var(--br);border-radius:10px;display:flex;flex-direction:column;align-items:center;gap:.3rem}
+.fsn{font-size:1.25rem;font-weight:700;line-height:1;white-space:nowrap}
+.fsl{font-size:.58rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--t3);line-height:1}
 
 /* CHANNELS */
 .ctabs{display:flex;gap:.42rem;flex-wrap:wrap;margin-bottom:1.6rem}
@@ -287,8 +287,8 @@ footer{border-top:1px solid var(--br);padding:3rem clamp(1rem,4vw,2.5rem) 1.8rem
 .ftg{max-width:var(--W);margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:2rem;margin-bottom:2rem}
 .fbr p{font-size:.78rem;color:var(--t3);margin:.72rem 0 1.15rem;line-height:1.7;max-width:250px}
 .fsoc{display:flex;gap:.55rem}
-.fsb{width:30px;height:30px;border-radius:6px;background:var(--card);border:1px solid var(--br);display:flex;align-items:center;justify-content:center;font-size:.8rem;transition:all .2s}
-.fsb:hover{background:var(--card2);border-color:rgba(198,241,53,.2)}
+.socbtn{width:32px;height:32px;border-radius:6px;background:var(--card);border:1px solid var(--br);display:flex;align-items:center;justify-content:center;font-size:.8rem;transition:all .2s}
+.socbtn:hover{background:var(--card2);border-color:rgba(198,241,53,.2)}
 .fcol h4{font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.88rem}
 .fls{display:flex;flex-direction:column;gap:.5rem}
 .fls a{font-size:.76rem;color:var(--t3);transition:color .2s}
@@ -733,9 +733,9 @@ footer{border-top:1px solid var(--br);padding:3rem clamp(1rem,4vw,2.5rem) 1.8rem
       <a href="/" class="logo">Norges<b>IPTV</b></a>
       <p>Beste IPTV Norge – Nordic IPTV med 50 000+ kanaler, 120 000+ filmer &amp; serier. Smart IPTV, IPTV Smarters Pro og IPTV Norway #1 leverandør.</p>
       <div class="fsoc">
-        <a href="#" class="fsb" aria-label="Facebook">f</a>
-        <a href="https://t.me/NorgesIPTVSupport" target="_blank" class="fsb" aria-label="Telegram">✈</a>
-        <a href="whatsapp.html" class="fsb" aria-label="WhatsApp">💬</a>
+        <a href="#" class="socbtn" aria-label="Facebook">f</a>
+        <a href="https://t.me/NorgesIPTVSupport" target="_blank" class="socbtn" aria-label="Telegram">✈</a>
+        <a href="whatsapp.html" class="socbtn" aria-label="WhatsApp">💬</a>
       </div>
     </div>
     <div class="fcol"><h4>Tjenester</h4><ul class="fls"><li><a href="/blogg.html">Blogg &amp; Guider</a></li><li><a href="#kanaler">Kanalliste</a></li><li><a href="#priser">Priser</a></li><li><a href="#sport">Sport</a></li><li><a href="#enheter">Enheter</a></li><li><a href="#oppsett">Installasjon</a></li></ul></div>
