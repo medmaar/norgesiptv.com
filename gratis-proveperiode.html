@@ -444,16 +444,20 @@ footer a:hover{color:var(--lime)}
   </div>
 </footer>
 
-<!-- EmailJS -->
+<!-- EmailJS SDK v4 -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
-(function(){
-  var PUBLIC_KEY  = 'rXnp1UdbIWXEUMeFc';
+window.addEventListener('load', function () {
+
+  /* ── EmailJS credentials ── */
   var SERVICE_ID  = 'service_9lgohwf';
   var TEMPLATE_ID = 'template_3ft4wxn';
+  var PUBLIC_KEY  = 'rXnp1UdbIWXEUMeFc';
 
-  emailjs.init({ publicKey: PUBLIC_KEY });
+  /* Init with plain string — most compatible across all v4 builds */
+  emailjs.init(PUBLIC_KEY);
 
+  /* ── Element refs ── */
   var form        = document.getElementById('trialForm');
   var submitBtn   = document.getElementById('submitBtn');
   var submitText  = document.getElementById('submitText');
@@ -461,61 +465,85 @@ footer a:hover{color:var(--lime)}
   var formSuccess = document.getElementById('formSuccess');
   var errorMsg    = document.getElementById('formErrorMsg');
 
-  function showError(msg){ errorMsg.textContent=msg; errorMsg.style.display='block'; submitBtn.disabled=false; submitText.innerHTML='🚀 Aktiver gratis IPTV trial'; }
-  function setLoading(on){ if(on){submitBtn.disabled=true;submitText.innerHTML='<span class="spinner"></span> Sender…';}else{submitBtn.disabled=false;submitText.innerHTML='🚀 Aktiver gratis IPTV trial';} }
-
-  function getApps(){
-    var checked=form.querySelectorAll('input[type="checkbox"]:checked');
-    return Array.from(checked).map(function(cb){return cb.value;}).join(', ')||'Ikke spesifisert';
+  /* ── Helpers ── */
+  function showError(msg) {
+    errorMsg.textContent = msg;
+    errorMsg.style.display = 'block';
+    submitBtn.disabled = false;
+    submitText.innerHTML = '🚀 Aktiver gratis IPTV trial';
   }
 
-  function validate(){
-    var name=document.getElementById('fieldName').value.trim();
-    var email=document.getElementById('fieldEmail').value.trim();
-    var phone=document.getElementById('fieldPhone').value.trim();
-    var device=document.getElementById('fieldDevice').value;
-    if(!name){showError('⚠️ Vennligst fyll inn ditt fulle navn.');return false;}
-    if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){showError('⚠️ Vennligst fyll inn en gyldig e-postadresse.');return false;}
-    if(!phone){showError('⚠️ Vennligst fyll inn ditt telefonnummer.');return false;}
-    if(!device){showError('⚠️ Vennligst velg hvilken enhet du vil bruke.');return false;}
+  function setLoading(on) {
+    submitBtn.disabled = on;
+    submitText.innerHTML = on
+      ? '<span class="spinner"></span> Sender…'
+      : '🚀 Aktiver gratis IPTV trial';
+  }
+
+  function getApps() {
+    var boxes = form.querySelectorAll('input[type="checkbox"]:checked');
+    return Array.from(boxes).map(function (b) { return b.value; }).join(', ') || 'Ikke spesifisert';
+  }
+
+  function validate() {
+    var name   = document.getElementById('fieldName').value.trim();
+    var email  = document.getElementById('fieldEmail').value.trim();
+    var phone  = document.getElementById('fieldPhone').value.trim();
+    var device = document.getElementById('fieldDevice').value;
+    if (!name)   { showError('⚠️ Vennligst fyll inn ditt fulle navn.'); return false; }
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      showError('⚠️ Vennligst fyll inn en gyldig e-postadresse.'); return false;
+    }
+    if (!phone)  { showError('⚠️ Vennligst fyll inn ditt telefonnummer.'); return false; }
+    if (!device) { showError('⚠️ Vennligst velg hvilken enhet du vil bruke.'); return false; }
     return true;
   }
 
-  form.addEventListener('submit',function(e){
+  /* ── Form submit ── */
+  form.addEventListener('submit', function (e) {
     e.preventDefault();
-    errorMsg.style.display='none';
-    if(!validate())return;
+    errorMsg.style.display = 'none';
+    if (!validate()) return;
     setLoading(true);
-    var params={
-      from_name: document.getElementById('fieldName').value.trim(),
-      reply_to:  document.getElementById('fieldEmail').value.trim(),
-      phone:     document.getElementById('fieldPhone').value.trim(),
-      device:    document.getElementById('fieldDevice').value,
-      apps:      getApps(),
-      notes:     form.querySelector('textarea[name="notes"]').value.trim()||'–',
-      sent_time: new Date().toLocaleString('nb-NO',{timeZone:'Europe/Oslo'})
+
+    var templateParams = {
+      from_name  : document.getElementById('fieldName').value.trim(),
+      from_email : document.getElementById('fieldEmail').value.trim(),
+      reply_to   : document.getElementById('fieldEmail').value.trim(),
+      phone      : document.getElementById('fieldPhone').value.trim(),
+      device     : document.getElementById('fieldDevice').value,
+      apps       : getApps(),
+      notes      : form.querySelector('textarea[name="notes"]').value.trim() || '–',
+      sent_time  : new Date().toLocaleString('nb-NO', { timeZone: 'Europe/Oslo' })
     };
-    emailjs.send(SERVICE_ID,TEMPLATE_ID,params)
-      .then(function(){
-        formContent.style.display='none';
-        formSuccess.style.display='block';
-        document.getElementById('formCard').scrollIntoView({behavior:'smooth',block:'center'});
+
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams)
+      .then(function (response) {
+        console.log('EmailJS OK', response.status, response.text);
+        formContent.style.display = 'none';
+        formSuccess.style.display = 'block';
+        document.getElementById('formCard').scrollIntoView({ behavior: 'smooth', block: 'center' });
       })
-      .catch(function(err){
-        console.error(err);
-        showError('⚠️ Noe gikk galt. Kontakt oss direkte: hjelp@norgesiptv.com');
+      .catch(function (err) {
+        console.error('EmailJS error:', err);
+        /* Show the real status/text so you can debug */
+        var detail = err && err.text ? ' ('+err.status+': '+err.text+')' : '';
+        showError('⚠️ Noe gikk galt' + detail + '. Kontakt oss: hjelp@norgesiptv.com');
         setLoading(false);
       });
   });
 
-  document.querySelectorAll('.fqq').forEach(function(btn){
-    btn.addEventListener('click',function(){
-      var item=btn.closest('.fqi'),open=item.classList.contains('open');
-      document.querySelectorAll('.fqi.open').forEach(function(x){x.classList.remove('open');});
-      if(!open)item.classList.add('open');
+  /* ── FAQ accordion ── */
+  document.querySelectorAll('.fqq').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item = btn.closest('.fqi');
+      var open = item.classList.contains('open');
+      document.querySelectorAll('.fqi.open').forEach(function (x) { x.classList.remove('open'); });
+      if (!open) item.classList.add('open');
     });
   });
-})();
+
+});
 </script>
 </body>
 </html>
