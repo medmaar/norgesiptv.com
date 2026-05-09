@@ -33,13 +33,22 @@ a{text-decoration:none;color:inherit}
 @keyframes ambf{0%,100%{transform:translateY(0)}50%{transform:translateY(-30px)}}
 
 /* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:999;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1rem,4vw,2.5rem);background:rgba(6,9,15,0.97);border-bottom:1px solid var(--br);backdrop-filter:blur(20px)}
-.logo{font-size:1.25rem;font-weight:700}.logo b{color:var(--lime)}
-.nav-links{display:flex;gap:1.5rem}
-.nav-links a{font-size:.76rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--t2)}
-.nav-links a:hover{color:var(--t1)}
-.nav-cta{background:var(--lime);color:#06090f;padding:.4rem 1.1rem;border-radius:100px;font-size:.76rem;font-weight:700}
-@media(max-width:600px){.nav-links{display:none}}
+.nav{position:fixed;top:0;left:0;right:0;z-index:999;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1rem,4vw,2.5rem);background:rgba(6,9,15,0.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--br);transition:background .3s}
+.logo{font-size:1.25rem;font-weight:700;letter-spacing:-.5px}
+.logo b{color:var(--lime)}
+.nlinks{display:flex;align-items:center;gap:1.6rem}
+.nlinks a{font-size:.78rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--t2);transition:color .2s}
+.nlinks a:hover{color:var(--t1)}
+.nbtn{background:var(--lime)!important;color:#06090f!important;padding:.4rem 1.1rem;border-radius:100px;font-size:.76rem!important;font-weight:700!important;letter-spacing:.03em!important;transition:box-shadow .2s,transform .2s!important}
+.nbtn:hover{box-shadow:0 0 20px rgba(198,241,53,.5);transform:scale(1.04)}
+.ham{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:6px}
+.ham span{display:block;width:20px;height:2px;background:var(--t1);border-radius:2px;transition:.3s}
+.mmenu{display:none;position:fixed;inset:62px 0 0 0;background:rgba(6,9,15,.97);backdrop-filter:blur(20px);z-index:998;flex-direction:column;padding:2rem clamp(1rem,4vw,2.5rem)}
+.mmenu.open{display:flex}
+.mmenu a{padding:.85rem 0;border-bottom:1px solid var(--br);font-size:.95rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--t2);transition:color .2s}
+.mmenu a:hover{color:var(--lime)}
+.mmenu .mmbtn{margin-top:1.5rem;background:var(--lime);color:#06090f;text-align:center;padding:.82rem;border-radius:10px;font-weight:700;font-size:.95rem;border-bottom:none!important;letter-spacing:.03em}
+@media(max-width:860px){.nlinks{display:none}.ham{display:flex}}
 
 /* LAYOUT */
 .w{max-width:var(--W);margin:0 auto;padding:0 clamp(1rem,4vw,2.5rem)}
@@ -200,15 +209,30 @@ footer a:hover{color:var(--lime)}
 <div class="amb amb1" aria-hidden="true"></div>
 <div class="amb amb2" aria-hidden="true"></div>
 
-<nav class="nav">
+<nav class="nav" id="nav">
   <a href="/" class="logo">Norges<b>IPTV</b></a>
-  <div class="nav-links">
+  <div class="nlinks">
+    <a href="/#anmeldelser">Anmeldelser</a>
     <a href="/#priser">Priser</a>
-    <a href="/blogg.html">Blogg</a>
+    <a href="/#kanaler">Kanaler</a>
+    <a href="/#sport">Sport</a>
     <a href="/#faq">FAQ</a>
+    <a href="/blogg.html">Blogg</a>
+    <a href="/gratis-proveperiode.html" style="color:var(--lime)">Gratis Trial</a>
+    <a href="/#priser" class="nbtn">Bestill nå</a>
   </div>
-  <a href="/#priser" class="nav-cta">Bestill nå</a>
+  <div class="ham" id="ham" onclick="tNav()" aria-label="Meny"><span></span><span></span><span></span></div>
 </nav>
+<div class="mmenu" id="mmenu">
+  <a href="/#anmeldelser" onclick="cNav()">⭐ Anmeldelser</a>
+  <a href="/#priser" onclick="cNav()">💰 Priser</a>
+  <a href="/#kanaler" onclick="cNav()">📺 Kanaler</a>
+  <a href="/#sport" onclick="cNav()">⚽ Sport</a>
+  <a href="/#faq" onclick="cNav()">❓ FAQ</a>
+  <a href="/blogg.html" onclick="cNav()">📝 Blogg</a>
+  <a href="/gratis-proveperiode.html" onclick="cNav()">🎁 Gratis IPTV Trial</a>
+  <a href="/#priser" class="mmbtn" onclick="cNav()">▶ Bestill nå</a>
+</div>
 
 <main class="page">
 <div class="w">
@@ -444,20 +468,21 @@ footer a:hover{color:var(--lime)}
   </div>
 </footer>
 
-<!-- EmailJS SDK v4 -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
-window.addEventListener('load', function () {
+/* ── Nav toggle (matches main site) ── */
+function tNav(){document.getElementById('mmenu').classList.toggle('open');}
+function cNav(){document.getElementById('mmenu').classList.remove('open');}
+window.addEventListener('scroll',function(){
+  document.getElementById('nav').style.background=window.scrollY>60?'rgba(6,9,15,0.97)':'rgba(6,9,15,0.88)';
+},{passive:true});
 
-  /* ── EmailJS credentials ── */
+/* ── Form + EmailJS via direct REST API (no SDK needed) ── */
+document.addEventListener('DOMContentLoaded', function () {
+
   var SERVICE_ID  = 'service_9lgohwf';
   var TEMPLATE_ID = 'template_3ft4wxn';
   var PUBLIC_KEY  = 'rXnp1UdbIWXEUMeFc';
 
-  /* Init with plain string — most compatible across all v4 builds */
-  emailjs.init(PUBLIC_KEY);
-
-  /* ── Element refs ── */
   var form        = document.getElementById('trialForm');
   var submitBtn   = document.getElementById('submitBtn');
   var submitText  = document.getElementById('submitText');
@@ -465,7 +490,6 @@ window.addEventListener('load', function () {
   var formSuccess = document.getElementById('formSuccess');
   var errorMsg    = document.getElementById('formErrorMsg');
 
-  /* ── Helpers ── */
   function showError(msg) {
     errorMsg.textContent = msg;
     errorMsg.style.display = 'block';
@@ -481,8 +505,8 @@ window.addEventListener('load', function () {
   }
 
   function getApps() {
-    var boxes = form.querySelectorAll('input[type="checkbox"]:checked');
-    return Array.from(boxes).map(function (b) { return b.value; }).join(', ') || 'Ikke spesifisert';
+    return Array.from(form.querySelectorAll('input[type="checkbox"]:checked'))
+      .map(function(b){ return b.value; }).join(', ') || 'Ikke spesifisert';
   }
 
   function validate() {
@@ -499,46 +523,56 @@ window.addEventListener('load', function () {
     return true;
   }
 
-  /* ── Form submit ── */
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     errorMsg.style.display = 'none';
     if (!validate()) return;
     setLoading(true);
 
-    var templateParams = {
-      from_name  : document.getElementById('fieldName').value.trim(),
-      from_email : document.getElementById('fieldEmail').value.trim(),
-      reply_to   : document.getElementById('fieldEmail').value.trim(),
-      phone      : document.getElementById('fieldPhone').value.trim(),
-      device     : document.getElementById('fieldDevice').value,
-      apps       : getApps(),
-      notes      : form.querySelector('textarea[name="notes"]').value.trim() || '–',
-      sent_time  : new Date().toLocaleString('nb-NO', { timeZone: 'Europe/Oslo' })
+    var payload = {
+      service_id  : SERVICE_ID,
+      template_id : TEMPLATE_ID,
+      user_id     : PUBLIC_KEY,
+      template_params: {
+        from_name  : document.getElementById('fieldName').value.trim(),
+        from_email : document.getElementById('fieldEmail').value.trim(),
+        reply_to   : document.getElementById('fieldEmail').value.trim(),
+        phone      : document.getElementById('fieldPhone').value.trim(),
+        device     : document.getElementById('fieldDevice').value,
+        apps       : getApps(),
+        notes      : form.querySelector('textarea[name="notes"]').value.trim() || '–',
+        sent_time  : new Date().toLocaleString('nb-NO', {timeZone:'Europe/Oslo'})
+      }
     };
 
-    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams)
-      .then(function (response) {
-        console.log('EmailJS OK', response.status, response.text);
+    fetch('https://api.emailjs.com/api/v1.0/email/send', {
+      method  : 'POST',
+      headers : { 'Content-Type': 'application/json' },
+      body    : JSON.stringify(payload)
+    })
+    .then(function(res) {
+      if (res.ok) {
         formContent.style.display = 'none';
         formSuccess.style.display = 'block';
-        document.getElementById('formCard').scrollIntoView({ behavior: 'smooth', block: 'center' });
-      })
-      .catch(function (err) {
-        console.error('EmailJS error:', err);
-        /* Show the real status/text so you can debug */
-        var detail = err && err.text ? ' ('+err.status+': '+err.text+')' : '';
-        showError('⚠️ Noe gikk galt' + detail + '. Kontakt oss: hjelp@norgesiptv.com');
-        setLoading(false);
-      });
+        document.getElementById('formCard').scrollIntoView({behavior:'smooth', block:'center'});
+      } else {
+        return res.text().then(function(txt) {
+          showError('⚠️ Feil (' + res.status + '): ' + txt + '. Kontakt oss: hjelp@norgesiptv.com');
+        });
+      }
+    })
+    .catch(function(err) {
+      console.error(err);
+      showError('⚠️ Nettverksfeil. Sjekk tilkoblingen eller kontakt oss: hjelp@norgesiptv.com');
+      setLoading(false);
+    });
   });
 
-  /* ── FAQ accordion ── */
-  document.querySelectorAll('.fqq').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var item = btn.closest('.fqi');
-      var open = item.classList.contains('open');
-      document.querySelectorAll('.fqi.open').forEach(function (x) { x.classList.remove('open'); });
+  /* FAQ accordion */
+  document.querySelectorAll('.fqq').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = btn.closest('.fqi'), open = item.classList.contains('open');
+      document.querySelectorAll('.fqi.open').forEach(function(x){ x.classList.remove('open'); });
       if (!open) item.classList.add('open');
     });
   });
