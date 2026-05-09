@@ -203,6 +203,8 @@ h2{font-size:1.85rem;font-weight:700;letter-spacing:-.02em;line-height:1.15;marg
 .p-feats{flex:1;display:flex;flex-direction:column;gap:.62rem;margin-bottom:1.6rem}
 .p-feats li{display:flex;align-items:flex-start;gap:.58rem;font-size:.82rem;color:var(--t2);line-height:1.4}
 .p-feats li .ck{width:16px;height:16px;min-width:16px;background:rgba(198,241,53,.1);color:var(--lime);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:.6rem;font-weight:900;margin-top:1px;flex-shrink:0}
+.p-bonus{display:flex;align-items:center;gap:.55rem;background:linear-gradient(135deg,rgba(255,185,0,0.15),rgba(255,140,0,0.08));border:1px solid rgba(255,185,0,0.4);border-radius:9px;padding:.65rem .85rem;font-size:.82rem;font-weight:700;color:#ffd966;margin-bottom:.5rem;letter-spacing:.01em}
+.p-bonus .pbi{font-size:1rem;flex-shrink:0}
 .pbuy-btn{display:block;text-align:center;padding:.85rem;border-radius:10px;font-family:'Josefin Sans',sans-serif;font-weight:700;font-size:.88rem;letter-spacing:.05em;text-transform:uppercase;transition:all .25s;cursor:pointer;background:var(--card2);color:var(--t2);border:1px solid var(--br2)}
 .pbuy-btn:hover{background:rgba(255,255,255,.1);color:var(--t1)}
 .pcard.featured .pbuy-btn{background:var(--lime);color:#06090f;border-color:transparent;box-shadow:0 0 20px rgba(198,241,53,.25)}
@@ -902,13 +904,18 @@ function renderPricing() {
     var badgeHtml = pl.badge ? '<span class="pbadge">' + pl.badge + '</span>' : '';
     var origHtml = op[i] ? '<div class="p-orig">Ordinær pris: kr ' + op[i] + '</div>' : '<div class="p-orig" style="opacity:0">–</div>';
     var saveHtml = planSave[i] ? '<div class="p-save">' + planSave[i] + '</div>' : '';
-    var feats = planFeatures[i].map(function(f){ return '<li><span class="ck">✓</span>' + f + '</li>'; }).join('');
+    var bonusHtml = '';
+    var featList = planFeatures[i].filter(function(f){
+      if(f.indexOf('🎁') === 0){ bonusHtml = '<div class="p-bonus"><span class="pbi">🎁</span>' + f.replace('🎁 ','') + '</div>'; return false; }
+      return true;
+    });
+    var feats = featList.map(function(f){ return '<li><span class="ck">✓</span>' + f + '</li>'; }).join('');
     card.innerHTML = badgeHtml +
       '<div class="p-period">' + pl.name + '</div>' +
       '<div class="p-price-row"><span class="p-cur">kr</span><span class="p-num">' + pp[i] + '</span></div>' +
       origHtml + saveHtml +
       '<div class="p-conn">/ ' + connLabel + '</div>' +
-      '<ul class="p-feats">' + feats + '</ul>' +
+      bonusHtml + '<ul class="p-feats">' + feats + '</ul>' +
       '<a href="bestill.html?plan=' + encodeURIComponent(pl.name) + '&connections=' + selConn + '&price=' + pp[i] + '" class="pbuy-btn">Bestill nå</a>';
     pg.appendChild(card);
   });
