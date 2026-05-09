@@ -361,7 +361,7 @@ footer{border-top:1px solid var(--br);padding:3rem clamp(1rem,4vw,2.5rem) 1.8rem
 }
 </style>
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"NorgesIPTV – Beste IPTV Norge","description":"Beste IPTV Norge og Nordic IPTV-tjeneste med 50 000+ kanaler. Smart IPTV, IPTV Smarters Pro, 4K IPTV, IPTV Norway.","brand":{"@type":"Brand","name":"NorgesIPTV"},"offers":{"@type":"AggregateOffer","lowPrice":"95","highPrice":"4749","priceCurrency":"NOK","availability":"https://schema.org/InStock"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"248","bestRating":"5","worstRating":"1"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"NorgesIPTV – Beste IPTV Norge","description":"Beste IPTV Norge og Nordic IPTV-tjeneste med 50 000+ kanaler. Smart IPTV, IPTV Smarters Pro, 4K IPTV, IPTV Norway.","brand":{"@type":"Brand","name":"NorgesIPTV"},"offers":{"@type":"AggregateOffer","lowPrice":"81","highPrice":"4050","priceCurrency":"NOK","availability":"https://schema.org/InStock"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"248","bestRating":"5","worstRating":"1"}}</script>
 <link rel="preload" as="image" href="iptv-norge.webp" type="image/webp" media="(min-width:861px)" fetchpriority="high"/>
 <link rel="preload" as="image" href="iptv-norge-mobile.webp" type="image/webp" media="(max-width:860px)" fetchpriority="high"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","url":"https://norgesiptv.com/iptv-norge.jpg","name":"IPTV Norge – Beste IPTV Nordic IPTV 4K","description":"iptv, iptv norge, iptv nordic, nordic iptv, iptv norway, iptv smarters pro, smart iptv, beste iptv norge","keywords":"iptv, iptv norge, iptv nordic, nordic iptv, iptv norway, iptv smarters pro, iptv smarters, smart iptv, beste iptv norge, beste iptv, viking iptv, best iptv, iptv premier league, iptv box, chromecast iptv","width":"1200","height":"800","encodingFormat":"image/jpeg"}</script>
@@ -380,6 +380,7 @@ footer{border-top:1px solid var(--br);padding:3rem clamp(1rem,4vw,2.5rem) 1.8rem
     <a href="#sport">Sport</a>
     <a href="#faq">FAQ</a>
     <a href="/blogg.html">Blogg</a>
+    <a href="/gratis-proveperiode.html" style="color:var(--lime)">Gratis Trial</a>
     <a href="#priser" class="nbtn">Bestill nå</a>
   </div>
   <div class="ham" id="ham" onclick="tNav()" aria-label="Meny"><span></span><span></span><span></span></div>
@@ -391,6 +392,7 @@ footer{border-top:1px solid var(--br);padding:3rem clamp(1rem,4vw,2.5rem) 1.8rem
   <a href="#sport" onclick="cNav()">⚽ Sport</a>
   <a href="#faq" onclick="cNav()">❓ FAQ</a>
   <a href="/blogg.html" onclick="cNav()">📝 Blogg</a>
+  <a href="/gratis-proveperiode.html" onclick="cNav()">🎁 Gratis IPTV Trial</a>
   <a href="#priser" class="mmbtn" onclick="cNav()">▶ Bestill nå</a>
 </div>
 
@@ -518,6 +520,11 @@ footer{border-top:1px solid var(--br);padding:3rem clamp(1rem,4vw,2.5rem) 1.8rem
       <h2 id="prh">Velg ditt IPTV Norge<br><span class="gr">abonnement</span></h2>
       <p class="subdesc" style="margin:0 auto 8px">Beste IPTV-pris i Norge. Nordic IPTV uten binding. Avbestill når som helst.</p>
       <p style="color:var(--t2);font-size:.82rem;margin-bottom:28px">Velg antall tilkoblinger nedenfor</p>
+    </div>
+    <div class="rv" style="text-align:center;margin-bottom:1.5rem">
+      <a href="/gratis-proveperiode.html" style="display:inline-flex;align-items:center;gap:.5rem;background:rgba(198,241,53,0.1);border:1px solid rgba(198,241,53,0.3);border-radius:100px;padding:.45rem 1.2rem;font-size:.78rem;font-weight:700;color:var(--lime);letter-spacing:.04em;text-transform:uppercase;transition:background .2s" onmouseover="this.style.background='rgba(198,241,53,0.18)'" onmouseout="this.style.background='rgba(198,241,53,0.1)'">
+        🎁 Prøv gratis i 24 timer – IPTV trial med NorgesIPTV →
+      </a>
     </div>
     <!-- Connection selector -->
     <div class="conn-wrap rv">
@@ -659,7 +666,7 @@ footer{border-top:1px solid var(--br);padding:3rem clamp(1rem,4vw,2.5rem) 1.8rem
 <div class="ctabot">
   <div class="rv">
     <div class="eyebrow" style="justify-content:center">Beste IPTV Norge – Klar til å starte?</div>
-    <h2>Beste <span class="gr">IPTV Norge</span><br>fra kr 95/mnd</h2>
+    <h2>Beste <span class="gr">IPTV Norge</span><br>fra kr 81/mnd</h2>
     <p>Bli med 10 000+ nordmenn som allerede nyter Norges beste Nordic IPTV-tjeneste. Smart IPTV, IPTV Smarters Pro og alle enheter støttes.</p>
     <div class="ctabtns">
       <a href="#priser" class="btn-lime">▶ Bestill abonnement</a>
@@ -811,39 +818,39 @@ var gRevs=[
 /* ── PRICING DATA ── */
 /* prices: [1mnd, 3mnd, 6mnd, 12mnd] */
 var prices = {
-  1:  [95,  299,  399,  499],
-  2:  [189, 529,  729,  939],
-  3:  [285, 795,  1109, 1429],
-  4:  [379, 1049, 1479, 1899],
-  5:  [475, 1269, 1849, 2379],
-  6:  [569, 1519, 2219, 2849],
-  7:  [665, 1775, 2589, 3329],
-  8:  [759, 2029, 2959, 3799],
-  9:  [855, 2279, 3329, 4279],
-  10: [949, 2539, 3699, 4749]
+  1:  [81,  261,  351,  441],
+  2:  [162, 450,  621,  801],
+  3:  [243, 675,  945,  1215],
+  4:  [324, 891,  1260, 1620],
+  5:  [405, 1080, 1575, 2025],
+  6:  [486, 1296, 1890, 2430],
+  7:  [567, 1512, 2205, 2835],
+  8:  [648, 1728, 2520, 3240],
+  9:  [729, 1944, 2835, 3645],
+  10: [810, 2160, 3150, 4050]
 };
 var origPrices = {
-  1:  [null, 285,  570,  1140],
-  2:  [null, 567,  1134, 2268],
-  3:  [null, 855,  1710, 3420],
-  4:  [null, 1137, 2274, 4548],
-  5:  [null, 1425, 2850, 5700],
-  6:  [null, 1707, 3414, 6828],
-  7:  [null, 1995, 3990, 7980],
-  8:  [null, 2277, 4554, 9108],
-  9:  [null, 2565, 5130, 10260],
-  10: [null, 2847, 5694, 11388]
+  1:  [null, 243,  486,  972],
+  2:  [null, 486,  972,  1944],
+  3:  [null, 729,  1458, 2916],
+  4:  [null, 972,  1944, 3888],
+  5:  [null, 1215, 2430, 4860],
+  6:  [null, 1458, 2916, 5832],
+  7:  [null, 1701, 3402, 6804],
+  8:  [null, 1944, 3888, 7776],
+  9:  [null, 2187, 4374, 8748],
+  10: [null, 2430, 4860, 9720]
 };
 var plans = [
-  {name:'1 Måned',     slug:'1-maned',     badge:null,           featured:false},
-  {name:'3 Måneder',   slug:'3-maneder',   badge:null,           featured:false},
-  {name:'6 Måneder',   slug:'6-maneder',   badge:'Mest Populær', featured:true},
-  {name:'12 Måneder',  slug:'12-maneder',  badge:'Beste Verdi',  featured:false},
+  {name:'1 Måned',    slug:'1-maned',   badge:null,           featured:false},
+  {name:'3 Måneder',  slug:'3-maneder', badge:null,           featured:false},
+  {name:'6 Måneder',  slug:'6-maneder', badge:'Mest Populær', featured:true},
+  {name:'12 Måneder', slug:'12-maneder',badge:'Beste Verdi',  featured:false},
 ];
-var planSave = [null, 'Spar 17% – Betal for 2, få 3', 'Spar 30% – Kr 171 rabatt', 'Spar 56% – Beste verdi!'];
+var planSave = [null, 'Spar 14% – 3 måneder ekstra verdi', 'Spar 28% – Mest populær valg', 'Spar 55% – Beste verdi!'];
 var planFeatures = [
   ['50 000+ kanaler + Netflix','120 000+ filmer &amp; serier','4K og HD kvalitet','Alle enheter','24/7 support'],
-  ['50 000+ kanaler + Netflix','120 000+ filmer &amp; serier','4K og HD kvalitet','Alle enheter','24/7 support','Spar 17%'],
+  ['50 000+ kanaler + Netflix','120 000+ filmer &amp; serier','4K og HD kvalitet','Alle enheter','24/7 support','Spar 14%'],
   ['50 000+ kanaler + Netflix','120 000+ filmer &amp; serier','4K og HD kvalitet','Alle enheter','Prioritert 24/7 support','Gratis Ibo Pro-aktivering','30-dagers garanti'],
   ['50 000+ kanaler + Netflix','120 000+ filmer &amp; serier','4K og HD kvalitet','Alle enheter','VIP 24/7 support','Gratis Ibo Pro-aktivering','30-dagers garanti','Prioritert server'],
 ];
