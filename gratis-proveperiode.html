@@ -101,10 +101,7 @@ a{text-decoration:none;color:inherit}
 .form-input.error{border-color:var(--red)}
 .form-select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238896b8' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem;cursor:pointer}
 .form-select option{background:#101828;color:#eef2ff}
-.device-checks{display:grid;grid-template-columns:1fr 1fr;gap:.4rem}
-.dcheck{display:flex;align-items:center;gap:.5rem;padding:.48rem .7rem;background:rgba(255,255,255,.04);border:1px solid var(--br);border-radius:8px;cursor:pointer;font-size:.75rem;color:var(--t2);transition:border-color .2s,background .2s}
-.dcheck input{width:14px;height:14px;accent-color:var(--lime);cursor:pointer;flex-shrink:0}
-.dcheck:has(input:checked){border-color:rgba(198,241,53,.35);background:rgba(198,241,53,.07);color:var(--t1)}
+
 .form-submit{width:100%;padding:.9rem;border-radius:12px;background:var(--lime);color:#06090f;font-family:'Josefin Sans',sans-serif;font-weight:700;font-size:.95rem;letter-spacing:.04em;text-transform:uppercase;border:none;cursor:pointer;transition:box-shadow .25s,transform .2s;margin-top:.3rem;display:flex;align-items:center;justify-content:center;gap:.5rem}
 .form-submit:hover{box-shadow:0 0 32px rgba(198,241,53,.4);transform:translateY(-2px)}
 .form-submit:disabled{opacity:.6;cursor:not-allowed;transform:none}
@@ -201,7 +198,6 @@ footer a:hover{color:var(--lime)}
 @media(max-width:500px){
   .trial-hero h1{font-size:1.75rem}
   .form-card{padding:1.5rem 1.2rem}
-  .device-checks{grid-template-columns:1fr 1fr}
 }
 </style>
 </head>
@@ -294,21 +290,25 @@ footer a:hover{color:var(--lime)}
 
           <form id="trialForm" novalidate>
             <div class="form-group">
-              <label>Fullt navn <span>*</span></label>
-              <input type="text" name="from_name" id="fieldName" class="form-input" placeholder="Ola Nordmann" autocomplete="name" required/>
+              <label>Fullt navn</label>
+              <input type="text" name="from_name" id="fieldName" class="form-input" placeholder="Ola Nordmann" autocomplete="name"/>
             </div>
             <div class="form-group">
-              <label>E-postadresse <span>*</span></label>
-              <input type="email" name="reply_to" id="fieldEmail" class="form-input" placeholder="ola@example.com" autocomplete="email" required/>
+              <label>E-postadresse</label>
+              <input type="email" name="reply_to" id="fieldEmail" class="form-input" placeholder="ola@example.com" autocomplete="email"/>
             </div>
             <div class="form-group">
-              <label>WhatsApp / telefonnummer <span>*</span></label>
-              <input type="tel" name="phone" id="fieldPhone" class="form-input" placeholder="+47 900 00 000" autocomplete="tel" required/>
+              <label>WhatsApp / telefonnummer</label>
+              <input type="tel" name="phone" id="fieldPhone" class="form-input" placeholder="+47 900 00 000" autocomplete="tel"/>
             </div>
             <div class="form-group">
-              <label>Din enhet <span>*</span></label>
-              <select name="device" id="fieldDevice" class="form-input form-select" required>
-                <option value="" disabled selected>Velg enhet…</option>
+              <label>Land</label>
+              <input type="text" name="country" id="fieldCountry" class="form-input" placeholder="Norge" autocomplete="country-name"/>
+            </div>
+            <div class="form-group">
+              <label>Din enhet</label>
+              <select name="device" id="fieldDevice" class="form-input form-select">
+                <option value="" selected>Velg enhet (valgfritt)…</option>
                 <option>Samsung Smart TV</option>
                 <option>LG Smart TV</option>
                 <option>Amazon Fire Stick</option>
@@ -323,18 +323,7 @@ footer a:hover{color:var(--lime)}
               </select>
             </div>
             <div class="form-group">
-              <label>IPTV-app du vil bruke</label>
-              <div class="device-checks">
-                <label class="dcheck"><input type="checkbox" name="app_smarters" value="IPTV Smarters Pro"/> IPTV Smarters Pro</label>
-                <label class="dcheck"><input type="checkbox" name="app_smart" value="Smart IPTV"/> Smart IPTV</label>
-                <label class="dcheck"><input type="checkbox" name="app_gse" value="GSE Smart IPTV"/> GSE Smart IPTV</label>
-                <label class="dcheck"><input type="checkbox" name="app_net" value="Net IPTV"/> Net IPTV</label>
-                <label class="dcheck"><input type="checkbox" name="app_extreme" value="Extreme IPTV"/> Extreme IPTV</label>
-                <label class="dcheck"><input type="checkbox" name="app_other" value="Annen app"/> Annen app</label>
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Noe spesielt du vil teste?</label>
+              <label>Melding / spørsmål</label>
               <textarea name="notes" class="form-input" rows="2" placeholder="F.eks. Premier League, NRK 1, Eliteserien…" style="resize:vertical;min-height:56px"></textarea>
             </div>
             <button type="submit" class="form-submit" id="submitBtn">
@@ -504,22 +493,18 @@ document.addEventListener('DOMContentLoaded', function () {
       : '🚀 Aktiver gratis IPTV trial';
   }
 
-  function getApps() {
-    return Array.from(form.querySelectorAll('input[type="checkbox"]:checked'))
-      .map(function(b){ return b.value; }).join(', ') || 'Ikke spesifisert';
-  }
-
   function validate() {
-    var name   = document.getElementById('fieldName').value.trim();
-    var email  = document.getElementById('fieldEmail').value.trim();
-    var phone  = document.getElementById('fieldPhone').value.trim();
-    var device = document.getElementById('fieldDevice').value;
-    if (!name)   { showError('⚠️ Vennligst fyll inn ditt fulle navn.'); return false; }
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      showError('⚠️ Vennligst fyll inn en gyldig e-postadresse.'); return false;
+    var email = document.getElementById('fieldEmail').value.trim();
+    var phone = document.getElementById('fieldPhone').value.trim();
+    /* At least email OR phone must be provided so we can reach the customer */
+    if (!email && !phone) {
+      showError('⚠️ Vennligst fyll inn e-postadresse eller telefonnummer.');
+      return false;
     }
-    if (!phone)  { showError('⚠️ Vennligst fyll inn ditt telefonnummer.'); return false; }
-    if (!device) { showError('⚠️ Vennligst velg hvilken enhet du vil bruke.'); return false; }
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      showError('⚠️ E-postadressen ser ikke riktig ut.');
+      return false;
+    }
     return true;
   }
 
@@ -529,19 +514,28 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!validate()) return;
     setLoading(true);
 
+    var nameVal    = document.getElementById('fieldName').value.trim();
+    var emailVal   = document.getElementById('fieldEmail').value.trim();
+    var phoneVal   = document.getElementById('fieldPhone').value.trim();
+    var countryVal = document.getElementById('fieldCountry').value.trim();
+    var deviceVal  = document.getElementById('fieldDevice').value;
+    var notesVal   = form.querySelector('textarea[name="notes"]').value.trim();
+
     var payload = {
       service_id  : SERVICE_ID,
       template_id : TEMPLATE_ID,
       user_id     : PUBLIC_KEY,
       template_params: {
-        from_name  : document.getElementById('fieldName').value.trim(),
-        from_email : document.getElementById('fieldEmail').value.trim(),
-        reply_to   : document.getElementById('fieldEmail').value.trim(),
-        phone      : document.getElementById('fieldPhone').value.trim(),
-        device     : document.getElementById('fieldDevice').value,
-        apps       : getApps(),
-        notes      : form.querySelector('textarea[name="notes"]').value.trim() || '–',
-        sent_time  : new Date().toLocaleString('nb-NO', {timeZone:'Europe/Oslo'})
+        subject    : '🎁 Gratis IPTV Trial – Ny forespørsel',
+        from_name  : nameVal    || 'Ikke oppgitt',
+        from_email : emailVal   || 'Ikke oppgitt',
+        reply_to   : emailVal   || phoneVal,
+        phone      : phoneVal   || 'Ikke oppgitt',
+        country    : countryVal || 'Ikke oppgitt',
+        device     : deviceVal  || 'Ikke oppgitt',
+        notes      : notesVal   || '–',
+        sent_time  : new Date().toLocaleString('nb-NO', {timeZone:'Europe/Oslo'}),
+        request_type: 'GRATIS IPTV TRIAL – 24 TIMER'
       }
     };
 
