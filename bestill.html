@@ -204,7 +204,7 @@ a{text-decoration:none;color:inherit}
     var country = document.getElementById('fcountry').value;
 
     emailjs.send('service_9lgohwf', 'template_3ft4wxn', {
-      subject:    plan + ' – NorgesIPTV.com',
+      subject:    plan + ' – ' + connections + ' tilkobling' + (connections>1?'er':'') + ' – NorgesIPTV.com',
       name:       name || 'Ikke oppgitt',
       email:      email || 'Ikke oppgitt',
       from_name:  name || 'Ikke oppgitt',
