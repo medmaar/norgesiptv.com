@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="nb-NO">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>IPTV Kanalliste Norge – 50 000+ Kanaler | Nordic IPTV | NorgesIPTV</title>
+<meta name="description" content="Komplett IPTV kanalliste 2025 – NRK, TV2, TVNorge, Viaplay, SVT, DR og 50 000+ kanaler. Norges beste Nordic IPTV med kanaler fra Norge, Sverige, Danmark, Finland og hele verden."/>
+<meta name="keywords" content="iptv kanalliste, norsk iptv kanaler, nordic iptv kanaler, iptv norge kanaler, nrk iptv, tv2 iptv, nordisk iptv, iptv premier league, iptv norway kanaler, beste iptv kanaler"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://norgesiptv.com/kanalliste.html"/>
+<meta property="og:title" content="IPTV Kanalliste Norge – 50 000+ Kanaler | NorgesIPTV"/>
+<meta property="og:description" content="Se alle kanaler hos NorgesIPTV: NRK, TV2, SVT, DR, Viaplay og 50 000+ internasjonale kanaler. Nordic IPTV med norsk kvalitet."/>
+<meta property="og:url" content="https://norgesiptv.com/kanalliste.html"/>
+<meta property="og:type" content="website"/>
+<link rel="icon" type="image/png" href="favicon.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Josefin Sans',sans-serif;background:#06090f;color:#eef2ff;overflow-x:hidden;line-height:1.5}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+button{font-family:'Josefin Sans',sans-serif;cursor:pointer;border:none;background:none;color:inherit}
+:root{
+  --bg:#06090f;--bg2:#0b1120;--bg3:#101828;
+  --card:rgba(255,255,255,0.035);--card2:rgba(255,255,255,0.065);
+  --br:rgba(255,255,255,0.08);--br2:rgba(255,255,255,0.13);
+  --lime:#c6f135;--cyan:#14d9f5;--red:#ff4060;
+  --t1:#eef2ff;--t2:#8896b8;--t3:#445070;
+  --r:12px;--rl:18px;--W:1200px;
+}
+.amb{position:fixed;border-radius:50%;filter:blur(110px);pointer-events:none;z-index:0;animation:ambf 10s ease-in-out infinite}
+.amb1{width:500px;height:500px;background:rgba(198,241,53,0.055);top:-150px;right:-80px}
+.amb2{width:380px;height:380px;background:rgba(20,217,245,0.045);bottom:20%;left:-100px;animation-delay:-4s}
+@keyframes ambf{0%,100%{transform:translateY(0)}50%{transform:translateY(-30px)}}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:999;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1rem,4vw,2.5rem);background:rgba(6,9,15,0.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--br);transition:background .3s}
+.logo{font-size:1.25rem;font-weight:700;letter-spacing:-.5px}
+.logo b{color:var(--lime)}
+.nlinks{display:flex;align-items:center;gap:1.6rem}
+.nlinks a{font-size:.78rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--t2);transition:color .2s}
+.nlinks a:hover{color:var(--t1)}
+.nlinks a.active{color:var(--lime)}
+.nbtn{background:var(--lime)!important;color:#06090f!important;padding:.4rem 1.1rem;border-radius:100px;font-size:.76rem!important;font-weight:700!important;letter-spacing:.03em!important;transition:box-shadow .2s,transform .2s!important}
+.nbtn:hover{box-shadow:0 0 20px rgba(198,241,53,.5);transform:scale(1.04)}
+.ham{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:6px}
+.ham span{display:block;width:20px;height:2px;background:var(--t1);border-radius:2px;transition:.3s}
+.mmenu{display:none;position:fixed;inset:62px 0 0 0;background:rgba(6,9,15,.97);backdrop-filter:blur(20px);z-index:998;flex-direction:column;padding:2rem clamp(1rem,4vw,2.5rem)}
+.mmenu.open{display:flex}
+.mmenu a{padding:.85rem 0;border-bottom:1px solid var(--br);font-size:.95rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--t2);transition:color .2s}
+.mmenu a:hover{color:var(--lime)}
+.mmenu .mmbtn{margin-top:1.5rem;background:var(--lime);color:#06090f;text-align:center;padding:.82rem;border-radius:10px;font-weight:700;font-size:.95rem;border-bottom:none!important;letter-spacing:.03em}
+
+/* BUTTONS */
+.btn-lime{display:inline-flex;align-items:center;gap:.4rem;background:var(--lime);color:#06090f;font-family:'Josefin Sans',sans-serif;font-weight:700;font-size:.88rem;letter-spacing:.03em;text-transform:uppercase;padding:.78rem 1.7rem;border-radius:100px;transition:box-shadow .25s,transform .25s;white-space:nowrap}
+.btn-lime:hover{box-shadow:0 0 28px rgba(198,241,53,.45);transform:translateY(-2px)}
+.btn-out{display:inline-flex;align-items:center;gap:.4rem;background:transparent;color:var(--t1);font-family:'Josefin Sans',sans-serif;font-weight:600;font-size:.88rem;letter-spacing:.03em;text-transform:uppercase;padding:.78rem 1.7rem;border-radius:100px;border:1px solid var(--br2);transition:background .25s,border-color .25s;white-space:nowrap}
+.btn-out:hover{background:var(--card2);border-color:rgba(255,255,255,.2)}
+
+.eyebrow{display:inline-flex;align-items:center;gap:.45rem;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);margin-bottom:.75rem}
+.eyebrow::before{content:'';width:14px;height:2px;background:var(--lime);border-radius:2px}
+h2{font-size:1.85rem;font-weight:700;letter-spacing:-.02em;line-height:1.15;margin-bottom:.85rem}
+.gr{background:linear-gradient(90deg,var(--lime) 0%,var(--cyan) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.subdesc{font-size:.9rem;color:var(--t2);max-width:520px;line-height:1.7}
+
+/* PAGE HERO */
+.phero{padding:110px 0 50px;text-align:center;position:relative;z-index:1}
+.phero h1{font-size:2.5rem;font-weight:700;letter-spacing:-.025em;line-height:1.12;margin-bottom:1rem}
+.phero p{font-size:.95rem;color:var(--t2);max-width:580px;margin:0 auto 2rem;line-height:1.75}
+.hbadge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(198,241,53,.1);border:1px solid rgba(198,241,53,.22);border-radius:100px;padding:.3rem .9rem;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--lime);margin-bottom:1.1rem}
+.dot{width:5px;height:5px;border-radius:50%;background:var(--lime);animation:blink 2s infinite;flex-shrink:0}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+
+/* STATS ROW */
+.stats-row{display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;margin-bottom:2rem}
+.stat-item{text-align:center}
+.stat-num{font-size:1.6rem;font-weight:700;color:var(--lime);line-height:1}
+.stat-lbl{font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--t3);margin-top:.2rem}
+
+/* SEARCH BAR */
+.search-wrap{max-width:600px;margin:0 auto 2rem;position:relative;z-index:1}
+.search-input{width:100%;padding:.9rem 1.2rem .9rem 3rem;background:var(--bg3);border:1.5px solid var(--br2);border-radius:100px;font-family:'Josefin Sans',sans-serif;font-size:.9rem;color:var(--t1);transition:border-color .2s;outline:none}
+.search-input:focus{border-color:rgba(198,241,53,.4)}
+.search-input::placeholder{color:var(--t3)}
+.search-ico{position:absolute;left:1.1rem;top:50%;transform:translateY(-50%);color:var(--t3);font-size:.95rem;pointer-events:none}
+
+/* FILTER TABS */
+.filter-wrap{max-width:var(--W);margin:0 auto 1.5rem;padding:0 clamp(1rem,4vw,2.5rem);display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;position:relative;z-index:1}
+.ftab{padding:.42rem 1rem;border-radius:100px;font-size:.74rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;border:1px solid var(--br);background:transparent;color:var(--t2);transition:all .2s;cursor:pointer;white-space:nowrap}
+.ftab:hover,.ftab.on{background:var(--lime);color:#06090f;border-color:transparent}
+
+/* MAIN LAYOUT */
+.main-wrap{max-width:var(--W);margin:0 auto;padding:0 clamp(1rem,4vw,2.5rem);position:relative;z-index:1}
+
+/* COUNTRY SECTION */
+.country-sec{margin-bottom:2rem;border:1px solid var(--br);border-radius:var(--rl);overflow:hidden;background:var(--card)}
+.country-header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.4rem;cursor:pointer;user-select:none;transition:background .2s}
+.country-header:hover{background:var(--card2)}
+.country-title{display:flex;align-items:center;gap:.7rem;font-weight:700;font-size:.9rem}
+.cflag{font-size:1.2rem}
+.cnor{font-weight:700;font-size:.82rem;letter-spacing:.04em}
+.cbadge-nordic{background:rgba(198,241,53,.15);color:var(--lime);font-size:.6rem;font-weight:700;letter-spacing:.06em;padding:.18rem .5rem;border-radius:4px;text-transform:uppercase}
+.country-meta{display:flex;align-items:center;gap:.7rem}
+.ccount{font-size:.72rem;color:var(--t3);font-weight:600;letter-spacing:.04em}
+.chevron{font-size:.7rem;color:var(--t3);transition:transform .25s}
+.country-sec.open .chevron{transform:rotate(180deg)}
+.country-body{display:none;padding:1rem 1.4rem 1.2rem;border-top:1px solid var(--br)}
+.country-sec.open .country-body{display:block}
+.ch-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.5rem}
+.ch-pill{display:flex;align-items:center;gap:.4rem;padding:.45rem .75rem;background:rgba(255,255,255,0.03);border:1px solid var(--br);border-radius:8px;font-size:.73rem;font-weight:600;color:var(--t2);transition:all .2s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ch-pill:hover{border-color:rgba(198,241,53,.25);color:var(--t1)}
+.chdot{width:5px;height:5px;border-radius:50%;background:var(--lime);flex-shrink:0;opacity:.6}
+
+/* NO RESULTS */
+.no-results{text-align:center;padding:3rem;color:var(--t3);font-size:.88rem}
+
+/* INTERNAL LINKS */
+.ilinks{padding:60px 0;border-top:1px solid var(--br);position:relative;z-index:1}
+.ilinks-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.8rem;margin-top:1.5rem}
+.ilink-card{display:block;padding:.85rem 1.1rem;background:var(--card);border:1px solid var(--br);border-radius:var(--r);font-size:.78rem;font-weight:600;color:var(--t2);transition:all .2s}
+.ilink-card:hover{border-color:rgba(198,241,53,.25);color:var(--t1);transform:translateY(-2px)}
+.ilink-card span{display:block;font-size:.65rem;letter-spacing:.06em;text-transform:uppercase;color:var(--t3);margin-bottom:.2rem}
+
+/* FOOTER */
+footer{border-top:1px solid var(--br);padding:3rem clamp(1rem,4vw,2.5rem) 1.8rem;position:relative;z-index:1}
+.ftg{max-width:var(--W);margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:2rem;margin-bottom:2rem}
+.fbr p{font-size:.78rem;color:var(--t3);margin:.72rem 0 1.15rem;line-height:1.7;max-width:250px}
+.fsoc{display:flex;gap:.55rem}
+.socbtn{width:32px;height:32px;border-radius:6px;background:var(--card);border:1px solid var(--br);display:flex;align-items:center;justify-content:center;font-size:.8rem;transition:all .2s}
+.fcol h4{font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.88rem}
+.fls{display:flex;flex-direction:column;gap:.5rem}
+.fls a{font-size:.76rem;color:var(--t3);transition:color .2s}
+.fls a:hover{color:var(--t1)}
+.fct{font-size:.76rem;color:var(--t3);line-height:1.88}
+.fct a{color:var(--cyan)}
+.fbot{max-width:var(--W);margin:0 auto;padding-top:1.6rem;border-top:1px solid var(--br);display:flex;justify-content:space-between;align-items:center;font-size:.72rem;color:var(--t3);flex-wrap:wrap;gap:.7rem;font-weight:600;letter-spacing:.03em}
+.flg{display:flex;gap:1.1rem;flex-wrap:wrap}
+.flg a{color:var(--t3);transition:color .2s}
+.flg a:hover{color:var(--t1)}
+
+/* FLOAT */
+.float-contact{position:fixed;bottom:24px;right:24px;z-index:998;display:flex;flex-direction:column;align-items:flex-end;gap:12px}
+.float-toggle{width:50px;height:50px;border-radius:50%;background:var(--lime);color:#06090f;display:flex;align-items:center;justify-content:center;font-size:1.2rem;cursor:pointer;box-shadow:0 4px 20px rgba(198,241,53,.35);transition:transform .2s}
+.float-menu{display:flex;flex-direction:column;align-items:flex-end;gap:8px;transition:all .3s}
+.float-menu.hidden{opacity:0;transform:translateY(16px);pointer-events:none}
+.float-btn{display:flex;align-items:center;gap:8px;padding:.5rem 1rem .5rem .7rem;border-radius:100px;font-size:.8rem;font-weight:700;cursor:pointer;transition:transform .2s;white-space:nowrap}
+.float-btn:hover{transform:scale(1.04)}
+
+/* SEO TEXT */
+.seo-text{padding:60px 0;position:relative;z-index:1;border-top:1px solid var(--br)}
+.seo-text .wrap{max-width:var(--W);margin:0 auto;padding:0 clamp(1rem,4vw,2.5rem)}
+.seo-text h2{font-size:1.4rem;margin-bottom:.75rem}
+.seo-text p{font-size:.84rem;color:var(--t2);line-height:1.8;margin-bottom:1rem}
+.seo-text a{color:var(--lime)}
+
+/* RESPONSIVE */
+@media(max-width:860px){
+  .nlinks{display:none}
+  .ham{display:flex}
+  .phero h1{font-size:2rem}
+  .stats-row{gap:1.2rem}
+  .ch-grid{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
+  .ftg{grid-template-columns:1fr 1fr;gap:1.2rem .6rem}
+  .fbr{grid-column:1/-1}
+}
+@media(max-width:540px){
+  .phero h1{font-size:1.7rem}
+  .ch-grid{grid-template-columns:repeat(auto-fill,minmax(120px,1fr))}
+  .ftg{grid-template-columns:1fr 1fr}
+  .fbot{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<div class="amb amb1"></div>
+<div class="amb amb2"></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="/" class="logo">Norges<b>IPTV</b></a>
+  <div class="nlinks">
+    <a href="/priser.html">Priser</a>
+    <a href="/kanalliste.html" class="active">Kanalliste</a>
+    <a href="/blogg.html">Blogg</a>
+    <a href="/gratis-proveperiode.html" style="color:var(--lime)">Gratis Trial</a>
+    <a href="/bestill.html" class="nbtn">Bestill nå</a>
+  </div>
+  <button class="ham" id="ham" onclick="tNav()" aria-label="Meny">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mmenu" id="mmenu">
+  <a href="/" onclick="cNav()">🏠 Hjem</a>
+  <a href="/priser.html" onclick="cNav()">💰 Priser</a>
+  <a href="/kanalliste.html" onclick="cNav()">📺 Kanalliste</a>
+  <a href="/blogg.html" onclick="cNav()">📝 Blogg</a>
+  <a href="/gratis-proveperiode.html" onclick="cNav()">🎁 Gratis IPTV Trial</a>
+  <a href="/bestill.html" class="mmbtn" onclick="cNav()">▶ Bestill nå</a>
+</div>
+
+<!-- HERO -->
+<section class="phero">
+  <div class="wrap" style="max-width:var(--W);margin:0 auto;padding:0 clamp(1rem,4vw,2.5rem)">
+    <div class="hbadge"><span class="dot"></span>Oppdatert 2025 – 50 000+ live-kanaler</div>
+    <h1>IPTV <span class="gr">Kanalliste</span> Norge 2025</h1>
+    <p>Komplett liste over alle kanaler hos NorgesIPTV. <strong>Norske kanaler</strong> (NRK, TV2, TVNorge, Viaplay), nordiske kanaler (SVT, DR, Yle) og 50 000+ internasjonale kanaler – alt inkludert i alle <a href="/priser.html" style="color:var(--lime)">IPTV-abonnementer</a>.</p>
+    
+    <!-- Stats -->
+    <div class="stats-row">
+      <div class="stat-item"><div class="stat-num">50k+</div><div class="stat-lbl">Live-kanaler</div></div>
+      <div class="stat-item"><div class="stat-num">152+</div><div class="stat-lbl">Land & regioner</div></div>
+      <div class="stat-item"><div class="stat-num">4K HD</div><div class="stat-lbl">Bildekvalitet</div></div>
+      <div class="stat-item"><div class="stat-num">24/7</div><div class="stat-lbl">Norsk support</div></div>
+    </div>
+
+    <div style="display:flex;justify-content:center;gap:.75rem;flex-wrap:wrap;margin-bottom:1.5rem">
+      <a href="/priser.html" class="btn-lime">Se priser →</a>
+      <a href="/gratis-proveperiode.html" class="btn-out">🎁 Prøv gratis</a>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="search-wrap">
+      <span class="search-ico">🔍</span>
+      <input type="text" class="search-input" id="searchInput" placeholder="Søk etter kanal (f.eks. NRK, TV2, BBC, ESPN...)" oninput="filterChannels(this.value)"/>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER TABS -->
+<div class="filter-wrap" id="filterWrap">
+  <button class="ftab on" onclick="setFilter('all',this)">Alle land</button>
+  <button class="ftab" onclick="setFilter('nordic',this)">🇳🇴 Skandinavia</button>
+  <button class="ftab" onclick="setFilter('europe',this)">🌍 Europa</button>
+  <button class="ftab" onclick="setFilter('america',this)">🌎 Amerika</button>
+  <button class="ftab" onclick="setFilter('asia',this)">🌏 Asia &amp; Midt-Østen</button>
+  <button class="ftab" onclick="setFilter('africa',this)">🌍 Afrika</button>
+  <button class="ftab" onclick="setFilter('sport',this)">⚽ Sport</button>
+</div>
+
+<!-- CHANNEL SECTIONS -->
+<div class="main-wrap">
+  <div id="channelContainer"></div>
+  <div class="no-results" id="noResults" style="display:none">Ingen kanaler funnet. Prøv et annet søkeord.</div>
+</div>
+
+<!-- SEO TEXT -->
+<section class="seo-text">
+  <div class="wrap">
+    <div class="eyebrow">Om vår kanalliste</div>
+    <h2>Norges mest komplette <span class="gr">IPTV-kanalliste</span></h2>
+    <p>NorgesIPTV tilbyr Norges mest komplette kanalutvalg. Alle <strong>norske IPTV-kanaler</strong> som NRK1, NRK2, NRK3, TV2, TV2 Nyhetskanalen, TVNorge, TV3, TV6 og Vox er inkludert. Vi er Norges beste leverandør for <strong>Nordic IPTV</strong> – med alle nordiske kanaler fra Sverige (SVT1, SVT2, TV3, TV4), Danmark (DR1, DR2, TV2 Danmark) og Finland (YLE TV1, YLE TV2).</p>
+    <p>Alle <a href="/priser.html">IPTV-abonnementer</a> inkluderer samtlige kanaler – ingen ekstraavgifter. Se sport som <strong>IPTV Premier League</strong>, Champions League og Eliteserien i 4K HD. Fungerer med <a href="/blogg/iptv-smarters-pro-norge.html">IPTV Smarters Pro</a>, <a href="/blogg/smart-iptv-alle-enheter.html">Smart IPTV</a>, Net IPTV og alle populære spillere. <a href="/gratis-proveperiode.html">Prøv gratis i dag →</a></p>
+  </div>
+</section>
+
+<!-- INTERNAL LINKS -->
+<section class="ilinks">
+  <div class="main-wrap">
+    <p class="eyebrow">Utforsk mer</p>
+    <div class="ilinks-grid">
+      <a href="/priser.html" class="ilink-card"><span>IPTV Priser</span>Se alle abonnementer fra kr 81/mnd</a>
+      <a href="/gratis-proveperiode.html" class="ilink-card"><span>Gratis trial</span>Prøv alle kanaler gratis nå</a>
+      <a href="/blogg/beste-iptv-norge.html" class="ilink-card"><span>Guide</span>Beste IPTV Norge 2025</a>
+      <a href="/blogg/nordic-iptv.html" class="ilink-card"><span>Nordic IPTV</span>Nordiske kanaler – komplett guide</a>
+      <a href="/blogg/iptv-smarters-pro-norge.html" class="ilink-card"><span>App</span>IPTV Smarters Pro oppsett</a>
+      <a href="/blogg/iptv-premier-league.html" class="ilink-card"><span>Sport</span>IPTV Premier League guide</a>
+      <a href="/blogg/iptv-oppsett-guide.html" class="ilink-card"><span>Oppsett</span>Slik setter du opp IPTV</a>
+      <a href="/whatsapp.html" class="ilink-card"><span>Support</span>Kontakt oss – svar innen 15 min</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ftg">
+    <div class="fbr">
+      <a href="/" class="logo">Norges<b>IPTV</b></a>
+      <p>Norges beste IPTV med 50 000+ kanaler, Nordic IPTV og 4K HD. IPTV Smarters Pro og alle enheter støttes.</p>
+      <div class="fsoc">
+        <a href="#" class="socbtn">f</a>
+        <a href="https://t.me/NorgesIPTVSupport" target="_blank" class="socbtn">✈</a>
+        <a href="/whatsapp.html" class="socbtn">💬</a>
+      </div>
+    </div>
+    <div class="fcol"><h4>Tjenester</h4><ul class="fls">
+      <li><a href="/priser.html">IPTV Priser</a></li>
+      <li><a href="/kanalliste.html">Kanalliste</a></li>
+      <li><a href="/gratis-proveperiode.html">Gratis Trial</a></li>
+      <li><a href="/blogg.html">Blogg</a></li>
+    </ul></div>
+    <div class="fcol"><h4>Info</h4><ul class="fls">
+      <li><a href="/personvern.html">Personvern</a></li>
+      <li><a href="/vilkar.html">Vilkår</a></li>
+      <li><a href="/refusjon.html">Refusjonspolicy</a></li>
+      <li><a href="/dmca.html">DMCA</a></li>
+    </ul></div>
+    <div class="fcol"><h4>Kontakt</h4><div class="fct">📧 <a href="mailto:hjelp@norgesiptv.com">hjelp@norgesiptv.com</a><br><br>💬 <a href="/whatsapp.html">WhatsApp</a><br>Man–søn: 08–23<br><br>✈ <a href="https://t.me/NorgesIPTVSupport" target="_blank">Telegram</a></div></div>
+  </div>
+  <div class="fbot">
+    <span>© 2025 NorgesIPTV – Beste IPTV Norge &amp; Nordic IPTV</span>
+    <div class="flg">
+      <a href="/personvern.html">Personvern</a><a href="/vilkar.html">Vilkår</a>
+      <a href="/refusjon.html">Refusjon</a><a href="/dmca.html">DMCA</a>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOAT -->
+<div class="float-contact">
+  <div class="float-menu hidden" id="fm">
+    <a href="/whatsapp.html" class="float-btn" style="background:#25D366;color:#fff">💬 WhatsApp</a>
+    <a href="https://t.me/NorgesIPTVSupport" target="_blank" class="float-btn" style="background:#229ED9;color:#fff">✈ Telegram</a>
+    <a href="mailto:hjelp@norgesiptv.com" class="float-btn" style="background:var(--lime);color:#06090f">✉ E-post</a>
+  </div>
+  <button class="float-toggle" onclick="toggleFloat()">💬</button>
+</div>
+
+<script>
+var D=[{n:"NORWAY",f:"\ud83c\uddf3\ud83c\uddf4",c:"24+",ch:["NO - NRK 1 HD", "NO - NRK 1 HD (B)", "NO - NRK 2 HD", "NO - STORTINGET HD", "NO - TV NORGE FHD", "NO - TV NORGE HD", "NO - TV VISJON NORGE FHD", "NO - TV2 LIVSSTIL HD", "NO - TV2 NORGE", "NO - TV2 NYHETSKANALEN FHD", "NO - TV2 SPORTKANALEN HD", "NO - TV2 Zebra FHD", "NO - TV2 ZEBRA HD", "NO - TV3 FHD", "NO - TV6", "NO - VIASAT 4", "NO - VIASAT 4 FHD", "NO - VIASAT EXPLORER", "NO - VIASAT GOLF HD", "NO - VIASAT HISTORY", "NO - VIASAT HOCKEY HD", "NO - VIASAT NATURE", "NO - VIASAT SERIES FHD", "NO - VOX FHD"]},
+{n:"SWEDEN",f:"\ud83c\uddf8\ud83c\uddea",c:"18+",ch:["SW - SVT 1 HD", "SW - SVT 2 HD", "SW - TV3 HD", "SW - TV4 HD", "SW - KANAL 5 HD", "SW - TV 6 HD", "SW - SJUAN HD", "SW - TV8 HD", "SW - KANAL 9 HD", "SW - TV 10 HD", "SW - KANAL 11 HD", "SW - TV 12 HD", "SW - TV MALM\u00d6", "SW - TV4 FAKTA HD", "SW - TV 4 GULD HD", "SW - BARNEKANALEN", "SW - MAX HD", "SW - SVT KUNSKAPSKANALEN HD"]},
+{n:"DENMARK",f:"\ud83c\udde9\ud83c\uddf0",c:"21+",ch:["DK - DR1", "DK - DR2", "DK - TV2 HD", "DK - TV2 HD", "DK - TV2 NEWS", "DK - TV2 CHARLIE", "DK - TV 2 FRI", "DK - TV2 LORRY DANMARK", "DK - TV2 SPORT", "DK - TV2 ZULU", "DK -TV3", "DK - TV3 +", "DK - TV3 MAX", "DK - TV3 PULS", "DK - DANSKE KLASSIKKER 1", "DK - DANSKE KLASSIKKER 2", "DK - DANSKE KLASSIKKER 3", "DK - DANSKE KLASSIKKER 4", "DK - DANSKE KLASSIKKER 5", "DK - DR RAMASJANG", "DK - XEE"]},
+{n:"FINLAND",f:"\ud83c\uddeb\ud83c\uddee",c:"6+",ch:["FI - YLE TV FEM", "FI - YLE TV1 HD", "FI - YLE TV2 HD", "FI - SF-Kanalen  [Multi-Sub]", "FI - LIV", "FI - NELONEN"]},
+{n:"ICELAND",f:"\ud83c\uddee\ud83c\uddf8",c:"4+",ch:["R\u00daV 4K", "S\u00cdMINN TV 4K", "ST\u00d6\u00d0 2 4K", "H\u00daSASMI\u00d0JAN TV 4K"]},
+{n:"CANADA",f:"\ud83c\udde8\ud83c\udde6",c:"434+",ch:["A&E 4K", "ABC EAST 4K", "ABC SPARK CANADA 4K", "ABC WEST 4K", "ACTION 4K", "AHC 4K", "AMC 4K", "ANIMAL PLANET 4K", "APTN 4K", "BBC CANADA 4K", "BBC WORLD NEWS 4K", "BET 4K", "BNN 4K", "BOOK TV 4K", "CTV Drama 4K", "Bravo HD 4K", "CARTOON NETWORK 4K", "CBC NEWS 4K", "CBC OTTAWA 4K", "CBC TORONTO 4K", "CBC WINNIPEG HD 4K", "CBC VANCOUVER 4K", "CBS EAST 4K", "CBS WEST 4K", "CHCH 4K", "CITY MONTREAL 4K", "CITY TORONTO 4K", "CITY VANCOUVER 4K", "CMT CANADA 4K", "CNBC 4K", "CNN 4K", "CNN INTERNATIONAL 4K", "CTV COMEDY HD 4K", "COOKING CHANNEL 4K", "COTTAGE LIFE 4K", "CP24 HD 4K", "CPAC 4K", "CRIME INVEST 4K", "CTV 2 VANCOUVER 4K", "CTV HALIFAX 4K", "CTV NEWS NETWORK 4K", "CTV OTTAWA 4K", "CTV TORONTO 4K", "CTV VANCOUVER 4K", "CTV2 OTTAWA 4K", "CW 11 4K", "DAYSTAR TV 4K", "DEJAVIEW 4K", "DISCOVERY CANADA 4K", "DISCOVERY SCIENCE CANADA 4K"]},
+{n:"USA",f:"\ud83c\uddfa\ud83c\uddf8",c:"1213+",ch:["A&E 4K", "AMC 4K", "BET 4K", "Bravo 4K", "Comedy Central 4K", "FX 4K", "FXX 4K", "Hallmark Channel 4K", "Hallmark Movies & Mysteries 4K", "Lifetime 4K", "Paramount Network 4K", "Syfy 4K", "TBS 4K", "TNT 4K", "USA Network 4K", "E! Entertainment 4K", "Freeform 4K", "truTV 4K", "VH1 4K", "WE tv 4K", "ABC News 4K", "Bloomberg 4K", "CNBC 4K", "CNN 4K", "Fox News 4K", "MSNBC 4K", "Newsmax 4K", "The Weather Channel 4K", "OANN (One America News Network) 4K", "PBS NewsHour 4K", "ESPN 4K", "ESPN2 4K", "Fox Sports 1 (FS1) 4K", "Fox Sports 2 (FS2) 4K", "NBC Sports Network 4K", "CBS Sports Network 4K", "NFL Network 4K", "NBA TV 4K", "MLB Network 4K", "NHL Network 4K", "Golf Channel 4K", "Tennis Channel 4K", "SEC Network 4K", "Big Ten Network 4K", "Pac-12 Network 4K", "ACC Network 4K", "WWE Network 4K", "Fubo Sports Network 4K", "Fox Soccer Plus 4K", "MotorTrend 4K"]},
+{n:"CARIBBEAN",f:"\ud83c\udf34",c:"160+",ch:["CAPEVERDE - TCV CABO", "ANTILLEN - TMA", "ARUBA - TELEARUBA", "CURACAO - NOS PAIS TV", "CURACAO - TV DIRECT 13", "CURACAO - DC TV", "CURACAO - TELECURACAO", "CAR - VH1 CLASSIC | HD", "CAR - &TV | HD", "CAR - 3ABN | SD", "CAR - AL JAZEERA | SD", "CAR - ANIMAL PLANET | SD", "CAR - ARTS | SD", "CAR - AWE | HD", "CAR - AXN | SD", "CAR - AXSTV | HD", "CAR - B4U MOVIES | SD", "CAR - B4U MUSIC | SD", "CAR - BABY FIRST | SD", "CAR - BABY TV | SD", "CAR - BBO | HD", "CAR - BET GOSPEL | SD", "CAR - BET HER | HD", "CAR - BET JAMS | SD", "CAR - BET SOUL | SD", "CAR - BET | SD", "CAR - BLOOMBERG | HD", "CAR - BOOMERANG | SD", "CAR - CANAL SONY | HD", "CAR - CARIBVISION | SD", "CAR - CARS TV | HD", "CAR - CCTV 4 | HD", "CAR - CGTN DOCUMENTARY | SD", "CAR - CINECANAL | HD", "CAR - CITYTV | HD", "CAR - CNN INTERNATIONAL | SD", "CAR - CNN | SD", "CAR - CNS | SD", "CAR - COMEDY | HD", "CAR - COOKING CHANNEL | HD", "CAR - CUBA V | SD", "CAR - CUBA VISION | SD", "CAR - CVM TV | SD", "CAR - CVTV | SD", "CAR - DANCEHALL REGGAE | SD", "CAR - DAYSTAR | SD", "CAR - DISCOVERY CHANNEL | SD", "CAR - DISCOVERY CIVILIZATION | SD", "CAR - DISCOVERY HOME AND HEALTH | SD", "CAR - DISCOVERY KIDS | SD"]},
+{n:"AM | BRAZIL",f:"\ud83c\udf10",c:"26+",ch:["BR - GLOBO BRASILA HD", "BR - GLOBO RJ HD", "BR - GLOBO SP HD", "BR - GLOBO MINAS HD", "BR - GLOBO NORDESTE HD", "BR - GLOBO RBS PORTO ALEGRE HD", "BR - GLOBO TV MIRANTE HD", "BR - GLOBO TV SERGIPE HD", "BR - RECORD HD", "BR - RECORD RJ HD", "BR - RECORD SP HD", "BR - WOOHOO HD", "BR - VIVA HD", "BR - EI PLUS HD", "BR - LIFETIME HD", "BR - FOOD NETWORK HD", "BR - GLOOB HD", "BR - GNT HD", "BR - GLOBOSAT HD", "BR - CANAL BRASIL HD", "BR - NOVO TEMPO HD", "BR - REDE TV HD", "BR - SBT CIDADE VERDE HD", "BR - SBT HD", "BR - CURTA! HD", "BR - PRIME BOX BRASIL HD"]},
+{n:"ARGENTINA",f:"\ud83c\udde6\ud83c\uddf7",c:"39+",ch:["ARG - FOX SPORTS PREMIUM", "ARG - 13 MAX", "ARG - A24", "ARG - AMERICA TV", "ARG - C5N", "ARG - CANAL 26", "ARG - CANAL 4", "ARG - CANAL 9 SALTA", "ARG - CIUDAD MAGAZINE", "ARG - CN3 PIRAMAR", "ARG - CRONICA", "ARG - DIRECT TV SPORTS", "ARG - DIRECT TV SPORTS 2", "ARG - DIRECT TV SPORTS PLUS", "ARG - EL TRECE", "ARG - ELNUEVE", "ARG - ESPN", "ARG - ESPN 2", "ARG - ESPN 3", "ARG - FOX SPORT", "ARG - FOX SPORT 2", "ARG - FOX SPORT 3", "ARG - LN+", "ARG - MUSIC TOP", "ARG - NET TV", "ARG - TELEFE", "ARG - TELERED", "ARG - TN", "ARG - TNT SPORT", "ARG - TV PUBLICA", "ARG - TYC", "ARG - ESPN+", "ARG - DEPORTV", "ARG - PAKAPAKA", "ARG - TOP LATINO TV", "ARG - CINE AR", "ARG - CANAL DE LA CIUDAD", "ARG - ARGENTINISIMA", "ARG - ENCUENTRO"]},
+{n:"COLOMBIA",f:"\ud83c\udde8\ud83c\uddf4",c:"32+",ch:["CO - CABLENOTICIAS", "CO - CARACOL", "CO - CITY TV", "CO - RCN", "CO - RCN HD2", "CO - RCN NOVELAS", "CO - SENAL COLOMBIA", "CO - TELE MEDELLIN", "CO - TELEANTIOQUIA", "CO - TELEPACIFICO", "CO - TRECE", "CO - CARACOL INTERNACIONAL", "CO - CARACOL HD2", "CO - Amordiscos TV", "CO - Cali TV", "CO - Cali TV", "CO - Canal 8 Teleenvigado", "CO - Canal CNC Medellin", "CO - Cosmovision", "CO - Melody Channel TV", "CO - Melody Channel TV", "CO - Mundo Mas", "CO - Suram", "CO - Tele Medellin", "CO - Telecafe", "CO - Telecaribe", "CO - Telecaribe Deportes", "CO - Teleislas", "CO - Telemusica", "CO - Televid", "CO - UAO Play", "CO - UAO Play +"]},
+{n:"ECUADOR",f:"\ud83c\uddea\ud83c\udde8",c:"6+",ch:["EC - CANAL UNO", "EC - ECUADOR TV", "EC - ECUAVISA", "EC - RTS", "EC - TC ECUADOR", "EC - TELE AMAZONAS"]},
+{n:"URUGUAY",f:"\ud83c\udf10",c:"14+",ch:["UY - CANAL 10", "UY - MONTECARLO TV", "UY - Tele 12", "UY - VTV", "UY - VTV HD", "UY - VTV+", "UY - VTV HD", "UY - CHARRUA TV", "UY - AV+", "UY - TNU", "UY - MONTECARLO TV", "UY - TELE 12", "UY - CANAL 10", "UY - TV CIUDAD"]},
+{n:"PERU",f:"\ud83c\uddf5\ud83c\uddea",c:"7+",ch:["PE - AMERICA TELEVISION", "PE - ATV", "PE - ATV+", "PE - CAPITAL TV", "PE - LATINA", "PE - PANAMERICANA", "PE - TV PERU"]},
+{n:"SURINAME",f:"\ud83c\udf10",c:"1213+",ch:["A&E 4K", "AMC 4K", "BET 4K", "Bravo 4K", "Comedy Central 4K", "FX 4K", "FXX 4K", "Hallmark Channel 4K", "Hallmark Movies & Mysteries 4K", "Lifetime 4K", "Paramount Network 4K", "Syfy 4K", "TBS 4K", "TNT 4K", "USA Network 4K", "E! Entertainment 4K", "Freeform 4K", "truTV 4K", "VH1 4K", "WE tv 4K", "ABC News 4K", "Bloomberg 4K", "CNBC 4K", "CNN 4K", "Fox News 4K", "MSNBC 4K", "Newsmax 4K", "The Weather Channel 4K", "OANN (One America News Network) 4K", "PBS NewsHour 4K", "ESPN 4K", "ESPN2 4K", "Fox Sports 1 (FS1) 4K", "Fox Sports 2 (FS2) 4K", "NBC Sports Network 4K", "CBS Sports Network 4K", "NFL Network 4K", "NBA TV 4K", "MLB Network 4K", "NHL Network 4K", "Golf Channel 4K", "Tennis Channel 4K", "SEC Network 4K", "Big Ten Network 4K", "Pac-12 Network 4K", "ACC Network 4K", "WWE Network 4K", "Fubo Sports Network 4K", "Fox Soccer Plus 4K", "MotorTrend 4K"]},
+{n:"LATINO",f:"\ud83c\udf10",c:"120+",ch:["LATIN - TELEMUNDO", "LATIN - TELENOVELAS", "LATIN - UNICABLE", "LATIN - UNIVERSAL CHANNEL", "LATIN - UNIVISION", "LATIN - CANAL DE LAS ESTRELLAS.", "LATIN - WARNER CHANNEL", "LATIN - FORO TV", "LATIN - SYFY", "LATIN - TCM", "LATIN - TLC", "LATIN - TNT", "LATIN - TNT SERIES", "LATIN - AXN", "LATIN - FOX.", "LATIN - FOX MOVIES", "LATIN - FOX ACTION", "LATIN - FOX CINEMA", "LATIN - FOX CLASSIC", "LATIN - FOX LIFE", "LATIN - E! ENTERTAINMENT", "LATIN - LIFETIME", "LATIN - SONY", "LATIN - FX", "LATIN - GALA TV", "LATIN - GOLDEN", "LATIN - GOLDEN EDGE", "LATIN - STUDIO UNIVERSAL", "LATIN - TUMUSICA", "LATIN - VH1", "LATIN - WIN SPORT HD", "LATIN - WIN SPORT PLUS HD", "LATIN - 52MX", "LATIN - A&E", "LATIN - AMC", "LATIN - ARTS", "LATIN - AZ MAS", "LATIN - AZ UNO", "LATIN - AZTECA 7", "LATIN - AZTECA CINEMA", "LATIN - AZTECA CORAZON", "LATIN - CANAL 11", "LATIN - CANAL 22", "LATIN - CANAL 5", "LATIN - CINE LATINO", "LATIN - CINECANAL", "LATIN - CINEMAX", "LATIN - CLARO", "LATIN - CNN", "LATIN - HISTORY"]},
+{n:"MEXICO",f:"\ud83c\uddf2\ud83c\uddfd",c:"199+",ch:["MX - A PLUS | SD", "MX - ADN40 | SD", "MX - AFORE AZTECA | UHD", "MX - AL JAZEERA | SD", "MX - AMC | UHD", "MX - ANIMAL PLANET | UHD", "MX - ANTENA3 | SD", "MX - AYM SPORT | SD", "MX - AZ CINEMA | HD", "MX - AZ CLIC B1 | UHD", "MX - AZ CORAZON | HD", "MX - AZ MUNDO | HD", "MX - AZTECA 7 | HD", "MX - AZTECA CLICK | SD", "MX - AZTECA CORAZON | SD", "MX - AZTECA DEPORTES | HD", "MX - AZTECA MUNDO | SD", "MX - AZTECA UNO B1 | HD", "MX - BABY FIRST | SD", "MX - BABY TV | HD", "MX - BANDAMAX | SD", "MX - BBC WORLD NEWS | SD", "MX - BLOOMBERG | HD", "MX -ENA H | HD", "MX -END TV | SD", "MX - CANAL 26 | HD", "MX - CANAL 4 | HD", "MX - CANAL 5 | HD", "MX - CANAL 7 | SD", "MX - CANAL 8 | HD", "MX - CANAL DE LAS ESTRELLAS | SD", "MX - CANAL JUDICIAL | HD", "MX - CANAL ONCE | SD", "MX - CANAL104 | SD", "MX - CANAL107 | SD", "MX - CANAL109 | SD", "MX - CANAL113 | SD", "MX - CANAL1749 | SD", "MX - CANAL1755 | SD", "MX - CANAL1870 | SD", "MX - CANAL1899 | SD", "MX - CANAL1932 | SD", "MX - CANAL1944 | SD", "MX - CANAL1944 | SD", "MX - CANAL2062 | SD", "MX - CANAL2089 | HD", "MX - CANAL211 | SD", "MX - CANAL2113 | SD", "MX - CANAL2145 | SD", "MX - CANAL2278 | SD"]},
+{n:"CHILE",f:"\ud83c\udde8\ud83c\uddf1",c:"10+",ch:["CL - 13 CABLE", "CL - CANAL13", "CL - CDF PREMIUN", "CL - CHILEVISION", "CL - CNN", "CL - LA RED", "CL - MEGA", "CL - TVN", "CL - FOX SPORTS", "CL - CDF"]},
+{n:"CUBA",f:"\ud83c\udde8\ud83c\uddfa",c:"4+",ch:["CU - CUBAVISION", "CU - CUBAVISION INTERNACIONAL", "CU - TELE REBELDE", "CU - TV MARTI"]},
+{n:"PANAMA",f:"\ud83c\uddf5\ud83c\udde6",c:"2+",ch:["PN - ECO", "PN - NET TV"]},
+{n:"DOMINICAN",f:"\ud83c\udde9\ud83c\uddf4",c:"16+",ch:["RDOM - COLORVISION", "RDOM - TELE FUTURO", "RDOM - TELESISTEMA", "RDOM - READY TELEVISION HD", "RDOM - XTREMO PREMIUM", "RDOM - TELEUNIVERSO", "RDOM - TELERADIO AMERICA", "RDOM - TELEMICRO", "RDOM - TELECENTRO", "RDOM - TELEANTILLAS", "RDOM - MICROVISION", "RDOM - DIGITAL VISION", "RDOM - DIGITAL 15", "RDOM - CERTV", "RDOM - CANAL DEL SOL", "RDOM - ACENTO TV"]},
+{n:"NICARAGUA",f:"\ud83c\uddf3\ud83c\uddee",c:"16+",ch:["CANAL 2 NICARAGUA 4K", "CANAL 4 NICARAGUA 4K", "CANAL 8 NICARAGUA 4K", "CANAL 10 NICARAGUA 4K", "CANAL 12 NICARAGUA 4K", "TELECORPORACI\u00d3N NICARAG\u00dcENSE (Telenica) 4K", "CANAL 14 NICARAGUA 4K", "CANAL 15 NICARAGUA 4K", "100% NOTICIAS 4K", "TN8 NICARAGUA 4K", "CRN NOTICIAS 4K", "CANAL 6 NICARAGUA 4K", "LA VOZ DE AM\u00c9RICA NICARAGUA 4K", "TELEVISA NICARAGUA 4K", "CNN NICARAGUA 4K", "NACIONAL TV NICARAGUA 4K"]},
+{n:"GUYANA",f:"\ud83c\udf10",c:"120+",ch:["LATIN - TELEMUNDO", "LATIN - TELENOVELAS", "LATIN - UNICABLE", "LATIN - UNIVERSAL CHANNEL", "LATIN - UNIVISION", "LATIN - CANAL DE LAS ESTRELLAS.", "LATIN - WARNER CHANNEL", "LATIN - FORO TV", "LATIN - SYFY", "LATIN - TCM", "LATIN - TLC", "LATIN - TNT", "LATIN - TNT SERIES", "LATIN - AXN", "LATIN - FOX.", "LATIN - FOX MOVIES", "LATIN - FOX ACTION", "LATIN - FOX CINEMA", "LATIN - FOX CLASSIC", "LATIN - FOX LIFE", "LATIN - E! ENTERTAINMENT", "LATIN - LIFETIME", "LATIN - SONY", "LATIN - FX", "LATIN - GALA TV", "LATIN - GOLDEN", "LATIN - GOLDEN EDGE", "LATIN - STUDIO UNIVERSAL", "LATIN - TUMUSICA", "LATIN - VH1", "LATIN - WIN SPORT HD", "LATIN - WIN SPORT PLUS HD", "LATIN - 52MX", "LATIN - A&E", "LATIN - AMC", "LATIN - ARTS", "LATIN - AZ MAS", "LATIN - AZ UNO", "LATIN - AZTECA 7", "LATIN - AZTECA CINEMA", "LATIN - AZTECA CORAZON", "LATIN - CANAL 11", "LATIN - CANAL 22", "LATIN - CANAL 5", "LATIN - CINE LATINO", "LATIN - CINECANAL", "LATIN - CINEMAX", "LATIN - CLARO", "LATIN - CNN", "LATIN - HISTORY"]},
+{n:"FRANCE",f:"\ud83c\uddeb\ud83c\uddf7",c:"38+",ch:["FR - TF1 FHD", "FR - FRANCE 2 FHD", "FR - FRANCE 3 FHD", "FR - FRANCE 3 NOA FHD", "FR - FRANCE 4 FHD", "FR - FRANCE 5 FHD", "FR - FRANCE \u00d4 FHD", "FR - ARTE FHD", "FR - M6  FHD", "FR - 6TER FHD", "FR - C8 FHD", "FR - W9 FHD", "FR - RTS UN FHD", "FR - RTS DEUX FHD", "FR - AB1 FHD", "FR - AB3 FHD", "FR - TV BREIZH FHD", "FR - TV5 MONDE FHD", "FR - 13EME RUE FHD", "FR - TFX FHD", "FR - TF1 SERIES-FILMS FHD", "FR - LFM TV FHD", "FR - TVM3 FHD", "FR - BET FHD", "FR - C STAR FHD", "FR - CANAL 31 FHD", "FR - CLIQUE TV FHD", "FR - COMEDIE  FHD", "FR - GAME ONE  1 FHD", "FR - GAME ONE FHD", "FR - IDF 1 FHD", "FR - J ONE FHD", "FR - MY CUISINE FHD", "FR - NOVELAS TV FHD", "FR - PARIS PREMIERE FHD", "FR - RTL 9 FHD", "FR - TEVA FHD", "FR - CHERIE 25 FHD"]},
+{n:"GERMANY",f:"\ud83c\udde9\ud83c\uddea",c:"25+",ch:["DE - DAS ERSTE HD (ARD)", "DE - DAS ERSTE (ARD)", "DE - ARTE HD", "DE - 3 SAT", "DE - ZDF HD", "DE - ZDF NEO", "DE - RTL", "DE - RTLII HD", "DE - RTL TELEVISION", "DE - RTL2", "DE - RTL PLUS", "DE - RTL NITRO", "DE - SIXX HD", "DE - PROSIEBEN HD", "DE - SAT 1 HD", "DE - SAT 1 GOLD HD", "DE - VOX HD", "DE - VOX", "DE - PHOENIX HD", "DE - KABEL EINS HD", "DE - KABEL 1 CLASSICS HD", "DE - TELE 5 HD", "DE - ANIXE HD", "DE - DMAX HD", "DE - ZDF INFO HD"]},
+{n:"SPAIN",f:"\ud83c\uddea\ud83c\uddf8",c:"19+",ch:["SP - CORONA VIRUS INFO", "SP - LA 1 HD", "SP - LA 2", "SP - ANTENA 3 HD", "SP - CUATRO HD", "SP - TELECINCO HD", "SP - LA SEXTA HD", "SP - FDF", "SP - ENERGY", "SP - DIVINITY", "SP - MEGA HD", "SP - NEOX", "SP - NOVA", "SP - 24 HORAS", "SP - CANAL 24 HORAS", "SP - CANAL SUR", "SP - TVE INTERNACIONAL", "SP - CLAN TVE", "SP - IBERALIA"]},
+{n:"ITALY",f:"\ud83c\uddee\ud83c\uddf9",c:"60+",ch:["IT - RAI 1 UHD", "IT - RAI 2 UHD", "IT - RAI3 UHD", "IT - RETE4 UHD", "IT - CANALE5 UHD", "IT - ITALIA 1 UHD", "IT - LA7 UHD", "IT - TV 8 UHD", "IT - NOVE UHD", "IT - CIELO UHD", "IT - RAI MOVIE UHD", "IT - IRIS", "IT - PARAMOUNT CHANNEL", "IT - SKY CINEMA UNO UHD", "IT - SKY CINEMA DUE UHD", "IT - SKY CINEMA COLLECTION UHD", "IT - SKY CINEMA FAMILY UHD", "IT - SKY CINEMA ACTION UHD", "IT - SKY CINEMA SUSPENCE UHD", "IT - SKY CINEMA ROMANCE UHD", "IT - SKY CINEMA DRAMA UHD", "IT - SKY CINEMA COMEDY UHD", "IT - SKY CINEMA UNO 24 UHD", "IT - SKY CINEMA DUE 24 UHD", "IT - PREMIUM CINEMA 1 FHD", "IT - PREMIUM CINEMA 2 FHD", "IT - PREMIUM CINEMA 3 FHD", "IT - PREMIUM ACTION FHD", "IT - PREMIUM CRIME UHD", "IT - PREMIUM STORIES UHD", "IT - RAI PREMIUM UHD", "IT - RAI 4 UHD", "IT - RAI 5 UHD", "IT - 20 MEDIASET UHD", "IT - LA5", "IT - MEDIASET ITALIA DUE", "IT - MEDIASET EXTRA", "IT - TOP CRIME", "IT - GIALLO UHD", "IT - REAL TIME UHD", "IT - REAL TIME +1", "IT - DMAX UHD", "IT - DMAX+1", "IT - LA7D", "IT - TV2000", "IT - SPIKE", "IT - FOOD NETWORK", "IT - SKY UNO UHD", "IT - SKY ATLANTIC UHD", "IT - FOX UHD"]},
+{n:"NETHERLANDS",f:"\ud83c\uddf3\ud83c\uddf1",c:"88+",ch:["NL - NPO 1 HD", "NL - NPO 2 HD", "NL - NPO 3 HD", "NL - RTL 4 HD", "NL - RTL 7 HD", "NL - RTL 8 HD", "NL - RTL LOUNGE", "NL - RTL Z HD", "NL - SBS 6 HD", "NL - SBS 9 HD", "NL - AT 5", "NL - TV DRENTHE", "NL - TV GELDERLAND", "NL - TV OOST", "NL - TV NOORD", "NL - TV ORANJE", "NL - TV RIJNMOND", "NL - TV WEST", "NL- OMROEP BRABANT", "NL - OMROEP FLEVOLAND", "NL- OMROEP FRYSLAND", "NL- OMROEP ZEELAND", "NL - L1 LIMBURG", "NL - FILM 1 ACTION HD", "NL - FILM 1 DRAMA HD", "NL - FILM 1 FAMILY HD", "NL - FILM 1 PREMIERE HD", "NL - RTL CRIME", "NL - FOX", "NL - E! HD", "NL - COMEDY CENTRAL", "NL - COMEDY CENTRAL EXTRA", "NL - COMEDY CENTRAL FAMILY", "NL - ZIGGO SPORT SELECT HD", "NL - FOX SPORT 1 HD", "NL - FOX SPORT 2 HD", "NL - FOX SPORT 3 HD", "NL - FOX SPORT 4 HD", "NL - FOX SPORT 5 HD", "NL - FOX SPORT 6 HD", "NL - EUROSPORT 1 HD", "NL - EUROSPORT 2 HD", "NL - ZIGGO SPORT EXTRA 2 HD", "NL - ZIGGO SPORT GOLF HD", "NL - ZIGGO SPORT HD", "NL - ZIGGO SPORT RACING HD", "NL - ZIGGO SPORT VOETBAL HD", "NL - NGC", "NL - NGC WILD HD", "NL - DISCOVERY"]},
+{n:"GREECE",f:"\ud83c\uddec\ud83c\uddf7",c:"18+",ch:["GR - ERT 1", "GR - ERT 1 HD", "GR - ERT 2", "GR - ERT 2 HD", "GR - ERT 3", "GR - ERT 3 HD", "GR - ERT HD", "GR - ALPHA", "GR - ALPHA HD", "GR - ANT 1", "GR - ANT 1 HD", "GR - KONTRA", "GR - KONTRA TV", "GR - MAKEDONIA", "GR - MAKEDONIA TV HD", "GR - SKAI", "GR - SKAI HD", "GR - MEGA CHANNEL"]},
+{n:"ARMENIA",f:"\ud83c\udde6\ud83c\uddf2",c:"42+",ch:["ARM - ARMENIA TV", "ARM - ARM PUBLIC TV", "ARM - KENTRON TV", "ARM - H1 HD AM", "ARM - H2 AM", "ARM - H3 AM", "ARM - ARMENIA NEWS HD AM", "ARM - ARMENIA TV HD AM", "ARM - ATV HD AM", "ARM - SHANT AM", "ARM - ARMENIA 1 TV AM", "ARM - KENTRON TV AM", "ARM - KENTRON TV1", "ARM - AR AM", "ARM - ARARAT AM", "ARM - LUYS AM", "ARM - DAR21 TV AM", "ARM - SHOGHAKAT AM", "ARM - AABC TV", "ARM - AMGA", "ARM - ARMENIA COMEDY", "ARM - ARTN-NET", "ARM - BAZMOC ATV", "ARM - CINEMAN", "ARM - FILMZONE ATV", "ARM - HAY TV KINO", "ARM - HAY TV MUSIC", "ARM - HIGH VISION TV", "ARM - HORIZON TV", "ARM - JAN TV", "ARM - LALISH TV", "ARM - LUYS ISTANBUL", "ARM - MTV HD", "ARM - PAN ARMENIA TV", "ARM - PREMIUM ATV", "ARM - ERKIR AM", "ARM - SONG TV HD", "ARM - TAVA ATV", "ARM - TBN ARMENIA HD", "ARM - TUNTUNIK", "ARM - US ARMENIA TV", "ARM - YERKIR MEDIA"]},
+{n:"SWITZERLAND",f:"\ud83c\udde8\ud83c\udded",c:"27+",ch:["CH -CORONA VIRUS INFO", "CH - RSI LA 1 HD", "CH - RSI LA 2 HD", "CH - SRF INFO", "CH - SRF ZWEI HD", "CH - SRF 1 HD", "CH - RTS UN HD", "CH - RTS DEUX HD", "CH - PLUS 8 HD", "CH - 3  HD", "CH - 4  HD", "CH - 5  HD", "CH - TV 24 HD", "CH - TV 25 HD", "CH - TELECLUB CINEMA HD", "CH - TELECLUB SPORT 1 HD", "CH - TELECLUB SPORT 2 HD", "CH - MY SPORTS HD", "CH - MY SPORTS 1 HD/SKY 1", "CH - MY SPORTS 2 HD/SKY 2", "CH - MY SPORTS 3 HD/SKY 3", "CH - MY SPORTS 4 HD/SKY 4", "CH - MY SPORTS 5 HD/SKY 5", "CH - MY SPORTS 6 HD/SKY 6", "CH - MY SPORTS 7 HD/SKY 7", "CH - MY SPORTS 8 HD/SKY 8", "CH - MY SPORTS 9 HD/SKY 9"]},
+{n:"BULGARIA",f:"\ud83c\udde7\ud83c\uddec",c:"81+",ch:["BU - BNT 1", "BU - BNT 2", "BU - BNT 3", "BU - BNT 4", "BU - BTV HD", "BU - BTV", "BU - BTV ACTION", "BU - BTV CINEMA", "BU - BTV COMEDY", "BU - BTV LADY", "BU - BNT WORLD", "BU - SKAT TV", "BU - PLANETA FOLK", "BU - PLANETA HD", "BU - PLANETA TV", "BU - EVROKOM", "BU - FEN TV", "BU - FEN FOLK TV", "BU - HOBBY TV", "BU - 24 KITCHEN", "BU - F PLUS HD", "BU - AMC", "BU - AXN", "BU - BALKANIKA", "BU - HBO HD", "BU - HBO 2 HD", "BU - HBO 3 HD", "BU - CINEMA PLUS", "BU - F PLUS HD", "BU - CITY TV", "BU - CN", "BU - COMEDY PLUS", "BU - 7/8 TV", "BU - DIEMA", "BU - DIEMA FAMILY", "BU - DIEMA SPORT", "BU - DIEMA SPORT 2", "BU - MAX SPORT 1", "BU - MAX SPORT 2", "BU - MAX SPORT 3", "BU - DISCOVERY CHANNEL", "BU - DISNEY CHANNEL", "BU - DISNEY JUNIOR", "BU - EKIDS", "BU - EUROSPORT", "BU - EUROSPORT 2", "BU - EUROSPORT HD", "BU - FINE LIVING", "BU - FOLKLOR TV", "BU - FOX"]},
+{n:"EXYU",f:"\ud83c\udf10",c:"39+",ch:["|EXYU| BHT HD", "|EXYU| BHT", "|EXYU| FTV", "|EXYU| HAYAT HD", "|EXYU| HAYAT BIH", "|EXYU| HAYAT PLUS", "|EXYU| NOVA BH HD", "|EXYU| NOVA BH", "|EXYU| FACE TV HD", "|EXYU| FACE TV", "|EXYU| AL JAZEERA BALKAN HD", "|EXYU| AL JAZEERA BALKAN", "|EXYU| OBN BIH", "|EXYU| OBN", "|EXYU| N1 BOSNA", "|EXYU| BN BIH", "|EXYU| BN SAT HD", "|EXYU| RTRS PLUS", "|EXYU| RTRS", "|EXYU| ALTERNATIVNA TV", "|EXYU| TV ZENICA", "|EXYU| TV USK", "|EXYU| RTV CAZIN", "|EXYU| RTV KRAJINA", "|EXYU| TK TV", "|EXYU| TV 1", "|EXYU| TV SARAJEVO", "|EXYU| TV KAKANJ", "|EXYU| TELEVIZIJA 5", "|EXYU| RTV VISOKO", "|EXYU| RTV SLON", "|EXYU| RTV BUGOJNO", "|EXYU| OTV VALENTINO", "|EXYU| MTV IGMAN", "|EXYU| K 3 PRNJAVOR", "|EXYU| HIT BRCKO", "|EXYU| POSAVINA TV", "|EXYU| B1 GRADACAC", "|EXYU| ALFA TV SARAJEVO"]},
+{n:"MAKEDONIA",f:"\ud83c\udf10",c:"33+",ch:["|MK| MRT 1", "|MK| MRT 2", "|MK| MRT SOBRANISKI", "|MK| 24 VESTI", "|MK| ALFA", "|MK| ALSAT M", "|MK| BBC EARTH", "|MK| DA VINCI LEARNING", "|MK| RTL 2", "|MK| RTL KOCKICA", "|MK| RTL LIVING", "|MK| FILM BOX_ARTHOUSE", "|MK| FILM BOX_PLUS", "|MK| CINESTAR ACTION AND THRILLER", "|MK| CINESTAR TV", "|MK| GRAND TV", "|MK| JUGOTON", "|MK| KANAL 5", "|MK| KISS", "|MK| MAGIC", "|MK| SITEL", "|MK| SK 1", "|MK| SK 2", "|MK| SK 3", "|MK| SK 4", "|MK| TELMA", "|MK| TV 1", "|MK| TV 1000", "|MK| TV 21", "|MK| TV SHENJA", "|MK| VIASAT EXPLORE", "|MK| VIASAT HISTORY", "|MK| VIASAT NATURE"]},
+{n:"HUNGARIAN",f:"\ud83c\udf10",c:"14+",ch:["HU - M PLUS", "HU - M4 HD", "HU - MEGAMAX", "HU - RTL 2 HD", "HU - RTL KLUB HD", "HU - RTL PLUS", "HU - SPEKTRUM HOME", "HU - STORY 4", "HU - STORY 5", "HU - TLC", "HU - TV 1000", "HU - TV2 HD", "HU - VIASAT 3", "HU - VIASAT 6"]},
+{n:"UKRAINE",f:"\ud83c\uddfa\ud83c\udde6",c:"51+",ch:["UKR - TONIS HD", "UKR - 112 UKRAINE HD", "UKR - KIEV STB", "UKR - M1", "UKR - MILADY TELEVISION", "UKR - NOVY CHANNEL", "UKR - ICTV", "UKR - M2", "UKR - NEWS 24", "UKR - TONIS", "UKR - QTV", "UKR - UA KRYM", "UKR - PERVY DELOVOY", "UKR - TYSA 1", "UKR - 112 UKRAINE", "UKR - CULTURE!", "UKR - 1+1", "UKR - TET", "UKR - 2+2", "UKR - 1+1 INTERNATIONAL", "UKR - PLUS PLUS", "UKR - BIGUDI", "UKR - UNIAN TV", "UKR - MUSIC BOX", "UKR - OTV", "UKR - TRK UKRAINA", "UKR - DONBASS", "UKR - 34", "UKR - NLO TV", "UKR - INDIGO", "UKR - NEWS NETWORK", "UKR - SONCE", "UKR - 5 KANAL", "UKR - KRT", "UKR - VINTAGE TV", "UKR - ATR", "UKR - LALE", "UKR - MAXXI TV", "UKR - INTER", "UKR - BLACK SEA TV", "UKR - NTN", "UKR - HORIZONT", "UKR - MEGA", "UKR - K1", "UKR - K2", "UKR - ZOOM", "UKR - PIXEL", "UKR - ENTER FILM", "UKR - XSPORT", "UKR - INTER PLUS"]},
+{n:"ANDORRA",f:"\ud83c\udde6\ud83c\udde9",c:"1+",ch:["ATV ANDORRA 4K"]},
+{n:"BOSNIA AND HERZEGOVINA",f:"\ud83c\udf10",c:"8+",ch:["BHRT 4K", "RTRS 4K", "FTV 4K", "OBN 4K", "HAYAT TV 4K", "PINK BH 4K", "FACE TV 4K", "ALFA TV 4K"]},
+{n:"CROATIA",f:"\ud83c\udded\ud83c\uddf7",c:"6+",ch:["HRT 1 4K", "HRT 2 4K", "NOVA TV 4K", "RTL TELEVIZIJA 4K", "RTL 2 4K", "DOMA TV 4K"]},
+{n:"CYPRUS",f:"\ud83c\udde8\ud83c\uddfe",c:"6+",ch:["RIK 1 4K", "RIK 2 4K", "SIGMA TV 4K", "ANT1 CYPRUS 4K", "OMEGA TV 4K", "ALPHA CYPRUS 4K"]},
+{n:"CZECH REPUBLIC",f:"\ud83c\udde8\ud83c\uddff",c:"6+",ch:["\u010cT1 4K", "\u010cT2 4K", "NOVA TV 4K", "PRIMA TV 4K", "PRIMA COOL 4K", "BARRANDOV TV 4K"]},
+{n:"ESTONIA",f:"\ud83c\uddea\ud83c\uddea",c:"5+",ch:["ETV 4K", "ETV2 4K", "KANAL 2 4K", "TV3 ESTONIA 4K", "TV6 ESTONIA 4K"]},
+{n:"GEORGIA",f:"\ud83c\uddec\ud83c\uddea",c:"5+",ch:["IMEDI TV 4K", "RUSTAVI 2 4K", "TV PIRVELI 4K", "MAESTRO TV 4K", "ADJARA TV 4K"]},
+{n:"VATICAN CITY",f:"\ud83c\udf10",c:"1+",ch:["VATICAN MEDIA 4K"]},
+{n:"BELGIUM",f:"\ud83c\udde7\ud83c\uddea",c:"14+",ch:["BE - CORONA VIRUS INFO", "BE - EEN HD", "BE - Q2 HD", "BE - VTM HD", "BE - VTM KIDS", "BE - VIER HD", "BE - VIJF TV", "BE - ZES", "BE - CAZ", "BE - VITAYA", "BE - VTM KIDS JR", "BE - KETNEET", "BE - JIM JAM", "BE - ECLIPS TV"]},
+{n:"PORTUGAL",f:"\ud83c\uddf5\ud83c\uddf9",c:"34+",ch:["PT - CORONA VIRUS INFO", "PT - RTP 1 HD", "PT - RTP 1", "PT - RTP 2 HD", "PT - RTP 2", "PT - RTP 3", "PT - RTP MEMORIA", "PT - RTP MADEIRA", "PT - RTP ACORES", "PT - RTP AFRICA", "PT - SIC HD", "PT - SIC", "PT - SIC MULHER HD", "PT - SIC MULHER", "PT - SIC RADICAL HD", "PT - SIC CARAS HD", "PT - SIC RADICAL", "PT - SIC CARAS", "PT - SIC K HD", "PT - SIC K", "PT - CANAL Q", "PT - PORTO CANAL", "PT - PORTO CANAL HD", "PT - TV RECORD", "PT - TVI HD", "PT - TVI", "PT - TVE 24H", "PT - TVI 24", "PT - TVE I", "PT - TVI FICCAO", "PT - TVI REALITY", "PT - BTV HD", "PT - TCV CABO", "PT - Fatima TV"]},
+{n:"MALTA",f:"\ud83c\uddf2\ud83c\uddf9",c:"30+",ch:["MT - TVM HD", "MT - TVM 2 HD", "MT - NET TV HD", "MT - ONE TV", "MT - SMASH 7 NEWS HD", "MT - SMASH FOOD HD", "MT - SMASH TV HD", "MT - ALTERNATIVE RADIO", "MT - ERGA LURA HD", "MT - SMASH ARABIC HD", "MT - NET HD", "MT - ONE HD", "MT - RETRO RADIO", "MT - ROCK RADIO", "MT - SMASH HD", "MT - SMASH 7 NEWS HD", "MT - SMASH CAM HD", "MT - SMASH COUNTRY HD", "MT - SMASH ENTERTAINMENT HD", "MT - SMASH EXPLORE HD", "MT - SMASH FOOD HD", "MT - SMASH HOUSE OF ROCK HD", "MT - SMASH JAZZ HD", "MT - SMASH MUSIC HD", "MT - SMASH POLITIKA HD", "MT - SMASH RADIO", "MT - SMASH RETRO HD", "MT - SMASH SPORTS HD", "MT - THE RIVER CHRISTIAN CHANNEL HD", "MT - TV SHOP CHANNEL HD"]},
+{n:"AUSTRIA",f:"\ud83c\udde6\ud83c\uddf9",c:"20+",ch:["AT - AUSTRIAAT - ATV HD", "AT - ATV2", "AT - ORF III HD", "AT - ORF SPORT", "AT - ORF SPORT  HD", "AT - ORF1 HD", "AT - ORF2N HD", "AT - ORF2W HD", "AT - PULS 4 HD Austria", "AT - ServusTV HD Oesterreich", "AT - Sky Sport Austria HD", "AT - MELODIE TV HD", "AT - MELODIE TV HEVC", "DAZN 1 BAR HD", "DAZN 2 BAR HD", "DE - RTL 2 HD", "DE - RTL HD", "DE - PROSIEBEN MAXX HD", "DE - NICK /MTV HD", "DE - Auto Motor Sport HD"]},
+{n:"ARMENIA",f:"\ud83c\udde6\ud83c\uddf2",c:"42+",ch:["ARM - ARMENIA TV", "ARM - ARM PUBLIC TV", "ARM - KENTRON TV", "ARM - H1 HD AM", "ARM - H2 AM", "ARM - H3 AM", "ARM - ARMENIA NEWS HD AM", "ARM - ARMENIA TV HD AM", "ARM - ATV HD AM", "ARM - SHANT AM", "ARM - ARMENIA 1 TV AM", "ARM - KENTRON TV AM", "ARM - KENTRON TV1", "ARM - AR AM", "ARM - ARARAT AM", "ARM - LUYS AM", "ARM - DAR21 TV AM", "ARM - SHOGHAKAT AM", "ARM - AABC TV", "ARM - AMGA", "ARM - ARMENIA COMEDY", "ARM - ARTN-NET", "ARM - BAZMOC ATV", "ARM - CINEMAN", "ARM - FILMZONE ATV", "ARM - HAY TV KINO", "ARM - HAY TV MUSIC", "ARM - HIGH VISION TV", "ARM - HORIZON TV", "ARM - JAN TV", "ARM - LALISH TV", "ARM - LUYS ISTANBUL", "ARM - MTV HD", "ARM - PAN ARMENIA TV", "ARM - PREMIUM ATV", "ARM - ERKIR AM", "ARM - SONG TV HD", "ARM - TAVA ATV", "ARM - TBN ARMENIA HD", "ARM - TUNTUNIK", "ARM - US ARMENIA TV", "ARM - YERKIR MEDIA"]},
+{n:"POLONIA",f:"\ud83c\udf10",c:"18+",ch:["PL - TVP HD", "PL - TVP 1 HD", "PL - TVP 2 HD", "PL - TVP 3", "PL - TV4 HD", "PL - TELE 5", "PL - TV6", "PL - POLONIA 1", "PL - POLSAT HD", "PL - POLSAT 2 HD", "PL - SUPER POLSAT", "PL - TVN HD", "PL - TVN 7 HD", "PL - TVS", "PL - TTV HD", "PL - TV PULS HD", "PL - ATM ROZRYWKA TV", "PL - POLSAT RODZINA"]},
+{n:"ALBANIA",f:"\ud83c\udde6\ud83c\uddf1",c:"63+",ch:["ALB - roylab stats", "ALB - RTK 1", "ALB - RTK 1 HD", "ALB - RTK 2", "ALB - RTK 3", "ALB - RTK 4", "ALB -  ALSAT M", "ALB - TOP CHANNEL HD", "ALB - TOP CHANNEL 4K", "ALB - VIZION PLUS HD", "ALB -  VIZION PLUS 4K", "ALB - KTV KOHAVISION", "ALB - KLAN MACEDONIA", "ALB - KLAN KOSOVA HD", "ALB - KLAN TV HD", "ALB - KLAN 4K", "ALB - KLAN PLUS HD", "ALB - KLAN PLUS 4K", "ALB - RTV21", "ALB - RTV21 HD", "ALB - RTV21 MIX", "ALB - RTV21 NEWSBIZ HD", "ALB - RTV21 PLUS", "ALB - RTV21 MAQEDONIA", "ALB - TV2 GOSTIVAR", "ALB - TV TETOVA HD", "ALB -  TV KOHA HD", "ALB - RTV ILIRIDA", "ALB - TV POLLOGU", "ALB - TV USKANA", "ALB - TDC", "ALB - TDC 4K", "ALB - RTSH 1", "ALB - RTSH 1 HD", "ALB - RTSH 2 HD", "ALB - RTSH 24 HD", "ALB - RTSH 3", "ALB - RTSH GJIROKASTRA", "ALB - RTSH KUVEND", "ALB - RTSH MUZIKE", "ALB - RTSH PLUS", "ALB - RTSH SHQIP", "ALB - TV CHANNEL SHOKDER", "ALB - MRT 2", "ALB - STAR PLUS SHKOD\u00cbR HD", "ALB - CHANNEL ONE", "ALB - FIRST TV", "ALB - TV MITROVICA", "ALB - SYRI VISION", "ALB - TV LLAPI"]},
+{n:"ROMANIA",f:"\ud83c\uddf7\ud83c\uddf4",c:"54+",ch:["|RO| TVR 1", "|RO| TVR 2", "|RO| TVR 3", "|RO| TVR HD", "|RO| ROMANIA TV", "|RO| ANTENA 1 HD", "|RO| ANTENA 3", "|RO| ANTENA STARS", "|RO| PROTV HD", "|RO| PRO TV", "|RO| PRO 2", "|RO| PRO X", "|RO| DIGI WORLD", "|RO| DIGI LIFE", "|RO| AXN WHITE", "|RO| AXN ROMANIA", "|RO| AXN BLACK", "|RO| B1 TV", "|RO| DTX", "|RO| FAVORIT TV", "|RO| HAPPY CHANNEL", "|RO| HBO Romania", "|RO| HBO HD RO", "|RO| HBO2", "|RO| HBO 3 RO", "|RO| HBO 3", "|RO| E! ENTERTAINMENT", "|RO| HORA TV", "|RO| JIMJAM", "|RO| KANAL D", "|RO| KISS TV", "|RO| LOOK PLUS HD", "|RO| LOOKPLUS", "|RO| NATIONAL TV", "|RO| PRIMA TV RO", "|RO| REALITATEA TV", "|RO| TARAF", "|RO| TNT RO", "|RO| NGRO", "|RO| N24", "|RO| FINE LIVING", "|RO| ETNO", "|RO| DUNA HD", "|RO| DOCUBOX", "|RO| DIVA", "|RO| DAVINCI LEARNING", "|RO| TRAVEL CHANNEL", "|RO| TV PAPRIKA", "|RO| ZU TV", "|RO| U TV"]},
+{n:"SLOVENIA",f:"\ud83c\uddf8\ud83c\uddee",c:"12+",ch:["|SLOVENIA| SLOV1 HD", "|SLOVENIA| SLOV2 HD", "|SLOVENIA| SLOV3", "|SLOVENIA| BRIOSLO", "|SLOVENIA| GOLICA", "|SLOVENIA| HISTORY HD", "|SLOVENIA| KINOSLO", "|SLOVENIA| MTV ADRIA", "|SLOVENIA| OTOSLO", "|SLOVENIA| POPTV", "|SLOVENIA| PLANET HD", "|SLOVENIA| TV3MSLO"]},
+{n:"MONTENEGRO",f:"\ud83c\uddf2\ud83c\uddea",c:"11+",ch:["|MONTENEGRO| RTV CG 1", "|MONTENEGRO| RTV CG 2", "|MONTENEGRO| RTV CG SAT", "|MONTENEGRO| NOVA M", "|MONTENEGRO| A1", "|MONTENEGRO| PRVA CG", "|MONTENEGRO| HAPPY CG", "|MONTENEGRO| TV 777 PODGORICA", "|MONTENEGRO| I PINK MEDIA M", "|MONTENEGRO| VIJESTI", "|MONTENEGRO| BOIN TV"]},
+{n:"AZERBAIJAN",f:"\ud83c\udde6\ud83c\uddff",c:"20+",ch:["AZE - ARB", "AZE - ARB 24", "AZE - ARB G\u00dcNE\u015e", "AZE - ARB \u00dcLD\u00dcZ", "AZE - ATV", "AZE - AZ TV", "AZE - AZAD TV", "AZE - CBC", "AZE - CBC SPORT HD", "AZE - DALGA TV", "AZE - D\u00dcNYA TV", "AZE - G\u00dcNAZ TV", "AZE - \u0130\u00c7T\u0130MA\u0130 TV", "AZE - \u0130DMAN TV", "AZE - L\u0130DER TV", "AZE - MEDEN\u0130YYET TV", "AZE - MUZ TV", "AZE - SAHAR AZERI", "AZE - SPACE TV", "AZE - XEZER TV"]},
+{n:"RUSSIA",f:"\ud83c\uddf7\ud83c\uddfa",c:"49+",ch:["RU - AMEDIA 1 HD", "RU - AMEDIA 2", "RU - Amedia Premium", "RU - AMEDIA HIT", "RU - REN TV", "RU - CCTV", "RU - CTC", "RU - 1TV RUS EUROPE", "RU - RUSSIA 1 HD", "RU - RUSSIA KULTURA", "RU - EUROPA PLUS TV", "RU - KVN TV", "RU - La Minor", "RU - MNOGO TV", "RU - MTV RUSSIA HD", "RU - NTV HD", "RU - RAZ TV", "RU - RTG TV", "RU - RTR PLANETA", "RU - RT HD", "RU - SHANTON TV", "RU - STRASHNOE HD", "RU - STV", "RU - T24", "RU - TELECAFE", "RU - TNT HD", "RU - TV 3", "RU - ZEE TV RUSSIA", "RU - BOX TV BG", "RU - DETSKIY MIR", "RU - DOM KINO", "RU - DOM KINO PREMIUM", "RU - EVRO KINO", "RU - FISHING AND HUNTING", "RU - HOME 4K", "RU - KHL TV HD", "RU - KINOHIT", "RU - MULYT", "RU - MUZYKA PERVOGO", "RU - NASHE NOVOE KINO", "RU - NHK WORLD TV", "RU - RETRO MUSIC TV", "RU - ROSSIYA 24", "RU - RU TV", "RU - TV1000", "RU - TV1000 ACTION HD", "RU - TV1000 \u0420\u0423\u0421\u0421\u041a\u041e\u0415 HD", "RU - TV1000 \u0420\u0423\u0421\u0421\u041a\u041e\u0415 \u041a\u0418\u041d\u041e", "RU - PERVIY KANAL"]},
+{n:"KOSOVO",f:"\ud83c\uddfd\ud83c\uddf0",c:"6+",ch:["RTK 1 4K", "RTK 2 4K", "RTK 3 4K", "RTV 21 4K", "KLAN KOSOVA 4K", "TV DUKAGJINI 4K"]},
+{n:"LATVIA",f:"\ud83c\uddf1\ud83c\uddfb",c:"5+",ch:["LTV1 4K", "LTV7 4K", "TV3 LATVIA 4K", "TV6 LATVIA 4K", "R\u012aGA TV 24 4K"]},
+{n:"LIECHTENSTEIN",f:"\ud83c\udf10",c:"1+",ch:["1FLTV 4K"]},
+{n:"LITHUANIA",f:"\ud83c\uddf1\ud83c\uddf9",c:"5+",ch:["LRT TELEVIZIJA 4K", "LRT PLIUS 4K", "TV3 LITHUANIA 4K", "TV6 LITHUANIA 4K", "BTV LITHUANIA 4K"]},
+{n:"LUXEMBOURG",f:"\ud83c\uddf1\ud83c\uddfa",c:"2+",ch:["RTL LUXEMBOURG 4K", "T.TV 4K"]},
+{n:"MONACO",f:"\ud83c\udf10",c:"1+",ch:["MONACO INFO 4K"]},
+{n:"SAN MARINO",f:"\ud83c\udf10",c:"1+",ch:["SAN MARINO RTV 4K"]},
+{n:"SERBIA",f:"\ud83c\uddf7\ud83c\uddf8",c:"6+",ch:["RTS1 4K", "RTS2 4K", "PRVA SRPSKA TELEVIZIJA 4K", "B92 4K", "PINK TV 4K", "HAPPY TV 4K"]},
+{n:"SLOVAKIA",f:"\ud83c\udf10",c:"5+",ch:["RTVS 1 (JEDNOTKA) 4K", "RTVS 2 (DVOJKA) 4K", "MARK\u00cdZA 4K", "JOJ TV 4K", "TA3 NEWS 4K"]},
+{n:"KURDISH",f:"\ud83c\udf10",c:"39+",ch:["|KU| NRT HD (B)", "|KU| NRT 2 HD", "|KU| NRT 2 HD  (B)", "|KU| NRT 3 KIDS", "|KU| KURDMAX HD KUR", "|KU| KURDMAX HD SOR", "|KU| KURDMAX MUSIC HD", "|KU| KURDMAX SHOW HD", "|KU| NET HD", "|KU| BABYON TV", "|KU| A TV KURD HD", "|KU| ARYEN TV", "|KU| BADINAN TV", "|KU| BANGWAZ TV", "|KU| CAN TV HD", "|KU| CIRA TV", "|KU| GK TV", "|KU| K24", "|KU| K24 HD", "|KU| KIRKUK TV", "|KU| KOREK TV HD PLUS", "|KU| KTV", "|KU| KURDISTAN TV HD", "|KU| KURDSAT HD", "|KU| KURDSAT NEWS HD PLUS", "|KU| MED MUZIK", "|KU| MEDYA HABER TV", "|KU| MINBIJ TV", "|KU| ROJAVA TV", "|KU| RONAHI TV", "|KU| RUDAW HD", "|KU| SPEDA TV", "|KU| STERK TV", "|KU| TRT KURDI HD PLUS", "|KU| WAAR TV HD", "|KU| WAAR TV HD PLUS", "|KU| ZAGROS HD PLUS", "|KU| ZAGROS TV", "|KU| ZAROK TV"]},
+{n:"IRAN",f:"\ud83c\uddee\ud83c\uddf7",c:"223+",ch:["IR - IRIB TV 1", "IR - IRIB TV 2", "IR - IRIB TV 3", "IR - IRIB TV 4", "IR - IRIB TV 5", "IR - IRINN (NEWS)", "IR - Nasim TV", "IR - Jame-Jam TV", "IR - Amoozesh", "IR - Varzesh TV", "IR - GEM TV", "IR - GEM DRAMA", "IR - GEM SERIES", "IR - GEM SERIES PLUS HD", "IR - GEM MOVIES", "IR - GEM Mifa", "IR - GEM Life", "IR - GEM ACTION", "IR - GEM Film HD", "IR - GEM FOOD", "IR - GEM River", "IR - GEM RUBIX", "IR - GEM TEEN", "IR - GEM Travel", "IR - GEM JUNIOR", "IR - GEM Kids", "IR - GEM Music", "IR - GEM Bollywood", "IR - GEM ARABIA", "IR - GEM Turk", "IR - GEM KURD", "IR - Cine Film", "IR - Movie 24", "IR - BBC Persian SD", "IR - FACE 1 PERSIAS", "IR - VoA TV Persian", "IR - Iran International HD", "IR - Manoto", "IR - BBC Persian", "IR - Fars TV (Shiraz)", "IR - TinTV", "IR - Mostanad HD", "IR - Royal Time TV", "IR - PMC", "IR - Radio Javan TV", "IR - Caltex Music", "IR - NR1 TV", "IR - OMC", "IR - AFNL Music", "IR - Tapesh TV"]},
+{n:"TAMIL",f:"\ud83c\udf10",c:"60+",ch:["TAMIL - ATHAVAN TV", "TAMIL - AKARAM MIX", "TAMIL - MUSIC HD", "TAMIL - IBC BAKTHI", "TAMIL - IBC TAMIL", "TAMIL - IBC KIDS", "TAMIL - IBC COMEDY", "TAMIL - VASANTHAM TV SINGAPOUR", "TAMIL - MOON TV", "TAMIL - RAGAM TV", "TAMIL - EETV HD", "TAMIL - SANGAMAM TV", "TAMIL - TVI HD", "TAMIL - ADHTIYA TV", "TAMIL - ANGEL TV HD", "TAMIL - NLM TV", "TAMIL - HOLYGOD", "TAMIL - AGARAM KITS", "TAMIL - PEPPERS TV", "TAMIL - CAPTAIN NEWS", "TAMIL - COLORS TAMIL HD", "TAMIL - DD PODHIGAI", "TAMIL - DISCOVERY WORLD HD", "TAMIL - FOX LIFE HD", "TAMIL - HISTORY TV18 HD", "TAMIL - JAYA TV HD", "TAMIL - KTV HD", "TAMIL - NAMBIKKAI TV", "TAMIL - NAT GEO WILD HD", "TAMIL - NATIONAL GEOGRAPHIC HD", "TAMIL - NEWS 18 TAMIL", "TAMIL - RAJ MUSIX", "TAMIL - RAJ TV", "TAMIL - SONY BBC EARTH HD", "TAMIL - STAR VIJAY HD", "TAMIL - STAR VIJAY HD (BACK UP)", "TAMIL - SUN LIFE", "TAMIL - SUN MUSIC HD", "TAMIL - SUN NEWS", "TAMIL - SUN TV HD", "TAMIL - TATA SKY TAMIL CINEMA", "TAMIL - VASANTH TV", "TAMIL - VIJAY SUPER HD", "TAMIL - ZEE TAMIL HD", "TAMIL - ZEE TAMIL", "TAMIL - MADHA TV", "TAMIL - PUDIYA THALAI MURAI", "TAMIL - THANDI TV", "TAMIL - BLESSING", "TAMIL - MK SIX"]},
+{n:"INDIA [EUROPE/UK]",f:"\ud83c\udf10",c:"34+",ch:["IN|UK - B4U PLUS", "IN|UK - COLORS CINEPLEX", "IN|UK - REPUBLIC TV", "IN|UK - MATV NATIONAL", "IN|UK - SANGAT", "IN|UK - AKAAL CHANNEL", "IN|UK - SIKH CHANNEL", "IN|UK - PTC PUNJABI", "IN|UK - AASTHA", "IN|UK - NDTV", "IN|UK - AAJ TAK", "IN|UK - ABP NEWS", "IN|UK - BRIT ASIA TV", "IN|UK - ZING", "IN|UK - B4U MUSIC", "IN|UK - B4U MOVIES", "IN|UK - COLORS RISHTEY TV", "IN|UK - COLORS", "IN|UK - SONY MAX 2", "IN|UK - SONY MAX HD", "IN|UK - SONY MAX", "IN|UK - SONY ASIA HD", "IN|UK - SONY SAB", "IN|UK - SONY ASIA", "IN|UK - SONY TEN  1  HD", "IN|UK - ZEE CINEMA HD", "IN|UK - ZEE CINEMA", "IN|UK - ZEE TV HD", "IN|UK - ZEE TV", "IN|UK - STAR BHARAT", "IN|UK - STAR GOLD HD", "IN|UK - STAR GOLD", "IN|UK - STAR PLUS HD", "IN|UK - STAR PLUS"]},
+{n:"TELUGU",f:"\ud83c\udf10",c:"28+",ch:["TELUGU - BHAKTI TV", "TELUGU - DISCOVERY WORLD HD", "TELUGU - ETV CINEMA", "TELUGU - ETV HD", "TELUGU - GEMINI HD", "TELUGU - GEMINI MOVIES HD", "TELUGU - HISTORY 18 TELUGU HD", "TELUGU - JAYA MAX", "TELUGU - MAA MOVIES HD", "TELUGU - NATIONAL GEOGRAPHIC HD", "TELUGU - RAJ MUSIC TELUGU", "TELUGU - RAJ NEWS TELUGU", "TELUGU - SONY BBC EARTH HD", "TELUGU - STAR MAA GOLD HD", "TELUGU - STAR MAA HD", "TELUGU - STAR MAA HD (backup)", "TELUGU - TATA SKY TELUGU CINEMA HD", "TELUGU - TV9 NEWS", "TELUGU - V6 NEWS", "TELUGU - VANITHA TV", "TELUGU - ZEE CINEMALU HD", "TELUGU - GEMINI COMEDY HD", "TELUGU - ZEE TELUGU HD", "TELUGU - DD SAPTAGIRI", "TELUGU - GEMINI MUSIC", "TELUGU - RAJ MUSIX", "TELUGU - GEMINI LIFE", "TELGU - SAKSHI TV"]},
+{n:"BENGALI",f:"\ud83c\udf10",c:"7+",ch:["BENGALI - COLORS BANGLA HD", "BENGALI - NAT GEO HD", "BENGALI - NEWS 18 BANGLA", "BENGALI - SANGEET BANGLA", "BENGALI - STAR JALSHA HD", "BENGALI - STAR JALSHA MOVIES HD", "BENGALI - TATA SKY BANGLA CINEMA HD"]},
+{n:"ENGLISH",f:"\ud83c\udf10",c:"35+",ch:["ENGLISH - AND FLIX HD", "ENGLISH - AND PRIVE HD", "ENGLISH - ANIMAL PLANET WORLD HD", "ENGLISH - AXN HD", "ENGLISH - BLOOMBERG INDIA", "ENGLISH - CARTOON NETWORK", "ENGLISH - CNBC TV18 PRIME NEWS HD", "ENGLISH - COLORS INFINITY HD", "ENGLISH - COMEDY CENTRAL HD", "ENGLISH - DISCOVERY WORLD HD", "ENGLISH - DISNEY INTERNATIONAL HD", "ENGLISH - DISNEY XD", "ENGLISH - ET NOW HD", "ENGLISH - FOX LIFE HD", "ENGLISH - HBO INDIA HD", "ENGLISH - HISTORY TV18 HD", "ENGLISH - MN PLUS HD", "ENGLISH - MNX HD", "ENGLISH - MOVIES NOW HD", "ENGLISH - NAT GEO WILD HD", "ENGLISH - NATIONAL GEOGRAPHIC HD", "ENGLISH - NEWS X", "ENGLISH - ROMEDY NOW HD", "ENGLISH - SONY BBC EARTH ENGLISH HD", "ENGLISH - STAR MOVIES HD", "ENGLISH - STAR MOVIES SELECT HD", "ENGLISH - STAR WORLD HD", "ENGLISH - STAR WORLD PREMIER HD", "ENGLISH - THE QYOU", "ENGLISH - TIMES NOW NEWS HD", "ENGLISH - TLC WORLD HD", "ENGLISH - TRAVEL XP HD", "ENGLISH - VH1 HD", "ENGLISH - WARNER BROS", "ENGLISH - ZEE CAFE HD"]},
+{n:"BHOJPURI",f:"\ud83c\udf10",c:"3+",ch:["BHOJPURI - DANGAL", "BHOJPURI - HUNGAMA DHAMAAL HD", "BHOJPURI - SANGEET BHOJPURI"]},
+{n:"KANNADA",f:"\ud83c\udf10",c:"11+",ch:["KANNADA - COLORS KANNADA HD", "KANNADA - COLORS KANNADA MOVIES", "KANNADA - COLORS SUPER", "KANNADA - HUNGAMA SAKKAT HD", "KANNADA - KASTURI TV", "KANNADA - NEWS 18", "KANNADA - RAJ MUSIC", "KANNADA - RAJ NEWS KANNADA", "KANNADA - STAR SUVARNA HD", "KANNADA - TV9 KANNADA", "KANNADA - UDAYA HD"]},
+{n:"AFGHANISTAN",f:"\ud83c\udde6\ud83c\uddeb",c:"34+",ch:["AFG - TOLO HD", "AFG - TOLO NEWS HD", "AFG - SHAMSHAD", "AFG - AREZO", "AFG - AMC TV", "AFG - ATN", "AFG - ATN NEWS", "AFG - AYNA TV", "AFG - HEWAD TV", "AFG - 1 TV", "AFG - KHURSHID TV", "AFG - LEMAR HD", "AFG - NOOR TV", "AFG - AVA Family", "AFG - AVA Music HD", "AFG - BAHAR TV HD", "AFG - KABUL TV", "AFG - KAYHAN TV HD", "AFG - Pamir TV", "AFG - PAYAM E AFGHAN", "AFG - TUTI TV HD", "AFG - Watan TV", "AFG - WATAN E MAA TV", "AFG  - ZARIN TV", "AFG - TAMDON", "AFG - ARIA NEWS", "AFG - 1TV AFGHAN", "AFG - ZHWANDOON TV", "AFG - BATUR TV", "AFG - MAIWAND TV", "AFG - TAMADON", "AFG - AGHANI", "AFG - RTA", "AFG - ASR TV"]},
+{n:"KAZAKHSTAN",f:"\ud83c\uddf0\ud83c\uddff",c:"16+",ch:["KZ - ASTANA TV", "KZ - A2", "KZ - KHABAR24", "KZ - KAZAKH TV", "KZ - 7 \u041a\u0410\u041d\u0410\u041b", "KZ - 31 \u041a\u0410\u041d\u0410\u041b", "KZ - \u0422\u0414\u041a 42", "KZ - \u0421\u0422\u0412 \u041a\u0410\u0417\u0410\u0425\u0421\u0422\u0410\u041d", "KZ - \u0421\u0422\u0421 INTERNATIONAL", "KZ - \u0420\u0415\u041d \u0422\u0412 INTERNATIONAL", "KZ - \u041c\u0418\u0420 24", "KZ - ID FASHION", "KZ - \u0425\u0410\u041b\u042b\u041a \u0410\u0420\u041d\u0410", "KZ - \u0415\u041b \u0410\u0420\u041d\u0410", "KZ - DOMBYRA TV", "KZ - \u0410\u0421\u042b\u041b \u0410\u0420\u041d\u0410"]},
+{n:"THAILAND",f:"\ud83c\uddf9\ud83c\udded",c:"8+",ch:["TH - THAIRATH TV HD", "TH - BTV NEWS", "TH - PPTV HD", "TH - THAI PBS HD", "TH - NATION TV HD", "TH - WORKPOINT TV HD", "TH - MONO29 HD", "TH - CARTOON CLUB HD"]},
+{n:"BHUTAN",f:"\ud83c\udde7\ud83c\uddf9",c:"1+",ch:["BHUTAN BROADCASTING SERVICE (BBS) 4K"]},
+{n:"BRUNEI",f:"\ud83c\udde7\ud83c\uddf3",c:"3+",ch:["RTB SUKA 4K", "RTB NEWS 4K", "RTB GO 4K"]},
+{n:"CAMBODIA",f:"\ud83c\uddf0\ud83c\udded",c:"3+",ch:["CTN (CAMBODIA TELEVISION NETWORK) 4K", "CNC (CAMBODIA NEWS CHANNEL) 4K", "MYTV 4K"]},
+{n:"EAST TIMOR (TIMOR-LESTE)",f:"\ud83c\udf10",c:"1+",ch:["RTTL (RADIO TELEVISAUN TIMOR LESTE) 4K"]},
+{n:"INDONESIA",f:"\ud83c\uddee\ud83c\udde9",c:"5+",ch:["RCTI 4K", "SCTV 4K", "MNCTV 4K", "TRANSTV 4K", "NET TV 4K"]},
+{n:"JAPAN",f:"\ud83c\uddef\ud83c\uddf5",c:"5+",ch:["NHK WORLD 4K", "FUJI TV 4K", "TBS TV 4K", "NTV (NIPPON TV) 4K", "TV ASAHI 4K"]},
+{n:"KAZAKHSTAN",f:"\ud83c\uddf0\ud83c\uddff",c:"4+",ch:["KAZAKH TV 4K", "QAZAQSTAN 4K", "KTK CHANNEL 4K", "NTK 4K"]},
+{n:"UZBEKISTAN",f:"\ud83c\uddfa\ud83c\uddff",c:"2+",ch:["UZBEKISTAN 24 4K", "SPORT TV UZBEKISTAN 4K"]},
+{n:"VIETNAM",f:"\ud83c\uddfb\ud83c\uddf3",c:"4+",ch:["VTV1 4K", "VTV3 4K", "HTV9 4K", "SCTV 4K"]},
+{n:"TURKEY",f:"\ud83c\uddf9\ud83c\uddf7",c:"32+",ch:["TR - TRT 1 HD", "TR - TRT 2 HD", "TR - SHOW HD", "TR - KANAL D HD", "TR - ATV HD", "TR - STAR HD", "TR - FOX HD", "TR - BEYAZ HD", "TR - TV 8 HD", "TR - TV 8.5 HD", "TR - TLC", "TR - CLC", "TR - KANAL 7 HD", "TR - TRT 4K", "TR - TRT 1 HD PLUS", "TR - TRT 2 HD PLUS", "TR - SHOW HD PLUS", "TR - KANAL D HD PLUS", "TR - ATV HD PLUS", "TR - STAR HD PLUS", "TR - FOX HD PLUS", "TR - BEYAZ HD PLUS", "TR - TV 8 HD PLUS", "TR - TV 8.5 HD PLUS", "TR - TLC HD PLUS", "TR - KANAL 7 HD PLUS", "TR - 360 TV HD PLUS", "TR - DMAX HD PLUS", "TR - A2 HD PLUS", "TR - TEVE 2 HD PLUS", "TR - SHOW MAX", "TR - TRT 4K PLUS"]},
+{n:"PAKISTAN",f:"\ud83c\uddf5\ud83c\uddf0",c:"24+",ch:["PK|EU - GEO TV", "PK|EU - GEO NEWS", "PK|EU - GEO KAHANI", "PK|EU - HUM TV", "PK|EU - HUM MASALA", "PK|EU - HUM NEWS", "PK|UK - SAMAA", "PK|EU - DUNYA NEWS", "PK|EU - NEW VISION TV", "PK|EU - ARY FAMILY", "PK|EU - TAKBEER", "PK|EU - PTV GLOBAL", "PK|EU - NOOR TV", "PK|EU - IQRA TV", "PK|EU - ISLAM CHANNEL", "PK|EU - MTA MUSLIM", "PK|EU - MADANI CHANNEL", "PK|EU - PEACE TV", "PK|EU - PEACE TV URDU", "PK|EU - BRITISH MUSLIM", "PK|EU - ISLAM CHANNEL URDU", "PK|EU - CMG CINEMA", "PK - CMG ACTION", "PK|EU - 92 NEWS"]},
+{n:"HINDI",f:"\ud83c\udf10",c:"101+",ch:["HINDI - DESI PLUS", "HINDI - ZEE TV HD", "HINDI - ZEE CINEMA HD", "HINDI - ZING", "HINDI - STAR BHARAT HD", "HINDI - STAR GOLD HD", "HINDI - STAR GOLD SELECT HD", "HINDI - STAR PLUS HD", "HINDI - STAR UTSAV", "HINDI - STAR UTSAV MOVIES", "HINDI - SONY HD", "HINDI - SONY MAX HD", "HINDI - SONY PIX HD", "HINDI - SONY BBC EARTH HD", "HINDI - SONY SAB HD", "HINDI - SONY PAL", "HINDI - SONY WAH", "HINDI - SONY YAY", "HINDI - SONY MIX HD", "HINDI - B4U MOVIES", "HINDI - COLORS HD", "IN|UK - VENUS", "HINDI - 9X JALWA", "HINDI - AAJ TAK HD", "HINDI - ZOOM TV HD", "HINDI - AASTHA", "HINDI - AASTHA BHAJAN", "HINDI - ABP NEWS INDIA", "HINDI - AND PICTURES HD", "HINDI - AND TV HD", "HINDI - ANIMAL PLANET HD", "HINDI - ARIHANT", "HINDI - B-FLIX MOVIES", "HINDI - BABY TV HDI", "HINDI - BIG MAGIC HD", "HINDI - BINDAS", "HINDI - CINEPLEX HD", "HINDI - COMEDY ACTIVE", "HINDI - DD NATIONAL", "HINDI - DD RAJASTHAN", "HINDI - DD BHARATI", "HINDI - DD BIHAR", "HINDI - DD INDIA", "HINDI - DD NEWS", "HINDI - DD SPORTS", "HINDI - DD ORIYA", "HINDI - DD UP", "HINDI - DISCOVERY JEET HD", "HINDI - DISCOVERY WORLD HD", "HINDI - E 24"]},
+{n:"BANGLA",f:"\ud83c\udf10",c:"9+",ch:["BANGLA - MUSIC FATAFATI", "BANGLA - BANGLA MOVIES 2", "BANGLA - BANGLA 21", "BANGLA -COLOSAL", "BANGLA - JHANKAR TV", "BANGLA - NAN TV", "BANGLA - AL DAWAH TV", "BANGLA - ANANDA TV", "BANGLA - ROAL TV"]},
+{n:"MALAYALAM",f:"\ud83c\udf10",c:"21+",ch:["MAL - AMRITHA TV", "MAL - ASIANET HD", "MAL - ASIANET MOVIES HD", "MAL - ASIANET PLUS HD", "MAL - FLOWERS TV", "MAL - KAIRALI TV", "MAL - KAUMUDY", "MAL - MAZAVIL MANORAMA HD", "MAL - NEWS 18 KERALA", "MAL - RAJ MUSIC", "MAL - SAFARI TV", "MAL - SHOLAM TV", "MAL - SURYA MOVIES", "MAL - SURYA TV HD", "MAL - WE TV", "MAL - ASIANET NEWS HD", "MAL - SURYA MUSIC", "MAL - MANORAMA NEWS", "MAL - ZEE KERALAM HD", "MAL - MEDIA ONE HD", "MAL - JANAM TV"]},
+{n:"PUNJABI",f:"\ud83c\udf10",c:"21+",ch:["PUNJABI - ABP SANJHA", "PUNJABI - CHARDIKLA TIMES TV", "PUNJABI - DD PUNJABI", "PUNJABI - INDIA NEWS PUNJAB", "PUNJABI - JUS 24x7", "PUNJABI - MANORANJAN MOVIES", "PUNJABI - MANORANJAN TV", "PUNJABI - MH1 MUSIC", "PUNJABI - MH1 NEWS", "PUNJABI - MH1 SHRADDHA", "PUNJABI - NEWS 18 PUNJAB HARYANA", "PUNJABI - PITAARA TV", "PUNJABI - PRIME ASIA FHD", "PUNJABI - PRIME ASIA HD", "PUNJABI - PTC CHAKDE", "PUNJABI - PTC NEWS", "PUNJABI - PTC PUNJABI", "PUNJABI - SANJHA TV HD", "PUNJABI - SSTV HD", "PUNJABI - ZEE PUNJAB HARYANA HD", "PUNJABI - JUS ONE"]},
+{n:"SPORTS",f:"\ud83c\udf10",c:"18+",ch:["SPORTS - D SPORTS HD", "SPORTS - SONY SIX HD", "SPORTS - STAR SPORTS 1 ENGLISH HD", "SPORTS - STAR SPORTS 1 HINDI HD", "SPORTS - STAR SPORTS 1 ENGLISH SD", "SPORTS - STAR SPORTS 2 HD", "SPORTS - STAR SPORTS 3", "SPORTS - STAR SPORTS SELECT 1 HD", "SPORTS - STAR SPORTS SELECT 2 HD", "SPORTS - STAR SPORTS TAMIL", "SPORTS - SKY SPORTS CRICKET FHD", "SPORTS - FOX SPORTS 501 | UHD", "SPORTS - SUPERSPORT 12 HD", "SPORTS - TEN 1 HD", "SPORTS - TEN 2 HD", "SPORTS - TEN 3 HD", "SPORTS - WILLOW CRICKET", "SPORTS - WILLOW CRICKET | HD"]},
+{n:"GUJARATI",f:"\ud83c\udf10",c:"7+",ch:["GUJARATI - COLORS GUJARATI", "GUJARATI - GSTV", "GUJARATI - INDIA NEWS GUJARAT", "GUJARATI - LAKSHYA TV HD", "GUJARATI - MANTAVYA NEWS", "GUJARATI - SANDESH NEWS", "GUJARATI - VTV NEWS"]},
+{n:"BANGLA",f:"\ud83c\udf10",c:"6+",ch:["BANGLA - UK - CHANNEL S", "BANGLA - UK - TV UK", "BANGLA -UK| NTV", "BANGLA -UK| ATN BANGLA UK", "BANGLA -UK| IQRA BANGLA", "BANGLA - ZEE BANGLA HD"]},
+{n:"PHILIPPINES",f:"\ud83c\uddf5\ud83c\udded",c:"63+",ch:["PH - ABS CBN | HD", "PH - Bloomberg", "PH - ABS-CBN Sports+Action", "PH - ANC", "PH - ARC", "PH - Aksyon TV", "PH - C1", "PH - CNBC Europe", "PH - CineMo", "PH - Cinema One Global TV", "PH - GMA Life TV", "PH - GMA News TV", "PH - GMA Pinoy TV", "PH - Lifestyle Network", "PH - Myx", "PH - TFC", "PH - TeleRadyo", "PH - VH-1", "PH - VIVA TV", "PH - ANIMAX | SD", "PH - ARIRANG | SD", "PH - BABY FIRST | SD", "PH - BEIN SPORTS 1 | SD", "PH - BEIN SPORTS 2 | SD", "PH - CELESTIAL CLASSIC MOVIES | SD", "PH - TLC | SD", "PH - TV5 MONDE | SD", "PH - TVN | SD", "PH - THRILL | SD", "PH - STINGRAY CLASSICA | SD", "PH - SOLAR SPORTS | SD", "PH - NICKELODEON | SD", "PH - NICK JR | SD", "PH - NAT GEO | SD", "PH - MTV LIVE | SD", "PH - MIAO MI | SD", "PH - LIVING ASIA | SD", "PH - KIX | SD", "PH - HISTORY 2 | SD", "PH - HGTV | SD", "PH - GMA PINOY TV | SD", "PH - GMA NEWS TV | SD", "PH - EURONEWS | SD", "PH - DISCOVERY ASIA WORLD | SD", "PH - CNN | SD", "PH VIP - GMA LIFE", "PH VIP - GMA NEWS TV", "PH VIP - GMA PINOY TV", "PH VIP - ABS CBN NEWS CHANNEL", "PH VIP - ABS CBN SPORTS ACTION"]},
+{n:"SOUTH KOREA",f:"\ud83c\uddf0\ud83c\uddf7",c:"13+",ch:["SK - YTN Science", "SK - TV CHOSUN", "SK - G1", "SK - CBS", "SK - TV CHOSUN 3", "SK - TV CHOSUN 1", "SK - GOOD TV", "SK - EBS PLUS 2", "SK - EBS PLUS 1", "SK - EBS ENGLISH", "SK - EBS 2", "SK - ARIRANG", "SK - EBS KIDS"]},
+{n:"MALAYSIA",f:"\ud83c\uddf2\ud83c\uddfe",c:"9+",ch:["MY - TV IKIM", "MY - Channel NewsAsia", "MY - Channel 8", "SK - KBS1 TV", "MY - 8TV", "MY - Astro Awani", "MY - Drama Sangat", "MY - NTV7", "MY - TV Ikim"]},
+{n:"KYRGYZSTAN",f:"\ud83c\udf10",c:"3+",ch:["KTRK 4K", "ELTR 4K", "NTS 4K"]},
+{n:"MALDIVES",f:"\ud83c\uddf2\ud83c\uddfb",c:"3+",ch:["TVM (TELEVISION MALDIVES) 4K", "YES TV 4K", "RAJJE TV 4K"]},
+{n:"MYANMAR (BURMA)",f:"\ud83c\uddf2\ud83c\uddf2",c:"3+",ch:["MRTV 4K", "MWD (MYANMAR WIDECASTING) 4K", "CHANNEL 7 4K"]},
+{n:"NEPAL",f:"\ud83c\uddf3\ud83c\uddf5",c:"3+",ch:["KANTIPUR TV 4K", "NTV (NEPAL TELEVISION) 4K", "IMAGE CHANNEL 4K"]},
+{n:"NORTH KOREA",f:"\ud83c\udf10",c:"1+",ch:["KCTV (KOREAN CENTRAL TELEVISION) 4K"]},
+{n:"PHILIPPINES",f:"\ud83c\uddf5\ud83c\udded",c:"5+",ch:["ABS-CBN 4K", "GMA NETWORK 4K", "TV5 4K", "PTV 4K", "CNN PHILIPPINES 4K"]},
+{n:"SINGAPORE",f:"\ud83c\uddf8\ud83c\uddec",c:"4+",ch:["CHANNEL 5 4K", "CHANNEL NEWSASIA 4K", "SURIA 4K", "OKTO 4K"]},
+{n:"SOUTH KOREA",f:"\ud83c\uddf0\ud83c\uddf7",c:"4+",ch:["KBS 1TV 4K", "MBC TV 4K", "SBS TV 4K", "JTBC 4K"]},
+{n:"SRI LANKA",f:"\ud83c\uddf1\ud83c\uddf0",c:"4+",ch:["RUPAVAHINI 4K", "ITN SRI LANKA 4K", "SIRASA TV 4K", "TV DERANA 4K"]},
+{n:"TAJIKISTAN",f:"\ud83c\udf10",c:"2+",ch:["TV VARZISH 4K", "TOJIKISTON TV 4K"]},
+{n:"TURKMENISTAN",f:"\ud83c\udf10",c:"2+",ch:["TURKMENISTAN TV 4K", "ALTYN ASYR 4K"]},
+{n:"ARABIC NEWS & FACTUAL",f:"\ud83c\udf10",c:"25+",ch:["AL JAZEERA", "AL JAZEERA HD", "AL JAZEERA MUBASHER", "AL ARABIYA", "AL ARABIYA AL HADATH", "AL ARABY HD", "BBC ARABIC", "FRANCE 24", "AL JAZEERA ENGLISH", "AL JAZEERA ENGLISH HD", "AL JAZEERA DOCUMENTARY", "AL JAZEERA DOCUMENTARY HD", "AL HURRA", "RT ARAB", "DW ARABIC", "TRT ARABIC", "BBC WORLD NEWS", "AL ALAM NEWS CHANNEL", "SKY NEWS ARABIA", "CNBC ARABIYA", "AL HIWAR HD", "AL GHAD HD", "AL MUSTAKILA", "KAIFA", "I24 NEWS"]},
+{n:"MOROCCO",f:"\ud83c\uddf2\ud83c\udde6",c:"48+",ch:["MA - AL OULA HD", "MA - AL OULA HD +6H", "MA - ARRYADIA HD LIVE", "MA - AL OULA INTER HD", "MA - 2M MAROC", "MA - 2M MAROC +6H", "MA - ARRIADIA", "MA - ARRABIA HD", "MA - ARRABIA HD +1", "MA - ARRABIA HD +2", "MA - ARRABIA HD +4", "MA - ARRABIA HD +6", "MA - AL MAGHRIBIA HD", "MA - ASSADISSA HD", "MA - ASSABIA HD", "MA - TAMAZIGHT HD", "MA - MEDI 1 TV HD", "MA - MEDI 1 TV ARAB HD", "MA - MEDI1TV AFRIQUE HD", "MA - TELE MAROC", "MA - TELE MAROC HD", "MA - CHADA FM HD", "MA - AL ONS TV", "MA - M24", "MA - CANAL ATLAS", "MA - AFlam On Demand", "MA - TNT 2M MAROC", "MA - TNT AL MAGHRIBIA", "MA - TNT AL OULA", "MA - TNT AL OULA HD", "MA - TNT AL OULA INTER", "MA - TNT ARRABIA", "MA - TNT ARRIADIA HD", "MA - TNT ASSABIA", "MA - TNT ASSADISSA", "MA - TNT ASSADISSA HD", "MA - TNT MEDI 1 TV", "MA - TNT TAMAZIGHT", "MA - Hit Radio", "MA - Radio 2M", "MA - Radio Mars", "MA - Med Radio", "MA - Medi1 FM", "MA - Radio Aswat", "MA - Chada FM", "MA - Atlantic Radio", "MA - Cap Radio", "MA - MUSIC HITS"]},
+{n:"TUNISIA",f:"\ud83c\uddf9\ud83c\uddf3",c:"15+",ch:["TN - TUNISIA NATIONAL 1", "TN - TUNISIA NATIONAL 2", "TN - HANNIBAL", "TN - NESSMA TV", "TN - AL HIWAR ETTOUNSI", "TN - AL INSEN", "TN - M TUNISIA", "TN - TUNISNA", "TN - ZAYTOONA TV", "TN - ATTESSIA TV", "TN - ZITOUNA HEDAYA", "TN - AL JANOUBIA", "TN - CARTHAGE+", "TN - TUNESIE TELEVISION", "TN - TELVZA TV"]},
+{n:"LEBANON",f:"\ud83c\uddf1\ud83c\udde7",c:"27+",ch:["LB - AL MANAR +6H", "LB - FUTURE +6H", "LB - LBC +6H", "LB - LDC +6H", "LB - MTV LEBANON +6H", "LB - OTV +6H", "LB - AL JADEED +6", "LB - LEBANON TV", "LB - LBC HD", "LB - LBC SAT", "LB - LBC INTERNATIONAL", "LB - OTV TV", "LB - MTV LEBANON HD", "LB - MTV LEBANON", "LB - NBN LEBANON HD", "LB - FUTURE TV", "LB - AL MAYADEEN", "LB - AL MANAR", "LB - ALAAN TV LEBANON", "LB - AGHANI AGHANI TV", "LB - ARABICA HD", "LB - ONE TV", "LB - Hawacom TV HD", "LB - AL NADA TV", "LB - AL JADEED", "LB - TELELIBAN TV", "LB - AL QANAT"]},
+{n:"UAE",f:"\ud83c\udde6\ud83c\uddea",c:"19+",ch:["AE - DUBAI ONE", "AE - DUBAI RACING 1 HD", "AE - DUBAI RACING 2", "AE - DUBAI RACING 3", "AE - DUBAI SPORT 1 HD", "AE - DUBAI TV", "AE - DUBAI TV HD", "AE - DUBAI ZAMAN", "AE - SHARJAH HD", "AE - SHARJAH SPORT HD", "AE - AL EMARAT HD", "AE - ABU DHABI DRAMA HD", "ABU DHABI NGC HD", "ABUDHABI SPORT 2 HD", "AE - ABU DHABI TV HD", "AE - YAS SPORT HD", "AE - SAMA DUBAI HD", "AE - NOOR DUBAI", "AE - HOD HOD TV"]},
+{n:"KUWAIT",f:"\ud83c\uddf0\ud83c\uddfc",c:"10+",ch:["KW - KTV 1 HD", "KW - KTV 2 HD", "KW - KTV KIDS HD", "KW - KTV ETHRAA HD", "KW - KTV PLUS", "KW - KTV SPORT HD", "KW - KTV AL ARABI", "KW - ALRAI HD", "KW - AL MAJLIS", "KW - AL QURAIN"]},
+{n:"LIBYA",f:"\ud83c\uddf1\ud83c\uddfe",c:"7+",ch:["LIBYA AL WATANIYA TV 4K", "LIBYA AL AHRAR TV 4K", "LIBYA AL HADATH TV 4K", "LIBYA CHANNEL 4K", "AL NABAA TV 4K", "LIBYA 218 TV 4K", "LIBYA ALRASMIA TV 4"]},
+{n:"MAURITANIA",f:"\ud83c\udf10",c:"6+",ch:["AL MOURITANIA TV 4K", "EL WATANIA 4K", "TV DE MAURITANIE CULTURELLE 4K", "TV DE MAURITANIE EDUCATION 4K", "SAHARA TV 4K", "CHINGUITTY TV 4K"]},
+{n:"COMOROS",f:"\ud83c\udf10",c:"3+",ch:["ORTC (OFFICE DE LA RADIO ET TELEVISION DES COMORES) 4K", "ORTC AL WATANIA 4K", "COMORES INFO TV 4K"]},
+{n:"DJIBOUTI",f:"\ud83c\udf10",c:"3+",ch:["RTD (RADIO TELEVISION DE DJIBOUTI) 4K", "DJIBOUTI NATIONAL TV 4K", "DJIBOUTI SPORTS TV 4K"]},
+{n:"SOMALIA",f:"\ud83c\uddf8\ud83c\uddf4",c:"11+",ch:["SOMALI NATIONAL TV (SNTV) 4K", "UNIVERSAL TV 4K", "HORN CABLE TV 4K", "SOMALI CABLE TV 4K", "SBC TV 4K", "RUGAAL TV 4K", "SOMNEWS TV 4K", "DALSAN TV 4K", "KALSAN TV 4K", "ASTAAN TV 4K", "SOMALICHANNEL TV 4K"]},
+{n:"YEMEN",f:"\ud83c\uddfe\ud83c\uddea",c:"10+",ch:["YEMEN TV 4K", "AL MASIRAH TV 4K", "YEMEN TODAY TV 4K", "SUHAIL TV 4K", "AL SAEEDAH TV 4K", "BELQEES TV 4K", "ADEN LIVE TV 4K", "AL EMAN TV 4K", "YEMEN SHABAB TV 4K", "AL HAWYAH TV 4K"]},
+{n:"PALESTINE",f:"\ud83c\udf10",c:"10+",ch:["PALESTINE TV 4K", "AL AQSA TV 4K", "MA'AN TV 4K", "AL QUDS TV 4K", "WATTAN TV 4K", "PALESTINE TODAY TV 4K", "AL FALSTINIAH TV 4K", "AL HUDA TV 4K", "AL MAHD TV 4K", "AL SIRAJ TV 4K"]},
+{n:"BEIN SPORTS 4K",f:"\ud83c\udf10",c:"24+",ch:["BEIN SPORTS 1", "BEIN SPORTS 2", "BEIN SPORTS 3", "BEIN SPORTS 4", "BEIN SPORTS 5", "BEIN SPORTS 6", "BEIN SPORTS 7", "BEIN SPORTS 8", "BEIN SPORTS 9", "BEIN SPORTS 10", "BEIN SPORTS 11", "BEIN SPORTS 12", "BEIN SPORTS 13", "BEIN SPORTS 14", "BEIN SPORTS 15", "BEIN SPORTS 16", "BEIN SPORTS NBA", "AL KASS 1 HD", "AL KASS 2 HD", "AL KASS 4 HD", "ABUDHABI SPORTS 1 HD", "ABUDHABI SPORTS 3 HD", "ABUDHABI SPORTS 4 HD", "YAS TV"]},
+{n:"MYHD & OSN",f:"\ud83c\udf10",c:"228+",ch:["MYHD - MBC1 HD", "MYHD - MBC2 HD", "MYHD - MBC3 HD", "MYHD - MBC4 HD", "MYHD - MBC 5 HD", "MYHD - MBC MASR HD", "MYHD - MBC MASR 2 HD", "MYHD - MBC IRAQ HD", "MYHD - MBC  Drama HD", "MYHD - MBC DRAMA +  HD", "MYHD - MBC Drama HD", "MYHD - MBC Action HD", "MYHD - MBC Bollywood HD", "MYHD - MBC Variety HD", "MYHD - MBC MAX HD", "MYHD - MBC PERSIA", "MYHD - CARTON NETWORK ARABIC", "MYHD - SPACETOON", "MYHD - Cinemachi Kidz HD", "MYHD - Animal Planet HD", "MYHD - Discovery SC HD", "MYHD - PLANET EARTH HD", "MYHD - FIX FOXI HD", "MYHD - FOX REWAYAT HD", "MYHD - FX HD", "MYHD - STAR MOVIES HD", "MYHD - STAR WORLD HD", "MYHD - Cinemachi Movies HD", "MYHD - Docubox HD", "MYHD - Fight Box HD", "MYHD - FOX ACTION MOVIES HD", "MYHD - FOX FAMILY MOVIES HD", "MYHD - FOX MOVIES HD", "MYHD - FOX CRIME HD", "MYHD - FOX LIFE HD", "MYHD - GULLI BIL ARABIE HD", "MYHD - LAAB WA JAD HD", "MYHD - MUSIC ALWAYS HD", "MYHD - MUSIC24 HD", "MYHD - MY CINEMA HD", "MyHD- MBC1-HD HEVC", "MyHD- MBC2-HD HEVC", "MyHD- MBC3-HD HEVC", "MyHD- MBC4-HD HEVC", "MyHD- MBC-DRAMA-HD HEVC", "MyHD- MBC-PLUS-DRAMA HEVC", "MyHD- MBC-ACTION-HD HEVC", "MyHD- MBC-MAX-HD HEVC", "MyHD- MBC-PLUS-VARIETY HEVC", "MyHD- MBC-BOLLYWOOD HEVC"]},
+{n:"ALGERIA",f:"\ud83c\udde9\ud83c\uddff",c:"19+",ch:["ENTV 4K", "CANAL ALG\u00c9RIE 4K", "A3 4K", "TV4 (TAMAZIGHT TV) 4K", "TV5 (CORAN TV) 4K", "TV6 4K", "TV7 (EL MAARIFA) 4K", "TV8 (DZA\u00cfR TV) 4K", "ECHOUROUK TV 4K", "ENNAHAR TV 4K", "EL BILAD TV 4K", "NUMIDIA NEWS TV 4K", "BEUR TV 4K", "HOGGAR TV 4K", "BAHIA TV 4K", "DZAIR 24 4K", "SAMIRA TV 4K", "EL DJAZAIRIA ONE 4K", "LINA TV 4K"]},
+{n:"EGYPT",f:"\ud83c\uddea\ud83c\uddec",c:"130+",ch:["AL MASRIYA 4K", "NILE TV INTERNATIONAL 4K", "NILE DRAMA 4K", "NILE COMEDY 4K", "NILE SPORTS 4K", "NILE CULTURE 4K", "NILE NEWS 4K", "AL-NAHAR TV 4K", "ON TV 4K", "CBC 4K", "DMC 4K", "SADA EL BALAD 4K", "MBC MASR 4K", "AL-HAYAT TV 4K", "TEN TV 4K", "MEHWAR TV 4K", "DREAM TV 4K", "AL-KAHERA WAL NAS 4K", "EXTRA NEWS 4K", "NILE TV INTERNATIONAL 4K", "NILE DRAMA 4K", "NILE CINEMA 4K", "NILE COMEDY 4K", "NILE CULTURE 4K", "NILE NEWS 4K", "NILE FAMILY 4K", "NILE LIFE 4K", "NILE SPORT 4K", "CAIRO CINEMA 4K", "CAIRO DRAMA 4K", "CAIRO COMEDY 4K", "CAIRO FILM 4K", "PANORAMA FILM 4K", "PANORAMA DRAMA 4K", "PANORAMA COMEDY 4K", "STAR CINEMA 1 4K", "STAR CINEMA 2 4K", "AL AAN TV 4K", "EL MEHWAR CHANNEL 4K", "MASR ALHAYAH 4K", "IQRAA EGY 4K", "DMC 4K", "DMC DRAMA 4K", "DMC SPORTS 4K", "TEN TV 4K", "ON E 4K", "ON SPORT 4K", "ON DRAMA 4K", "AL YOUM 4K", "AL SAFAWA 4K"]},
+{n:"JORDAN",f:"\ud83c\uddef\ud83c\uddf4",c:"10+",ch:["JORDAN TV 4K", "AL-MAMLAKA TV 4K", "ROYA TV 4K", "JRTV SPORTS 4K", "ATV JORDAN 4K", "AL-ORDON AL-YOOM 4K", "JOSAT TV 4K", "NOURMINA TV 4K", "AL HAQIQA INTERNATIONAL 4K", "A1 JORDAN 4K"]},
+{n:"SAUDI ARABIA",f:"\ud83c\uddf8\ud83c\udde6",c:"19+",ch:["SAUDI TV CHANNEL 1 4K", "SAUDI TV CHANNEL 2 4K", "AL EKHBRIYA 4K", "SBC 4K", "SAUDI SPORTS CHANNEL 1 4K", "SAUDI SPORTS CHANNEL 2 4K", "AL QURAN AL KAREEM TV 4K", "AL SUNNAH AL NABAWIYAH TV 4K", "ROTANA KHALIJIAH 4K", "ROTANA CINEMA 4K", "MBC 1 4K", "MBC 2 4K", "MBC 3 4K", "MBC 4 4K", "MBC ACTION 4K", "MBC MAX 4K", "ART HEKAYAT 4K", "LBC SAT 4K", "AL ARABIYA 4K"]},
+{n:"OMAN",f:"\ud83c\uddf4\ud83c\uddf2",c:"10+",ch:["OMAN TV GENERAL 4K", "OMAN TV SPORT 4K", "OMAN TV LIVE 4K", "OMAN TV CULTURAL 4K", "MAJAN TV 4K", "AL HAKAM CHANNEL 4K", "AL WISAL TV 4K", "AL SHABAB TV 4K", "OMAN MUBASHER 4K", "OMAN HD 4K"]},
+{n:"QATAR",f:"\ud83c\uddf6\ud83c\udde6",c:"15+",ch:["QATAR TV 4K", "AL JAZEERA 4K", "AL JAZEERA ENGLISH 4K", "AL JAZEERA MUBASHER 4K", "AL JAZEERA DOCUMENTARY 4K", "BEIN SPORTS MENA 1 4K", "BEIN SPORTS MENA 2 4K", "BEIN SPORTS MENA 3 4K", "BEIN SPORTS NEWS 4K", "QATAR SPORTS CLUB TV 4K", "AL RAYYAN TV 4K", "BARAEM TV 4K", "JEEM TV 4K", "AL KASS SPORTS CHANNELS 4K", "QATAR FOUNDATION TV 4K"]},
+{n:"BAHRAIN",f:"\ud83c\udde7\ud83c\udded",c:"10+",ch:["BAHRAIN TV 4K", "BAHRAIN SPORTS CHANNEL 4K", "BAHRAIN INTERNATIONAL TV 4K", "BAHRAIN QURAN CHANNEL 4K", "BAHRAIN SPORTS 2 4K", "BAHRAIN RADIO AND TELEVISION CORPORATION CHANNEL 55 4K", "AL MAAREF TV 4K", "AL AYAM TV 4K", "AL WATAN TV 4K", "AL SALAM TV 4K"]},
+{n:"SYRIA",f:"\ud83c\uddf8\ud83c\uddfe",c:"10+",ch:["SYRIAN SATELLITE CHANNEL 4K", "SYRIAN DRAMA TV 4K", "SYRIAN NEWS CHANNEL 4K", "NOOR AL-SHAM TV 4K", "SYRIAN EDUCATION TV 4K", "SAMA TV 4K", "ADDOUNIA TV 4K", "ORIENT NEWS 4K", "ALIKHBARIA SYRIA 4K", "SHAM TV 4K"]},
+{n:"IRAQ",f:"\ud83c\uddee\ud83c\uddf6",c:"16+",ch:["AL IRAQIYA TV 4K", "AL SUMARIA TV 4K", "AL SHARQIYA TV 4K", "KURDISTAN TV 4K", "RUDAW TV 4K", "NRT TV 4K", "AL FORAT TV 4K", "AL BAGHDADIA TV 4K", "AL RASHEED TV 4K", "AFAQ TV 4K", "AL HURRIA TV 4K", "AL ETEJAH TV 4K", "AL ANWAR TV 4K", "AL FAYHAA TV 4K", "AL MASAR TV 4K", "AL NUJABA TV 4K"]},
+{n:"SUDAN",f:"\ud83c\uddf8\ud83c\udde9",c:"10+",ch:["SUDAN TV 4K", "BLUE NILE TV 4K", "SUDAN NEWS CHANNEL 4K", "SUDAN DRAMA 4K", "SUDAN MUSIC AND YOUTH 4K", "AL SHOROOQ TV 4K", "TAYBA TV 4K", "ASHOROOQ TV 4K", "S24 TV 4K", "AL ZAIEM AL AZHARI TV 4K"]},
+{n:"YEMEN",f:"\ud83c\uddfe\ud83c\uddea",c:"10+",ch:["YEMEN TV 4K", "AL MASIRAH TV 4K", "YEMEN TODAY TV 4K", "SUHAIL TV 4K", "AL SAEEDAH TV 4K", "BELQEES TV 4K", "ADEN LIVE TV 4K", "AL EMAN TV 4K", "YEMEN SHABAB TV 4K", "AL HAWYAH TV 4K"]},
+{n:"SOUTH AFRICA",f:"\ud83c\uddff\ud83c\udde6",c:"93+",ch:["SABC 1 4K", "SABC 2 4K", "SABC 3 4K", "ETV 4K", "SUPERSPORT PREMIER LEAGUE 4K", "SUPERSPORT LA LIGA 4K", "SUPERSPORT VARIETY 1 4K", "SUPERSPORT VARIETY 2 4K", "SUPERSPORT VARIETY 3 4K", "SUPERSPORT VARIETY 4 4K", "SUPERSPORT ACTION 4K", "SUPERSPORT CRICKET 4K", "SUPERSPORT RUGBY 4K", "SUPERSPORT TENNIS 4K", "SUPERSPORT MOTORSPORT 4K", "NEWSROOM AFRIKA 4K", "ANN7 4K", "ENCA 4K", "M-NET 4K", "M-NET MOVIES PREMIERE 4K", "M-NET MOVIES ACTION 4K", "M-NET MOVIES DRAMA 4K", "M-NET MOVIES COMEDY 4K", "KYKNET 4K", "KYKNET NOU! 4K", "VIA 4K", "MOJA LOVE 4K", "TRACE URBAN 4K", "TRACE AFRICA 4K", "MTV BASE AFRICA 4K", "CHANNEL O 4K", "LIFESTYLE TV 4K", "SOWETO TV 4K", "CAPE TOWN TV 4K", "1GOSPEL 4K", "FAITH TV 4K", "TBN AFRICA 4K", "EDEN CHANNEL 4K", "IQRAA TV 4K", "ISLAM CHANNEL 4K", "BOP TV 4K", "eMOVIES 4K", "eTOONS 4K", "eEXTRA 4K", "eBELLA 4K", "ZONE REALITY 4K", "DISCOVERY CHANNEL AFRICA 4K", "ANIMAL PLANET AFRICA 4K", "NATIONAL GEOGRAPHIC AFRICA 4K", "HISTORY CHANNEL AFRICA 4K"]},
+{n:"SOMALIA",f:"\ud83c\uddf8\ud83c\uddf4",c:"1+",ch:["SOMALIA - FLIX MOVIE"]},
+{n:"GHANA",f:"\ud83c\uddec\ud83c\udded",c:"31+",ch:["GHANA - KESSBEN TV", "GHANA - BEN", "GHANA - GTV", "GHANA - RTV", "GHANA - JOY NEWS", "GHANA - JOY PRIME", "GHANA - UTV", "GHANA - METRO TV", "GHANA - OSEIKROM TV", "GHANA - MINISTERS CHANNEL", "GHANA - KUMAWOOD TV", "GHANA - VOLTA1 TV", "GHANA - MISSION AFRICA TV", "GHANA - HIJRAH TV", "GHANA - GHONE TV", "GHANA - GTV GOV TV", "GHANA - GTV SPORT", "GHANA - GBC24", "GHANA - ATINKA TV", "GHANA - ROYAL TV", "GHANA - CNBC AFRICA", "GHANA - RESURRECTION TELEVISION", "GHANA - GHANA BROADCASTING CORPORATION", "GHANA - MTA AFRICA", "GHANA - STUDIO1 TV", "GHANA - GI SPORTS TV", "GHANA - TV3 GHANA", "GHANA - 3ABN INTERNATIONAL", "GHANA - 3ABN KIDS", "GHANA - 3ABN FRAN\u00c7AIS", "GHANA - | ADOM TV"]},
+{n:"KENYA",f:"\ud83c\uddf0\ud83c\uddea",c:"80+",ch:["KBC CHANNEL 1 4K", "CITIZEN TV 4K", "NTV KENYA 4K", "KTN HOME 4K", "KTN NEWS 4K", "SWITCH TV 4K", "INOORO TV 4K", "RAMOGI TV 4K", "K24 TV 4K", "TV47 KENYA 4K", "EBRU TV KENYA 4K", "FAMILY TV KENYA 4K", "LOOK UP TV 4K", "GBS TV KENYA 4K", "KU TV 4K", "ZOE TV 4K", "MOHI TV 4K", "MBN TV 4K", "KASS TV 4K", "CHAMS MEDIA 4K", "CTN TV 4K", "PCEA TV 4K", "SAUTI TV 4K", "MUHORO TV 4K", "SHANG TV 4K", "AKILI KIDS 4K", "EDU TV KENYA 4K", "GETV KENYA 4K", "SIFA TV 4K", "HOPE TV 4K", "KAMEME TV 4K", "MAASAI TV 4K", "SAYARE TV 4K", "STAR TV KENYA 4K", "TBN KENYA 4K", "POWER FM TV 4K", "LIGHTHOUSE TV 4K", "ATG TV KENYA 4K", "ZUKU SPORTS 4K", "ZUKU MOVIES 4K", "ZUKU KIDS 4K", "ZUKU LIFE 4K", "ZUKU MUSIC 4K", "KIDS TV KENYA 4K", "AFRICAN VOICES TV 4K", "CLASSIC TV KENYA 4K", "KTN FARMERS TV 4K", "WIKONNECT TV 4K", "EATV 4K", "VOICE TV AFRICA 4K"]},
+{n:"UGANDA",f:"\ud83c\uddfa\ud83c\uddec",c:"75+",ch:["UBC TV 4K", "NBS TV 4K", "NTV UGANDA 4K", "BUKEDDE TV 1 4K", "BUKEDDE TV 2 4K", "BBS TELEVISION 4K", "ABS TV 4K", "SPARK TV 4K", "TV WEST 4K", "MAGIC 1 TV 4K", "SALT TV 4K", "DREAM TV UGANDA 4K", "REST TV 4K", "FAMILY TV UGANDA 4K", "CHANNEL 44 TV 4K", "TOP TV UGANDA 4K", "KBS TV 4K", "PRIME RADIO TV 4K", "WBS TV 4K", "LIGHTHOUSE TELEVISION 4K", "KINGDOM TV UGANDA 4K", "HGTV UGANDA 4K", "AGAPE TV 4K", "POWER TV UGANDA 4K", "MAC TV 4K", "STV UGANDA 4K", "SMART24 TV 4K", "NEXT MEDIA TV 4K", "CHILL TV 4K", "BASOGA BAATO TV 4K", "YOTV 4K", "TV AFRICA 4K", "VOICE OF AFRICA TV 4K", "PEARL MAGIC PRIME 4K", "TRACE MZIKI UGANDA 4K", "TRACE GOSPEL 4K", "TRACE URBAN UGANDA 4K", "MTV BASE AFRICA 4K", "AFRICAN MOVIE CHANNEL 4K", "MAMA AFRICA TV 4K", "ACTION MOVIES UGANDA 4K", "EMMANUEL TV 4K", "MIRACLE TV 4K", "GOD TV 4K", "TEENZ TV UGANDA 4K", "LOVE NATURE TV 4K", "INSIGHT TV 4K", "GOSPEL LIFE TV 4K", "CAPITAL TV 4K", "STAR TV UGANDA 4K"]},
+{n:"TANZANIA",f:"\ud83c\uddf9\ud83c\uddff",c:"74+",ch:["ITV TANZANIA 4K", "STV TANZANIA 4K", "TBC1 TANZANIA 4K", "TBC2 TANZANIA 4K", "EATV TANZANIA 4K", "CLOUDS TV 4K", "ZBC TV 4K", "KBC TANZANIA 4K", "LEO TV 4K", "STAR TV TANZANIA 4K", "KTN TANZANIA 4K", "TV1 TANZANIA 4K", "AFRICAN MAGIC SWAHILI 4K", "TRACE AFRICA 4K", "TRACE MZIKI TANZANIA 4K", "TRACE GOSPEL TANZANIA 4K", "MAJESTIC TV TANZANIA 4K", "AIT TANZANIA 4K", "FILM GALLERY TV 4K", "BONGO MOVIE CHANNEL 4K", "EMMANUEL TV 4K", "TELEVISION AFRICA 4K", "LOVE NATURE TV 4K", "CNN INTERNATIONAL TANZANIA 4K", "BBC WORLD NEWS TANZANIA 4K", "TV ONE TANZANIA 4K", "MULTI TV 4K", "HOME BASE TV TANZANIA 4K", "FAMILY TV TANZANIA 4K", "MTV BASE AFRICA TANZANIA 4K", "SUPERSPORT TANZANIA 4K", "FOX SPORTS TANZANIA 4K", "ESPN TANZANIA 4K", "ZUKU SPORTS TANZANIA 4K", "ZUKU MOVIES TANZANIA 4K", "NTV TANZANIA 4K", "TBC INTERNATIONAL 4K", "MINISTRY TV TANZANIA 4K", "TELE 10 TANZANIA 4K", "TBC 4K", "AFRICAN VOICES TV 4K", "TEENZ TV TANZANIA 4K", "EDUCATION CHANNEL TANZANIA 4K", "KINGDOM TV TANZANIA 4K", "MIRACLE TV TANZANIA 4K", "MAMBO TV 4K", "SPORTS 247 TANZANIA 4K", "MBC 4K", "LIVING WORD TV 4K", "FRESH TV TANZANIA 4K"]},
+{n:"RWANDA",f:"\ud83c\uddf7\ud83c\uddfc",c:"71+",ch:["RTV RWANDA 4K", "TVR RWANDA 4K", "KISS TV RWANDA 4K", "IYEBE TV 4K", "NTV RWANDA 4K", "MAGIC FM TV RWANDA 4K", "TV10 RWANDA 4K", "10 PLUS TV RWANDA 4K", "CHAMBER TV RWANDA 4K", "RBA TV 4K", "SPARK TV RWANDA 4K", "AFRICA TV RWANDA 4K", "INYARWANDA TV 4K", "RWANDAN MOVIES TV 4K", "TRACE AFRICA RWANDA 4K", "TRACE MZIKI RWANDA 4K", "TRACE GOSPEL RWANDA 4K", "STAR TV RWANDA 4K", "GO TV RWANDA 4K", "ZUKU TV RWANDA 4K", "BFM RWANDA 4K", "SHINE TV RWANDA 4K", "EDU TV RWANDA 4K", "EATV RWANDA 4K", "CITIZEN TV RWANDA 4K", "KBC RWANDA 4K", "ZNBC RWANDA 4K", "BBC WORLD NEWS RWANDA 4K", "AL JAZEERA RWANDA 4K", "CNN INTERNATIONAL RWANDA 4K", "ITV RWANDA 4K", "MULTICHOICE RWANDA 4K", "AFRICAN MAGIC SWAHILI 4K", "BONGO MOVIE CHANNEL RWANDA 4K", "STADIUM TV RWANDA 4K", "SABC NEWS RWANDA 4K", "FOX SPORTS RWANDA 4K", "ESPN RWANDA 4K", "SUPERSPORT RWANDA 4K", "ZUKU SPORTS RWANDA 4K", "ZUKU MOVIES RWANDA 4K", "STAR MOVIES RWANDA 4K", "AFRICAN MOVIE CHANNEL RWANDA 4K", "HISTORY CHANNEL RWANDA 4K", "DISCOVERY CHANNEL RWANDA 4K", "NATIONAL GEOGRAPHIC RWANDA 4K", "PLANET TV RWANDA 4K", "LIVING TV RWANDA 4K", "METRO TV RWANDA 4K", "TV5 MONDE RWANDA 4K"]},
+{n:"BURUNDI",f:"\ud83c\udf10",c:"65+",ch:["RTNB (RADIO T\u00c9L\u00c9VISION NATIONALE DU BURUNDI) 4K", "BTV (BURUNDI TELEVISION) 4K", "RFI BURUNDI 4K", "BBC WORLD NEWS BURUNDI 4K", "AL JAZEERA BURUNDI 4K", "CNN INTERNATIONAL BURUNDI 4K", "FRANCE 24 BURUNDI 4K", "TV5 MONDE BURUNDI 4K", "TRACE AFRICA BURUNDI 4K", "TRACE MZIKI BURUNDI 4K", "TRACE GOSPEL BURUNDI 4K", "NATION TV BURUNDI 4K", "GO TV BURUNDI 4K", "ZUKU TV BURUNDI 4K", "BONGO MOVIE CHANNEL BURUNDI 4K", "MAGIC TV BURUNDI 4K", "BBC BURUNDI 4K", "TBC (TANZANIA BROADCASTING CORPORATION) BURUNDI 4K", "STADIUM TV BURUNDI 4K", "SABC NEWS BURUNDI 4K", "DStv BURUNDI 4K", "EUROSPORT BURUNDI 4K", "ESPN BURUNDI 4K", "SUPERSPORT BURUNDI 4K", "M-NET BURUNDI 4K", "MBC BURUNDI 4K", "KBC BURUNDI 4K", "K24 BURUNDI 4K", "ZNBC BURUNDI 4K", "KISS TV BURUNDI 4K", "BFM TV BURUNDI 4K", "SHINE TV BURUNDI 4K", "EATV BURUNDI 4K", "TV ONE BURUNDI 4K", "TVT BURUNDI 4K", "ZUKU SPORTS BURUNDI 4K", "ZUKU MOVIES BURUNDI 4K", "STAR MOVIES BURUNDI 4K", "DISNEY CHANNEL BURUNDI 4K", "NATIONAL GEOGRAPHIC BURUNDI 4K", "DISCOVERY CHANNEL BURUNDI 4K", "PLANET TV BURUNDI 4K", "HISTORY CHANNEL BURUNDI 4K", "COMEDY CENTRAL BURUNDI 4K", "LIVING TV BURUNDI 4K", "METRO TV BURUNDI 4K", "FLUX TV BURUNDI 4K", "INFO TV BURUNDI 4K", "MY AFRICA TV BURUNDI 4K", "TOP TV BURUNDI 4K"]},
+{n:"MALAWI",f:"\ud83c\uddf2\ud83c\uddfc",c:"65+",ch:["MBC TV (MALAWI BROADCASTING CORPORATION) 4K", "ZBS TV (ZODIAK BROADCASTING STATION) 4K", "TVM (TELEVISION MALAWI) 4K", "STAR TV MALAWI 4K", "DStv MALAWI 4K", "ZUKU TV MALAWI 4K", "GO TV MALAWI 4K", "M-NET MALAWI 4K", "BBC WORLD NEWS MALAWI 4K", "AL JAZEERA MALAWI 4K", "CNN INTERNATIONAL MALAWI 4K", "FRANCE 24 MALAWI 4K", "TV5 MONDE MALAWI 4K", "TRACE AFRICA MALAWI 4K", "TRACE MZIKI MALAWI 4K", "TRACE GOSPEL MALAWI 4K", "ESPN MALAWI 4K", "SUPERSPORT MALAWI 4K", "EUROSPORT MALAWI 4K", "DISCOVERY CHANNEL MALAWI 4K", "NATIONAL GEOGRAPHIC MALAWI 4K", "HISTORY CHANNEL MALAWI 4K", "COMEDY CENTRAL MALAWI 4K", "LIVING TV MALAWI 4K", "FOX NEWS MALAWI 4K", "SKY NEWS MALAWI 4K", "E! ENTERTAINMENT MALAWI 4K", "CNBC AFRICA MALAWI 4K", "EATV MALAWI 4K", "KISS TV MALAWI 4K", "METRO TV MALAWI 4K", "SHINE TV MALAWI 4K", "DABANGA TV MALAWI 4K", "PLANET TV MALAWI 4K", "MTV BASE MALAWI 4K", "STAR MOVIES MALAWI 4K", "DISNEY CHANNEL MALAWI 4K", "ANIMAL PLANET MALAWI 4K", "FOOD NETWORK MALAWI 4K", "LUXE TV MALAWI 4K", "LIFESTYLE TV MALAWI 4K", "MOVIE JUNCTION MALAWI 4K", "GLOBE TV MALAWI 4K", "MY AFRICA TV MALAWI 4K", "AFRICA MAGIC MALAWI 4K", "LOCAL NEWS TV MALAWI 4K", "BLACK TV MALAWI 4K", "SILVER TV MALAWI 4K", "GO SPORTS MALAWI 4K", "VIVA TV MALAWI 4K"]},
+{n:"NIGERIA",f:"\ud83c\uddf3\ud83c\uddec",c:"54+",ch:["NIGERIA - VOX AFRICA", "NIGERIA - ROK TV", "NIGERIA - AIT", "NIGERIA - BET BLACK", "NIGERIA - ABN", "NIGERIA - VOX", "NIGERIA - TVC", "NIGERIA - TVC NEWS", "NIGERIA - LOVE WORLD", "NIGERIA - EMMANUEL TV", "NIGERIA - NOLLYWOOD FRENCH", "NIGERIA - NOLLYWOOD MOVIE", "NIGERIA - CHANNELS TELEVISION", "NIGERIA - CHANNELS 24", "NIGERIA - A+ HD", "NIGERIA - TELE SAHEL", "NIGERIA - HI-IMPACTS", "NIGERIA - LAGOS TV", "NIGERIA - FUSION PLUS TV", "NIGERIA - BRIDE TV", "NIGERIA - COMEDY CHANNEL", "NIGERIA - EMCI TV", "NIGERIA - ET", "NIGERIA - FUFU KITCHEN", "NIGERIA - HOPE CHANNEL AFRICA", "NIGERIA - LIGHT TV", "NIGERIA - KINGS WORD INFO TV", "NIGERIA - NEW BEGINNING TV NETWORK", "NIGERIA - ONCE SPOKEN NETWORK", "NIGERIA - AFRICAN ENTERTAIMENT TV", "NIGERIA - SPYDAR TV NETWORK", "NIGERIA - NU SMILES TV", "NIGERIA - LIFETV", "NIGERIA - BIAFRA TV", "NIGERIA - EKO4SHOW", "NIGERIA - MORE GRACE TV", "NIGERIA - LIBERATIONTV", "NIGERIA - TV CONTINENTAL", "NIGERIA - LOVE WORLD SAT TV", "NIGERIA - TV360", "NIGERIA - DUNAMIS TV", "NIGERIA - NTA HAUSSA", "NIGERIA - NTA NEWS", "NIGERIA - NTA LIVE TV", "NIGERIA - NTA INTERNATIONAL", "NIGERIA - SALVATION TV", "NIGERIA - EBRU AFRICA", "NIGERIA - VH TV", "NIGERIA - WESTERN 4U TV NETWORK", "NIGERIA - EBONY LIFE TV"]},
+{n:"ZAMBIA",f:"\ud83c\uddff\ud83c\uddf2",c:"67+",ch:["ZNBC (ZAMBIA NATIONAL BROADCASTING CORPORATION) 4K", "MUVI TV 4K", "K24 TV ZAMBIA 4K", "ZNBC 2 4K", "ZNBC 3 4K", "ZNBC WORLD 4K", "ZAMBEZI MAGIC 4K", "DStv ZAMBIA 4K", "GO TV ZAMBIA 4K", "ZUKU TV ZAMBIA 4K", "BBC WORLD NEWS ZAMBIA 4K", "AL JAZEERA ZAMBIA 4K", "CNN INTERNATIONAL ZAMBIA 4K", "FRANCE 24 ZAMBIA 4K", "TV5 MONDE ZAMBIA 4K", "TRACE AFRICA ZAMBIA 4K", "TRACE MZIKI ZAMBIA 4K", "TRACE GOSPEL ZAMBIA 4K", "ESPN ZAMBIA 4K", "SUPERSPORT ZAMBIA 4K", "EUROSPORT ZAMBIA 4K", "DISCOVERY CHANNEL ZAMBIA 4K", "NATIONAL GEOGRAPHIC ZAMBIA 4K", "HISTORY CHANNEL ZAMBIA 4K", "COMEDY CENTRAL ZAMBIA 4K", "LIVING TV ZAMBIA 4K", "FOX NEWS ZAMBIA 4K", "SKY NEWS ZAMBIA 4K", "E! ENTERTAINMENT ZAMBIA 4K", "CNBC AFRICA ZAMBIA 4K", "EATV ZAMBIA 4K", "KISS TV ZAMBIA 4K", "METRO TV ZAMBIA 4K", "SHINE TV ZAMBIA 4K", "DABANGA TV ZAMBIA 4K", "PLANET TV ZAMBIA 4K", "MTV BASE ZAMBIA 4K", "STAR MOVIES ZAMBIA 4K", "DISNEY CHANNEL ZAMBIA 4K", "ANIMAL PLANET ZAMBIA 4K", "FOOD NETWORK ZAMBIA 4K", "LUXE TV ZAMBIA 4K", "LIFESTYLE TV ZAMBIA 4K", "MOVIE JUNCTION ZAMBIA 4K", "GLOBE TV ZAMBIA 4K", "MY AFRICA TV ZAMBIA 4K", "AFRICA MAGIC ZAMBIA 4K", "LOCAL NEWS TV ZAMBIA 4K", "BLACK TV ZAMBIA 4K", "SILVER TV ZAMBIA 4K"]},
+{n:"ZIMBABWE",f:"\ud83c\uddff\ud83c\uddfc",c:"65+",ch:["ZBC TV (ZIMBABWE BROADCASTING CORPORATION) 4K", "ZBC NEWS 4K", "ZBC 2 4K", "ZBC 3 4K", "ZIMBABWEAN BROADCASTING CORPORATION RADIO 4K", "MUZANDE TV 4K", "KISS TV ZIMBABWE 4K", "JOY TV 4K", "STV (SABC TV ZIMBABWE) 4K", "ZTN (ZIMBABWEAN TELEVISON NETWORK) 4K", "DStv ZIMBABWE 4K", "GO TV ZIMBABWE 4K", "ZUKU TV ZIMBABWE 4K", "MULTICHOICE ZIMBABWE 4K", "TRACE AFRICA ZIMBABWE 4K", "TRACE MZIKI ZIMBABWE 4K", "TRACE GOSPEL ZIMBABWE 4K", "MTV BASE ZIMBABWE 4K", "MTV AFRICA ZIMBABWE 4K", "ESPIN ZIMBABWE 4K", "SUPERSPORT ZIMBABWE 4K", "EUROSPORT ZIMBABWE 4K", "BBC WORLD NEWS ZIMBABWE 4K", "AL JAZEERA ZIMBABWE 4K", "CNN INTERNATIONAL ZIMBABWE 4K", "FRANCE 24 ZIMBABWE 4K", "TV5 MONDE ZIMBABWE 4K", "SKY NEWS ZIMBABWE 4K", "E! ENTERTAINMENT ZIMBABWE 4K", "CNBC AFRICA ZIMBABWE 4K", "LIVING TV ZIMBABWE 4K", "DISCOVERY CHANNEL ZIMBABWE 4K", "NATIONAL GEOGRAPHIC ZIMBABWE 4K", "HISTORY CHANNEL ZIMBABWE 4K", "COMEDY CENTRAL ZIMBABWE 4K", "FOX NEWS ZIMBABWE 4K", "SHOWTIME ZIMBABWE 4K", "FOOD NETWORK ZIMBABWE 4K", "ANIMAL PLANET ZIMBABWE 4K", "MOVIE JUNCTION ZIMBABWE 4K", "LUXE TV ZIMBABWE 4K", "LIFESTYLE TV ZIMBABWE 4K", "EATV ZIMBABWE 4K", "DABANGA TV ZIMBABWE 4K", "MY AFRICA TV ZIMBABWE 4K", "GLOBAL TV ZIMBABWE 4K", "STAR MOVIES ZIMBABWE 4K", "DISNEY CHANNEL ZIMBABWE 4K", "TBN ZIMBABWE 4K", "AFRO MUSIC ZIMBABWE 4K"]},
+{n:"BOTSWANA",f:"\ud83c\udde7\ud83c\uddfc",c:"57+",ch:["BTV (BOTSWANA TELEVISION) 4K", "BTV 2 4K", "BTV NEWS 4K", "BOTSWANA RADIO 4K", "DStv BOTSWANA 4K", "GO TV BOTSWANA 4K", "ZUKU TV BOTSWANA 4K", "MULTICHOICE BOTSWANA 4K", "TRACE AFRICA BOTSWANA 4K", "TRACE MZIKI BOTSWANA 4K", "TRACE GOSPEL BOTSWANA 4K", "MTV BASE BOTSWANA 4K", "MTV AFRICA BOTSWANA 4K", "SUPERSPORT BOTSWANA 4K", "EUROSPORT BOTSWANA 4K", "BBC WORLD NEWS BOTSWANA 4K", "AL JAZEERA BOTSWANA 4K", "CNN INTERNATIONAL BOTSWANA 4K", "FRANCE 24 BOTSWANA 4K", "SKY NEWS BOTSWANA 4K", "E! ENTERTAINMENT BOTSWANA 4K", "CNBC AFRICA BOTSWANA 4K", "LIVING TV BOTSWANA 4K", "DISCOVERY CHANNEL BOTSWANA 4K", "NATIONAL GEOGRAPHIC BOTSWANA 4K", "HISTORY CHANNEL BOTSWANA 4K", "COMEDY CENTRAL BOTSWANA 4K", "FOX NEWS BOTSWANA 4K", "SHOWTIME BOTSWANA 4K", "FOOD NETWORK BOTSWANA 4K", "ANIMAL PLANET BOTSWANA 4K", "MOVIE JUNCTION BOTSWANA 4K", "LUXE TV BOTSWANA 4K", "LIFESTYLE TV BOTSWANA 4K", "EATV BOTSWANA 4K", "DABANGA TV BOTSWANA 4K", "MY AFRICA TV BOTSWANA 4K", "GLOBAL TV BOTSWANA 4K", "STAR MOVIES BOTSWANA 4K", "DISNEY CHANNEL BOTSWANA 4K", "TBN BOTSWANA 4K", "AFRO MUSIC BOTSWANA 4K", "RELIGIOUS TV BOTSWANA 4K", "RADIOTEL BOTSWANA 4K", "STADIUM TV BOTSWANA 4K", "BOUNCE TV BOTSWANA 4K", "MOVIES NOW BOTSWANA 4K", "NOVA TV BOTSWANA 4K", "INFORMATION TV BOTSWANA 4K", "THE FILM CHANNEL BOTSWANA 4K"]},
+{n:"NAMIBIA",f:"\ud83c\uddf3\ud83c\udde6",c:"57+",ch:["NBC (NAMIBIA BROADCASTING CORPORATION) 4K", "NBC 2 4K", "NBC NEWS 4K", "NBC SPORT 4K", "DSTV NAMIBIA 4K", "GO TV NAMIBIA 4K", "ZUKU TV NAMIBIA 4K", "MULTICHOICE NAMIBIA 4K", "TRACE AFRICA NAMIBIA 4K", "TRACE MZIKI NAMIBIA 4K", "TRACE GOSPEL NAMIBIA 4K", "MTV BASE NAMIBIA 4K", "MTV AFRICA NAMIBIA 4K", "SUPERSPORT NAMIBIA 4K", "EUROSPORT NAMIBIA 4K", "BBC WORLD NEWS NAMIBIA 4K", "AL JAZEERA NAMIBIA 4K", "CNN INTERNATIONAL NAMIBIA 4K", "FRANCE 24 NAMIBIA 4K", "SKY NEWS NAMIBIA 4K", "E! ENTERTAINMENT NAMIBIA 4K", "CNBC AFRICA NAMIBIA 4K", "LIVING TV NAMIBIA 4K", "DISCOVERY CHANNEL NAMIBIA 4K", "NATIONAL GEOGRAPHIC NAMIBIA 4K", "HISTORY CHANNEL NAMIBIA 4K", "COMEDY CENTRAL NAMIBIA 4K", "FOX NEWS NAMIBIA 4K", "SHOWTIME NAMIBIA 4K", "FOOD NETWORK NAMIBIA 4K", "ANIMAL PLANET NAMIBIA 4K", "MOVIE JUNCTION NAMIBIA 4K", "LUXE TV NAMIBIA 4K", "LIFESTYLE TV NAMIBIA 4K", "EATV NAMIBIA 4K", "DABANGA TV NAMIBIA 4K", "MY AFRICA TV NAMIBIA 4K", "GLOBAL TV NAMIBIA 4K", "STAR MOVIES NAMIBIA 4K", "DISNEY CHANNEL NAMIBIA 4K", "TBN NAMIBIA 4K", "AFRO MUSIC NAMIBIA 4K", "RELIGIOUS TV NAMIBIA 4K", "RADIOTEL NAMIBIA 4K", "STADIUM TV NAMIBIA 4K", "BOUNCE TV NAMIBIA 4K", "MOVIES NOW NAMIBIA 4K", "NOVA TV NAMIBIA 4K", "INFORMATION TV NAMIBIA 4K", "THE FILM CHANNEL NAMIBIA 4K"]},
+{n:"MOZAMBIQUE",f:"\ud83c\uddf2\ud83c\uddff",c:"63+",ch:["TVM (TELEVIS\u00c3O DE MO\u00c7AMBIQUE) 4K", "TVM 2 4K", "TVM 3 4K", "TVM INTERNACIONAL 4K", "SOICO TV 4K", "STV (SISTEMA DE TELEVIS\u00c3O DE MO\u00c7AMBIQUE) 4K", "STV 2 4K", "STV Not\u00edcias 4K", "STV Desporto 4K", "ZAP TV 4K", "ZAP Viva 4K", "ZAP World 4K", "DStv Mozambique 4K", "GOtv Mozambique 4K", "Canal de Mo\u00e7ambique 4K", "CNN INTERNATIONAL MOZAMBIQUE 4K", "BBC WORLD NEWS MOZAMBIQUE 4K", "FRANCE 24 MOZAMBIQUE 4K", "SKY NEWS MOZAMBIQUE 4K", "AL JAZEERA MOZAMBIQUE 4K", "CNBC AFRICA MOZAMBIQUE 4K", "NTV (NACIONAL TELEVIS\u00c3O) MOZAMBIQUE 4K", "NATIONAL GEOGRAPHIC MOZAMBIQUE 4K", "DISCOVERY CHANNEL MOZAMBIQUE 4K", "HISTORY CHANNEL MOZAMBIQUE 4K", "COMEDY CENTRAL MOZAMBIQUE 4K", "FOX NEWS MOZAMBIQUE 4K", "E! ENTERTAINMENT MOZAMBIQUE 4K", "MOVIE JUNCTION MOZAMBIQUE 4K", "SHOWTIME MOZAMBIQUE 4K", "LUXE TV MOZAMBIQUE 4K", "FOOD NETWORK MOZAMBIQUE 4K", "ANIMAL PLANET MOZAMBIQUE 4K", "LIVING TV MOZAMBIQUE 4K", "TRACE AFRICA MOZAMBIQUE 4K", "TRACE MZIKI MOZAMBIQUE 4K", "MTV AFRICA MOZAMBIQUE 4K", "MTV BASE MOZAMBIQUE 4K", "ESPN MOZAMBIQUE 4K", "SUPERSPORT MOZAMBIQUE 4K", "EUROSPORT MOZAMBIQUE 4K", "TBN MOZAMBIQUE 4K", "DISNEY CHANNEL MOZAMBIQUE 4K", "STAR MOVIES MOZAMBIQUE 4K", "ECTV MOZAMBIQUE 4K", "REVELATION TV MOZAMBIQUE 4K", "RELIGIOUS TV MOZAMBIQUE 4K", "PRIME VIDEO MOZAMBIQUE 4K", "SHOWMAX MOZAMBIQUE 4K", "GLOBAL TV MOZAMBIQUE 4K"]},
+{n:"ANGOLA",f:"\ud83c\udde6\ud83c\uddf4",c:"79+",ch:["TPA (TELEVIS\u00c3O P\u00daBLICA DE ANGOLA) 4K", "TPA 2 4K", "TPA Internacional 4K", "ZAP Viva 4K", "ZAP Mundo 4K", "ZAP News 4K", "ZAP Desporto 4K", "DStv Angola 4K", "GOtv Angola 4K", "TV Record Angola 4K", "SBT Angola 4K", "RTP \u00c1frica 4K", "CNN International Angola 4K", "BBC World News Angola 4K", "France 24 Angola 4K", "Sky News Angola 4K", "Al Jazeera Angola 4K", "National Geographic Angola 4K", "Discovery Channel Angola 4K", "History Channel Angola 4K", "Comedy Central Angola 4K", "Fox News Angola 4K", "E! Entertainment Angola 4K", "Showmax Angola 4K", "Movie Zone Angola 4K", "Luxe TV Angola 4K", "Trace Africa Angola 4K", "Trace Mziki Angola 4K", "MTV Africa Angola 4K", "MTV Base Angola 4K", "ESPN Angola 4K", "SuperSport Angola 4K", "Eurosport Angola 4K", "TBN Angola 4K", "Disney Channel Angola 4K", "Star Movies Angola 4K", "TV Zimbo 4K", "TV Kwanza 4K", "Kwanza TV 4K", "Angola Telesat 4K", "TFC (Televis\u00e3o de Funchal e Cacuso) 4K", "Net One Angola 4K", "Telecine Angola 4K", "Multichoice Angola 4K", "HBO Angola 4K", "Cinemax Angola 4K", "HBO Max Angola 4K", "Viasat Angola 4K", "AXN Angola 4K", "Planet Kids Angola 4K"]},
+{n:"GABON",f:"\ud83c\uddec\ud83c\udde6",c:"65+",ch:["RTG (R\u00c9SEAU T\u00c9L\u00c9VISION GABON) 4K", "TVG (TELEVISION GABON) 4K", "GABON24 4K", "ZEE AFRICA 4K", "CANAL+ AFRIQUE 4K", "CANAL+ GABON 4K", "RFI (RADIO FRANCE INTERNATIONALE) 4K", "FRANCE 24 4K", "RTS (RADIO T\u00c9L\u00c9VISION S\u00c9N\u00c9GALAISE) 4K", "EURONEWS 4K", "BBC WORLD NEWS 4K", "CNN INTERNATIONAL 4K", "AL JAZEERA 4K", "SKY NEWS 4K", "MTV BASE AFRICA 4K", "MTV AFRICA 4K", "TRACE AFRICA 4K", "TRACE MZIKI 4K", "DSTV GABON 4K", "GOTV GABON 4K", "SUPERSPORT 4K", "EUROSPORT 4K", "ESPN AFRICA 4K", "FOX SPORTS AFRICA 4K", "NATIONAL GEOGRAPHIC 4K", "DISCOVERY CHANNEL 4K", "DISCOVERY KIDS 4K", "COMEDY CENTRAL AFRICA 4K", "HISTORY CHANNEL AFRICA 4K", "E! ENTERTAINMENT 4K", "SHOWMAX 4K", "HBO MAX 4K", "SHOWTIME 4K", "SONY ENTERTAINMENT TELEVISION 4K", "UNIVERSAL CHANNEL 4K", "DISNEY CHANNEL AFRICA 4K", "STAR MOVIES 4K", "CARTOON NETWORK AFRICA 4K", "BOOMERANG AFRICA 4K", "TLC AFRICA 4K", "FOOD NETWORK AFRICA 4K", "LIVING CHANNEL 4K", "ANIMAL PLANET 4K", "HGTV AFRICA 4K", "NATIONAL GEOGRAPHIC WILD 4K", "INVESTIGATION DISCOVERY 4K", "REELZCHANNEL 4K", "OVATION 4K", "CINEMAX 4K", "TELECINCO 4K"]}];
+
+var NORDIC = ['NORWAY','SWEDEN','DENMARK','FINLAND','ICELAND'];
+var EUROPE = ['NORWAY','SWEDEN','DENMARK','FINLAND','ICELAND','UK','FRANCE','GERMANY','SPAIN','ITALY','NETHERLANDS','GREECE','SWITZERLAND','BELGIUM','PORTUGAL','AUSTRIA','POLAND','RUSSIA','UKRAINE','BULGARIA','HUNGARY','CZECH REPUBLIC','ROMANIA','ALBANIA','CROATIA','SERBIA','SLOVENIA','MONTENEGRO','ESTONIA','LATVIA','LITHUANIA','GEORGIA','ARMENIA','AZERBAIJAN','CYPRUS','MALTA','ANDORRA','LUXEMBOURG','LIECHTENSTEIN','SAN MARINO','VATICAN CITY','MONACO','MAKEDONIA','EXYU','BOSNIA AND HERZEGOVINA','KOSOVO','SLOVAKIA'];
+var AMERICA = ['USA','CANADA','BRAZIL','MEXICO','ARGENTINA','COLOMBIA','CHILE','PERU','ECUADOR','URUGUAY','CUBA','PANAMA','DOMINICAN','NICARAGUA','GUYANA','SURINAME','CARIBBEAN','LATINO'];
+var ASIA_ME = ['IRAN','INDIA [EUROPE/UK]','TURKEY','PAKISTAN','HINDI','TAMIL','TELUGU','BENGALI','KANNADA','MALAYALAM','PUNJABI','GUJARATI','BHOJPURI','SPORTS','BANGLA','PHILIPPINES','SOUTH KOREA','MALAYSIA','JAPAN','THAILAND','INDONESIA','VIETNAM','MYANMAR (BURMA)','CAMBODIA','SINGAPORE','BRUNEI','NEPAL','SRI LANKA','MALDIVES','BHUTAN','EAST TIMOR (TIMOR-LESTE)','NORTH KOREA','KYRGYZSTAN','TAJIKISTAN','TURKMENISTAN','UZBEKISTAN','KAZAKHSTAN','AFGHANISTAN','ARABIC NEWS & FACTUAL','MOROCCO','TUNISIA','LEBANON','UAE','KUWAIT','LIBYA','MAURITANIA','COMOROS','DJIBOUTI','SOMALIA','YEMEN','PALESTINE','BEIN SPORTS 4K','MYHD & OSN','ALGERIA','EGYPT','JORDAN','SAUDI ARABIA','OMAN','QATAR','BAHRAIN','SYRIA','IRAQ','SUDAN','KURDISH'];
+var AFRICA = ['SOUTH AFRICA','GHANA','KENYA','UGANDA','TANZANIA','RWANDA','BURUNDI','MALAWI','NIGERIA','ZAMBIA','ZIMBABWE','BOTSWANA','NAMIBIA','MOZAMBIQUE','ANGOLA','GABON','SOMALIA'];
+var SPORT_CATS = ['SPORTS','BEIN SPORTS 4K'];
+
+var currentFilter = 'all';
+var currentSearch = '';
+
+function isInFilter(name) {
+  if (currentFilter === 'all') return true;
+  if (currentFilter === 'nordic') return NORDIC.indexOf(name) >= 0;
+  if (currentFilter === 'europe') return EUROPE.indexOf(name) >= 0;
+  if (currentFilter === 'america') return AMERICA.indexOf(name) >= 0;
+  if (currentFilter === 'asia') return ASIA_ME.indexOf(name) >= 0;
+  if (currentFilter === 'africa') return AFRICA.indexOf(name) >= 0;
+  if (currentFilter === 'sport') return SPORT_CATS.indexOf(name) >= 0;
+  return true;
+}
+
+function setFilter(f, btn) {
+  currentFilter = f;
+  document.querySelectorAll('.ftab').forEach(function(b){ b.classList.remove('on'); });
+  btn.classList.add('on');
+  render();
+}
+
+function filterChannels(q) {
+  currentSearch = q.toLowerCase().trim();
+  render();
+}
+
+function render() {
+  var container = document.getElementById('channelContainer');
+  var noRes = document.getElementById('noResults');
+  var html = '';
+  var shown = 0;
+  
+  for (var i = 0; i < D.length; i++) {
+    var cat = D[i];
+    if (!isInFilter(cat.n)) continue;
+    
+    var filteredCh = cat.ch;
+    if (currentSearch) {
+      filteredCh = cat.ch.filter(function(c){ 
+        return c.toLowerCase().indexOf(currentSearch) >= 0 || cat.n.toLowerCase().indexOf(currentSearch) >= 0;
+      });
+      if (filteredCh.length === 0 && cat.n.toLowerCase().indexOf(currentSearch) < 0) continue;
+    }
+    
+    shown++;
+    var isNordic = NORDIC.indexOf(cat.n) >= 0;
+    var nordBadge = isNordic ? '<span class="cbadge-nordic">Nordisk</span>' : '';
+    
+    // Build channel pills (max 48 for performance)
+    var chHtml = '';
+    var displayCh = filteredCh.slice(0, 48);
+    for (var j = 0; j < displayCh.length; j++) {
+      chHtml += '<div class="ch-pill"><span class="chdot"></span>' + esc(displayCh[j]) + '</div>';
+    }
+    if (filteredCh.length > 48) {
+      chHtml += '<div class="ch-pill" style="color:var(--lime);border-color:rgba(198,241,53,.2)">+' + (filteredCh.length - 48) + ' til</div>';
+    }
+    
+    var openClass = (isNordic || currentSearch) ? ' open' : '';
+    html += '<div class="country-sec' + openClass + '" data-cat="' + esc(cat.n) + '">' +
+      '<div class="country-header" onclick="toggleSec(this.parentElement)">' +
+        '<div class="country-title">' +
+          '<span class="cflag">' + cat.f + '</span>' +
+          '<span class="cnor">' + esc(cat.n) + '</span>' +
+          nordBadge +
+        '</div>' +
+        '<div class="country-meta">' +
+          '<span class="ccount">' + filteredCh.length + ' kanaler</span>' +
+          '<span class="chevron">▼</span>' +
+        '</div>' +
+      '</div>' +
+      '<div class="country-body">' +
+        '<div class="ch-grid">' + chHtml + '</div>' +
+      '</div>' +
+    '</div>';
+  }
+  
+  container.innerHTML = html;
+  noRes.style.display = shown === 0 ? 'block' : 'none';
+}
+
+function esc(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function toggleSec(el) {
+  el.classList.toggle('open');
+}
+
+function tNav(){document.getElementById('mmenu').classList.toggle('open')}
+function cNav(){document.getElementById('mmenu').classList.remove('open')}
+function toggleFloat(){document.getElementById('fm').classList.toggle('hidden')}
+
+document.addEventListener('click',function(e){
+  var m=document.getElementById('mmenu'),h=document.getElementById('ham');
+  if(m.classList.contains('open')&&!m.contains(e.target)&&!h.contains(e.target))m.classList.remove('open');
+});
+
+// Initial render
+render();
+</script>
+</body>
+</html>
