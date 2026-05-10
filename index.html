@@ -147,7 +147,7 @@ h2{font-size:1.85rem;font-weight:700;letter-spacing:-.02em;line-height:1.15;marg
 .rv-stat{background:var(--bg3);border:1px solid var(--br);border-radius:12px;padding:12px 20px;text-align:center;min-width:90px}
 .rv-stat .val{font-size:1.1rem;font-weight:700}
 .rv-stat .lbl{font-size:.65rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--t3);margin-top:2px}
-.slide-wrap{overflow:hidden;position:relative}
+.slide-wrap{overflow:hidden;position:relative;will-change:contents}
 .slide-wrap.sliding{opacity:0}
 .slide-wrap .slide-inner{transition:opacity .35s ease;will-change:opacity}
 .pdots{display:flex;justify-content:center;gap:8px;margin-top:20px}
@@ -338,8 +338,8 @@ footer{border-top:1px solid var(--br);padding:3rem clamp(1rem,4vw,2.5rem) 1.8rem
 .float-toggle.open svg{transform:rotate(45deg)}
 
 /* SCROLL REVEAL */
-.rv{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;backface-visibility:hidden}
-.rv.in{opacity:1;transform:translateY(0)}
+.rv{opacity:0;transition:opacity .6s ease}
+.rv.in{opacity:1}
 
 /* RESPONSIVE */
 @media(max-width:1060px){
@@ -491,7 +491,7 @@ footer{border-top:1px solid var(--br);padding:3rem clamp(1rem,4vw,2.5rem) 1.8rem
 </div>
 
 <!-- 2. REVIEWS -->
-<section class="sec" id="anmeldelser" aria-labelledby="rv-h">
+<section class="sec" id="anmeldelser" style="isolation:isolate;contain:layout" aria-labelledby="rv-h">
   <div class="w">
     <div class="rv-header rv">
       <div class="eyebrow" style="justify-content:center">Verifiserte anmeldelser</div>
@@ -945,16 +945,27 @@ function makeSlider(revs,perPage,renderFn,slideId,dotsId,interval){
   var slideEl=document.getElementById(slideId),dotsEl=document.getElementById(dotsId);
   function renderDots(){dotsEl.innerHTML='';for(var i=0;i<total;i++){var d=document.createElement('button');d.className='pdot'+(i===cur?' on':'');d.style.width=i===cur?'26px':'10px';d.setAttribute('aria-label','Anmeldelse '+(i+1));(function(idx){d.onclick=function(){go(idx);paused=Date.now()+9000;};})(i);dotsEl.appendChild(d);}}
   function render(){renderFn(revs.slice(cur*perPage,cur*perPage+perPage));renderDots();}
+  /* First render, then LOCK the height so the box never resizes again */
+  render();
+  requestAnimationFrame(function(){
+    var h=slideEl.scrollHeight;
+    slideEl.style.height=h+'px';
+    slideEl.style.minHeight=h+'px';
+    slideEl.style.overflow='hidden';
+  });
   function go(n){
+    var lockedH=slideEl.style.height; /* save locked height */
     var inner=slideEl.firstElementChild;
-    if(inner){inner.style.transition='opacity .3s ease';inner.style.opacity='0';}
+    if(inner){inner.style.transition='opacity .28s ease';inner.style.opacity='0';}
     setTimeout(function(){
       cur=n;render();
+      /* Restore locked height – innerHTML replacement may have changed it */
+      slideEl.style.height=lockedH;
+      slideEl.style.minHeight=lockedH;
       var ni=slideEl.firstElementChild;
-      if(ni){ni.style.opacity='0';ni.style.transition='opacity .3s ease';requestAnimationFrame(function(){requestAnimationFrame(function(){ni.style.opacity='1';});});}
-    },300);
+      if(ni){ni.style.opacity='0';ni.style.transition='opacity .28s ease';requestAnimationFrame(function(){requestAnimationFrame(function(){ni.style.opacity='1';});});}
+    },280);
   }
-  render();
   setInterval(function(){if(Date.now()<paused)return;go((cur+1)%total);},interval);
 }
 function renderTP(revs){var r=revs[0];document.getElementById('tp-card').innerHTML='<div class="tp-stars">'+'<div class="tp-star"><span>★</span></div>'.repeat(5)+'</div><h3 class="tp-title">'+r.title+'</h3><p class="tp-text">'+r.text+'</p><p class="tp-author">— '+r.name+' '+flagSVG(r.flag)+'</p>';}
