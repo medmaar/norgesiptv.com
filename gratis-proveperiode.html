@@ -714,21 +714,46 @@ document.addEventListener('DOMContentLoaded', function () {
     var deviceVal  = document.getElementById('fieldDevice').value;
     var notesVal   = form.querySelector('textarea[name="notes"]').value.trim();
 
+    var sentTime = new Date().toLocaleString('nb-NO', {timeZone:'Europe/Oslo'});
+
+    /* Build a rich message body — shows clearly even if template layout is basic */
+    var msgBody = [
+      '=== 🎁 GRATIS IPTV TRIAL FORESPØRSEL ===',
+      '',
+      'Navn    : ' + (nameVal    || 'Ikke oppgitt'),
+      'E-post  : ' + (emailVal   || 'Ikke oppgitt'),
+      'Telefon : ' + (phoneVal   || 'Ikke oppgitt'),
+      'Land    : ' + (countryVal || 'Ikke oppgitt'),
+      'Enhet   : ' + (deviceVal  || 'Ikke oppgitt'),
+      'Melding : ' + (notesVal   || '–'),
+      '',
+      'Tidspunkt: ' + sentTime,
+      '======================================='
+    ].join('\n');
+
     var payload = {
       service_id  : SERVICE_ID,
       template_id : TEMPLATE_ID,
       user_id     : PUBLIC_KEY,
       template_params: {
-        subject    : '🎁 Gratis IPTV Trial – Ny forespørsel',
-        from_name  : nameVal    || 'Ikke oppgitt',
-        from_email : emailVal   || 'Ikke oppgitt',
-        reply_to   : emailVal   || phoneVal,
-        phone      : phoneVal   || 'Ikke oppgitt',
-        country    : countryVal || 'Ikke oppgitt',
-        device     : deviceVal  || 'Ikke oppgitt',
-        notes      : notesVal   || '–',
-        sent_time  : new Date().toLocaleString('nb-NO', {timeZone:'Europe/Oslo'}),
-        request_type: 'GRATIS IPTV TRIAL – 24 TIMER'
+        /* Subject — add {{subject}} to your EmailJS template's Subject field */
+        subject      : '🎁 Gratis IPTV Trial – Ny forespørsel fra ' + (nameVal || emailVal || phoneVal || 'ukjent'),
+        /* Match the exact variable names the template uses */
+        from_name    : nameVal    || 'Ikke oppgitt',
+        name         : nameVal    || 'Ikke oppgitt',
+        from_email   : emailVal   || 'Ikke oppgitt',
+        email        : emailVal   || 'Ikke oppgitt',
+        reply_to     : emailVal   || phoneVal || '',
+        phone        : phoneVal   || 'Ikke oppgitt',
+        country      : countryVal || 'Ikke oppgitt',
+        device       : deviceVal  || 'Ikke oppgitt',
+        /* Fill "Plan:" field with the trial label so it's obvious in the email */
+        plan         : '🎁 GRATIS IPTV TRIAL – 24 TIMER',
+        /* Fill "Message:" with notes + full summary */
+        message      : msgBody,
+        notes        : notesVal   || '–',
+        sent_time    : sentTime,
+        request_type : '🎁 GRATIS IPTV TRIAL – 24 TIMER'
       }
     };
 
