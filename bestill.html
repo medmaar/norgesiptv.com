@@ -204,16 +204,16 @@ a{text-decoration:none;color:inherit}
     var country = document.getElementById('fcountry').value;
 
     emailjs.send('service_9lgohwf', 'template_3ft4wxn', {
-      subject:    (({'1 Måned':'1 Month','3 Måneder':'3 Months','6 Måneder':'6 Months','12 Måneder':'12 Months'})[plan]||plan) + ' – ' + connections + ' Connection' + (connections>1?'s':'') + ' – NorgesIPTV.com',
+      subject:    'New Order: ' + connections + ' Connection' + (connections>1?'s':'') + ' / ' + price + ' NOK / ' + plan + ' – NorgesIPTV.com',
       name:       name || 'Ikke oppgitt',
       email:      email || 'Ikke oppgitt',
       from_name:  name || 'Ikke oppgitt',
       from_email: email || 'Ikke oppgitt',
       phone:      wa || 'Ikke oppgitt',
       country:    country || 'Ikke oppgitt',
-      device:     'Ikke spesifisert',
+      device:     'Not specified',
       plan:       plan + ' – ' + connections + ' tilkobling' + (connections>1?'er':'') + ' – kr ' + price,
-      message:    '–',
+      message:    'N/A',
       site_name:  'NorgesIPTV.com',
       to_email:   'hjelp@norgesiptv.com',
     }).then(function(){
