@@ -158,6 +158,8 @@ footer{border-top:1px solid var(--br);padding:3rem clamp(1rem,4vw,2.5rem) 1.8rem
 
 /* RESPONSIVE */
 @media(max-width:860px){
+  .ftg{grid-template-columns:1fr 1fr;gap:1.5rem 1rem}
+  .fbr{grid-column:1/-1}
   .nlinks{display:none}
   .ham{display:flex}
   .phero h1{font-size:2rem}
@@ -169,8 +171,11 @@ footer{border-top:1px solid var(--br);padding:3rem clamp(1rem,4vw,2.5rem) 1.8rem
 @media(max-width:540px){
   .phero h1{font-size:1.7rem}
   .ch-grid{grid-template-columns:repeat(auto-fill,minmax(120px,1fr))}
-  .ftg{grid-template-columns:1fr 1fr}
-  .fbot{flex-direction:column;align-items:flex-start}
+  .ftg{grid-template-columns:1fr 1fr;gap:1.2rem .8rem}
+  .fbr{grid-column:1/-1;display:flex;flex-direction:column;gap:.6rem}
+  .fbr p{max-width:100%}
+  .fbot{flex-direction:column;align-items:flex-start;gap:.5rem}
+  .flg{gap:.6rem .9rem}
 }
 </style>
 </head>
