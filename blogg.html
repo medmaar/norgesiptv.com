@@ -169,7 +169,7 @@ footer a:hover{color:var(--lime)}
     <div class="bcard-img">🇳🇴<span class="bcard-cat">Nordisk streaming</span></div>
     <div class="bcard-body">
       <div class="bcard-meta"><span class="bcard-date">Mai 2026</span><span class="bcard-read">8 min lesing</span></div>
-      <h2>pakken 2026 – Norsk, nordisk og Viking Streamingtjenesten forklart</h2>
+      <h2>pakken 2026 – Norsk, nordisk og Viking IPTV forklart</h2>
       <p>Hva er Nordic-pakken, nordisk TV-tjenesten og Viking-streaming? Vi forklarer forskjellen og hjelper deg velge beste Nordic-pakken-tjeneste.</p>
       <div class="bcard-tags"><span class="btag">nordic tv-pakken</span><span class="btag">Nordic-streaming</span><span class="btag">Viking-pakken</span><span class="btag">nordisk streaming</span></div>
       <span class="bcard-link">Les guiden</span>
@@ -194,7 +194,7 @@ footer a:hover{color:var(--lime)}
     <div class="bcard-body">
       <div class="bcard-meta"><span class="bcard-date">Mai 2026</span><span class="bcard-read">7 min lesing</span></div>
       <h2>Premier League-streaming Norge – Se alle kamper live i 4K</h2>
-      <p>Slik ser du Premier League, Eliteserien og Champions League live via norsk streaming. 4K TV-pakken sport guide med Streamingtjenesten trial.</p>
+      <p>Slik ser du Premier League, Eliteserien og Champions League live via norsk streaming. 4K TV-pakken sport guide med IPTV trial.</p>
       <div class="bcard-tags"><span class="btag">streaming premier league</span><span class="btag">4K-streaming</span><span class="btag">prøveperiode</span><span class="btag">tjenesten norge</span></div>
       <span class="bcard-link">Les guiden</span>
     </div>
@@ -206,7 +206,7 @@ footer a:hover{color:var(--lime)}
     <div class="bcard-body">
       <div class="bcard-meta"><span class="bcard-date">Mai 2026</span><span class="bcard-read">11 min lesing</span></div>
       <h2>IPTV Oppsett Guide – Net TV-tjenesten, Set Streaming, GSE Tjenesten &amp; mer</h2>
-      <p>Den komplette oppsettguiden for Net spilleren, Set spilleren, IPTV EIT, GSE, Extreme TV-pakken og Streamingtjenesten Rapid på alle plattformer i Norge.</p>
+      <p>Den komplette oppsettguiden for Net spilleren, Set spilleren, IPTV EIT, GSE, Extreme TV-pakken og IPTV Rapid på alle plattformer i Norge.</p>
       <div class="bcard-tags"><span class="btag">denne appen</span><span class="btag">denne appen</span><span class="btag">spilleren</span><span class="btag">Extreme</span></div>
       <span class="bcard-link">Les guiden</span>
     </div>
@@ -239,5 +239,68 @@ footer a:hover{color:var(--lime)}
   </div>
 </div>
 <script>function tNav(){document.getElementById('mmenu').classList.toggle('open')}function cNav(){document.getElementById('mmenu').classList.remove('open')}</script>
+<!-- SALES NOTIFICATION BANNER -->
+<div id="snack" style="position:fixed;bottom:24px;left:24px;z-index:9999;max-width:320px;pointer-events:none">
+  <div id="snack-inner" style="background:#0d1421;border:1px solid rgba(198,241,53,0.25);border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:12px;box-shadow:0 8px 32px rgba(0,0,0,0.5);opacity:0;transform:translateY(20px);transition:opacity .4s ease,transform .4s ease;pointer-events:auto">
+    <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#1a2740,#0f1e35);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px" id="snack-flag">🇳🇴</div>
+    <div style="flex:1;min-width:0">
+      <div style="font-size:13px;font-weight:600;color:#eef2ff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" id="snack-name">Ole fra Oslo</div>
+      <div style="font-size:12px;color:#8896b8;margin-top:2px" id="snack-action">kjøpte 6 måneder abonnement</div>
+      <div style="font-size:11px;color:#c6f135;margin-top:3px" id="snack-time">for 2 minutter siden</div>
+    </div>
+    <div style="width:8px;height:8px;border-radius:50%;background:#c6f135;flex-shrink:0;animation:pulse-dot 1.5s ease-in-out infinite"></div>
+  </div>
+</div>
+<style>
+@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
+</style>
+<script>
+(function(){
+  var sales=[
+    {flag:'🇳🇴',name:'Ole fra Oslo',action:'kjøpte 12 måneder abonnement',time:'1 minutt siden'},
+    {flag:'🇳🇴',name:'Ingrid fra Bergen',action:'kjøpte 6 måneder abonnement',time:'3 minutter siden'},
+    {flag:'🇸🇪',name:'Erik fra Stockholm',action:'kjøpte 12 måneder abonnement',time:'2 minutter siden'},
+    {flag:'🇳🇴',name:'Lars fra Trondheim',action:'startet gratis prøveperiode',time:'5 minutter siden'},
+    {flag:'🇩🇰',name:'Mads fra København',action:'kjøpte 6 måneder abonnement',time:'4 minutter siden'},
+    {flag:'🇳🇴',name:'Kari fra Stavanger',action:'kjøpte 12 måneder abonnement',time:'6 minutter siden'},
+    {flag:'🇸🇪',name:'Anna fra Göteborg',action:'kjøpte 3 måneder abonnement',time:'7 minutter siden'},
+    {flag:'🇳🇴',name:'Per fra Drammen',action:'kjøpte 6 måneder abonnement',time:'8 minutter siden'},
+    {flag:'🇫🇮',name:'Mikael fra Helsinki',action:'kjøpte 12 måneder abonnement',time:'9 minutter siden'},
+    {flag:'🇳🇴',name:'Hanne fra Kristiansand',action:'startet gratis prøveperiode',time:'11 minutter siden'},
+    {flag:'🇳🇴',name:'Bjørn fra Tromsø',action:'kjøpte 6 måneder abonnement',time:'13 minutter siden'},
+    {flag:'🇸🇪',name:'Sara fra Malmö',action:'kjøpte 12 måneder abonnement',time:'14 minutter siden'},
+    {flag:'🇳🇴',name:'Tor fra Fredrikstad',action:'kjøpte 3 måneder abonnement',time:'16 minutter siden'},
+    {flag:'🇩🇰',name:'Sofie fra Aarhus',action:'kjøpte 6 måneder abonnement',time:'18 minutter siden'},
+    {flag:'🇳🇴',name:'Rune fra Ålesund',action:'kjøpte 12 måneder abonnement',time:'20 minutter siden'},
+  ];
+  var snack=document.getElementById('snack-inner');
+  var idx=0;
+  var showing=false;
+
+  function show(){
+    if(showing) return;
+    showing=true;
+    var s=sales[idx % sales.length]; idx++;
+    document.getElementById('snack-flag').textContent=s.flag;
+    document.getElementById('snack-name').textContent=s.name;
+    document.getElementById('snack-action').textContent=s.action;
+    document.getElementById('snack-time').textContent=s.time;
+    snack.style.opacity='1';
+    snack.style.transform='translateY(0)';
+    setTimeout(function(){
+      snack.style.opacity='0';
+      snack.style.transform='translateY(20px)';
+      setTimeout(function(){ showing=false; }, 500);
+    }, 4500);
+  }
+
+  // First show after 3 seconds, then every 8-14 seconds randomly
+  setTimeout(function(){
+    show();
+    setInterval(function(){ show(); }, 8000 + Math.random()*6000);
+  }, 3000);
+})();
+</script>
+<!-- END SALES NOTIFICATION BANNER -->
 </body>
 </html>

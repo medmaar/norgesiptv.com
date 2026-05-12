@@ -141,7 +141,7 @@ footer a{color:var(--t2);margin:0 .5rem}.footer-links{display:flex;justify-conte
   <div class="post-cat">🇳🇴 tjenesten</div>
   <h1 class="post-title">Nordic IPTV 2026 – Norsk, nordisk og Viking-streaming forklart</h1>
   <div class="post-meta"><span>📅 Mai 2026</span><span>⏱ 8 min lesing</span><span>✍️ NorgesIPTV-teamet</span></div>
-  <p class="post-intro"><strong>pakken</strong>, <strong>TV-pakken Nordic</strong> og <strong>nordisk IPTV</strong> er begreper mange nordmenn søker etter – til sammen over 5 800 søk per måned. I denne guiden forklarer vi hva <strong>Nordic-pakken</strong> er, hva som skiller det fra vanlig norsk Streamingtjenesten, og hva <strong>Viking-streaming</strong> egentlig betyr.</p>
+  <p class="post-intro"><strong>pakken</strong>, <strong>TV-pakken Nordic</strong> og <strong>nordisk IPTV</strong> er begreper mange nordmenn søker etter – til sammen over 5 800 søk per måned. I denne guiden forklarer vi hva <strong>Nordic-pakken</strong> er, hva som skiller det fra vanlig norsk IPTV, og hva <strong>Viking-streaming</strong> egentlig betyr.</p>
   <div class="post-body">
 
    <h2>Hva er Nordisk streaming?</h2>
@@ -166,7 +166,7 @@ footer a{color:var(--t2);margin:0 .5rem}.footer-links{display:flex;justify-conte
    <h2>Hvilke kanaler inkluderer Nordisk TV-pakke?</h2>
    <p>Et komplett <strong>pakken</strong>-tilbud som NorgesIPTV inkluderer kanaler fra alle nordiske land:</p>
 
-   <h3>🇳🇴 Norske kanaler (Streamingtjenesten Norway)</h3>
+   <h3>🇳🇴 Norske kanaler (IPTV Norway)</h3>
    <ul>
     <li>NRK 1, NRK 2, NRK 3, NRK Super, NRK News</li>
     <li>TV 2, TV 2 Zebra, TV 2 Livsstil</li>
@@ -206,7 +206,7 @@ footer a{color:var(--t2);margin:0 .5rem}.footer-links{display:flex;justify-conte
     <li><strong>4K Nordisk TV</strong> – krystallklar kvalitet på alle støttede kanaler</li>
     <li><strong>Dedikerte nordiske servere</strong> – optimalisert for skandinavisk internettinfrastruktur</li>
     <li><strong>Norsktalende support</strong> – 24/7 hjelp på ditt eget språk</li>
-    <li><strong>Alle IPTV-apper støttes</strong> – IPTV Smarters Pro, Smart Streamingtjenesten, GSE Spilleren og mer</li>
+    <li><strong>Alle IPTV-apper støttes</strong> – IPTV Smarters Pro, Smart IPTV, GSE Spilleren og mer</li>
    </ul>
 
    <h2>Vanlige spørsmål om nordisk streaming</h2>
@@ -223,9 +223,72 @@ footer a{color:var(--t2);margin:0 .5rem}.footer-links{display:flex;justify-conte
   </div>
 </article>
 <footer>
-  <span>© 2026 NorgesIPTV – Vår tjeneste | Nordic Streamingtjenesten | norsk streaming</span>
+  <span>© 2026 NorgesIPTV – Vår tjeneste | Nordic IPTV | norsk streaming</span>
   <div class="footer-links"><a href="/">Hjem</a><a href="/blogg.html">Blogg</a><a href="/#priser">Priser</a><a href="/vilkar.html">Vilkår</a><a href="/personvern.html">Personvern</a><a href="/om-oss.html">Om oss</a></div>
 </footer>
 <script>document.querySelectorAll('.pfqq').forEach(function(btn){btn.addEventListener('click',function(){var item=btn.closest('.pfqi'),open=item.classList.contains('open');document.querySelectorAll('.pfqi.open').forEach(function(x){x.classList.remove('open')});if(!open)item.classList.add('open');});});</script>
 <script>function tNav(){document.getElementById('mmenu').classList.toggle('open')}function cNav(){document.getElementById('mmenu').classList.remove('open')}</script>
+<!-- SALES NOTIFICATION BANNER -->
+<div id="snack" style="position:fixed;bottom:24px;left:24px;z-index:9999;max-width:320px;pointer-events:none">
+  <div id="snack-inner" style="background:#0d1421;border:1px solid rgba(198,241,53,0.25);border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:12px;box-shadow:0 8px 32px rgba(0,0,0,0.5);opacity:0;transform:translateY(20px);transition:opacity .4s ease,transform .4s ease;pointer-events:auto">
+    <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#1a2740,#0f1e35);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px" id="snack-flag">🇳🇴</div>
+    <div style="flex:1;min-width:0">
+      <div style="font-size:13px;font-weight:600;color:#eef2ff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" id="snack-name">Ole fra Oslo</div>
+      <div style="font-size:12px;color:#8896b8;margin-top:2px" id="snack-action">kjøpte 6 måneder abonnement</div>
+      <div style="font-size:11px;color:#c6f135;margin-top:3px" id="snack-time">for 2 minutter siden</div>
+    </div>
+    <div style="width:8px;height:8px;border-radius:50%;background:#c6f135;flex-shrink:0;animation:pulse-dot 1.5s ease-in-out infinite"></div>
+  </div>
+</div>
+<style>
+@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
+</style>
+<script>
+(function(){
+  var sales=[
+    {flag:'🇳🇴',name:'Ole fra Oslo',action:'kjøpte 12 måneder abonnement',time:'1 minutt siden'},
+    {flag:'🇳🇴',name:'Ingrid fra Bergen',action:'kjøpte 6 måneder abonnement',time:'3 minutter siden'},
+    {flag:'🇸🇪',name:'Erik fra Stockholm',action:'kjøpte 12 måneder abonnement',time:'2 minutter siden'},
+    {flag:'🇳🇴',name:'Lars fra Trondheim',action:'startet gratis prøveperiode',time:'5 minutter siden'},
+    {flag:'🇩🇰',name:'Mads fra København',action:'kjøpte 6 måneder abonnement',time:'4 minutter siden'},
+    {flag:'🇳🇴',name:'Kari fra Stavanger',action:'kjøpte 12 måneder abonnement',time:'6 minutter siden'},
+    {flag:'🇸🇪',name:'Anna fra Göteborg',action:'kjøpte 3 måneder abonnement',time:'7 minutter siden'},
+    {flag:'🇳🇴',name:'Per fra Drammen',action:'kjøpte 6 måneder abonnement',time:'8 minutter siden'},
+    {flag:'🇫🇮',name:'Mikael fra Helsinki',action:'kjøpte 12 måneder abonnement',time:'9 minutter siden'},
+    {flag:'🇳🇴',name:'Hanne fra Kristiansand',action:'startet gratis prøveperiode',time:'11 minutter siden'},
+    {flag:'🇳🇴',name:'Bjørn fra Tromsø',action:'kjøpte 6 måneder abonnement',time:'13 minutter siden'},
+    {flag:'🇸🇪',name:'Sara fra Malmö',action:'kjøpte 12 måneder abonnement',time:'14 minutter siden'},
+    {flag:'🇳🇴',name:'Tor fra Fredrikstad',action:'kjøpte 3 måneder abonnement',time:'16 minutter siden'},
+    {flag:'🇩🇰',name:'Sofie fra Aarhus',action:'kjøpte 6 måneder abonnement',time:'18 minutter siden'},
+    {flag:'🇳🇴',name:'Rune fra Ålesund',action:'kjøpte 12 måneder abonnement',time:'20 minutter siden'},
+  ];
+  var snack=document.getElementById('snack-inner');
+  var idx=0;
+  var showing=false;
+
+  function show(){
+    if(showing) return;
+    showing=true;
+    var s=sales[idx % sales.length]; idx++;
+    document.getElementById('snack-flag').textContent=s.flag;
+    document.getElementById('snack-name').textContent=s.name;
+    document.getElementById('snack-action').textContent=s.action;
+    document.getElementById('snack-time').textContent=s.time;
+    snack.style.opacity='1';
+    snack.style.transform='translateY(0)';
+    setTimeout(function(){
+      snack.style.opacity='0';
+      snack.style.transform='translateY(20px)';
+      setTimeout(function(){ showing=false; }, 500);
+    }, 4500);
+  }
+
+  // First show after 3 seconds, then every 8-14 seconds randomly
+  setTimeout(function(){
+    show();
+    setInterval(function(){ show(); }, 8000 + Math.random()*6000);
+  }, 3000);
+})();
+</script>
+<!-- END SALES NOTIFICATION BANNER -->
 </body></html>
