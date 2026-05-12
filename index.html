@@ -38,6 +38,8 @@ button{font-family:'Josefin Sans',sans-serif;cursor:pointer;border:none;backgrou
 .amb1{width:500px;height:500px;background:rgba(198,241,53,0.055);top:-150px;right:-80px}
 .amb2{width:380px;height:380px;background:rgba(20,217,245,0.045);bottom:20%;left:-100px;animation-delay:-4s}
 @keyframes ambf{0%,100%{transform:translateY(0)}50%{transform:translateY(-30px)}}
+@keyframes slideIn{from{opacity:0;transform:translateX(48px)}to{opacity:1;transform:translateX(0)}}
+@keyframes slideOut{from{opacity:1;transform:translateX(0)}to{opacity:0;transform:translateX(-48px)}}
 .w{max-width:var(--W);margin:0 auto;padding:0 clamp(1rem,4vw,2.5rem)}
 .sec{padding:80px 0;position:relative;z-index:1}
 
@@ -147,7 +149,7 @@ h2{font-size:1.85rem;font-weight:700;letter-spacing:-.02em;line-height:1.15;marg
 .rv-stat{background:var(--bg3);border:1px solid var(--br);border-radius:12px;padding:12px 20px;text-align:center;min-width:90px}
 .rv-stat .val{font-size:1.1rem;font-weight:700}
 .rv-stat .lbl{font-size:.65rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--t3);margin-top:2px}
-.slide-wrap{overflow:hidden;position:relative;will-change:contents}
+.slide-wrap{overflow:hidden;position:relative;will-change:contents;clip-path:inset(0)}
 .slide-wrap.sliding{opacity:0}
 .slide-wrap .slide-inner{transition:opacity .35s ease;will-change:opacity}
 .pdots{display:flex;justify-content:center;gap:8px;margin-top:20px}
@@ -311,11 +313,7 @@ footer{border-top:1px solid var(--br);padding:3rem clamp(1rem,4vw,2.5rem) 1.8rem
 
 
 /* ── FOOTER MOBILE ── */
-@media(max-width:860px){
-  .ftg{grid-template-columns:1fr 1fr;gap:1.8rem 1.2rem}
-  .fbr{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem}
-  .fbr p{max-width:100%;margin:.5rem 0 0}
-}
+
 @media(max-width:540px){
   .ftg{grid-template-columns:1fr 1fr;gap:1.2rem .6rem}
   .fbr{grid-column:1/-1;flex-direction:column;align-items:flex-start}
@@ -326,6 +324,25 @@ footer{border-top:1px solid var(--br);padding:3rem clamp(1rem,4vw,2.5rem) 1.8rem
   .flg{flex-wrap:wrap;gap:.4rem .75rem}
   .flg a{font-size:.68rem}
 }
+
+/* ── FOOTER MOBILE – CLEAN ── */
+@media(max-width:900px){
+  .ftg{grid-template-columns:1fr 1fr;gap:1.8rem 1.4rem}
+  .fbr{grid-column:1/-1}
+}
+@media(max-width:480px){
+  .ftg{grid-template-columns:1fr 1fr;gap:1.2rem .8rem}
+  .fbr{grid-column:1/-1;margin-bottom:.5rem}
+  .fbr p{font-size:.72rem}
+  .fcol h4{font-size:.67rem;margin-bottom:.5rem}
+  .fls a{font-size:.7rem}
+  .fct{font-size:.7rem}
+  .fbot{flex-direction:column;align-items:flex-start;gap:.5rem;padding-top:1rem}
+  .flg{flex-wrap:wrap;gap:.35rem .6rem}
+  .flg a{font-size:.66rem}
+  .fpay img{max-width:240px}
+}
+
 /* FLOATING CONTACT */
 .float-contact{position:fixed;bottom:24px;right:24px;z-index:998;display:flex;flex-direction:column;align-items:flex-end;gap:12px}
 .float-menu{display:flex;flex-direction:column;align-items:flex-end;gap:8px;transition:all .3s}
@@ -952,16 +969,20 @@ function makeSlider(revs,perPage,renderFn,slideId,dotsId,interval){
     slideEl.style.overflow='hidden';
   });
   function go(n){
-    var lockedH=slideEl.style.height; /* save locked height */
+    var lockedH=slideEl.style.height;
     var inner=slideEl.firstElementChild;
-    if(inner){inner.style.transition='opacity .28s ease';inner.style.opacity='0';}
+    /* Slide OUT to the left */
+    if(inner){
+      inner.style.animation='none';
+      inner.style.animation='slideOut .28s ease forwards';
+    }
     setTimeout(function(){
       cur=n;render();
-      /* Restore locked height – innerHTML replacement may have changed it */
       slideEl.style.height=lockedH;
       slideEl.style.minHeight=lockedH;
       var ni=slideEl.firstElementChild;
-      if(ni){ni.style.opacity='0';ni.style.transition='opacity .28s ease';requestAnimationFrame(function(){requestAnimationFrame(function(){ni.style.opacity='1';});});}
+      /* Slide IN from the right */
+      if(ni){ni.style.animation='slideIn .32s ease forwards';}
     },280);
   }
   setInterval(function(){if(Date.now()<paused)return;go((cur+1)%total);},interval);
