@@ -76,16 +76,54 @@ h1.post-title{font-size:2rem;font-weight:700;letter-spacing:-.025em;line-height:
 .ptag{font-size:.62rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:.2rem .6rem;border-radius:5px;background:rgba(255,255,255,.05);color:var(--t3);border:1px solid var(--br)}
 footer{border-top:1px solid var(--br);padding:2rem clamp(1rem,4vw,2.5rem);text-align:center;font-size:.75rem;color:var(--t3)}
 footer a{color:var(--t2);margin:0 .5rem}.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:.3rem 1rem;margin-top:.7rem}
+
+/* === CANONICAL NAVBAR === */
+.nav{position:fixed;top:0;left:0;right:0;z-index:999;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1rem,4vw,2.5rem);background:rgba(6,9,15,0.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.09);transition:background .3s}
+.nav .logo{font-size:1.25rem;font-weight:700;letter-spacing:-.5px;color:#eef2ff;text-decoration:none}
+.nav .logo b{color:#c6f135}
+.nav .nlinks{display:flex;align-items:center;gap:1.6rem}
+.nav .nlinks a{font-size:.78rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#8896b8;transition:color .2s;text-decoration:none}
+.nav .nlinks a:hover,.nav .nlinks a.active{color:#eef2ff}
+.nav .nbtn{background:#c6f135!important;color:#06090f!important;padding:.4rem 1.1rem;border-radius:100px;font-size:.76rem!important;font-weight:700!important;letter-spacing:.03em!important;transition:box-shadow .2s,transform .2s!important}
+.nav .nbtn:hover{box-shadow:0 0 20px rgba(198,241,53,.5);transform:scale(1.04)}
+.nav .ham{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:6px}
+.nav .ham span{display:block;width:20px;height:2px;background:#eef2ff;border-radius:2px;transition:.3s}
+.mmenu{display:none;position:fixed;inset:62px 0 0 0;background:rgba(6,9,15,.97);backdrop-filter:blur(20px);z-index:998;flex-direction:column;padding:2rem clamp(1rem,4vw,2.5rem)}
+.mmenu.open{display:flex}
+.mmenu a{padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,0.09);font-size:.95rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#8896b8;transition:color .2s;text-decoration:none}
+.mmenu a:hover{color:#c6f135}
+.mmenu .mmbtn{margin-top:1.5rem;background:#c6f135;color:#06090f;text-align:center;padding:.82rem;border-radius:10px;font-weight:700;font-size:.95rem;border-bottom:none!important;letter-spacing:.03em}
+@media (max-width:860px){.nav .nlinks{display:none}.nav .ham{display:flex}}
+/* === END NAVBAR === */
 </style>
   <link rel="icon" type="image/png" href="../favicon.png?v=2"/>
   <link rel="apple-touch-icon" href="../favicon.png?v=2"/>
 </head>
 <body>
-<nav class="nav">
+<nav class="nav" id="nav">
   <a href="/" class="logo">Norges<b>IPTV</b></a>
-  <div class="nav-links"><a href="/#priser">Priser</a><a href="/blogg.html">Blogg</a><a href="/#faq">FAQ</a></div>
-  <a href="/#priser" class="nav-cta">Bestill nå</a>
+  <div class="nlinks">
+    <a href="/priser.html">Priser</a>
+    <a href="/kanalliste.html">Kanalliste</a>
+    <a href="/#sport">Sport</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/anmeldelser.html">Anmeldelser</a>
+    <a href="/blogg.html" class="active">Blogg</a>
+    <a href="/gratis-proveperiode.html" style="color:var(--lime)">Gratis Trial</a>
+    <a href="/#priser" class="nbtn">Bestill nå</a>
+  </div>
+  <div class="ham" id="ham" onclick="tNav()" aria-label="Meny"><span></span><span></span><span></span></div>
 </nav>
+<div class="mmenu" id="mmenu">
+  <a href="/priser.html" onclick="cNav()">💰 Priser</a>
+  <a href="/kanalliste.html" onclick="cNav()">📺 Kanalliste</a>
+  <a href="/#sport" onclick="cNav()">⚽ Sport</a>
+  <a href="/#faq" onclick="cNav()">❓ FAQ</a>
+  <a href="/anmeldelser.html" onclick="cNav()">⭐ Anmeldelser</a>
+  <a href="/blogg.html" onclick="cNav()">📝 Blogg</a>
+  <a href="/gratis-proveperiode.html" onclick="cNav()">🎁 Gratis IPTV Trial</a>
+  <a href="/#priser" class="mmbtn" onclick="cNav()">▶ Bestill nå</a>
+</div>
 <article class="page">
   <div class="breadcrumb"><a href="/">Hjem</a><span>›</span><a href="/blogg.html">Blogg</a><span>›</span><span>🇳🇴 Nordic IPTV</span></div>
   <div class="post-cat">🇳🇴 Nordic IPTV</div>
@@ -177,4 +215,5 @@ footer a{color:var(--t2);margin:0 .5rem}.footer-links{display:flex;justify-conte
   <div class="footer-links"><a href="/">Hjem</a><a href="/blogg.html">Blogg</a><a href="/#priser">Priser</a><a href="/vilkar.html">Vilkår</a><a href="/personvern.html">Personvern</a><a href="/om-oss.html">Om oss</a></div>
 </footer>
 <script>document.querySelectorAll('.pfqq').forEach(function(btn){btn.addEventListener('click',function(){var item=btn.closest('.pfqi'),open=item.classList.contains('open');document.querySelectorAll('.pfqi.open').forEach(function(x){x.classList.remove('open')});if(!open)item.classList.add('open');});});</script>
+<script>function tNav(){document.getElementById('mmenu').classList.toggle('open')}function cNav(){document.getElementById('mmenu').classList.remove('open')}</script>
 </body></html>

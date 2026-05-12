@@ -119,20 +119,24 @@ footer a:hover{color:var(--lime)}
 <nav class="nav" id="nav">
   <a href="/" class="logo">Norges<b>IPTV</b></a>
   <div class="nlinks">
-    <a href="/#priser">Priser</a>
+    <a href="/priser.html">Priser</a>
+    <a href="/kanalliste.html">Kanalliste</a>
+    <a href="/#sport">Sport</a>
+    <a href="/#faq">FAQ</a>
     <a href="/anmeldelser.html" class="active">Anmeldelser</a>
     <a href="/blogg.html">Blogg</a>
-    <a href="/#faq">FAQ</a>
     <a href="/gratis-proveperiode.html" style="color:var(--lime)">Gratis Trial</a>
     <a href="/#priser" class="nbtn">Bestill nå</a>
   </div>
-  <div class="ham" id="ham" onclick="tNav()"><span></span><span></span><span></span></div>
+  <div class="ham" id="ham" onclick="tNav()" aria-label="Meny"><span></span><span></span><span></span></div>
 </nav>
 <div class="mmenu" id="mmenu">
-  <a href="/#priser" onclick="cNav()">💰 Priser</a>
+  <a href="/priser.html" onclick="cNav()">💰 Priser</a>
+  <a href="/kanalliste.html" onclick="cNav()">📺 Kanalliste</a>
+  <a href="/#sport" onclick="cNav()">⚽ Sport</a>
+  <a href="/#faq" onclick="cNav()">❓ FAQ</a>
   <a href="/anmeldelser.html" onclick="cNav()">⭐ Anmeldelser</a>
   <a href="/blogg.html" onclick="cNav()">📝 Blogg</a>
-  <a href="/#faq" onclick="cNav()">❓ FAQ</a>
   <a href="/gratis-proveperiode.html" onclick="cNav()">🎁 Gratis IPTV Trial</a>
   <a href="/#priser" class="mmbtn" onclick="cNav()">▶ Bestill nå</a>
 </div>
