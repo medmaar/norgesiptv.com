@@ -534,14 +534,10 @@ function render() {
     var isNordic = NORDIC.indexOf(cat.n) >= 0;
     var nordBadge = isNordic ? '<span class="cbadge-nordic">Nordisk</span>' : '';
     
-    // Build channel pills (max 48 for performance)
+    // Build channel pills (show all channels)
     var chHtml = '';
-    var displayCh = filteredCh.slice(0, 48);
-    for (var j = 0; j < displayCh.length; j++) {
-      chHtml += '<div class="ch-pill"><span class="chdot"></span>' + esc(displayCh[j]) + '</div>';
-    }
-    if (filteredCh.length > 48) {
-      chHtml += '<div class="ch-pill" style="color:var(--lime);border-color:rgba(198,241,53,.2)">+' + (filteredCh.length - 48) + ' til</div>';
+    for (var j = 0; j < filteredCh.length; j++) {
+      chHtml += '<div class="ch-pill"><span class="chdot"></span>' + esc(filteredCh[j]) + '</div>';
     }
     
     var openClass = (isNordic || currentSearch) ? ' open' : '';
