@@ -88,62 +88,25 @@
 }
 </script>
 
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0f; color: #e2e8f0; line-height: 1.7; }
-  header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-bottom: 1px solid #2d3748; padding: 1rem 0; }
-  .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; display: flex; justify-content: space-between; align-items: center; }
-  .logo { font-size: 1.4rem; font-weight: 700; color: #63b3ed; text-decoration: none; }
-  nav a { color: #a0aec0; text-decoration: none; margin-left: 1.5rem; font-size: 0.9rem; }
-  nav a:hover { color: #63b3ed; }
-  .hero { background: linear-gradient(135deg, #1a1a2e 0%, #0d1b2a 100%); padding: 3rem 1.5rem; text-align: center; }
-  .hero-inner { max-width: 800px; margin: 0 auto; }
-  .breadcrumb { font-size: 0.85rem; color: #718096; margin-bottom: 1rem; }
-  .breadcrumb a { color: #63b3ed; text-decoration: none; }
-  h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; color: #f7fafc; margin-bottom: 1rem; line-height: 1.25; }
-  .meta { font-size: 0.85rem; color: #718096; margin-bottom: 1.5rem; }
-  .intro-text { font-size: 1.1rem; color: #a0aec0; max-width: 700px; margin: 0 auto; }
-  .content { max-width: 820px; margin: 0 auto; padding: 2.5rem 1.5rem; }
-  h2 { font-size: 1.5rem; font-weight: 700; color: #f7fafc; margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #2d3748; }
-  h3 { font-size: 1.15rem; font-weight: 600; color: #e2e8f0; margin: 1.5rem 0 0.5rem; }
-  p { color: #a0aec0; margin-bottom: 1rem; }
-  .channel-card { background: #1a1a2e; border: 1px solid #2d3748; border-radius: 10px; padding: 1.2rem; margin: 0.8rem 0; display: flex; align-items: center; gap: 1rem; }
-  .channel-icon { font-size: 2.2rem; flex-shrink: 0; }
-  .channel-info h3 { margin: 0 0 0.3rem; font-size: 1rem; }
-  .channel-info p { margin: 0; font-size: 0.9rem; }
-  .included { display: inline-block; padding: 0.2rem 0.6rem; background: #276749; color: #9ae6b4; border-radius: 4px; font-size: 0.75rem; font-weight: 700; }
-  .highlight-box { background: linear-gradient(135deg, #1e3a5f 0%, #1a2a4a 100%); border: 1px solid #2d5986; border-radius: 10px; padding: 1.5rem; margin: 2rem 0; }
-  .highlight-box h3 { color: #63b3ed; margin-top: 0; }
-  table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
-  th { background: #1a1a2e; color: #63b3ed; text-align: left; padding: 0.75rem 1rem; border-bottom: 2px solid #2d3748; }
-  td { padding: 0.65rem 1rem; border-bottom: 1px solid #1e2636; color: #a0aec0; }
-  .tip-box { background: #1c3a2b; border: 1px solid #276749; border-radius: 8px; padding: 1rem 1.2rem; margin: 1.5rem 0; }
-  .tip-box::before { content: "⚽ Tips: "; font-weight: 700; color: #68d391; }
-  .cta-section { background: linear-gradient(135deg, #1e3a5f 0%, #1a1a2e 100%); border: 1px solid #2d5986; border-radius: 12px; padding: 2rem; margin: 2.5rem 0; text-align: center; }
-  .cta-section h2 { border: none; margin-top: 0; }
-  .cta-btn { display: inline-block; background: linear-gradient(135deg, #3182ce, #2b6cb0); color: #fff; padding: 0.9rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; margin-top: 1rem; }
-  footer { background: #0d0d1a; border-top: 1px solid #1e2636; padding: 2rem 1.5rem; text-align: center; }
-  footer p { color: #4a5568; font-size: 0.85rem; }
-  footer a { color: #63b3ed; text-decoration: none; }
-</style>
+<link rel="stylesheet" href="../assets/css/iptv-eliteserien.css"/>
 </head>
 <body>
 
 <header>
   <div class="nav-inner">
-    <a href="https://norgesiptv.com/" class="logo">NorgesIPTV</a>
+    <a href="/" class="logo">NorgesIPTV</a>
     <nav>
-      <a href="https://norgesiptv.com/priser.html">Priser</a>
-      <a href="https://norgesiptv.com/kanalliste.html">Kanaler</a>
-      <a href="https://norgesiptv.com/blogg.html">Blogg</a>
-      <a href="https://norgesiptv.com/gratis-proveperiode.html">Prøv gratis</a>
+      <a href="/priser.html">Priser</a>
+      <a href="/kanalliste.html">Kanaler</a>
+      <a href="/blogg.html">Blogg</a>
+      <a href="/gratis-proveperiode.html">Prøv gratis</a>
     </nav>
   </div>
 </header>
 
 <section class="hero">
   <div class="hero-inner">
-    <p class="breadcrumb"><a href="https://norgesiptv.com/">Hjem</a> › <a href="https://norgesiptv.com/blogg.html">Blogg</a> › IPTV Eliteserien</p>
+    <p class="breadcrumb"><a href="/">Hjem</a> › <a href="/blogg.html">Blogg</a> › IPTV Eliteserien</p>
     <h1>IPTV Eliteserien 2026 – Se Alle Norske Fotballkamper Live i 4K</h1>
     <p class="meta">Oppdatert: 16. mai 2026 · 6 min lesing</p>
     <p class="intro-text">Eliteserien er Norges øverste fotballiga med lag som Brann, Molde, Rosenborg og Viking. Med NorgesIPTV ser du alle kampene live – ingen kamp skal gå glipp av.</p>
@@ -205,7 +168,7 @@
 
   <p>Det er tre enkle steg:</p>
   <ol style="margin: 0 0 1.5rem 1.5rem; color: #a0aec0;">
-    <li style="margin-bottom: 0.8rem;"><strong style="color: #e2e8f0;">Bestill abonnement</strong> — Gå til <a href="https://norgesiptv.com/priser.html" style="color: #63b3ed;">norgesiptv.com/priser.html</a> og velg en pakke. Du mottar innloggingsdetaljer umiddelbart.</li>
+    <li style="margin-bottom: 0.8rem;"><strong style="color: #e2e8f0;">Bestill abonnement</strong> — Gå til <a href="/priser.html" style="color: #63b3ed;">norgesiptv.com/priser.html</a> og velg en pakke. Du mottar innloggingsdetaljer umiddelbart.</li>
     <li style="margin-bottom: 0.8rem;"><strong style="color: #e2e8f0;">Installer IPTV-app</strong> — Last ned IPTV Smarters Pro eller TiviMate på din enhet (Smart TV, Firestick, telefon, etc.)</li>
     <li style="margin-bottom: 0.8rem;"><strong style="color: #e2e8f0;">Legg inn M3U/Xtream-koder</strong> — Bruk innloggingsdetaljene du fikk til å logge inn i appen. Alle kanaler laster automatisk.</li>
   </ol>
@@ -232,28 +195,28 @@
   <div class="cta-section">
     <h2 style="color: #f7fafc;">⚽ Gå aldri glipp av en Eliteserien-kamp igjen</h2>
     <p style="color: #a0aec0;">NorgesIPTV inkluderer Viaplay, TV 2 Sport og alle norske sportskanaler. 50 000+ kanaler, 4K-kvalitet, ingen bindingstid.</p>
-    <a href="https://norgesiptv.com/gratis-proveperiode.html" class="cta-btn">Start gratis prøveperiode nå</a>
+    <a href="/gratis-proveperiode.html" class="cta-btn">Start gratis prøveperiode nå</a>
     <br><br>
-    <a href="https://norgesiptv.com/priser.html" style="color: #63b3ed; font-size: 0.9rem;">Se priser og pakker →</a>
+    <a href="/priser.html" style="color: #63b3ed; font-size: 0.9rem;">Se priser og pakker →</a>
   </div>
 
   <h2>Relaterte guider</h2>
   <ul style="margin: 0 0 1rem 1.5rem; color: #a0aec0;">
-    <li style="margin-bottom: 0.5rem;"><a href="https://norgesiptv.com/blogg/iptv-premier-league.html" style="color: #63b3ed;">Se Premier League via IPTV i Norge</a></li>
-    <li style="margin-bottom: 0.5rem;"><a href="https://norgesiptv.com/blogg/iptv-firestick-norge.html" style="color: #63b3ed;">IPTV på Firestick – Oppsettguide</a></li>
-    <li style="margin-bottom: 0.5rem;"><a href="https://norgesiptv.com/kanalliste.html" style="color: #63b3ed;">Full kanalliste – alle kanaler inkludert</a></li>
-    <li style="margin-bottom: 0.5rem;"><a href="https://norgesiptv.com/blogg/nordic-iptv.html" style="color: #63b3ed;">Nordic IPTV – Alle nordiske kanaler</a></li>
+    <li style="margin-bottom: 0.5rem;"><a href="/blogg/iptv-premier-league.html" style="color: #63b3ed;">Se Premier League via IPTV i Norge</a></li>
+    <li style="margin-bottom: 0.5rem;"><a href="/blogg/iptv-firestick-norge.html" style="color: #63b3ed;">IPTV på Firestick – Oppsettguide</a></li>
+    <li style="margin-bottom: 0.5rem;"><a href="/kanalliste.html" style="color: #63b3ed;">Full kanalliste – alle kanaler inkludert</a></li>
+    <li style="margin-bottom: 0.5rem;"><a href="/blogg/nordic-iptv.html" style="color: #63b3ed;">Nordic IPTV – Alle nordiske kanaler</a></li>
   </ul>
 
 </article>
 
 <footer>
   <p>
-    <a href="https://norgesiptv.com/">NorgesIPTV</a> ·
-    <a href="https://norgesiptv.com/personvern.html">Personvern</a> ·
-    <a href="https://norgesiptv.com/vilkar.html">Vilkår</a> ·
-    <a href="https://norgesiptv.com/refusjon.html">Refusjon</a> ·
-    <a href="https://norgesiptv.com/dmca.html">DMCA</a>
+    <a href="/">NorgesIPTV</a> ·
+    <a href="/personvern.html">Personvern</a> ·
+    <a href="/vilkar.html">Vilkår</a> ·
+    <a href="/refusjon.html">Refusjon</a> ·
+    <a href="/dmca.html">DMCA</a>
   </p>
   <p style="margin-top: 0.5rem;">© 2026 NorgesIPTV. Alle rettigheter forbeholdt.</p>
 </footer>

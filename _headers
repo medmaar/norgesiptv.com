@@ -2,6 +2,8 @@
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
 
 /*.html
   Cache-Control: public, max-age=300, must-revalidate
@@ -30,3 +32,11 @@
 
 /*.js
   Cache-Control: public, max-age=86400
+
+# Explicit rules for nested asset paths (wildcard suffix matching above
+# is not reliable across subdirectories on Cloudflare Pages)
+/assets/css/*
+  Cache-Control: public, max-age=604800
+
+/assets/js/*
+  Cache-Control: public, max-age=604800

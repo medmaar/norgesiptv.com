@@ -6,44 +6,7 @@
 <title>Refusjon & Pengene-tilbake – NorgesIPTV</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Josefin Sans',sans-serif;background:#06090f;color:#eef2ff;line-height:1.7}
-a{text-decoration:none;color:#c6f135}
-.nav{position:fixed;top:0;left:0;right:0;z-index:999;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1rem,4vw,2.5rem);background:rgba(6,9,15,0.97);border-bottom:1px solid rgba(255,255,255,0.08)}
-.logo{font-size:1.25rem;font-weight:700}
-.logo b{color:#c6f135}
-.page{max-width:820px;margin:0 auto;padding:100px clamp(1rem,4vw,2.5rem) 60px}
-h1{font-size:2rem;font-weight:700;margin-bottom:.5rem;color:#c6f135}
-.updated{font-size:.8rem;color:#445070;margin-bottom:2.5rem}
-h2{font-size:1.1rem;font-weight:700;margin:2rem 0 .75rem;color:#eef2ff}
-p{font-size:.88rem;color:#8896b8;margin-bottom:1rem}
-ul{font-size:.88rem;color:#8896b8;padding-left:1.4rem;margin-bottom:1rem}
-ul li{margin-bottom:.4rem}
-.highlight{background:rgba(198,241,53,0.08);border:1px solid rgba(198,241,53,0.2);border-radius:10px;padding:1rem 1.2rem;margin-bottom:1.5rem}
-.highlight p{color:#c6f135;margin:0;font-weight:600}
-footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.8rem clamp(1rem,4vw,2.5rem);text-align:center;font-size:.75rem;color:#445070}
-footer a{color:#8896b8;margin:0 .6rem}
-
-/* === CANONICAL NAVBAR === */
-.nav{position:fixed;top:0;left:0;right:0;z-index:999;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1rem,4vw,2.5rem);background:rgba(6,9,15,0.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.09);transition:background .3s}
-.nav .logo{font-size:1.25rem;font-weight:700;letter-spacing:-.5px;color:#eef2ff;text-decoration:none}
-.nav .logo b{color:#c6f135}
-.nav .nlinks{display:flex;align-items:center;gap:1.6rem}
-.nav .nlinks a{font-size:.78rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#8896b8;transition:color .2s;text-decoration:none}
-.nav .nlinks a:hover,.nav .nlinks a.active{color:#eef2ff}
-.nav .nbtn{background:#c6f135!important;color:#06090f!important;padding:.4rem 1.1rem;border-radius:100px;font-size:.76rem!important;font-weight:700!important;letter-spacing:.03em!important;transition:box-shadow .2s,transform .2s!important}
-.nav .nbtn:hover{box-shadow:0 0 20px rgba(198,241,53,.5);transform:scale(1.04)}
-.nav .ham{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:6px}
-.nav .ham span{display:block;width:20px;height:2px;background:#eef2ff;border-radius:2px;transition:.3s}
-.mmenu{display:none;position:fixed;inset:62px 0 0 0;background:rgba(6,9,15,.97);backdrop-filter:blur(20px);z-index:998;flex-direction:column;padding:2rem clamp(1rem,4vw,2.5rem)}
-.mmenu.open{display:flex}
-.mmenu a{padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,0.09);font-size:.95rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#8896b8;transition:color .2s;text-decoration:none}
-.mmenu a:hover{color:#c6f135}
-.mmenu .mmbtn{margin-top:1.5rem;background:#c6f135;color:#06090f;text-align:center;padding:.82rem;border-radius:10px;font-weight:700;font-size:.95rem;border-bottom:none!important;letter-spacing:.03em}
-@media (max-width:860px){.nav .nlinks{display:none}.nav .ham{display:flex}}
-/* === END NAVBAR === */
-</style>
+<link rel="stylesheet" href="assets/css/refusjon.css"/>
   <link rel="icon" type="image/png" href="favicon.png?v=2"/>
   <link rel="apple-touch-icon" href="favicon.png?v=2"/>
   <meta name="description" content="NorgesIPTV gir 30 dagers pengene-tilbake-garanti. Les hvordan refusjon fungerer og hvordan du krever refusjon."/>
@@ -151,7 +114,7 @@ footer a{color:#8896b8;margin:0 .6rem}
    </div>
   </div>
 </div>
-<script>function tNav(){document.getElementById('mmenu').classList.toggle('open')}function cNav(){document.getElementById('mmenu').classList.remove('open')}</script>
+<script src="assets/js/refusjon.js" defer></script>
 <!-- SALES NOTIFICATION BANNER -->
 <div id="snack" style="position:fixed;bottom:24px;left:24px;z-index:9999;max-width:320px;pointer-events:none">
   <div id="snack-inner" style="background:#c6f135;border:none;border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:12px;box-shadow:0 8px 32px rgba(0,0,0,0.4);opacity:0;transform:translateY(20px);transition:opacity .4s ease,transform .4s ease;pointer-events:auto">
@@ -166,56 +129,8 @@ footer a{color:#8896b8;margin:0 .6rem}
     <div style="width:8px;height:8px;border-radius:50%;background:#06090f;flex-shrink:0;animation:pulse-dot 1.5s ease-in-out infinite"></div>
   </div>
 </div>
-<style>
-@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
-</style>
-<script>
-(function(){
-  var sales=[
-    {code:'no',name:'Ole fra Oslo',action:'kjøpte 12 måneder abonnement',time:'1 minutt siden'},
-    {code:'no',name:'Ingrid fra Bergen',action:'kjøpte 6 måneder abonnement',time:'3 minutter siden'},
-    {code:'se',name:'Erik fra Stockholm',action:'kjøpte 12 måneder abonnement',time:'2 minutter siden'},
-    {code:'no',name:'Lars fra Trondheim',action:'startet gratis prøveperiode',time:'5 minutter siden'},
-    {code:'dk',name:'Mads fra København',action:'kjøpte 6 måneder abonnement',time:'4 minutter siden'},
-    {code:'no',name:'Kari fra Stavanger',action:'kjøpte 12 måneder abonnement',time:'6 minutter siden'},
-    {code:'se',name:'Anna fra Göteborg',action:'kjøpte 3 måneder abonnement',time:'7 minutter siden'},
-    {code:'no',name:'Per fra Drammen',action:'kjøpte 6 måneder abonnement',time:'8 minutter siden'},
-    {code:'fi',name:'Mikael fra Helsinki',action:'kjøpte 12 måneder abonnement',time:'9 minutter siden'},
-    {code:'no',name:'Hanne fra Kristiansand',action:'startet gratis prøveperiode',time:'11 minutter siden'},
-    {code:'no',name:'Bjørn fra Tromsø',action:'kjøpte 6 måneder abonnement',time:'13 minutter siden'},
-    {code:'se',name:'Sara fra Malmö',action:'kjøpte 12 måneder abonnement',time:'14 minutter siden'},
-    {code:'no',name:'Tor fra Fredrikstad',action:'kjøpte 3 måneder abonnement',time:'16 minutter siden'},
-    {code:'dk',name:'Sofie fra Aarhus',action:'kjøpte 6 måneder abonnement',time:'18 minutter siden'},
-    {code:'no',name:'Rune fra Ålesund',action:'kjøpte 12 måneder abonnement',time:'20 minutter siden'},
-  ];
-  var snack=document.getElementById('snack-inner');
-  var idx=0;
-  var showing=false;
 
-  function show(){
-    if(showing) return;
-    showing=true;
-    var s=sales[idx % sales.length]; idx++;
-    document.getElementById('snack-flag').src='https://flagcdn.com/w40/'+s.code+'.png';
-    document.getElementById('snack-flag').alt=s.code.toUpperCase();
-    document.getElementById('snack-name').textContent=s.name;
-    document.getElementById('snack-action').textContent=s.action;
-    document.getElementById('snack-time').textContent=s.time;
-    snack.style.opacity='1';
-    snack.style.transform='translateY(0)';
-    setTimeout(function(){
-      snack.style.opacity='0';
-      snack.style.transform='translateY(20px)';
-      setTimeout(function(){ showing=false; }, 500);
-    }, 4500);
-  }
 
-  setTimeout(function(){
-    show();
-    setInterval(function(){ show(); }, 8000 + Math.random()*6000);
-  }, 3000);
-})();
-</script>
 <!-- END SALES NOTIFICATION BANNER -->
 </body>
 </html>

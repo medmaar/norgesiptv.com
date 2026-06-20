@@ -16,81 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"NorgesIPTV Blogg","url":"https://norgesiptv.com/blogg.html","description":"Guider, tips og nyheter om norsk streaming, nordisk TV og de beste streaming-appene","publisher":{"@type":"Organization","name":"NorgesIPTV","url":"https://norgesiptv.com"}}</script>
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Josefin Sans',sans-serif;background:#06090f;color:#eef2ff;line-height:1.6;overflow-x:hidden}
-a{text-decoration:none;color:inherit}
-:root{--lime:#c6f135;--cyan:#14d9f5;--bg3:#101828;--br:rgba(255,255,255,0.08);--t2:#8896b8;--t3:#445070;--W:1160px}
-.nav{position:fixed;top:0;left:0;right:0;z-index:999;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1rem,4vw,2.5rem);background:rgba(6,9,15,0.97);border-bottom:1px solid var(--br);backdrop-filter:blur(20px)}
-.logo{font-size:1.25rem;font-weight:700}.logo b{color:var(--lime)}
-.nav-cta{background:var(--lime);color:#06090f;padding:.4rem 1.1rem;border-radius:100px;font-size:.76rem;font-weight:700}
-.w{max-width:var(--W);margin:0 auto;padding:0 clamp(1rem,4vw,2.5rem)}
-
-/* HERO */
-.blog-hero{padding:110px 0 60px;text-align:center;border-bottom:1px solid var(--br)}
-.blog-hero .eyebrow{display:inline-flex;align-items:center;gap:.45rem;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);margin-bottom:.75rem}
-.blog-hero h1{font-size:2.2rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.85rem}
-.blog-hero h1 span{background:linear-gradient(90deg,var(--lime),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.blog-hero p{color:var(--t2);font-size:.92rem;max-width:560px;margin:0 auto}
-
-/* GRID */
-.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;padding:60px 0}
-@media(max-width:900px){.blog-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:580px){.blog-grid{grid-template-columns:1fr}}
-
-/* CARD */
-.bcard{background:var(--bg3);border:1px solid var(--br);border-radius:16px;overflow:hidden;transition:transform .25s,border-color .25s;display:flex;flex-direction:column}
-.bcard:hover{transform:translateY(-5px);border-color:rgba(198,241,53,.25)}
-.bcard-img{aspect-ratio:16/9;background:linear-gradient(135deg,#0d1f0d,#0b1120);display:flex;align-items:center;justify-content:center;font-size:3rem;position:relative;overflow:hidden}
-.bcard-img::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,24,40,.8) 0%,transparent 60%)}
-.bcard-cat{position:absolute;bottom:.7rem;left:.8rem;z-index:2;background:var(--lime);color:#06090f;font-size:.58rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:.2rem .6rem;border-radius:100px}
-.bcard-body{padding:1.3rem 1.4rem 1.5rem;flex:1;display:flex;flex-direction:column}
-.bcard-meta{display:flex;align-items:center;gap:.6rem;margin-bottom:.65rem}
-.bcard-date{font-size:.65rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--t3)}
-.bcard-read{font-size:.65rem;font-weight:600;color:var(--t3)}
-.bcard-read::before{content:'·';margin-right:.6rem}
-.bcard h2{font-size:.95rem;font-weight:700;line-height:1.35;margin-bottom:.6rem;color:#eef2ff}
-.bcard p{font-size:.8rem;color:var(--t2);line-height:1.7;flex:1;margin-bottom:1rem}
-.bcard-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:1rem}
-.btag{font-size:.6rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:.18rem .55rem;border-radius:4px;background:rgba(198,241,53,.08);color:var(--lime);border:1px solid rgba(198,241,53,.15)}
-.bcard-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.78rem;font-weight:700;color:var(--lime);letter-spacing:.03em;margin-top:auto}
-.bcard-link::after{content:'→';transition:transform .2s}
-.bcard:hover .bcard-link::after{transform:translateX(4px)}
-
-/* FEATURED */
-.bcard.featured{grid-column:1/-1;flex-direction:row;min-height:280px}
-.bcard.featured .bcard-img{aspect-ratio:unset;width:420px;flex-shrink:0;font-size:5rem}
-.bcard.featured .bcard-body{padding:2rem 2rem 2rem}
-.bcard.featured h2{font-size:1.3rem}
-.bcard.featured p{font-size:.85rem}
-@media(max-width:780px){.bcard.featured{flex-direction:column;grid-column:unset}.bcard.featured .bcard-img{width:100%;aspect-ratio:16/9}}
-
-/* FOOTER */
-footer{border-top:1px solid var(--br);padding:2.5rem clamp(1rem,4vw,2.5rem);text-align:center;font-size:.76rem;color:var(--t3)}
-footer a{color:var(--t2);margin:0 .6rem;transition:color .2s}
-footer a:hover{color:var(--lime)}
-.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:.3rem 1.2rem;margin-top:.8rem}
-
-/* === CANONICAL NAVBAR === */
-.nav{position:fixed;top:0;left:0;right:0;z-index:999;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1rem,4vw,2.5rem);background:rgba(6,9,15,0.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.09);transition:background .3s}
-.nav .logo{font-size:1.25rem;font-weight:700;letter-spacing:-.5px;color:#eef2ff;text-decoration:none}
-.nav .logo b{color:#c6f135}
-.nav .nlinks{display:flex;align-items:center;gap:1.6rem}
-.nav .nlinks a{font-size:.78rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#8896b8;transition:color .2s;text-decoration:none}
-.nav .nlinks a:hover,.nav .nlinks a.active{color:#eef2ff}
-.nav .nbtn{background:#c6f135!important;color:#06090f!important;padding:.4rem 1.1rem;border-radius:100px;font-size:.76rem!important;font-weight:700!important;letter-spacing:.03em!important;transition:box-shadow .2s,transform .2s!important}
-.nav .nbtn:hover{box-shadow:0 0 20px rgba(198,241,53,.5);transform:scale(1.04)}
-.nav .ham{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:6px}
-.nav .ham span{display:block;width:20px;height:2px;background:#eef2ff;border-radius:2px;transition:.3s}
-.mmenu{display:none;position:fixed;inset:62px 0 0 0;background:rgba(6,9,15,.97);backdrop-filter:blur(20px);z-index:998;flex-direction:column;padding:2rem clamp(1rem,4vw,2.5rem)}
-.mmenu.open{display:flex}
-.mmenu a{padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,0.09);font-size:.95rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#8896b8;transition:color .2s;text-decoration:none}
-.mmenu a:hover{color:#c6f135}
-.mmenu .mmbtn{margin-top:1.5rem;background:#c6f135;color:#06090f;text-align:center;padding:.82rem;border-radius:10px;font-weight:700;font-size:.95rem;border-bottom:none!important;letter-spacing:.03em}
-@media (max-width:860px){.nav .nlinks{display:none}.nav .ham{display:flex}}
-/* === END NAVBAR === */
-</style>
+<link rel="stylesheet" href="assets/css/blogg.css"/>
   <link rel="icon" type="image/png" href="favicon.png?v=2"/>
   <link rel="apple-touch-icon" href="favicon.png?v=2"/>
   <meta name="robots" content="index, follow"/>
@@ -241,7 +167,7 @@ footer a:hover{color:var(--lime)}
    </div>
   </div>
 </div>
-<script>function tNav(){document.getElementById('mmenu').classList.toggle('open')}function cNav(){document.getElementById('mmenu').classList.remove('open')}</script>
+<script src="assets/js/blogg.js" defer></script>
 <!-- SALES NOTIFICATION BANNER -->
 <div id="snack" style="position:fixed;bottom:24px;left:24px;z-index:9999;max-width:320px;pointer-events:none">
   <div id="snack-inner" style="background:#c6f135;border:none;border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:12px;box-shadow:0 8px 32px rgba(0,0,0,0.4);opacity:0;transform:translateY(20px);transition:opacity .4s ease,transform .4s ease;pointer-events:auto">
@@ -256,56 +182,8 @@ footer a:hover{color:var(--lime)}
     <div style="width:8px;height:8px;border-radius:50%;background:#06090f;flex-shrink:0;animation:pulse-dot 1.5s ease-in-out infinite"></div>
   </div>
 </div>
-<style>
-@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
-</style>
-<script>
-(function(){
-  var sales=[
-    {code:'no',name:'Ole fra Oslo',action:'kjøpte 12 måneder abonnement',time:'1 minutt siden'},
-    {code:'no',name:'Ingrid fra Bergen',action:'kjøpte 6 måneder abonnement',time:'3 minutter siden'},
-    {code:'se',name:'Erik fra Stockholm',action:'kjøpte 12 måneder abonnement',time:'2 minutter siden'},
-    {code:'no',name:'Lars fra Trondheim',action:'startet gratis prøveperiode',time:'5 minutter siden'},
-    {code:'dk',name:'Mads fra København',action:'kjøpte 6 måneder abonnement',time:'4 minutter siden'},
-    {code:'no',name:'Kari fra Stavanger',action:'kjøpte 12 måneder abonnement',time:'6 minutter siden'},
-    {code:'se',name:'Anna fra Göteborg',action:'kjøpte 3 måneder abonnement',time:'7 minutter siden'},
-    {code:'no',name:'Per fra Drammen',action:'kjøpte 6 måneder abonnement',time:'8 minutter siden'},
-    {code:'fi',name:'Mikael fra Helsinki',action:'kjøpte 12 måneder abonnement',time:'9 minutter siden'},
-    {code:'no',name:'Hanne fra Kristiansand',action:'startet gratis prøveperiode',time:'11 minutter siden'},
-    {code:'no',name:'Bjørn fra Tromsø',action:'kjøpte 6 måneder abonnement',time:'13 minutter siden'},
-    {code:'se',name:'Sara fra Malmö',action:'kjøpte 12 måneder abonnement',time:'14 minutter siden'},
-    {code:'no',name:'Tor fra Fredrikstad',action:'kjøpte 3 måneder abonnement',time:'16 minutter siden'},
-    {code:'dk',name:'Sofie fra Aarhus',action:'kjøpte 6 måneder abonnement',time:'18 minutter siden'},
-    {code:'no',name:'Rune fra Ålesund',action:'kjøpte 12 måneder abonnement',time:'20 minutter siden'},
-  ];
-  var snack=document.getElementById('snack-inner');
-  var idx=0;
-  var showing=false;
 
-  function show(){
-    if(showing) return;
-    showing=true;
-    var s=sales[idx % sales.length]; idx++;
-    document.getElementById('snack-flag').src='https://flagcdn.com/w40/'+s.code+'.png';
-    document.getElementById('snack-flag').alt=s.code.toUpperCase();
-    document.getElementById('snack-name').textContent=s.name;
-    document.getElementById('snack-action').textContent=s.action;
-    document.getElementById('snack-time').textContent=s.time;
-    snack.style.opacity='1';
-    snack.style.transform='translateY(0)';
-    setTimeout(function(){
-      snack.style.opacity='0';
-      snack.style.transform='translateY(20px)';
-      setTimeout(function(){ showing=false; }, 500);
-    }, 4500);
-  }
 
-  setTimeout(function(){
-    show();
-    setInterval(function(){ show(); }, 8000 + Math.random()*6000);
-  }, 3000);
-})();
-</script>
 <!-- END SALES NOTIFICATION BANNER -->
 </body>
 </html>
