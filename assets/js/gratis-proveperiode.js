@@ -6,12 +6,10 @@ window.addEventListener('scroll',function(){
   document.getElementById('nav').style.background=window.scrollY>60?'rgba(6,9,15,0.97)':'rgba(6,9,15,0.88)';
 },{passive:true});
 
-/* ── Form + EmailJS via direct REST API (no SDK needed) ── */
+/* ── Form → Cloudflare Worker (auto-provisions IPTV trial) ── */
 document.addEventListener('DOMContentLoaded', function () {
 
-  var SERVICE_ID  = 'service_9lgohwf';
-  var TEMPLATE_ID = 'template_3ft4wxn';
-  var PUBLIC_KEY  = 'rXnp1UdbIWXEUMeFc';
+  var WORKER_URL = 'https://iptv-trial-norgesiptv.medmaar.workers.dev';
 
   var form      = document.getElementById('trialForm');
   var submitBtn  = document.getElementById('submitBtn');
@@ -62,64 +60,28 @@ document.addEventListener('DOMContentLoaded', function () {
    var deviceVal  = document.getElementById('fieldDevice').value;
    var notesVal  = form.querySelector('textarea[name="notes"]').value.trim();
 
-   var sentTime = new Date().toLocaleString('nb-NO', {timeZone:'Europe/Oslo'});
-
-   /* Build a rich message body — shows clearly even if template layout is basic */
-   var msgBody = [
-    '=== 🎁 GRATIS IPTV TRIAL FORESPØRSEL ===',
-    '',
-    'Navn   : ' + (nameVal   || 'Ikke oppgitt'),
-    'E-post  : ' + (emailVal  || 'Ikke oppgitt'),
-    'Telefon : ' + (phoneVal  || 'Ikke oppgitt'),
-    'Land   : ' + (countryVal || 'Ikke oppgitt'),
-    'Enhet  : ' + (deviceVal  || 'Ikke oppgitt'),
-    'Melding : ' + (notesVal  || '–'),
-    '',
-    'Tidspunkt: ' + sentTime,
-    '======================================='
-   ].join('\n');
-
-   var payload = {
-    service_id  : SERVICE_ID,
-    template_id : TEMPLATE_ID,
-    user_id    : PUBLIC_KEY,
-    template_params: {
-      /* Subject — add {{subject}} to your EmailJS template's Subject field */
-      subject    : 'Free Trial Request - NorgesIPTV.com',
-      /* Match the exact variable names the template uses */
-      from_name   : nameVal   || 'Ikke oppgitt',
-      name      : nameVal   || 'Ikke oppgitt',
-      from_email  : emailVal  || 'Ikke oppgitt',
-      email      : emailVal  || 'Ikke oppgitt',
-      reply_to    : emailVal  || phoneVal || '',
-      phone      : phoneVal  || 'Ikke oppgitt',
-      country    : countryVal || 'Ikke oppgitt',
-      device     : deviceVal  || 'Ikke oppgitt',
-      /* Fill "Plan:" field with the trial label so it's obvious in the email */
-      plan      : '🎁 GRATIS IPTV TRIAL – 24 TIMER',
-      /* Fill "Message:" with notes + full summary */
-      message    : msgBody,
-      notes      : notesVal  || '–',
-      sent_time   : sentTime,
-      request_type : '🎁 GRATIS IPTV TRIAL – 24 TIMER'
-    }
-   };
-
-   fetch('https://api.emailjs.com/api/v1.0/email/send', {
+   fetch(WORKER_URL, {
     method  : 'POST',
     headers : { 'Content-Type': 'application/json' },
-    body   : JSON.stringify(payload)
+    body   : JSON.stringify({
+      name     : nameVal  || 'Ikke oppgitt',
+      email    : emailVal,
+      whatsapp  : phoneVal,
+      country   : countryVal,
+      device   : deviceVal,
+      notes    : notesVal
+    })
    })
    .then(function(res) {
-    if (res.ok) {
-      formContent.style.display = 'none';
-      formSuccess.style.display = 'block';
-      document.getElementById('formCard').scrollIntoView({behavior:'smooth', block:'center'});
-    } else {
-      return res.text().then(function(txt) {
-       showError('⚠️ Feil (' + res.status + '): ' + txt + '. Kontakt oss: hjelp@norgesiptv.com');
-      });
-    }
+    return res.json().then(function(data) {
+      if (res.ok && data.success) {
+        formContent.style.display = 'none';
+        formSuccess.style.display = 'block';
+        document.getElementById('formCard').scrollIntoView({behavior:'smooth', block:'center'});
+      } else {
+        showError('⚠️ Feil: ' + (data.error || 'Ukjent feil') + '. Kontakt oss: hjelp@norgesiptv.com');
+      }
+    });
    })
    .catch(function(err) {
     console.error(err);
@@ -186,3 +148,4 @@ document.addEventListener('DOMContentLoaded', function () {
     setInterval(function(){ show(); }, 8000 + Math.random()*6000);
   }, 3000);
 })();
+
