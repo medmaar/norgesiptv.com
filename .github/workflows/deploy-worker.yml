@@ -10,8 +10,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v4
 
@@ -41,23 +39,14 @@ jobs:
             -F "metadata=${METADATA};type=application/json" \
             -F "worker.js=@worker/worker.js;type=application/javascript+module"
 
-      - name: Verify worker reachable
+      - name: Set Cron Trigger
+        env:
+          CF_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT: ${{ secrets.CF_ACCOUNT_ID }}
+          WORKER_NAME: iptv-trial-norgesiptv
         run: |
-          sleep 4
-          mkdir -p .debug
-          echo "=== GET / ===" > .debug/final_check.txt
-          curl -s "https://iptv-trial-norgesiptv.medmaar.workers.dev/" >> .debug/final_check.txt
-          echo "" >> .debug/final_check.txt
-          echo "=== POST trial ===" >> .debug/final_check.txt
-          curl -s -X POST "https://iptv-trial-norgesiptv.medmaar.workers.dev/" \
+          curl -s -X PUT \
+            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts/${WORKER_NAME}/schedules" \
+            -H "Authorization: Bearer ${CF_TOKEN}" \
             -H "Content-Type: application/json" \
-            -d '{"name":"Test User","email":"test@example.com","whatsapp":"","country":"Norge","device":"","notes":""}' >> .debug/final_check.txt
-          cat .debug/final_check.txt
-
-      - name: Commit
-        run: |
-          git config user.name bot
-          git config user.email bot@example.com
-          git add .debug/final_check.txt
-          git commit -m "debug: final check" || true
-          git push || true
+            -d '[{"cron": "0 * * * *"}]'
