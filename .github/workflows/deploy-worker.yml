@@ -10,42 +10,11 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v4
-
-      - name: Check subdomain status and account info
-        env:
-          CF_TOKEN: ${{ secrets.CF_API_TOKEN }}
-          CF_ACCOUNT: ${{ secrets.CF_ACCOUNT_ID }}
-          WORKER_NAME: iptv-trial-norgesiptv
-        run: |
-          mkdir -p .debug
-          echo "=== Account subdomain ===" > .debug/diag.txt
-          curl -s "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/subdomain" \
-            -H "Authorization: Bearer ${CF_TOKEN}" >> .debug/diag.txt
-          echo "" >> .debug/diag.txt
-          echo "=== Script subdomain settings ===" >> .debug/diag.txt
-          curl -s "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts/${WORKER_NAME}/subdomain" \
-            -H "Authorization: Bearer ${CF_TOKEN}" >> .debug/diag.txt
-          echo "" >> .debug/diag.txt
-          echo "=== Enable subdomain PUT response ===" >> .debug/diag.txt
-          curl -s -i -X PUT \
-            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts/${WORKER_NAME}/subdomain" \
-            -H "Authorization: Bearer ${CF_TOKEN}" \
-            -H "Content-Type: application/json" \
-            -d '{"enabled": true, "previews_enabled": true}' >> .debug/diag.txt
-          echo "" >> .debug/diag.txt
-          echo "=== List all worker scripts ===" >> .debug/diag.txt
-          curl -s "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts" \
-            -H "Authorization: Bearer ${CF_TOKEN}" >> .debug/diag.txt
-          cat .debug/diag.txt
-
-      - name: Commit diag
-        run: |
-          git config user.name bot
-          git config user.email bot@example.com
-          git add .debug/diag.txt
-          git commit -m "debug: diagnostics" || true
-          git push || true
+      - name: Deploy Worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          workingDirectory: worker
