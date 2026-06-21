@@ -1,0 +1,22 @@
+=== GET / ===
+HTTP/2 404 
+date: Sun, 21 Jun 2026 05:38:39 GMT
+content-type: text/plain; charset=UTF-8
+content-length: 17
+cache-control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+expires: Thu, 01 Jan 1970 00:00:01 GMT
+referrer-policy: same-origin
+x-frame-options: SAMEORIGIN
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=BMepaDGclJlVxy5OEfU5LzsHGvEWQM5D6DS9r6rQKhXeJpATfkPFIcDqnjj0Yi8h3Up1WG%2BQntXK8QHC6VErYqjj9XWLTNjbYJmRaSm7T47dtL0YiXCqKXyciOP0W6TDhPxFWb%2BjhilnI3PdG6j3tcJapuzZqBkcwpzHww%3D%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-ray: a0f0ab155a713479-DFW
+alt-svc: h3=":443"; ma=86400
+
+error code: 1042
+
+=== GET /?debug ===
+error code: 1042
+
+=== POST trial ===
+error code: 1042
