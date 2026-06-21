@@ -1,0 +1,4 @@
+=== GET / ===
+NorgesIPTV Trial Worker — OK
+=== POST trial ===
+{"success":true}
