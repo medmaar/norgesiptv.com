@@ -10,6 +10,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
 
@@ -62,3 +64,27 @@ jobs:
             -H "Authorization: Bearer ${CF_TOKEN}" \
             -H "Content-Type: application/json" \
             -d '[{"cron": "0 * * * *"}]'
+
+      - name: Verify worker is reachable
+        run: |
+          sleep 5
+          mkdir -p .debug
+          echo "=== GET / ===" > .debug/verify.txt
+          curl -s -i "https://iptv-trial-norgesiptv.medmaar.workers.dev/" >> .debug/verify.txt
+          echo "" >> .debug/verify.txt
+          echo "=== GET /?debug ===" >> .debug/verify.txt
+          curl -s "https://iptv-trial-norgesiptv.medmaar.workers.dev/?debug" >> .debug/verify.txt
+          echo "" >> .debug/verify.txt
+          echo "=== POST trial ===" >> .debug/verify.txt
+          curl -s -X POST "https://iptv-trial-norgesiptv.medmaar.workers.dev/" \
+            -H "Content-Type: application/json" \
+            -d '{"name":"Test User","email":"test@example.com","whatsapp":"","country":"Norge","device":"","notes":""}' >> .debug/verify.txt
+          cat .debug/verify.txt
+
+      - name: Commit verify output
+        run: |
+          git config user.name bot
+          git config user.email bot@example.com
+          git add .debug/verify.txt
+          git commit -m "debug: verify worker" || true
+          git push || true
