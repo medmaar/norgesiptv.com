@@ -10,11 +10,26 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
-      - name: Deploy Worker
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CF_API_TOKEN }}
-          accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          workingDirectory: worker
+
+      - name: Check subdomain status
+        env:
+          CF_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT: ${{ secrets.CF_ACCOUNT_ID }}
+          WORKER_NAME: iptv-trial-norgesiptv
+        run: |
+          mkdir -p .debug
+          curl -s "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts/${WORKER_NAME}/subdomain" \
+            -H "Authorization: Bearer ${CF_TOKEN}" > .debug/subdomain_status.txt
+          cat .debug/subdomain_status.txt
+
+      - name: Commit
+        run: |
+          git config user.name bot
+          git config user.email bot@example.com
+          git add .debug/subdomain_status.txt
+          git commit -m "debug: subdomain status check" || true
+          git push || true
