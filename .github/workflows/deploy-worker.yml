@@ -15,76 +15,37 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Deploy Worker via Cloudflare API
+      - name: Check subdomain status and account info
         env:
           CF_TOKEN: ${{ secrets.CF_API_TOKEN }}
           CF_ACCOUNT: ${{ secrets.CF_ACCOUNT_ID }}
           WORKER_NAME: iptv-trial-norgesiptv
         run: |
-          METADATA=$(cat <<'METADATA'
-          {
-            "main_module": "worker.js",
-            "compatibility_date": "2024-01-01",
-            "bindings": [
-              {
-                "type": "kv_namespace",
-                "name": "TRIALS",
-                "namespace_id": "79ad6a7d5f4349e7a00fd87252024a82"
-              }
-            ]
-          }
-          METADATA
-          )
-          curl -s -X PUT \
-            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts/${WORKER_NAME}" \
-            -H "Authorization: Bearer ${CF_TOKEN}" \
-            -F "metadata=${METADATA};type=application/json" \
-            -F "worker.js=@worker/worker.js;type=application/javascript+module"
-
-      - name: Enable workers.dev subdomain
-        env:
-          CF_TOKEN: ${{ secrets.CF_API_TOKEN }}
-          CF_ACCOUNT: ${{ secrets.CF_ACCOUNT_ID }}
-          WORKER_NAME: iptv-trial-norgesiptv
-        run: |
-          curl -s -X PUT \
+          mkdir -p .debug
+          echo "=== Account subdomain ===" > .debug/diag.txt
+          curl -s "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/subdomain" \
+            -H "Authorization: Bearer ${CF_TOKEN}" >> .debug/diag.txt
+          echo "" >> .debug/diag.txt
+          echo "=== Script subdomain settings ===" >> .debug/diag.txt
+          curl -s "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts/${WORKER_NAME}/subdomain" \
+            -H "Authorization: Bearer ${CF_TOKEN}" >> .debug/diag.txt
+          echo "" >> .debug/diag.txt
+          echo "=== Enable subdomain PUT response ===" >> .debug/diag.txt
+          curl -s -i -X PUT \
             "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts/${WORKER_NAME}/subdomain" \
             -H "Authorization: Bearer ${CF_TOKEN}" \
             -H "Content-Type: application/json" \
-            -d '{"enabled": true}'
+            -d '{"enabled": true, "previews_enabled": true}' >> .debug/diag.txt
+          echo "" >> .debug/diag.txt
+          echo "=== List all worker scripts ===" >> .debug/diag.txt
+          curl -s "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts" \
+            -H "Authorization: Bearer ${CF_TOKEN}" >> .debug/diag.txt
+          cat .debug/diag.txt
 
-      - name: Set Cron Trigger
-        env:
-          CF_TOKEN: ${{ secrets.CF_API_TOKEN }}
-          CF_ACCOUNT: ${{ secrets.CF_ACCOUNT_ID }}
-          WORKER_NAME: iptv-trial-norgesiptv
-        run: |
-          curl -s -X PUT \
-            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts/${WORKER_NAME}/schedules" \
-            -H "Authorization: Bearer ${CF_TOKEN}" \
-            -H "Content-Type: application/json" \
-            -d '[{"cron": "0 * * * *"}]'
-
-      - name: Verify worker is reachable
-        run: |
-          sleep 5
-          mkdir -p .debug
-          echo "=== GET / ===" > .debug/verify.txt
-          curl -s -i "https://iptv-trial-norgesiptv.medmaar.workers.dev/" >> .debug/verify.txt
-          echo "" >> .debug/verify.txt
-          echo "=== GET /?debug ===" >> .debug/verify.txt
-          curl -s "https://iptv-trial-norgesiptv.medmaar.workers.dev/?debug" >> .debug/verify.txt
-          echo "" >> .debug/verify.txt
-          echo "=== POST trial ===" >> .debug/verify.txt
-          curl -s -X POST "https://iptv-trial-norgesiptv.medmaar.workers.dev/" \
-            -H "Content-Type: application/json" \
-            -d '{"name":"Test User","email":"test@example.com","whatsapp":"","country":"Norge","device":"","notes":""}' >> .debug/verify.txt
-          cat .debug/verify.txt
-
-      - name: Commit verify output
+      - name: Commit diag
         run: |
           git config user.name bot
           git config user.email bot@example.com
-          git add .debug/verify.txt
-          git commit -m "debug: verify worker" || true
+          git add .debug/diag.txt
+          git commit -m "debug: diagnostics" || true
           git push || true
