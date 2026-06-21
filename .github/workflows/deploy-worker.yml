@@ -15,51 +15,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Deploy Worker via Cloudflare API
-        env:
-          CF_TOKEN: ${{ secrets.CF_API_TOKEN }}
-          CF_ACCOUNT: ${{ secrets.CF_ACCOUNT_ID }}
-          WORKER_NAME: iptv-trial-norgesiptv
-        run: |
-          METADATA=$(cat <<'METADATA'
-          {
-            "main_module": "worker.js",
-            "compatibility_date": "2024-01-01",
-            "bindings": [
-              {
-                "type": "kv_namespace",
-                "name": "TRIALS",
-                "namespace_id": "79ad6a7d5f4349e7a00fd87252024a82"
-              }
-            ]
-          }
-          METADATA
-          )
-          curl -s -X PUT \
-            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts/${WORKER_NAME}" \
-            -H "Authorization: Bearer ${CF_TOKEN}" \
-            -F "metadata=${METADATA};type=application/json" \
-            -F "worker.js=@worker/worker.js;type=application/javascript+module"
-
-      - name: Test worker and capture output
+      - name: Compare with known-working worker
         run: |
           mkdir -p .debug
-          echo "=== GET /?debug ===" > .debug/test_output.txt
-          curl -s "https://iptv-trial-norgesiptv.medmaar.workers.dev/?debug" >> .debug/test_output.txt
-          echo "" >> .debug/test_output.txt
-          echo "=== POST trial ===" >> .debug/test_output.txt
-          curl -s -X POST "https://iptv-trial-norgesiptv.medmaar.workers.dev/" \
-            -H "Content-Type: application/json" \
-            -d '{"name":"Test User","email":"test@example.com","whatsapp":"","country":"Norge","device":"","notes":""}' >> .debug/test_output.txt
-          echo "" >> .debug/test_output.txt
-          echo "=== OPTIONS preflight ===" >> .debug/test_output.txt
-          curl -s -i -X OPTIONS "https://iptv-trial-norgesiptv.medmaar.workers.dev/" >> .debug/test_output.txt
-          cat .debug/test_output.txt
+          echo "=== streambleu (known working) ===" > .debug/compare.txt
+          curl -s -i "https://iptv-trial-streambleu.medmaar.workers.dev/" >> .debug/compare.txt
+          echo "" >> .debug/compare.txt
+          echo "=== norgesiptv ===" >> .debug/compare.txt
+          curl -s -i "https://iptv-trial-norgesiptv.medmaar.workers.dev/" >> .debug/compare.txt
+          cat .debug/compare.txt
 
-      - name: Commit test output
+      - name: Commit
         run: |
           git config user.name bot
           git config user.email bot@example.com
-          git add .debug/test_output.txt
-          git commit -m "debug: test output" || true
+          git add .debug/compare.txt
+          git commit -m "debug: compare workers" || true
           git push || true
