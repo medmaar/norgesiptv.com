@@ -10,26 +10,43 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v4
 
-      - name: Check subdomain status
+      - name: Deploy Worker via Cloudflare API
         env:
           CF_TOKEN: ${{ secrets.CF_API_TOKEN }}
           CF_ACCOUNT: ${{ secrets.CF_ACCOUNT_ID }}
           WORKER_NAME: iptv-trial-norgesiptv
         run: |
-          mkdir -p .debug
-          curl -s "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts/${WORKER_NAME}/subdomain" \
-            -H "Authorization: Bearer ${CF_TOKEN}" > .debug/subdomain_status.txt
-          cat .debug/subdomain_status.txt
+          METADATA=$(cat <<'METADATA'
+          {
+            "main_module": "worker.js",
+            "compatibility_date": "2024-01-01",
+            "bindings": [
+              {
+                "type": "kv_namespace",
+                "name": "TRIALS",
+                "namespace_id": "79ad6a7d5f4349e7a00fd87252024a82"
+              }
+            ]
+          }
+          METADATA
+          )
+          curl -s -X PUT \
+            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts/${WORKER_NAME}" \
+            -H "Authorization: Bearer ${CF_TOKEN}" \
+            -F "metadata=${METADATA};type=application/json" \
+            -F "worker.js=@worker/worker.js;type=application/javascript+module"
 
-      - name: Commit
+      - name: Set Cron Trigger
+        env:
+          CF_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT: ${{ secrets.CF_ACCOUNT_ID }}
+          WORKER_NAME: iptv-trial-norgesiptv
         run: |
-          git config user.name bot
-          git config user.email bot@example.com
-          git add .debug/subdomain_status.txt
-          git commit -m "debug: subdomain status check" || true
-          git push || true
+          curl -s -X PUT \
+            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts/${WORKER_NAME}/schedules" \
+            -H "Authorization: Bearer ${CF_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -d '[{"cron": "0 * * * *"}]'
