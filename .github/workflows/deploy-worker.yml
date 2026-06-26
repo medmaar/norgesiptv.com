@@ -13,40 +13,24 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Deploy Worker via Cloudflare API
-        env:
-          CF_TOKEN: ${{ secrets.CF_API_TOKEN }}
-          CF_ACCOUNT: ${{ secrets.CF_ACCOUNT_ID }}
-          WORKER_NAME: iptv-trial-norgesiptv
+      - name: Deploy to Cloudflare Workers
         run: |
-          METADATA=$(cat <<'METADATA'
-          {
-            "main_module": "worker.js",
-            "compatibility_date": "2024-01-01",
-            "bindings": [
-              {
-                "type": "kv_namespace",
-                "name": "TRIALS",
-                "namespace_id": "79ad6a7d5f4349e7a00fd87252024a82"
-              }
-            ]
-          }
-          METADATA
-          )
-          curl -s -X PUT \
-            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts/${WORKER_NAME}" \
-            -H "Authorization: Bearer ${CF_TOKEN}" \
-            -F "metadata=${METADATA};type=application/json" \
-            -F "worker.js=@worker/worker.js;type=application/javascript+module"
+          RESULT=$(curl -s -X PUT \
+            "https://api.cloudflare.com/client/v4/accounts/${{ secrets.CF_ACCOUNT_ID }}/workers/scripts/iptv-trial-norgesiptv" \
+            -H "Authorization: Bearer ${{ secrets.CF_API_TOKEN }}" \
+            -F 'metadata={"main_module":"worker.js","compatibility_date":"2024-01-01","bindings":[{"type":"kv_namespace","name":"TRIALS","namespace_id":"79ad6a7d5f4349e7a00fd87252024a82"}]};type=application/json' \
+            -F "worker.js=@worker/worker.js;type=application/javascript+module")
+          echo "$RESULT" | python3 -c "
+          import sys,json
+          d=json.load(sys.stdin)
+          if d.get('success'): print('Deployed: iptv-trial-norgesiptv')
+          else: print('Error:', d.get('errors')); exit(1)
+          "
 
-      - name: Set Cron Trigger
-        env:
-          CF_TOKEN: ${{ secrets.CF_API_TOKEN }}
-          CF_ACCOUNT: ${{ secrets.CF_ACCOUNT_ID }}
-          WORKER_NAME: iptv-trial-norgesiptv
+      - name: Enable workers.dev subdomain
         run: |
-          curl -s -X PUT \
-            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts/${WORKER_NAME}/schedules" \
-            -H "Authorization: Bearer ${CF_TOKEN}" \
+          curl -s -X POST \
+            "https://api.cloudflare.com/client/v4/accounts/${{ secrets.CF_ACCOUNT_ID }}/workers/scripts/iptv-trial-norgesiptv/subdomain" \
+            -H "Authorization: Bearer ${{ secrets.CF_API_TOKEN }}" \
             -H "Content-Type: application/json" \
-            -d '[{"cron": "0 * * * *"}]'
+            -d '{"enabled":true}' | python3 -c "import sys,json; print('Subdomain:', json.load(sys.stdin).get('success'))"
