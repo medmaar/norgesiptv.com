@@ -10,6 +10,7 @@ const RESEND_KEY  = "re_KSki1Vcs_2VpnYjf1tUGCHXWiEZq6S8bc";
 const FROM_EMAIL  = "NorgesIPTV <hjelp@norgesiptv.com>";
 const ADMIN_EMAIL = "hjelp@norgesiptv.com";
 const SITE_URL    = "https://norgesiptv.com";
+const SITE_NAME   = "norgesiptv.com";
 const PACK_NAME   = "Norway";
 const WA_NUMBER   = "17828026280";
 const ACCENT      = "#c6f135";
@@ -282,32 +283,39 @@ async function handleFetch(request, env) {
     try { const u = new URL(rawUrl); username = u.searchParams.get("username") || ""; password = u.searchParams.get("password") || ""; } catch {}
     const m3uUrl = `${HOST}/get.php?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}&type=m3u_plus&output=ts`;
 
+    // ── Store in KV FIRST (so trial is always recorded even if email fails) ──
+    step = "kv_store";
+    const expiry = Date.now() + 24 * 60 * 60 * 1000;
+    await env.TRIALS.put(
+      `trial:${email}`,
+      JSON.stringify({ name, email, whatsapp, site: SITE_NAME, username, password, m3uUrl, expiry, reminder_sent: false, followup_sent: false, created_at: Date.now() }),
+      { expirationTtl: 30 * 24 * 60 * 60 }
+    );
+
+    // ── Notify central KV reader ──
+    try {
+      await fetch('https://iptv-kv-reader.medmaar.workers.dev/add', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, whatsapp, site: SITE_NAME, phone: whatsapp, created_at: Date.now() })
+      });
+    } catch(_) {}
+
+    // ── Send emails (after KV so trial is always recorded) ──
     step = "email_client";
     await sendEmail(email, "Din NorgesIPTV-prøveperiode er klar — 24t gratis aktivert ✓", welcomeEmail(name, username, password, m3uUrl));
 
     step = "email_admin";
     await sendEmail(ADMIN_EMAIL, `Automation / norgesiptv.com / trial / ${name || "—"} / ${email}`, adminEmail(name, email, country, device, whatsapp, notes, username, password, m3uUrl));
 
-    step = "kv_store";
-    const expiry = Date.now() + 24 * 60 * 60 * 1000;
-    await env.TRIALS.put(
-      `trial:${email}`,
-      JSON.stringify({ name, email, whatsapp, site: 'norgesiptv.com', username, password, m3uUrl, expiry, reminder_sent: false, followup_sent: false, created_at: Date.now() }),
-      { expirationTtl: 30 * 24 * 60 * 60 }
-    );
-    // Notify central KV reader (single-key design, no list ops)
-    try {
-      await fetch('https://iptv-kv-reader.medmaar.workers.dev/add', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, whatsapp, site: SITE, phone: whatsapp, created_at: Date.now() })
-      });
-    } catch(_) {}
-
     return jsonRes({ success: true });
 
   } catch (err) {
     console.error(`[step=${step}]`, err.message);
+    // If only email failed (kv already saved), still return success with a warning
+    if (step === "email_client" || step === "email_admin") {
+      return jsonRes({ success: true, warning: `email_failed: ${err.message}` });
+    }
     return jsonRes({ success: false, error: `[${step}] ${err.message}` }, 500);
   }
 }
