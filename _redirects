@@ -1,1 +1,5 @@
 /home /index.html 301
+
+# Retired WhatsApp callback-form page -> direct WhatsApp redirect
+/whatsapp.html  /prat/wa  301
+/whatsapp       /prat/wa  301
