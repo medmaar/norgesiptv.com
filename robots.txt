@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /prat/wa
+Disallow: /whatsapp.html
+Disallow: /whatsapp
 
 Sitemap: https://norgesiptv.com/sitemap.xml
