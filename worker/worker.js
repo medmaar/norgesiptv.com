@@ -5,7 +5,7 @@
 
 const API_BASE    = "https://activationpanel.ru/api/api.php";
 const API_KEY     = "35cf68cc83a3a82e1a0ac5361c7b6105";
-const HOST        = "http://terry.thecontentnest.com";
+const HOST        = "http://mag.trexlive.me";
 const RESEND_KEY  = "re_KSki1Vcs_2VpnYjf1tUGCHXWiEZq6S8bc";
 const FROM_EMAIL  = "NorgesIPTV <hjelp@norgesiptv.com>";
 const ADMIN_EMAIL = "hjelp@norgesiptv.com";
