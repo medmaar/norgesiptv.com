@@ -312,10 +312,10 @@ async function handleFetch(request, env) {
 
     // ── Send emails (after KV so trial is always recorded) ──
     step = "email_client";
-    await sendEmail(email, "Din NorgesIPTV-prøveperiode er klar — 24t gratis aktivert ✓", welcomeEmail(name, username, password, m3uUrl, RESEND_KEY));
+    await sendEmail(email, "Din NorgesIPTV-prøveperiode er klar — 24t gratis aktivert ✓", welcomeEmail(name, username, password, m3uUrl), RESEND_KEY);
 
     step = "email_admin";
-    await sendEmail(ADMIN_EMAIL, `Automation / norgesiptv.com / trial / ${name || "—"} / ${email}`, adminEmail(name, email, country, device, whatsapp, notes, username, password, m3uUrl, RESEND_KEY));
+    await sendEmail(ADMIN_EMAIL, `Automation / norgesiptv.com / trial / ${name || "—"} / ${email}`, adminEmail(name, email, country, device, whatsapp, notes, username, password, m3uUrl), RESEND_KEY);
 
     return jsonRes({ success: true });
 
@@ -345,7 +345,7 @@ async function handleScheduled(env) {
 
     if (!reminder_sent && now >= expiry - FOUR_HOURS && now < expiry) {
       try {
-        await sendEmail(email, "⏳ Prøveperioden din utløper om 4 timer", reminderEmail(name, username, password, m3uUrl, RESEND_KEY));
+        await sendEmail(email, "⏳ Prøveperioden din utløper om 4 timer", reminderEmail(name, username, password, m3uUrl), RESEND_KEY);
         trial.reminder_sent = true;
         await env.TRIALS.put(key, JSON.stringify(trial), { expirationTtl: 30 * 24 * 60 * 60 });
         console.log(`[cron] Påminnelse → ${email}`);
@@ -354,7 +354,7 @@ async function handleScheduled(env) {
 
     if (!followup_sent && now >= expiry) {
       try {
-        await sendEmail(email, "Prøveperioden din er over — Kom tilbake når som helst 🎬", followupEmail(name, RESEND_KEY));
+        await sendEmail(email, "Prøveperioden din er over — Kom tilbake når som helst 🎬", followupEmail(name), RESEND_KEY);
         trial.followup_sent = true;
         await env.TRIALS.put(key, JSON.stringify(trial), { expirationTtl: 30 * 24 * 60 * 60 });
         console.log(`[cron] Oppfølging → ${email}`);
