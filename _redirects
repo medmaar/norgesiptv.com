@@ -1,3 +1,7 @@
+# ── NEW PAGE 200 rewrites ───────────────────────────────────────────────────
+/iptv-box                                /iptv-box.html                           200
+/iptv-mac                                /iptv-mac.html                           200
+
 # ── NEW PAGES – 200 rewrites (priority) ──────────────────────────────────
 /iptv-norge                              /iptv-norge.html                         200
 /viking-iptv                             /viking-iptv.html                        200
@@ -97,7 +101,6 @@
 /iptv-m3u                   /m3u.html                       301
 /mag-box                    /iptv-boks.html                 301
 /formuler                   /iptv-boks.html                 301
-/iptv-box                   /iptv-boks.html                 301
 /mag-524                    /iptv-boks.html                 301
 /mag-322                    /iptv-boks.html                 301
 /nordic-iptv-norge          /nordic-iptv.html               301
@@ -913,3 +916,120 @@
 /best-paid-iptv             /beste-iptv.html                301
 /iptv-smarters-subscription-reddit /iptv-reddit.html        301
 /iptv-smasters-reddit       /iptv-reddit.html               301
+
+# ── PASS 2: New page rewrites ─────────────────────────────────────────────────
+
+# ── PASS 2: Uncovered keyword redirects ──────────────────────────────────────
+
+# ip iptv / iptv tv / iptv ip variants → home/hva-er-iptv
+/ip-iptv                    /hva-er-iptv.html               301
+/iptv-tv                    /hva-er-iptv.html               301
+/ip-television-guide        /hva-er-iptv.html               301
+
+# provider iptv → iptv-providers
+/provider-iptv              /iptv-providers.html            301
+/iptv-service               /iptv-providers.html            301
+/iptv-service-provider      /iptv-providers.html            301
+
+# IPTV box cluster → iptv-box
+/best-iptv-box              /iptv-box.html                  301
+/best-android-box-for-iptv  /iptv-box.html                  301
+/best-android-tv-box-iptv   /iptv-box.html                  301
+/iptv-box-4k                /iptv-box.html                  301
+/iptv-box-android           /iptv-box.html                  301
+/iptv-box-amazon            /iptv-box.html                  301
+/iptv-box-near-me           /iptv-box.html                  301
+/iptv-box-price             /iptv-box.html                  301
+/ip-box-tv                  /iptv-box.html                  301
+/box-tv-iptv                /iptv-box.html                  301
+/iptv-set-top-box           /iptv-box.html                  301
+/iptv-tv-box-android        /iptv-box.html                  301
+/iptv-set                   /iptv-box.html                  301
+/fire-stick-4k-iptv         /iptv-firestick.html            301
+/iptv-fire-tv-stick-4k      /iptv-firestick.html            301
+
+# mac / macbook / laptop → iptv-mac
+/mac-iptv                   /iptv-mac.html                  301
+/iptv-macbook               /iptv-mac.html                  301
+/laptop-iptv                /iptv-mac.html                  301
+/iptv-computer              /iptv-mac.html                  301
+/ip-tv-vlc                  /iptv-mac.html                  301
+/iptv-web                   /iptv-mac.html                  301
+/iptv-url                   /m3u.html                       301
+/iptv-playliste             /m3u.html                       301
+
+# smarters/smasters on specific platforms → iptv-smarters-pro
+/iptv-smarters-firestick    /iptv-smarters-pro.html         301
+/iptv-smasters-for-firestick /iptv-smarters-pro.html        301
+/iptv-smarters-for-firestick /iptv-smasters-pro.html        301
+/iptv-smarters-apple-tv     /iptv-apple-tv.html             301
+/iptv-smasters-pro-apple-tv /iptv-apple-tv.html             301
+/iptv-smasters-pro-com      /iptv-smarters-pro.html         301
+/iptv-smasters-pro-subscription /iptv-smarters-pro.html     301
+/iptv-smasters-pro-tv       /iptv-smarters-pro.html         301
+/iptv-smarters-iphone       /iptv-iphone.html               301
+/iptv-smarters-for-pc       /iptv-pc.html                   301
+/iptv-smarters-google-play  /iptv-android.html              301
+/iptv-smasters-lg-tv        /iptv-lg.html                   301
+/iptv-smasters-pro-lg-tv    /iptv-lg.html                   301
+/lg-iptv-smasters-pro       /iptv-lg.html                   301
+/iptv-smasters-samsung-tv   /iptv-samsung.html              301
+/iptv-smasters-pro-samsung-tv /iptv-samsung.html            301
+/samsung-iptv-smasters      /iptv-samsung.html              301
+/samsung-tv-iptv-smarters   /iptv-samsung.html              301
+/iptv-smasters-tizen        /iptv-samsung.html              301
+/samsung-tizen-iptv         /iptv-samsung.html              301
+/iptv-smasters-smart-tv     /smart-iptv.html                301
+/iptv-smasters-pro-smart-tv /smart-iptv.html                301
+/iptv-smarters-mac          /iptv-mac.html                  301
+/iptv-smasters-mac          /iptv-mac.html                  301
+/iptv-smarters-linux        /iptv-pc.html                   301
+/iptv-smasters-linux        /iptv-pc.html                   301
+/iptv-smasters-android-tv   /iptv-android.html              301
+/iptv-smasters-downloader   /iptv-smarters-pro.html         301
+/iptv-smasters-webtv        /iptv-smarters-pro.html         301
+/iptv-smasters-pro-g-play   /iptv-android.html              301
+/iptv-smasters-pro-price    /priser.html                    301
+/iptv-smarter-pro           /iptv-smarters-pro.html         301
+/iptv-smarter-pro-pc        /iptv-pc.html                   301
+
+# apple tv variants → iptv-apple-tv
+/apple-tv-3-iptv            /iptv-apple-tv.html             301
+/apple-tv-4k-iptv           /iptv-apple-tv.html             301
+/iptv-on-apple-tv-4k        /iptv-apple-tv.html             301
+/iptv-via-apple-tv          /iptv-apple-tv.html             301
+/iptv-for-lg-webos          /iptv-lg.html                   301
+/iptv-for-samsung-tv        /iptv-samsung.html              301
+
+# smart player variants → iptv-player or smart-iptv
+/iptv-smart-lite            /smart-iptv.html                301
+/iptv-smart-player-pro      /iptv-player.html               301
+/iptv-smart-pro             /smart-iptv.html                301
+/iptv-streamer-pro          /iptv-player.html               301
+/iptvstreamplayer-com       /iptv-player.html               301
+/iptv-media-player          /iptv-player.html               301
+
+# misc uncovered
+/iptv-new                   /iptv-norge.html                301
+/iptv-top                   /beste-iptv.html                301
+/iptv-telefon               /iptv-android.html              301
+/iptv-tnt                   /iptv-sport.html                301
+/iptv-tvfix                 /iptv-alternativer.html         301
+/mag-box-322                /iptv-mag.html                  301
+/mag-254-iptv               /iptv-mag.html                  301
+/plus-iptv                  /iptv-premium.html              301
+/premium-tv-iptv            /iptv-premium.html              301
+/iptv-2                     /hva-er-iptv.html               301
+/iptv-24                    /iptv-abonnement.html           301
+/iptv-24-7                  /iptv-abonnement.html           301
+/iptv-6                     /hva-er-iptv.html               301
+/manage-setiptv-com         /set-iptv.html                  301
+/manage-roomiptv-com        /set-iptv.html                  301
+/legjobb-iptv-szolgaltato   /beste-iptv.html                301
+/ip-smart-tv-pro            /smart-iptv.html                301
+/ip-tv-smart-pro            /smart-iptv.html                301
+/kodi-tv-iptv               /iptv-kodi.html                 301
+/best-iptv-for-kodi         /iptv-kodi.html                 301
+/best-iptv-for-sports       /iptv-sport.html                301
+/iptv-ip                    /hva-er-iptv.html               301
+/ip-tv-tv                   /hva-er-iptv.html               301

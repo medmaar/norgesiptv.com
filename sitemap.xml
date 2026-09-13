@@ -113,4 +113,8 @@
   <url><loc>https://norgesiptv.com/perfect-player</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
   <url><loc>https://norgesiptv.com/stremio-iptv</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
   <url><loc>https://norgesiptv.com/gecko-iptv</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
+
+  <!-- PASS 2 NEW PAGES – 2026-09-13 -->
+  <url><loc>https://norgesiptv.com/iptv-box</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.89</priority></url>
+  <url><loc>https://norgesiptv.com/iptv-mac</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.87</priority></url>
 </urlset>
