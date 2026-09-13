@@ -697,3 +697,180 @@
 /iptv-player-android-tv     /iptv-android.html              301
 /iptv-player-smart-tv       /iptv-player.html               301
 /iptv-smart-smart-tv        /smart-iptv.html                301
+
+# ── PASS-4 NEW PAGES (clean URLs) ──────────────────────────────────────────
+/tivimate-premium           /tivimate-premium.html          200
+/smarters-player-lite       /smarters-player-lite.html      200
+/xciptv                     /xciptv.html                    200
+/ss-iptv                    /ss-iptv.html                   200
+/stbemu                     /stbemu.html                    200
+/tvip                       /tvip.html                      200
+
+# ── TIVIMATE keyword redirects ──────────────────────────────────────────────
+/tivimate-premium-price     /tivimate-premium.html          301
+/tivimate-premium-cost      /tivimate-premium.html          301
+/tivimate-premium-firestick /tivimate-premium.html          301
+/tivimate-premium-subscription /tivimate-premium.html       301
+/tivimate-subscription      /tivimate-premium.html          301
+/tivimate-price             /tivimate-premium.html          301
+/tivimate-account           /tivimate-premium.html          301
+/tivimate-com               /tivimate-premium.html          301
+/tiviapp                    /tivimate-premium.html          301
+/tiviapp-live-iptv-player   /tivimate-premium.html          301
+/tivi-mate-premium          /tivimate-premium.html          301
+/tivimate-pro               /tivimate-premium.html          301
+/tivimate-firestick         /tivimate-premium.html          301
+/tivimate-for-firestick     /tivimate-premium.html          301
+/tivimate-on-firestick      /tivimate-premium.html          301
+/tivimate-iptv              /tivimate.html                  301
+/tivimate-android-tv        /tivimate.html                  301
+/tivimate-apple-tv          /iptv-apple-tv.html             301
+/tivimate-chromecast        /iptv-chromecast.html           301
+/tivimate-samsung           /iptv-samsung.html              301
+/tivimate-samsung-smart-tv  /iptv-samsung.html              301
+/tivimate-samsung-tv        /iptv-samsung.html              301
+/tivimate-smart-tv          /iptv-player.html               301
+/tivimate-tv                /tivimate.html                  301
+/tivimate-pc                /tivimate-premium.html          301
+/tivimate-for-pc            /tivimate-premium.html          301
+/tivimate-mac               /tivimate-premium.html          301
+/tivimate-m3u               /m3u.html                       301
+/tivimate-reddit            /iptv-reddit.html               301
+
+# ── SMARTERS PLAYER LITE keyword redirects ──────────────────────────────────
+/smarters-player-android    /smarters-player-lite.html      301
+/smarters-player-android-tv /smarters-player-lite.html      301
+/smarters-player-iptv       /smarters-player-lite.html      301
+/smarters-player-life       /smarters-player-lite.html      301
+/smarters-player-lite-android /smarters-player-lite.html    301
+/smarters-player-lite-android-tv /smarters-player-lite.html 301
+/smarters-player-lite-chromecast /smarters-player-lite.html 301
+/smarters-player-lite-google-play /smarters-player-lite.html 301
+/smarters-player-lite-lg    /smarters-player-lite.html      301
+/smarters-player-lite-lg-tv /smarters-player-lite.html      301
+/smarters-player-lite-premium /smarters-player-lite.html    301
+/smarters-player-lite-pro   /smarters-player-lite.html      301
+/smarters-player-lite-samsung-tv /smarters-player-lite.html 301
+/smarters-player-lite-smart-tv /smarters-player-lite.html   301
+/smarters-player-lite-tv    /smarters-player-lite.html      301
+/smarters-player-online     /smarters-player-lite.html      301
+/smarters-player-premium    /smarters-player-lite.html      301
+/smarters-player-pro        /smarters-player-lite.html      301
+/smarters-player-pro-pc     /iptv-smarters-pro.html         301
+/smarters-player-samsung    /smarters-player-lite.html      301
+/smarters-player-samsung-tv /smarters-player-lite.html      301
+/smarters-player-tv         /smarters-player-lite.html      301
+/smarters-players-lite      /smarters-player-lite.html      301
+/smarters-pro-firestick     /iptv-smarters-pro.html         301
+/smarters-pro-lg            /iptv-smarters-pro.html         301
+/smarters-pro-pc            /iptv-smarters-pro.html         301
+/smarters-pro-player        /iptv-smarters-pro.html         301
+/smarters-pro-roku          /iptv-smarters-pro.html         301
+/smarters-pro-samsung-tv    /iptv-smarters-pro.html         301
+/smarters-pro-shop          /bestill.html                   301
+/smarters-pro-tv            /iptv-smarters-pro.html         301
+/smarters-tv                /iptv-smarters-pro.html         301
+/smarters-tv-pro            /iptv-smarters-pro.html         301
+/smarters-lite              /smarters-player-lite.html      301
+/smarters-pc                /iptv-smarters-pro.html         301
+/smarters-pl                /iptv-smarters-pro.html         301
+/smarters-ip-tv             /iptv-smarters-pro.html         301
+/smarter-pro-iptv           /iptv-smarters-pro.html         301
+/smarters-iptv-android      /smarters-player-lite.html      301
+/smarters-iptv-android-tv   /smarters-player-lite.html      301
+/smarters-iptv-firestick    /iptv-smarters-pro.html         301
+/smarters-iptv-lg           /smarters-player-lite.html      301
+/smarters-iptv-mac          /iptv-smarters-pro.html         301
+/smarters-iptv-pc           /iptv-smarters-pro.html         301
+/smarters-iptv-player       /smarters-player-lite.html      301
+/smarters-iptv-samsung      /smarters-player-lite.html      301
+/smarters-iptv-samsung-tv   /smarters-player-lite.html      301
+
+# ── SS IPTV keyword redirects ────────────────────────────────────────────────
+/ss-iptv                    /ss-iptv.html                   200
+/ssiptv                     /ss-iptv.html                   301
+/ssiptv-android             /ss-iptv.html                   301
+/ssiptv-com                 /ss-iptv.html                   301
+/ssiptv-list                /ss-iptv.html                   301
+/ssiptv-pc                  /ss-iptv.html                   301
+
+# ── XCIPTV keyword redirects ─────────────────────────────────────────────────
+/xciptv-android             /xciptv.html                    301
+/xciptv-android-tv          /xciptv.html                    301
+/xciptv-iptv                /xciptv.html                    301
+/xciptv-lg                  /xciptv.html                    301
+/xciptv-lg-smart-tv         /xciptv.html                    301
+/xciptv-lg-tv               /xciptv.html                    301
+/xciptv-player-pro          /xciptv.html                    301
+/xciptv-samsung             /xciptv.html                    301
+/xciptv-url                 /xciptv.html                    301
+/xiptv                      /xciptv.html                    301
+/xtream-tv                  /xciptv.html                    301
+/xtreamtv                   /xciptv.html                    301
+/xtreme-hd-iptv             /xciptv.html                    301
+/xtreme-hd-iptv-reddit      /xciptv.html                    301
+/xtra-iptv                  /xciptv.html                    301
+/x-iptv                     /xciptv.html                    301
+/trex-iptv                  /iptv-alternativer.html         301
+/trexiptv                   /iptv-alternativer.html         301
+/vortex-iptv                /iptv-alternativer.html         301
+
+# ── STBEMU keyword redirects ─────────────────────────────────────────────────
+/stb-emu-pro                /stbemu.html                    301
+/stbemu-4k                  /stbemu.html                    301
+/stbemu-iptv                /stbemu.html                    301
+/stbemu-pro                 /stbemu.html                    301
+/stb-emulator               /stbemu.html                    301
+
+# ── TVIP keyword redirects ───────────────────────────────────────────────────
+/tvip-605                   /tvip.html                      301
+/tvip-s-box                 /tvip.html                      301
+/tvip-s-box-605             /tvip.html                      301
+/tvip-s-box-v-525           /tvip.html                      301
+/tvip-s-box-v-530           /tvip.html                      301
+/tvip-s-box-v-605           /tvip.html                      301
+
+# ── SMART IPTV additional redirects ─────────────────────────────────────────
+/smart-iptv-pro             /smart-iptv.html                301
+/smart-iptv-pro-pc          /smart-iptv.html                301
+/smart-iptv-samsung         /iptv-samsung.html              301
+/smart-iptv-samsung-tizen   /iptv-samsung.html              301
+/smart-iptv-url             /smart-iptv.html                301
+/smart-iptv-web             /smart-iptv.html                301
+/smart-player-iptv          /smart-iptv.html                301
+/smart-player-lite          /smart-iptv.html                301
+/smart-player-pro           /smart-iptv.html                301
+/smart-stb-m3u              /smart-iptv.html                301
+/smart4iptv                 /smart-iptv.html                301
+/smart-tv-ip-tv             /hva-er-iptv.html               301
+/smart-tv-lg-iptv           /iptv-lg.html                   301
+/tv-lg-iptv                 /iptv-lg.html                   301
+/tv-samsung-iptv            /iptv-samsung.html              301
+/tizen-iptv-player          /iptv-samsung.html              301
+/tizen-os-iptv              /iptv-samsung.html              301
+
+# ── BRAND / MISC redirects ───────────────────────────────────────────────────
+/star-iptv                  /iptv-alternativer.html         301
+/stariptv                   /iptv-alternativer.html         301
+/studio-iptv                /iptv-alternativer.html         301
+/tango-iptv                 /iptv-alternativer.html         301
+/toucan-iptv                /iptv-alternativer.html         301
+/wise-iptv                  /iptv-alternativer.html         301
+/wise-iptv-player           /iptv-alternativer.html         301
+/world-iptv                 /                               301
+/top-iptv                   /beste-iptv.html                301
+/top-10-iptv                /beste-iptv.html                301
+/top-5-iptv                 /beste-iptv.html                301
+/ip-tv-smart                /smart-iptv.html                301
+/norge-iptv                 /                               301
+/tnt-iptv                   /iptv-sport.html                301
+/trustpilot-iptv            /anmeldelser.html               301
+/sony-bravia-iptv           /iptv-sony.html                 301
+/watch-iptv                 /                               301
+/tv-stick-iptv              /iptv-firestick.html            301
+/store-iptv                 /bestill.html                   301
+/url-iptv-player            /iptv-server.html               301
+/url-m3u                    /m3u.html                       301
+/web-iptv                   /iptv-pc.html                   301
+/stream-iptv                /iptv-vod.html                  301
+/stream-player-iptv         /iptv-player.html               301

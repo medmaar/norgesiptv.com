@@ -9,15 +9,20 @@
   <url><loc>https://norgesiptv.com/anmeldelser</loc><lastmod>2026-09-13</lastmod><changefreq>weekly</changefreq><priority>0.90</priority></url>
   <url><loc>https://norgesiptv.com/om-oss</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.70</priority></url>
 
-  <!-- HIGH-VOLUME PLAYERS -->
+  <!-- PLAYERS — HIGH VOLUME -->
   <url><loc>https://norgesiptv.com/tivimate</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.98</priority></url>
+  <url><loc>https://norgesiptv.com/tivimate-premium</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.96</priority></url>
   <url><loc>https://norgesiptv.com/iptv-smarters-pro</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.98</priority></url>
+  <url><loc>https://norgesiptv.com/smarters-player-lite</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
   <url><loc>https://norgesiptv.com/smart-iptv</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://norgesiptv.com/iptv-player</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.93</priority></url>
+  <url><loc>https://norgesiptv.com/ss-iptv</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://norgesiptv.com/xciptv</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://norgesiptv.com/stbemu</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://norgesiptv.com/nanomid</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
   <url><loc>https://norgesiptv.com/ott-navigator</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.86</priority></url>
   <url><loc>https://norgesiptv.com/iptv-duplex</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
   <url><loc>https://norgesiptv.com/flex-iptv</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.86</priority></url>
+  <url><loc>https://norgesiptv.com/iptv-player</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.93</priority></url>
 
   <!-- PROTOCOL / TECH -->
   <url><loc>https://norgesiptv.com/xtream-iptv</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
@@ -53,6 +58,7 @@
   <url><loc>https://norgesiptv.com/iptv-formuler</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
   <url><loc>https://norgesiptv.com/iptv-mag</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
   <url><loc>https://norgesiptv.com/nvidia-shield</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://norgesiptv.com/tvip</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
 
   <!-- CONTENT / CATEGORY -->
   <url><loc>https://norgesiptv.com/iptv-4k</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.93</priority></url>
