@@ -1023,8 +1023,8 @@
 /iptv-24                    /iptv-abonnement.html           301
 /iptv-24-7                  /iptv-abonnement.html           301
 /iptv-6                     /hva-er-iptv.html               301
-/manage-setiptv-com         /set-iptv.html                  301
-/manage-roomiptv-com        /set-iptv.html                  301
+/manage-setiptv-com         /smart-iptv.html                  301
+/manage-roomiptv-com        /smart-iptv.html                  301
 /legjobb-iptv-szolgaltato   /beste-iptv.html                301
 /ip-smart-tv-pro            /smart-iptv.html                301
 /ip-tv-smart-pro            /smart-iptv.html                301
@@ -1033,3 +1033,128 @@
 /best-iptv-for-sports       /iptv-sport.html                301
 /iptv-ip                    /hva-er-iptv.html               301
 /ip-tv-tv                   /hva-er-iptv.html               301
+
+# ═══════════════════════════════════════════════════════════════════
+# SEO PASS 3 – Keyword gap redirects
+# ═══════════════════════════════════════════════════════════════════
+
+# M3U / M3U8 variants → /m3u
+/ip-m3u                         /m3u.html                       301
+/iptv-links-m3u                 /m3u.html                       301
+/iptv-list-m3u                  /m3u.html                       301
+/iptv-listas-m3u                /m3u.html                       301
+/iptv-liste-m3u                 /m3u.html                       301
+/iptv-listm3u                   /m3u.html                       301
+/iptv-m3u-list                  /m3u.html                       301
+/iptv-m3u8                      /m3u.html                       301
+/iptv-premium-m3u               /m3u.html                       301
+/iptv-pro-m3u                   /m3u.html                       301
+/iptv-smasters-m3u              /m3u.html                       301
+/iptv-stream-m3u                /m3u.html                       301
+/iptv-streamer-pro-m3u          /m3u.html                       301
+/iptvm3ulist                    /m3u.html                       301
+/kodi-iptv-m3u                  /m3u.html                       301
+/m3u-checker                    /m3u.html                       301
+/m3u-iptv-samsung               /m3u.html                       301
+/m3u-kodi                       /m3u.html                       301
+/m3u-lista                      /m3u.html                       301
+/m3u-online                     /m3u.html                       301
+/m3u-online-player              /m3u.html                       301
+/m3u-player-samsung-tv          /m3u.html                       301
+/m3u-samsung-tv                 /m3u.html                       301
+/m3u-smart-tv                   /m3u.html                       301
+/m3u-tester-online              /m3u.html                       301
+/m3u-web-player                 /m3u.html                       301
+/m3u8-iptv                      /m3u.html                       301
+/m3u8-list                      /m3u.html                       301
+/m3ulista                       /m3u.html                       301
+/play-list-m3u                  /m3u.html                       301
+/set-iptv-m3u                   /m3u.html                       301
+/ip-m3u-list                    /m3u.html                       301
+/iptv-pro-m3u-list              /m3u.html                       301
+
+# Smart IPTV variants → /smart-iptv
+/smart-iptv-3-0-99              /smart-iptv.html                301
+/smart-iptv-android             /smart-iptv.html                301
+/smart-iptv-android-tv          /smart-iptv.html                301
+/smart-iptv-downloader          /smart-iptv.html                301
+/smart-iptv-list                /smart-iptv.html                301
+/smart-iptv-lista               /smart-iptv.html                301
+/smart-iptv-my-list             /smart-iptv.html                301
+/smart-iptv-pc                  /smart-iptv.html                301
+
+# Samsung IPTV player variants → /iptv-samsung
+/iptv-samsung-smart-tv          /iptv-samsung.html              301
+/samsung-iptv-smarters          /iptv-samsung.html              301
+/samsung-tizen-iptv-player      /iptv-samsung.html              301
+/samsung-tv-iptv-player         /iptv-samsung.html              301
+/m3u-player-samsung             /iptv-samsung.html              301
+/iptv-player-samsung-tv         /iptv-samsung.html              301
+/iptv-player-tizen              /iptv-samsung.html              301
+/iptv-tizen                     /iptv-samsung.html              301
+
+# LG IPTV player variants → /iptv-lg
+/iptv-lg-smart                  /iptv-lg.html                   301
+/iptv-player-lg-tv              /iptv-lg.html                   301
+/lg-tv-iptv-player              /iptv-lg.html                   301
+/ott-navigator-lg-webos         /iptv-lg.html                   301
+/set-iptv-lg                    /iptv-lg.html                   301
+/set-iptv-samsung               /iptv-samsung.html              301
+
+# IPTV player variants → /iptv-player
+/iptv-player-chromecast         /iptv-player.html               301
+/iptv-player-com                /iptv-player.html               301
+/iptv-player-fire-tv            /iptv-player.html               301
+/iptv-player-lite               /iptv-player.html               301
+/iptv-player-live               /iptv-player.html               301
+/iptv-player-smart              /iptv-player.html               301
+/iptv-player-tv                 /iptv-player.html               301
+/iptv-player-web                /iptv-player.html               301
+
+# Smasters Pro variants → /iptv-smarters-pro
+/iptv-smarters-pro-android      /iptv-smarters-pro.html         301
+/iptv-smarters-pro-fire-stick   /iptv-smarters-pro.html         301
+/iptv-smarters-pro-google-play  /iptv-smarters-pro.html         301
+/iptv-smarters-pro-live         /iptv-smarters-pro.html         301
+/iptv-smasters-pro-mac          /iptv-smasters-pro.html         301
+/iptv-smasters-pro-m3u          /iptv-smarters-pro.html         301
+
+# Misc uncovered keywords
+/247-iptv-android               /iptv-android.html              301
+/best-iptv-premium              /iptv-premium.html              301
+/beste-iptv-player-android      /iptv-android.html              301
+/ip-tv-netflix                  /iptv-vod.html                  301
+/iptv-1                         /iptv-norge.html                301
+/iptv-365                       /iptv-abonnement.html           301
+/iptv-android-tv-box            /iptv-box.html                  301
+/iptv-nanomid                   /nanomid.html                   301
+/iptv4k-fr                      /iptv-4k.html                   301
+/online-ip-tv                   /iptv-norge.html                301
+
+# ═══════════════════════════════════════════════════════════════════
+# SEO PASS 3 – Final gap redirects (pass 2)
+# ═══════════════════════════════════════════════════════════════════
+/apple-tv-ip-tv                 /iptv-apple-tv.html             301
+/fire-stick-iptv-smarters-pro   /iptv-smarters-pro.html         301
+/firestick-iptv-smarters        /iptv-smarters-pro.html         301
+/formuler-z-plus-box            /iptv-formuler.html             301
+/ip-tv-4k                       /iptv-4k.html                   301
+/ip-tv-android-tv               /iptv-android.html              301
+/ip-tv-box                      /iptv-box.html                  301
+/ip-tv-kodi                     /iptv-kodi.html                 301
+/ip-tv-lg                       /iptv-lg.html                   301
+/ip-tv-pc                       /iptv-pc.html                   301
+/ip-tv-samsung                  /iptv-samsung.html              301
+/iptv-fire-stick                /iptv-firestick.html            301
+/iptv-lg-webos                  /iptv-lg.html                   301
+/m3u-ip-tv                      /m3u.html                       301
+/set-ip-tv-app                  /smart-iptv.html                  301
+/smart-ip-tv-pro                /smart-iptv.html                301
+/smart-iptv-3-0                 /smart-iptv.html                301
+
+/set-ip-tv                      /smart-iptv.html                301
+/set-ip-tv-pro                  /smart-iptv.html                301
+
+# MAG model aliases
+/mag420                         /iptv-mag.html                  301
+/mag524                         /iptv-mag.html                  301
