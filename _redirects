@@ -95,3 +95,184 @@
 /iptv-forklart              /hva-er-iptv.html               301
 /iptv-ipad                  /iptv-iphone.html               301
 /ios-iptv                   /iptv-iphone.html               301
+
+# ── NEW PAGES (clean URLs) ──────────────────────────────────────────────────
+/beste-iptv                 /beste-iptv.html                200
+/iptv-formuler              /iptv-formuler.html             200
+/iptv-mag                   /iptv-mag.html                  200
+/iptv-player                /iptv-player.html               200
+/iptv-premier-league        /iptv-premier-league.html       200
+/nanomid                    /nanomid.html                   200
+/iptv-sony                  /iptv-sony.html                 200
+/iptv-hisense               /iptv-hisense.html              200
+/ott-navigator              /ott-navigator.html             200
+/iptv-duplex                /iptv-duplex.html               200
+
+# Blog posts
+/blogg/beste-iptv-app-apple-tv  /blogg/beste-iptv-app-apple-tv.html  200
+/blogg/iptv-formuler-guide      /blogg/iptv-formuler-guide.html       200
+
+# ── KEYWORD REDIRECTS → BESTE IPTV ──────────────────────────────────────────
+/beste-iptv-norge           /beste-iptv.html                301
+/beste-ip-tv                /beste-iptv.html                301
+/best-iptv-service          /beste-iptv.html                301
+/best-iptv-subscription     /beste-iptv.html                301
+/best-iptv-reddit           /beste-iptv.html                301
+/best-iptv-service-reddit   /beste-iptv.html                301
+/reddit-best-iptv           /beste-iptv.html                301
+/paid-iptv                  /beste-iptv.html                301
+/premium-iptv               /iptv-premium.html              301
+/private-iptv               /beste-iptv.html                301
+/buy-iptv                   /bestill.html                   301
+/buy-iptv-online            /bestill.html                   301
+/buy-iptv-subscription      /bestill.html                   301
+/buyiptv                    /bestill.html                   301
+/iptv-shop                  /bestill.html                   301
+/iptvshop                   /bestill.html                   301
+/shopiptv                   /bestill.html                   301
+/iptv-near-me               /bestill.html                   301
+
+# ── KEYWORD REDIRECTS → FORMULER ────────────────────────────────────────────
+/formuler-box               /iptv-formuler.html             301
+/formuler-iptv-box          /iptv-formuler.html             301
+/formuler-tv-box            /iptv-formuler.html             301
+/formuler-z11               /iptv-formuler.html             301
+/formuler-z11-pro           /iptv-formuler.html             301
+/formuler-z11-pro-max       /iptv-formuler.html             301
+/formuler-z8                /iptv-formuler.html             301
+/formuler-z8-pro            /iptv-formuler.html             301
+/formuler-z7                /iptv-formuler.html             301
+/formuler-z7plus            /iptv-formuler.html             301
+/formuler-z10-se            /iptv-formuler.html             301
+/formuler-z-nano            /iptv-formuler.html             301
+/formuler-z-neo             /iptv-formuler.html             301
+
+# ── KEYWORD REDIRECTS → MAG ─────────────────────────────────────────────────
+/mag-254                    /iptv-mag.html                  301
+/mag-256                    /iptv-mag.html                  301
+/mag-410                    /iptv-mag.html                  301
+/mag-420                    /iptv-mag.html                  301
+/mag-420w1                  /iptv-mag.html                  301
+/mag-424                    /iptv-mag.html                  301
+/mag-425a                   /iptv-mag.html                  301
+/mag-520                    /iptv-mag.html                  301
+/mag-524                    /iptv-mag.html                  301
+/mag-524w3                  /iptv-mag.html                  301
+/mag-box-4k                 /iptv-mag.html                  301
+/mag-tv-box                 /iptv-mag.html                  301
+/infomir                    /iptv-mag.html                  301
+/infomir-mag                /iptv-mag.html                  301
+/infomir-mag-254            /iptv-mag.html                  301
+/infomir-mag-524            /iptv-mag.html                  301
+/infomir-iptv               /iptv-mag.html                  301
+/mytvonline                 /iptv-mag.html                  301
+/mytvonline-3               /iptv-mag.html                  301
+
+# ── KEYWORD REDIRECTS → PLAYER ──────────────────────────────────────────────
+/iptv-smart-player          /iptv-player.html               301
+/iptv-stream-player-pro     /iptv-player.html               301
+/iptv-player-android        /iptv-player.html               301
+/iptv-player-samsung        /iptv-player.html               301
+/iptv-player-lg             /iptv-player.html               301
+/iptv-player-smart-tv       /iptv-player.html               301
+/perfect-player             /iptv-player.html               301
+/perfect-player-iptv        /iptv-player.html               301
+/gse-iptv                   /iptv-player.html               301
+/gse-smart-iptv             /iptv-player.html               301
+/iptv-extreme-pro           /iptv-player.html               301
+/extreme-iptv               /iptv-player.html               301
+/iptv-extreme-player        /iptv-player.html               301
+/ott-navigator-premium      /ott-navigator.html             301
+/iplaytv                    /iptv-player.html               301
+/implayer                   /iptv-player.html               301
+/ludio-player               /iptv-player.html               301
+/flex-iptv                  /iptv-player.html               301
+/iptvx                      /iptv-player.html               301
+/iptvx-android              /iptv-player.html               301
+/iptvx-apple-tv             /iptv-apple-tv.html             301
+/cloud-stream               /iptv-player.html               301
+
+# ── KEYWORD REDIRECTS → SPORT / PREMIER LEAGUE ──────────────────────────────
+/iptv-sky-sport             /iptv-premier-league.html       301
+/iptv-bein                  /iptv-premier-league.html       301
+/iptv-bein-sport            /iptv-premier-league.html       301
+/iptv-world-cup             /iptv-premier-league.html       301
+/iptv-champions-league      /iptv-premier-league.html       301
+/iptv-motogp                /iptv-premier-league.html       301
+/iptv-eurosport             /iptv-premier-league.html       301
+/iptv-wwe                   /iptv-premier-league.html       301
+/iptv-soccer                /iptv-premier-league.html       301
+/beinsport-iptv             /iptv-premier-league.html       301
+/sky-sport-iptv             /iptv-premier-league.html       301
+
+# ── KEYWORD REDIRECTS → NANOMID ─────────────────────────────────────────────
+/nanomid-com                /nanomid.html                   301
+/nanomid-iptv               /nanomid.html                   301
+/nanomid-iptv-player        /nanomid.html                   301
+/nanomid-player             /nanomid.html                   301
+/nanomid-samsung            /nanomid.html                   301
+/nanomid-samsung-tv         /nanomid.html                   301
+/nanomid-lg-tv              /nanomid.html                   301
+/nanomid-player-lg          /nanomid.html                   301
+
+# ── KEYWORD REDIRECTS → SONY ────────────────────────────────────────────────
+/iptv-sony-bravia           /iptv-sony.html                 301
+/iptv-sony-tv               /iptv-sony.html                 301
+
+# ── KEYWORD REDIRECTS → HISENSE ─────────────────────────────────────────────
+/iptv-vidaa                 /iptv-hisense.html              301
+/iptv-hisense-vidaa         /iptv-hisense.html              301
+
+# ── KEYWORD REDIRECTS → DUPLEX ──────────────────────────────────────────────
+/duplex-iptv                /iptv-duplex.html               301
+/duplex-iptv-android        /iptv-duplex.html               301
+/duplex-iptv-samsung        /iptv-duplex.html               301
+
+# ── MISC KEYWORD REDIRECTS ──────────────────────────────────────────────────
+/viking-iptv                /beste-iptv.html                301
+/nordic-one-iptv            /nordic-iptv.html               301
+/nordisk-iptv               /nordic-iptv.html               301
+/iptv-norden                /nordic-iptv.html               301
+/iptv-nordic                /nordic-iptv.html               301
+/iptv-boks                  /iptv-boks.html                 200
+/iptv-abonnement            /iptv-abonnement.html           200
+/iptv-priser                /priser.html                    301
+/iptv-cost                  /priser.html                    301
+/iptv-price                 /priser.html                    301
+/iptv-plans                 /priser.html                    301
+/iptv-deals                 /priser.html                    301
+/iptv-packages              /priser.html                    301
+/iptv-lifetime              /priser.html                    301
+/iptv-ps5                   /iptv-android.html              301
+/iptv-ps3                   /iptv-android.html              301
+/iptv-panasonic             /iptv-android.html              301
+/iptv-philips               /iptv-android.html              301
+/iptv-philips-tv            /iptv-android.html              301
+/iptv-tcl                   /iptv-android.html              301
+/jellyfin-iptv              /m3u.html                       301
+/plex-iptv                  /m3u.html                       301
+/emby-iptv                  /m3u.html                       301
+/stremio-iptv               /m3u.html                       301
+/kodi-ip-tv                 /iptv-kodi.html                 301
+/iptv-enigma2               /iptv-kodi.html                 301
+/iptv-for-firestick         /iptv-firestick.html            301
+/iptv-amazon                /iptv-firestick.html            301
+/iptv-amazon-stick          /iptv-firestick.html            301
+/amazon-fire-stick-iptv     /iptv-firestick.html            301
+/fire-stick-iptv-smarters   /iptv-smarters-pro.html         301
+/fire-tv-iptv               /iptv-firestick.html            301
+/fire-tv-stick-iptv         /iptv-firestick.html            301
+/firestick-tivimate         /tivimate.html                  301
+/tivimate-iptv              /tivimate.html                  301
+/best-iptv-for-tivimate     /tivimate.html                  301
+/best-iptv-for-firestick    /iptv-firestick.html            301
+/best-iptv-for-samsung-tv   /iptv-samsung.html              301
+/best-iptv-for-apple-tv-4k  /iptv-apple-tv.html             301
+/best-iptv-app-for-apple-tv /blogg/beste-iptv-app-apple-tv.html 301
+/samsung-iptv-app           /iptv-samsung.html              301
+/chromecast-iptv            /iptv-chromecast.html           301
+/iptv-google-chromecast     /iptv-chromecast.html           301
+/room-iptv                  /iptv-player.html               301
+/roomiptv                   /iptv-player.html               301
+/set-iptv-pro               /smart-iptv.html                301
+/net-iptv                   /smart-iptv.html                301
