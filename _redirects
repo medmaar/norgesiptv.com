@@ -1497,3 +1497,220 @@
 /manage-roomiptv                /smart-iptv.html                        301
 /manage-roomiptv-com            /smart-iptv.html                        301
 /manage-setiptv-com             /smart-iptv.html                        301
+
+# ═══════════════════════════════════════════════════════════════════
+# SEO PASS 5 – 6 new pages + comprehensive keyword gap coverage
+# ═══════════════════════════════════════════════════════════════════
+
+# ── New page 200 rewrites ─────────────────────────────────────────
+/iptv-subscription          /iptv-subscription.html             200
+/iptv-altibox               /iptv-altibox.html                  200
+/iptv-ps5                   /iptv-ps5.html                      200
+/iptv-enigma2               /iptv-enigma2.html                  200
+/iptv-panasonic-tcl         /iptv-panasonic-tcl.html            200
+/iptv-checker               /iptv-checker.html                  200
+
+# ── IPTV Subscription / Service / Plans variants ──────────────────
+/iptv-plans                 /iptv-subscription.html             301
+/iptv-packages              /iptv-subscription.html             301
+/iptv-cost                  /iptv-subscription.html             301
+/iptv-price                 /iptv-subscription.html             301
+/iptv-deals                 /iptv-subscription.html             301
+/iptv-subscribe             /iptv-subscription.html             301
+/iptv-service               /iptv-subscription.html             301
+/iptv-streaming-service     /iptv-subscription.html             301
+/iptv-service-provider      /iptv-subscription.html             301
+/iptv-lifetime              /iptv-subscription.html             301
+/iptv-account               /iptv-subscription.html             301
+/iptv-line                  /iptv-subscription.html             301
+/iptv-sub                   /iptv-subscription.html             301
+/iptv-subscription-reddit   /iptv-reddit.html                   301
+/iptv-services-reddit       /iptv-reddit.html                   301
+/iptv-providers-reddit      /iptv-reddit.html                   301
+/iptv-subscription-ebay     /kjop-iptv.html                     301
+/ip-tv-subscription         /iptv-subscription.html             301
+/best-iptv-service          /iptv-subscription.html             301
+/best-paid-iptv             /iptv-subscription.html             301
+/iptv-pay                   /iptv-subscription.html             301
+/iptv-new                   /iptv-subscription.html             301
+/iptv-id                    /iptv-subscription.html             301
+/iptvclub                   /iptv-subscription.html             301
+/iptvone                    /iptv-subscription.html             301
+/iptvonly                   /iptv-subscription.html             301
+/iptvplus                   /iptv-subscription.html             301
+/iptvportal                 /iptv-server.html                   301
+/iptvshop                   /kjop-iptv.html                     301
+/iptvbest                   /iptv-providers.html                301
+/iptvgold                   /iptv-providers.html                301
+/iptvgreat                  /iptv-providers.html                301
+/iptvfarm                   /iptv-providers.html                301
+/iptvmain                   /iptv-providers.html                301
+/iptvm3u                    /m3u.html                           301
+/iptvm3ulist                /m3u.html                           301
+/iptvod                     /iptv-vod.html                      301
+/iptvapp                    /iptv-player.html                   301
+/iptv4on                    /iptv-providers.html                301
+/iptv222                    /iptv-providers.html                301
+/iptv345                    /iptv-providers.html                301
+/iptv365                    /iptv-abonnement.html               301
+/iptv1                      /iptv-norge.html                    301
+/iptvforum                  /iptv-reddit.html                   301
+
+# ── Altibox / Norden / Danske kanaler ────────────────────────────
+/nye-altibox-tv             /iptv-altibox.html                  301
+/paramount-plus-altibox     /iptv-altibox.html                  301
+/iptv-norden                /iptv-altibox.html                  301
+/iptv-danske-kanaler        /iptv-altibox.html                  301
+/iptv-norden-kanaler        /iptv-altibox.html                  301
+/nordic-one-iptv            /nordic-iptv.html                   301
+
+# ── PS5 / PS4 / Gaming console ────────────────────────────────────
+/iptv-ps4                   /iptv-ps5.html                      301
+/iptv-ps3                   /iptv-ps5.html                      301
+/iptv-playstation           /iptv-ps5.html                      301
+/iptv-xbox                  /iptv-ps5.html                      301
+/iptv-shield                /nvidia-shield.html                 301
+
+# ── Enigma2 / Dreamlink ───────────────────────────────────────────
+/dreamlink-t2               /iptv-enigma2.html                  301
+/dreamlink-t3               /iptv-enigma2.html                  301
+/dreamlink-iptv             /iptv-enigma2.html                  301
+/dreambox-iptv              /iptv-enigma2.html                  301
+/vu-plus-iptv               /iptv-enigma2.html                  301
+/zgemma-iptv                /iptv-enigma2.html                  301
+
+# ── Panasonic / TCL / Vidaa ──────────────────────────────────────
+/iptv-panasonic             /iptv-panasonic-tcl.html            301
+/iptv-tcl                   /iptv-panasonic-tcl.html            301
+/iptv-vidaa                 /iptv-panasonic-tcl.html            301
+/iptv-hisense-vidaa         /iptv-panasonic-tcl.html            301
+/iptv-tizen                 /iptv-samsung.html                  301
+
+# ── IPTV Checker / M3U Tester ────────────────────────────────────
+/m3u-checker                /iptv-checker.html                  301
+/m3u-tester-online          /iptv-checker.html                  301
+/iptv-checker-online        /iptv-checker.html                  301
+/iptv-url-checker           /iptv-checker.html                  301
+
+# ── IPTV F1 / UFC / WWE / NBA / Sports ───────────────────────────
+/iptv-f1                    /iptv-sport.html                    301
+/iptv-ufc                   /iptv-sport.html                    301
+/iptv-wwe                   /iptv-sport.html                    301
+/iptv-nba                   /iptv-sport.html                    301
+/iptv-world-cup             /iptv-sport.html                    301
+/iptv-motogp                /iptv-sport.html                    301
+/iptv-soccer                /iptv-sport.html                    301
+/iptv-bein-sport            /iptv-sport.html                    301
+/iptv-bein                  /iptv-sport.html                    301
+/iptv-eurosport             /iptv-sport.html                    301
+/iptv-tnt                   /iptv-sport.html                    301
+/iptv-sky-sports            /iptv-sport.html                    301
+/iptv-motogp                /iptv-sport.html                    301
+
+# ── IPTV VOD / Netflix / HBO / Discovery ─────────────────────────
+/iptv-netflix               /iptv-vod.html                      301
+/iptv-hbo                   /iptv-vod.html                      301
+/iptv-hbo-max               /iptv-vod.html                      301
+/iptv-discovery             /iptv-vod.html                      301
+/iptv-discovery-plus        /iptv-vod.html                      301
+/iptv-vod-movies            /iptv-vod.html                      301
+/iptv-series                /iptv-vod.html                      301
+/ip-tv-netflix              /iptv-vod.html                      301
+/iptv-watch-tv-online       /iptv-vod.html                      301
+/watch-iptv                 /iptv-vod.html                      301
+
+# ── IPTV Web / Browser ───────────────────────────────────────────
+/iptv-web                   /iptv-pc.html                       301
+/iptv-web-browser           /iptv-pc.html                       301
+/iptv-browser               /iptv-pc.html                       301
+/iptv-internet              /ip-television.html                 301
+/iptv-computer              /iptv-pc.html                       301
+/web-iptv                   /iptv-pc.html                       301
+/iptv-online                /ip-television.html                 301
+/iptv-on-line               /ip-television.html                 301
+/iptv-live                  /ip-television.html                 301
+/iptv-live-tv               /ip-television.html                 301
+/live-iptv                  /ip-television.html                 301
+
+# ── IPTV Number/brand shortcuts ───────────────────────────────────
+/iptv-24                    /iptv-subscription.html             301
+/iptv-24-7                  /iptv-subscription.html             301
+/iptv-24h                   /iptv-subscription.html             301
+/247-iptv-android           /iptv-android.html                  301
+/365tv-iptv                 /iptv-subscription.html             301
+/iptv-4k-premium            /iptv-4k.html                       301
+/iptv-8k                    /iptv-4k.html                       301
+/iptv-hdr                   /iptv-4k.html                       301
+/bulsatcom-iptv             /iptv-providers.html                301
+/rushmore-iptv              /iptv-providers.html                301
+/purple-iptv                /iptv-providers.html                301
+/iptv-purple                /iptv-providers.html                301
+/streamy-iptv               /iptv-providers.html                301
+/iptv-streamz               /iptv-providers.html                301
+/iptv-global                /iptv-providers.html                301
+/iptv-global-tv             /iptv-providers.html                301
+/iptv-cobra                 /iptv-providers.html                301
+/iptv-azul                  /iptv-providers.html                301
+
+# ── IPTV M3U / Stream variants ────────────────────────────────────
+/iptv-stream                /iptv-player.html                   301
+/iptv-stream-pro            /iptv-player.html                   301
+/iptv-stream-player-pro     /iptv-player.html                   301
+/iptv-streamer-pro          /iptv-player.html                   301
+/iptvstreamer               /iptv-player.html                   301
+/iptvstreamplayer-com       /iptv-player.html                   301
+/iptv-stream-m3u            /m3u.html                           301
+/iptv-streamer-pro-m3u      /m3u.html                           301
+/iptv-m3u                   /m3u.html                           301
+/iptv-m3u-list              /m3u.html                           301
+/iptv-m3u8                  /m3u.html                           301
+/iptv-list-m3u              /m3u.html                           301
+/iptv-links-m3u             /m3u.html                           301
+/iptv-listas-m3u            /m3u.html                           301
+/iptv-liste-m3u             /m3u.html                           301
+/iptv-listm3u               /m3u.html                           301
+/iptv-url-m3u               /m3u.html                           301
+/iptv-premium-m3u           /m3u.html                           301
+/iptv-pro-m3u               /m3u.html                           301
+/ip-m3u                     /m3u.html                           301
+/ip-player                  /iptv-player.html                   301
+
+# ── IPTV misc informational ───────────────────────────────────────
+/iptv-dvr                   /iptv-epg.html                      301
+/iptv-ipad                  /iptv-iphone.html                   301
+/iptv-macbook               /iptv-mac.html                      301
+/iptv-laptop                /iptv-pc.html                       301
+/iptv-trustpilot            /anmeldelser.html                   301
+/iptv-reviews               /anmeldelser.html                   301
+/iptv-set-top-box           /iptv-box.html                      301
+/iptv-stb                   /iptv-box.html                      301
+/iptv-receiver              /iptv-box.html                      301
+/iptv-digital               /ip-television.html                 301
+/iptv-what-is-it            /hva-er-iptv.html                   301
+/iptv-hd                    /iptv-4k.html                       301
+/iptv-4k-fr                 /iptv-4k.html                       301
+/iptv-local                 /iptv-norge.html                    301
+/iptv-near-me               /iptv-norge.html                    301
+/iptv-star                  /iptv-providers.html                301
+/iptv-main                  /iptv-providers.html                301
+/iptvmain                   /iptv-providers.html                301
+/iptv-run                   /iptv-providers.html                301
+/iptv-tvfix                 /iptv-providers.html                301
+/iptv-nova                  /iptv-providers.html                301
+/iptv-nova-tv               /iptv-providers.html                301
+/iptv-mega                  /iptv-providers.html                301
+/iptv-go                    /iptv-providers.html                301
+/iptv-photo                 /iptv-providers.html                301
+/iptv-total                 /iptv-providers.html                301
+/iptv-world                 /iptv-providers.html                301
+/iptv-spanish               /iptv-providers.html                301
+/iptv-kanali                /kanalliste.html                    301
+/iptv-playliste             /m3u.html                           301
+/iptv-my-list               /smart-iptv.html                    301
+/iptv-downloader            /iptv-smarters-pro.html             301
+/iptv-speed                 /iptv-server.html                   301
+/iptv-isp                   /iptv-server.html                   301
+/iptv-source                /iptv-server.html                   301
+/iptv-url                   /m3u.html                           301
+/iptv-enigma                /iptv-enigma2.html                  301
+/iptv-ps5-ps4               /iptv-ps5.html                      301

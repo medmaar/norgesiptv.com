@@ -29,7 +29,7 @@
   <url><loc>https://norgesiptv.com/m3u</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
   <url><loc>https://norgesiptv.com/iptv-epg</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
   <url><loc>https://norgesiptv.com/iptv-server</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
-  <url><loc>https://norgesiptv.com/iptv-vod</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
+  <url><loc>https://norgesiptv.com/iptv-vod</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
 
   <!-- COMMERCIAL / INTENT -->
   <url><loc>https://norgesiptv.com/beste-iptv</loc><lastmod>2026-09-13</lastmod><changefreq>weekly</changefreq><priority>0.97</priority></url>
@@ -63,7 +63,7 @@
   <!-- CONTENT / CATEGORY -->
   <url><loc>https://norgesiptv.com/iptv-4k</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.93</priority></url>
   <url><loc>https://norgesiptv.com/iptv-premium</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.93</priority></url>
-  <url><loc>https://norgesiptv.com/iptv-sport</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.93</priority></url>
+  <url><loc>https://norgesiptv.com/iptv-sport</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.93</priority></url>
   <url><loc>https://norgesiptv.com/iptv-premier-league</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
   <url><loc>https://norgesiptv.com/nordic-iptv</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
   <url><loc>https://norgesiptv.com/hva-er-iptv</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
@@ -117,6 +117,12 @@
   <!-- PASS 2 NEW PAGES – 2026-09-13 -->
   <url><loc>https://norgesiptv.com/iptv-box</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.89</priority></url>
   <url><loc>https://norgesiptv.com/iptv-mac</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.87</priority></url>
+  <url><loc>https://norgesiptv.com/iptv-subscription</loc><lastmod>2026-09-14</lastmod><changefreq>weekly</changefreq><priority>0.97</priority></url>
+  <url><loc>https://norgesiptv.com/iptv-altibox</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://norgesiptv.com/iptv-ps5</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://norgesiptv.com/iptv-enigma2</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
+  <url><loc>https://norgesiptv.com/iptv-panasonic-tcl</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://norgesiptv.com/iptv-checker</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
   <url><loc>https://norgesiptv.com/ip-television</loc><lastmod>2026-09-14</lastmod><changefreq>weekly</changefreq><priority>0.96</priority></url>
   <url><loc>https://norgesiptv.com/kjop-iptv</loc><lastmod>2026-09-14</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
   <url><loc>https://norgesiptv.com/formuler-z</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
