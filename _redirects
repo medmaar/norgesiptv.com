@@ -1965,3 +1965,95 @@
 /tv-kurdisk-norge                                         /iptv-kurdisk.html                          301
 /tv-somali-arabisk-norge                                         /iptv-somali-arabisk.html                          301
 /tv-serbisk-norge                                         /iptv-serbisk.html                          301
+
+# ═══════════════════════════════════════════════════════════════════
+# SEO PASS 7 – Extra community, geo-area, hub, device pages
+# ═══════════════════════════════════════════════════════════════════
+
+/iptv-tysk                                     /iptv-tysk.html 200
+/iptv-svensk                                   /iptv-svensk.html 200
+/iptv-dansk                                    /iptv-dansk.html 200
+/iptv-russisk                                  /iptv-russisk.html 200
+/iptv-ukrainsk                                 /iptv-ukrainsk.html 200
+/iptv-italiensk                                /iptv-italiensk.html 200
+/iptv-gresk                                    /iptv-gresk.html 200
+/iptv-fransk                                   /iptv-fransk.html 200
+/iptv-nederlandsk                              /iptv-nederlandsk.html 200
+/iptv-koreansk                                 /iptv-koreansk.html 200
+/iptv-japansk                                  /iptv-japansk.html 200
+/iptv-brasiliansk                              /iptv-brasiliansk.html 200
+/iptv-libanesisk                               /iptv-libanesisk.html 200
+/iptv-palestinsk                               /iptv-palestinsk.html 200
+/iptv-tunisisk                                 /iptv-tunisisk.html 200
+/iptv-algerisk                                 /iptv-algerisk.html 200
+/iptv-egyptisk                                 /iptv-egyptisk.html 200
+/iptv-samisk                                   /iptv-samisk.html 200
+/iptv-jordansk                                 /iptv-jordansk.html 200
+/iptv-chilensk                                 /iptv-chilensk.html 200
+/iptv-colombiansk                              /iptv-colombiansk.html 200
+/iptv-fjordregionen                            /iptv-fjordregionen.html 200
+/iptv-arktisk-region                           /iptv-arktisk-region.html 200
+/iptv-sentralnorge                             /iptv-sentralnorge.html 200
+/iptv-byer                                     /iptv-byer.html 200
+/iptv-internasjonal                            /iptv-internasjonal.html 200
+/iptv-fylker                                   /iptv-fylker.html 200
+/iptv-roku                                     /iptv-roku.html 200
+/iptv-google-tv                                /iptv-google-tv.html 200
+/iptv-android-mobil                            /iptv-android-mobil.html 200
+/iptv-oled                                     /iptv-oled.html 200
+/iptv-tivimate-firestick                       /iptv-tivimate-firestick.html 200
+
+# Community alias 301s
+/tv-tysk-norge                                       /iptv-tysk.html 301
+/tv-svensk-norge                                       /iptv-svensk.html 301
+/tv-dansk-norge                                       /iptv-dansk.html 301
+/tv-russisk-norge                                       /iptv-russisk.html 301
+/tv-ukrainsk-norge                                       /iptv-ukrainsk.html 301
+/tv-italiensk-norge                                       /iptv-italiensk.html 301
+/tv-gresk-norge                                       /iptv-gresk.html 301
+/tv-fransk-norge                                       /iptv-fransk.html 301
+/tv-nederlandsk-norge                                       /iptv-nederlandsk.html 301
+/tv-koreansk-norge                                       /iptv-koreansk.html 301
+/tv-japansk-norge                                       /iptv-japansk.html 301
+/tv-brasiliansk-norge                                       /iptv-brasiliansk.html 301
+/tv-libanesisk-norge                                       /iptv-libanesisk.html 301
+/tv-palestinsk-norge                                       /iptv-palestinsk.html 301
+/tv-tunisisk-norge                                       /iptv-tunisisk.html 301
+/tv-algerisk-norge                                       /iptv-algerisk.html 301
+/tv-egyptisk-norge                                       /iptv-egyptisk.html 301
+/tv-samisk-norge                                       /iptv-samisk.html 301
+/tv-jordansk-norge                                       /iptv-jordansk.html 301
+/tv-chilensk-norge                                       /iptv-chilensk.html 301
+/tv-colombiansk-norge                                       /iptv-colombiansk.html 301
+
+# Device alias 301s
+/iptv-tivimate-on-firestick             /iptv-tivimate-firestick.html 301
+/tivimate-firestick-guide               /iptv-tivimate-firestick.html 301
+/iptv-google-chromecast                 /iptv-google-tv.html 301
+/iptv-chromecast-google-tv              /iptv-google-tv.html 301
+/iptv-samsung-oled                      /iptv-oled.html 301
+/iptv-lg-oled                           /iptv-oled.html 301
+/iptv-sony-oled                         /iptv-oled.html 301
+/iptv-android-phone                     /iptv-android-mobil.html 301
+/iptv-android-smartphone                /iptv-android-mobil.html 301
+/iptv-samsung-galaxy                    /iptv-android-mobil.html 301
+/iptv-roku-tv                           /iptv-roku.html 301
+/iptv-roku-stick                        /iptv-roku.html 301
+/iptv-fjordland                         /iptv-fjordregionen.html 301
+/iptv-arktisk                           /iptv-arktisk-region.html 301
+/iptv-midt-norge                        /iptv-sentralnorge.html 301
+/iptv-internasjonal-kanaler             /iptv-internasjonal.html 301
+/iptv-verdenskanaler                    /iptv-internasjonal.html 301
+/iptv-alle-byer                         /iptv-byer.html 301
+/iptv-norske-byer                       /iptv-byer.html 301
+/iptv-alle-fylker                       /iptv-fylker.html 301
+/iptv-norske-fylker                     /iptv-fylker.html 301
+
+# Ethnic group alias 301s for remaining groups
+/norsk-tysk                                    /iptv-tysk.html 301
+/norsk-svensk                                  /iptv-svensk.html 301
+/norsk-dansk                                   /iptv-dansk.html 301
+/norsk-russisk                                 /iptv-russisk.html 301
+/norsk-ukrainsk                                /iptv-ukrainsk.html 301
+/iptv-nordmenn                                 /iptv-norge.html 301
+/iptv-sami-kanaler                             /iptv-samisk.html 301
