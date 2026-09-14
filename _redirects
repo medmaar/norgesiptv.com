@@ -1158,3 +1158,342 @@
 # MAG model aliases
 /mag420                         /iptv-mag.html                  301
 /mag524                         /iptv-mag.html                  301
+
+# ═══════════════════════════════════════════════════════════════════
+# SEO PASS 4 – New pages + keyword gap redirects (Sept 2026)
+# ═══════════════════════════════════════════════════════════════════
+
+# ── New pages – 200 rewrites ──────────────────────────────────────
+/ip-television                  /ip-television.html                     200
+/formuler-z                     /formuler-z.html                        200
+/mag-boks                       /mag-boks.html                          200
+/kjop-iptv                      /kjop-iptv.html                         200
+/iptv-eit                       /iptv-eit.html                          200
+
+# ── IP Television keyword variants ───────────────────────────────
+/ip-tv                          /ip-television.html                     301
+/ip-iptv                        /ip-television.html                     301
+/iptv-ip                        /ip-television.html                     301
+/iptv-tv                        /ip-television.html                     301
+/ip-tv-smart                    /ip-television.html                     301
+/live-ip-tv                     /ip-television.html                     301
+/live-iptv                      /ip-television.html                     301
+/online-iptv                    /ip-television.html                     301
+/online-ip-tv                   /ip-television.html                     301
+/web-iptv                       /ip-television.html                     301
+/ip-television-norge            /ip-television.html                     301
+
+# ── Buy IPTV transactional variants ──────────────────────────────
+/buy-iptv                       /kjop-iptv.html                         301
+/buy-iptv-online                /kjop-iptv.html                         301
+/buy-iptv-subscription          /kjop-iptv.html                         301
+/buyiptv                        /kjop-iptv.html                         301
+/shop-iptv                      /kjop-iptv.html                         301
+/shopiptv                       /kjop-iptv.html                         301
+/get-iptv                       /kjop-iptv.html                         301
+/getiptv                        /kjop-iptv.html                         301
+/paid-iptv                      /kjop-iptv.html                         301
+/private-iptv                   /kjop-iptv.html                         301
+/premium-iptv                   /iptv-premium.html                      301
+
+# ── Formuler Z model variants ─────────────────────────────────────
+/formuler-box                   /formuler-z.html                        301
+/formuler-tv-box                /formuler-z.html                        301
+/formuler-iptv-box              /formuler-z.html                        301
+/formuler-z-nano                /formuler-z.html                        301
+/formuler-z-neo                 /formuler-z.html                        301
+/formuler-z-plus                /formuler-z.html                        301
+/formuler-z7                    /formuler-z.html                        301
+/formuler-z7-plus               /formuler-z.html                        301
+/formuler-z8                    /formuler-z.html                        301
+/formuler-z8-pro                /formuler-z.html                        301
+/formuler-z10-se                /formuler-z.html                        301
+/formuler-z11                   /formuler-z.html                        301
+/formuler-z11-pro               /formuler-z.html                        301
+/formuler-z11-pro-max           /formuler-z.html                        301
+
+# ── MAG box model variants ────────────────────────────────────────
+/mag-box                        /mag-boks.html                          301
+/mag-tv-box                     /mag-boks.html                          301
+/mag-box-4k                     /mag-boks.html                          301
+/mag-254                        /mag-boks.html                          301
+/mag-254-iptv                   /mag-boks.html                          301
+/mag-256                        /mag-boks.html                          301
+/mag-322                        /mag-boks.html                          301
+/mag-box-322                    /mag-boks.html                          301
+/mag322w1                       /mag-boks.html                          301
+/mag-410                        /mag-boks.html                          301
+/mag420                         /mag-boks.html                          301
+/mag-420w1                      /mag-boks.html                          301
+/mag425a                        /mag-boks.html                          301
+/mag-424                        /mag-boks.html                          301
+/mag520                         /mag-boks.html                          301
+/mag524                         /mag-boks.html                          301
+/mag-524                        /mag-boks.html                          301
+/mag524w3                       /mag-boks.html                          301
+/infomir-mag                    /mag-boks.html                          301
+/infomir-iptv                   /mag-boks.html                          301
+/infomir-mag-254                /mag-boks.html                          301
+
+# ── TiviMate variants ─────────────────────────────────────────────
+/tivi-mate-premium              /tivimate-premium.html                  301
+/tivimate-account               /tivimate-premium.html                  301
+/tivimate-com                   /tivimate.html                          301
+/tivimate-iptv                  /tivimate.html                          301
+/tivimate-tv                    /tivimate.html                          301
+/tivimate-pro                   /tivimate.html                          301
+/tivimate-premium-cost          /tivimate-premium.html                  301
+/tivimate-premium-price         /tivimate-premium.html                  301
+/tivimate-premium-subscription  /tivimate-premium.html                  301
+/tivimate-price                 /tivimate-premium.html                  301
+/tivimate-subscription          /tivimate-premium.html                  301
+/tivimate-for-firestick         /tivimate.html                          301
+/tivimate-on-firestick          /tivimate.html                          301
+/tivimate-premium-firestick     /tivimate.html                          301
+/tivimate-apple-tv              /tivimate.html                          301
+
+# ── Smarters Player Lite variants ─────────────────────────────────
+/smarters-player-lite-android   /smarters-player-lite.html             301
+/smarters-player-lite-pro       /smarters-player-lite.html             301
+/smarters-player-lite-premium   /smarters-player-lite.html             301
+/smarters-players-lite          /smarters-player-lite.html             301
+/smarters-lite                  /smarters-player-lite.html             301
+/smarters-player-life           /smarters-player-lite.html             301
+/smartersplayer-lite            /smarters-player-lite.html             301
+
+# ── Smart IPTV / SET IPTV variants ───────────────────────────────
+/sip-tv                         /smart-iptv.html                        301
+/siplayer-iptv                  /smart-iptv.html                        301
+/sip-ip-tv                      /smart-iptv.html                        301
+/my-siptv                       /smart-iptv.html                        301
+/my-sip-tv                      /smart-iptv.html                        301
+/smart-hub-iptv                 /smart-iptv.html                        301
+/smart-ip                       /smart-iptv.html                        301
+/smart-ip-tv-pro                /smart-iptv.html                        301
+/smart-iptv-pro-pc              /smart-iptv.html                        301
+/smart-iptv-com                 /smart-iptv.html                        301
+/smart-player-iptv              /smart-iptv.html                        301
+/smart-player-lite              /smarters-player-lite.html             301
+/smart-player-pro               /iptv-smarters-pro.html                 301
+/smart4iptv                     /smart-iptv.html                        301
+/set-iptv-pro                   /smart-iptv.html                        301
+/siptv-list                     /smart-iptv.html                        301
+
+# ── M3U / XMLTV variants ──────────────────────────────────────────
+/m3u-iptv-samsung               /m3u.html                               301
+/m3u-lista                      /m3u.html                               301
+/m3u8-iptv                      /m3u.html                               301
+/m3u8-list                      /m3u.html                               301
+/m3ulista                       /m3u.html                               301
+/url-m3u                        /m3u.html                               301
+/m3u-online                     /m3u.html                               301
+/m3u-online-player              /m3u.html                               301
+/m3u-web-player                 /m3u.html                               301
+/m3u-smart-tv                   /m3u.html                               301
+/url-iptv-player                /m3u.html                               301
+/play-list-m3u                  /m3u.html                               301
+
+# ── Alternative IPTV provider name redirects ─────────────────────
+/cloud-stream-iptv              /cloud-stream.html                      301
+/flixiptv-com                   /flix-iptv.html                         301
+/flixiptv-list                  /flix-iptv.html                         301
+/flixtv-iptv                    /flix-iptv.html                         301
+/flix-ip-tv                     /flix-iptv.html                         301
+/forevertv                      /forever-tv.html                        301
+/forever-tv-iptv                /forever-tv.html                        301
+/xtream-tv                      /xtream-iptv.html                       301
+/xtreamtv                       /xtream-iptv.html                       301
+/xtream-hd-iptv                 /xtream-iptv.html                       301
+/xciptv-android                 /xciptv.html                            301
+/xciptv-iptv                    /xciptv.html                            301
+/xc-iptv                        /xciptv.html                            301
+/x-iptv                         /xciptv.html                            301
+/xiptv                          /xciptv.html                            301
+/xciptv-player-pro              /xciptv.html                            301
+/iptvxtream                     /xtream-iptv.html                       301
+/ssiptv-com                     /ss-iptv.html                           301
+/ssiptv                         /ss-iptv.html                           301
+/ss-iptv-com                    /ss-iptv.html                           301
+/stbemu-pro                     /stbemu.html                            301
+/stbemu-iptv                    /stbemu.html                            301
+/stbemu-4k                      /stbemu.html                            301
+/stb-emu-pro                    /stbemu.html                            301
+/mega-iptv                      /iptv-providers.html                    301
+/megaiptv                       /iptv-providers.html                    301
+/mega-ott                       /iptv-providers.html                    301
+/megaott                        /iptv-providers.html                    301
+/megaott-iptv                   /iptv-providers.html                    301
+/megaott-net                    /iptv-providers.html                    301
+/masteriptv                     /iptv-providers.html                    301
+/onpointiptv                    /iptv-providers.html                    301
+/on-point-iptv                  /iptv-providers.html                    301
+/vortex-iptv                    /iptv-providers.html                    301
+/proton-iptv                    /iptv-providers.html                    301
+/tango-iptv                     /iptv-providers.html                    301
+/nova-iptv                      /iptv-providers.html                    301
+/novaiptv                       /iptv-providers.html                    301
+/silver-iptv                    /iptv-providers.html                    301
+/star-iptv                      /iptv-providers.html                    301
+/stariptv                       /iptv-providers.html                    301
+/hub-iptv                       /iptv-providers.html                    301
+/studio-iptv                    /iptv-providers.html                    301
+/infinity-iptv                  /iptv-providers.html                    301
+/cobra-iptv                     /iptv-providers.html                    301
+/cobraiptv                      /iptv-providers.html                    301
+/plus-iptv                      /iptv-providers.html                    301
+/world-iptv                     /iptv-providers.html                    301
+/4kiptv                         /iptv-4k.html                           301
+/4k-ott-iptv                    /iptv-4k.html                           301
+/best-iptv-4k                   /iptv-4k.html                           301
+/iptv-4k-premium                /iptv-4k.html                           301
+/hd-iptv                        /iptv-4k.html                           301
+/high-iptv                      /iptv-4k.html                           301
+/xtreme-hd-iptv                 /xtream-iptv.html                       301
+/xtreme-hd-iptv-reddit          /iptv-reddit.html                       301
+
+# ── IPTV player app redirects ─────────────────────────────────────
+/implayer                       /iptv-player.html                       301
+/implayer-premium               /iptv-player.html                       301
+/ludio-player                   /iptv-player.html                       301
+/moon-player-iptv               /iptv-player.html                       301
+/moonplayer-iptv                /iptv-player.html                       301
+/stream-player-iptv             /iptv-player.html                       301
+/stream-iptv                    /iptv-player.html                       301
+/neutro-iptv                    /iptv-player.html                       301
+/neutro-iptv-player             /iptv-player.html                       301
+/wise-iptv                      /iptv-player.html                       301
+/wise-iptv-player               /iptv-player.html                       301
+/datoo-iptv                     /iptv-player.html                       301
+/datoo-player                   /iptv-player.html                       301
+/blink-iptv-player              /iptv-player.html                       301
+/blinkplayer                    /iptv-player.html                       301
+/dragon-iptv                    /iptv-player.html                       301
+/dragon-iptv-pro                /iptv-player.html                       301
+/dragoniptv                     /iptv-player.html                       301
+/foxy-iptv                      /iptv-player.html                       301
+/flex-iptv-player               /flex-iptv.html                         301
+/ott-plus-player                /ott-navigator.html                     301
+/tiviapp                        /iptv-player.html                       301
+/tiviapp-live-iptv-player       /iptv-player.html                       301
+/flip-iptv                      /iptv-player.html                       301
+/flipiptv                       /iptv-player.html                       301
+/toucan-iptv                    /iptv-player.html                       301
+/trexiptv                       /iptv-player.html                       301
+/dot-iptv                       /iptv-player.html                       301
+/leo-iptv                       /iptv-player.html                       301
+/quzu-iptv                      /iptv-player.html                       301
+/elk-iptv                       /iptv-player.html                       301
+
+# ── Device-specific IPTV redirects ───────────────────────────────
+/iptv-nvidia-shield             /nvidia-shield.html                     301
+/nvidia-shield-iptv             /nvidia-shield.html                     301
+/nvidia-shield-tv-pro-iptv      /nvidia-shield.html                     301
+/onn-tv-box                     /iptv-android.html                      301
+/tv-stick-iptv                  /iptv-firestick.html                    301
+/fire-tv-iptv                   /iptv-firestick.html                    301
+/fire-tv-stick-iptv             /iptv-firestick.html                    301
+/fire-stick-4k-iptv             /iptv-firestick.html                    301
+/amazon-fire-stick-iptv         /iptv-firestick.html                    301
+/best-iptv-for-firestick        /iptv-firestick.html                    301
+/best-iptv-for-tivimate         /tivimate.html                          301
+/best-iptv-for-kodi             /iptv-kodi.html                         301
+/best-iptv-for-samsung-tv       /iptv-samsung.html                      301
+/best-iptv-for-apple-tv-4k      /iptv-apple-tv.html                     301
+/best-iptv-app-for-apple-tv     /iptv-apple-tv.html                     301
+/apple-tv-4k-iptv               /iptv-apple-tv.html                     301
+/apple-tv-3-iptv                /iptv-apple-tv.html                     301
+/apple-tv-ip-tv                 /iptv-apple-tv.html                     301
+/samsung-tizen-iptv             /iptv-samsung.html                      301
+/samsung-tizen-iptv-player      /iptv-samsung.html                      301
+/tizen-iptv-player              /iptv-samsung.html                      301
+/tizen-os-iptv                  /iptv-samsung.html                      301
+/samsung-iptv-app               /iptv-samsung.html                      301
+/tv-samsung-iptv                /iptv-samsung.html                      301
+/tv-lg-iptv                     /iptv-lg.html                           301
+/smart-tv-lg-iptv               /iptv-lg.html                           301
+/ott-navigator-lg-tv            /ott-navigator.html                     301
+/ott-navigator-lg-webos         /ott-navigator.html                     301
+/ott-navigator-samsung-tv       /ott-navigator.html                     301
+/ott-navigator-premium          /ott-navigator.html                     301
+/best-android-box-for-iptv      /iptv-android.html                      301
+/best-android-tv-box-for-iptv   /iptv-android.html                      301
+/best-iptv-box                  /iptv-box.html                          301
+/arabic-tv-box                  /iptv-box.html                          301
+/box-tv-iptv                    /iptv-box.html                          301
+/tv-ip-box                      /tvip.html                              301
+/tvip-s-box                     /tvip.html                              301
+/tvip-s-box-605                 /tvip.html                              301
+/tvip-s-box-v-525               /tvip.html                              301
+/tvip-s-box-v-530               /tvip.html                              301
+/tvip-s-box-v-605               /tvip.html                              301
+/tvip-605                       /tvip.html                              301
+/sony-bravia-iptv               /iptv-sony.html                         301
+/dreamlink-t2                   /iptv-box.html                          301
+/dreamlink-t3                   /iptv-box.html                          301
+
+# ── Kodi / Emby / Plex / Stremio ─────────────────────────────────
+/kodi-ip-tv                     /iptv-kodi.html                         301
+/kodi-tv-iptv                   /iptv-kodi.html                         301
+/kodi-iptv-m3u                  /iptv-kodi.html                         301
+/kodi-m3u                       /iptv-kodi.html                         301
+/kodi-live-tv                   /iptv-kodi.html                         301
+/emby-iptv                      /iptv-kodi.html                         301
+/jellyfin-iptv                  /iptv-kodi.html                         301
+/plex-iptv                      /iptv-kodi.html                         301
+/stremio-iptv                   /stremio-iptv.html                      301
+
+# ── IPTV for sports redirects ─────────────────────────────────────
+/iptv-beinsport                 /iptv-sport.html                        301
+/beinsport-iptv                 /iptv-sport.html                        301
+/sky-sport-iptv                 /iptv-sport.html                        301
+/tnt-iptv                       /iptv-sport.html                        301
+/best-iptv-for-sports           /iptv-sport.html                        301
+/iptv-premier-league-live       /iptv-sport.html                        301
+
+# ── Provider/review redirects ─────────────────────────────────────
+/trustpilot-iptv                /anmeldelser.html                       301
+/iptv-reddit                    /iptv-reddit.html                       200
+/reddit-best-iptv               /iptv-reddit.html                       301
+/firestick-iptv-reddit          /iptv-reddit.html                       301
+/rapid-iptv-reddit              /rapid-iptv.html                        301
+/xtreme-hd-iptv-reddit          /iptv-reddit.html                       301
+/best-iptv-service-reddit       /iptv-reddit.html                       301
+/best-iptv-reddit               /iptv-reddit.html                       301
+
+# ── EIT / EPG variants ────────────────────────────────────────────
+/iptv-epg-norge                 /iptv-eit.html                          301
+/epg-iptv                       /iptv-epg.html                          301
+/xmltv-iptv                     /iptv-epg.html                          301
+
+# ── Nordic IPTV variants ──────────────────────────────────────────
+/nordisk-iptv                   /nordic-iptv.html                       301
+/nordic-one-iptv                /nordic-iptv.html                       301
+/iptv-nordic                    /nordic-iptv.html                       301
+/nord-iptv-norge                /nord-iptv.html                         301
+/norge-iptv                     /iptv-norge.html                        301
+/ip-iptv-norge                  /iptv-norge.html                        301
+
+# ── Misc long-tail ────────────────────────────────────────────────
+/discovery-plus-iptv            /iptv-vod.html                          301
+/hbo-max-iptv                   /iptv-vod.html                          301
+/eon-iptv                       /iptv-vod.html                          301
+/local-iptv                     /iptv-norge.html                        301
+/laptop-iptv                    /iptv-pc.html                           301
+/mac-iptv                       /iptv-mac.html                          301
+/smart-stb-m3u                  /stbemu.html                            301
+/mytvonline                     /formuler-z.html                        301
+/mytvonline-3                   /formuler-z.html                        301
+/giga-iptv                      /iptv-providers.html                    301
+/gurbet-iptv                    /iptv-providers.html                    301
+/4k-iptv-premium                /iptv-4k.html                           301
+/ebay-iptv                      /kjop-iptv.html                         301
+/top-10-iptv                    /iptv-providers.html                    301
+/top-5-iptv                     /iptv-providers.html                    301
+/top-iptv                       /iptv-providers.html                    301
+/iptv-pro                       /iptv-premium.html                      301
+/room-iptv                      /smart-iptv.html                        301
+/roomiptv                       /smart-iptv.html                        301
+/manage-room-iptv               /smart-iptv.html                        301
+/manage-roomiptv                /smart-iptv.html                        301
+/manage-roomiptv-com            /smart-iptv.html                        301
+/manage-setiptv-com             /smart-iptv.html                        301
