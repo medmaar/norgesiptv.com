@@ -4,4 +4,23 @@ Disallow: /prat/wa
 Disallow: /whatsapp.html
 Disallow: /whatsapp
 
+# Allow AI crawlers per GEO/AEO best practice
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Omgilibot
+Allow: /
+
 Sitemap: https://norgesiptv.com/sitemap.xml

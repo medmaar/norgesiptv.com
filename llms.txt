@@ -1,0 +1,57 @@
+# NorgesIPTV
+> Norges beste IPTV-tjeneste med 50 000+ live kanaler og 120 000+ filmer i 4K Ultra HD. Nordic IPTV for norske husholdninger og nordisk diaspora.
+> Target markets: Norway, Denmark, Sweden, Finland, UK, USA, Canada, Australia, New Zealand, and European diaspora in Norway
+> Approved diaspora communities: Polish, Lithuanian, Romanian, Serbian, Bosnian, German, Swedish, Danish, Russian, Ukrainian, Italian, Greek, French, Dutch, Spanish (Spain), Portuguese (Portugal), British, American
+
+## Main pages
+- Homepage: https://norgesiptv.com/
+- Subscription plans: https://norgesiptv.com/priser
+- Channel list: https://norgesiptv.com/kanalliste
+- Free trial: https://norgesiptv.com/gratis-proveperiode
+- Order now: https://norgesiptv.com/bestill
+
+## IPTV Players & Apps
+- TiviMate guide: https://norgesiptv.com/tivimate
+- IPTV Smarters Pro: https://norgesiptv.com/iptv-smarters-pro
+- Smart IPTV (Samsung/LG): https://norgesiptv.com/smart-iptv
+- GSE Smart IPTV: https://norgesiptv.com/gse-iptv
+- STBEmu (MAG emulator): https://norgesiptv.com/stbemu
+- Nanomid (LG): https://norgesiptv.com/nanomid
+- ImPlayer: https://norgesiptv.com/implayer
+- OTT Navigator: https://norgesiptv.com/ott-navigator
+
+## Device guides
+- Samsung Smart TV IPTV: https://norgesiptv.com/iptv-samsung
+- LG Smart TV IPTV: https://norgesiptv.com/iptv-lg
+- Amazon Firestick IPTV: https://norgesiptv.com/iptv-firestick
+- Apple TV IPTV: https://norgesiptv.com/iptv-apple-tv
+- Android IPTV: https://norgesiptv.com/iptv-android
+- IPTV on PC/Windows: https://norgesiptv.com/iptv-pc
+- Chromecast IPTV: https://norgesiptv.com/iptv-chromecast
+- Kodi IPTV: https://norgesiptv.com/iptv-kodi
+
+## Norwegian geo pages
+- IPTV Oslo: https://norgesiptv.com/iptv-oslo
+- IPTV Bergen: https://norgesiptv.com/iptv-bergen
+- IPTV Trondheim: https://norgesiptv.com/iptv-trondheim
+- All Norwegian cities: https://norgesiptv.com/iptv-byer
+- All Norwegian regions: https://norgesiptv.com/iptv-fylker
+
+## International/diaspora communities
+- International IPTV hub: https://norgesiptv.com/iptv-internasjonal
+- Polish IPTV: https://norgesiptv.com/iptv-polsk
+- Lithuanian IPTV: https://norgesiptv.com/iptv-litauisk
+- British IPTV: https://norgesiptv.com/iptv-britisk
+- German IPTV: https://norgesiptv.com/iptv-tysk
+
+## Sport
+- IPTV Sport: https://norgesiptv.com/iptv-sport
+- Premier League IPTV: https://norgesiptv.com/iptv-premier-league
+- Champions League IPTV: https://norgesiptv.com/iptv-champions-league
+- beIN Sports IPTV: https://norgesiptv.com/iptv-bein
+- Formel 1 IPTV: https://norgesiptv.com/iptv-f1
+
+## Blog & guides
+- Blog: https://norgesiptv.com/blogg
+- IPTV setup guide: https://norgesiptv.com/iptv-setup
+- What is IPTV: https://norgesiptv.com/hva-er-iptv
