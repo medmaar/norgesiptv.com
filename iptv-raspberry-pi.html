@@ -50,7 +50,29 @@
     <div class="sec-head"><div class="eyebrow">FAQ</div><h2>Vanlige spørsmål</h2></div>
     <div class="faq"><div class="faq-item"><div class="faq-q">Kan jeg bruke Raspberry Pi som IPTV-boks?<span class="faq-icon">+</span></div><div class="faq-a">Ja! Raspberry Pi 4 og Pi 5 med LibreELEC/Kodi er en utmerket IPTV-boks. Installer PVR IPTV Simple Client-pluginen og legg inn NorgesIPTV M3U-URL. Du får full EPG, live TV og VOD.</div></div><div class="faq-item"><div class="faq-q">Hva er beste OS for IPTV på Raspberry Pi?<span class="faq-icon">+</span></div><div class="faq-a">LibreELEC er det beste operativsystemet for Raspberry Pi IPTV. Det er et minimalistisk Linux-OS optimert kun for Kodi. Alternativt: OSMC (OpenSource Media Center) som er litt mer fleksibelt.</div></div><div class="faq-item"><div class="faq-q">Støtter Raspberry Pi 4K IPTV?<span class="faq-icon">+</span></div><div class="faq-a">Raspberry Pi 4 støtter 4K via HDMI 2.0. For 4K IPTV trenger du Pi 4 eller Pi 5. Pi 3 håndterer 1080p HD IPTV uten problemer.</div></div><div class="faq-item"><div class="faq-q">Hva er PVR IPTV Simple Client?<span class="faq-icon">+</span></div><div class="faq-a">PVR IPTV Simple Client er en Kodi-plugin (PVR = Personal Video Recorder) som legger til live TV via M3U-URL. Det er standard-måten å kjøre IPTV i Kodi – inkludert NorgesIPTV.</div></div></div>
   </div></section>
-  <section class="sec-sm" style="background:var(--bg2);position:relative;z-index:1"><div class="w">
+    <section class="sec-sm" style="background:var(--bg2);position:relative;z-index:1">
+    <div class="w">
+      <div class="sec-head"><div class="eyebrow">Oppsett</div><h2>NorgesIPTV på <span class="gr">Raspberry Pi</span></h2></div>
+      <div class="steps">
+        <div class="step"><div class="step-num">1</div><div><h4>Installer LibreELEC med Kodi</h4><p>Flash LibreELEC (Kodi-basert OS) til microSD-kort. Boot Raspberry Pi 4/5 fra kortet. Kodi starter automatisk. LibreELEC er det beste operativsystemet for Pi-basert IPTV-bruk.</p></div></div>
+        <div class="step"><div class="step-num">2</div><div><h4>Legg til PVR IPTV Simple Client</h4><p>I Kodi: Legg til → PVR klienter → PVR IPTV Simple Client → Installer. Under innstillinger: legg inn M3U-URL fra NorgesIPTV under «General → M3U spilleliste URL».</p></div></div>
+        <div class="step"><div class="step-num">3</div><div><h4>Legg inn EPG fra NorgesIPTV</h4><p>Under PVR IPTV Simple Client → EPG-innstillinger: legg inn NorgesIPTV sin XMLTV EPG-URL. Da får du full programguide for alle 50 000+ kanaler i Kodi på Raspberry Pi.</p></div></div>
+        <div class="step"><div class="step-num">4</div><div><h4>Alternativ: Kodi på Raspberry Pi OS</h4><p>Installer Kodi direkte på Raspberry Pi OS (Debian) via «sudo apt install kodi». Deretter installerer du PVR-pluginen via Kodi-grensesnittet. Gir mer fleksibilitet enn LibreELEC.</p></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="sec-sm" style="position:relative;z-index:1">
+    <div class="w">
+      <div class="sec-head"><div class="eyebrow">Raspberry Pi for IPTV</div><h2>Pi 4 vs. Pi 5 <span class="gr">– hvilken er best til IPTV?</span></h2></div>
+      <div class="fg">
+        <div class="fc"><div class="fc-ico">🥇</div><h3>Raspberry Pi 5</h3><p>Pi 5 er den kraftigste Pi-en og håndterer 4K H.265/HEVC og AV1 IPTV via Kodi/LibreELEC uten problemer. Rask nok for smooth EPG-scrolling og kanalbytte. Anbefales for 4K NorgesIPTV.</p></div>
+        <div class="fc"><div class="fc-ico">🥈</div><h3>Raspberry Pi 4</h3><p>Pi 4 klarer Full HD IPTV uten problemer. 4K fungerer på enkle kanaler men kan streve med tungere H.265-strømmer. God nok for de fleste NorgesIPTV-brukere med Full HD-TV.</p></div>
+        <div class="fc"><div class="fc-ico">🔄</div><h3>Vurder Firestick i stedet</h3><p>For IPTV-bruk er <a href="/iptv-firestick">Amazon Firestick 4K Max</a> enklere og billigere enn Pi 5. Firestick gir bedre IPTV-opplevelse out-of-the-box med TiviMate – ingen konfigurasjon nødvendig.</p></div>
+      </div>
+    </div>
+  </section>
+
+<section class="sec-sm" style="background:var(--bg2);position:relative;z-index:1"><div class="w">
     <div class="cta-strip">
       <h2>Prøv NorgesIPTV på <span class="gr">IPTV</span></h2>
       <p>Gratis 24-timers prøveperiode – ingen kredittkort.</p>
