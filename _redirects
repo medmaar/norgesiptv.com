@@ -54,7 +54,7 @@
 
 # Keyword alias redirects → target pages
 /tivi-mate                  /tivimate.html                  301
-/tivimate-premium           /tivimate.html                  301
+/tivimate-premium           /tivimate-premium.html          200
 /tivimate-firestick         /tivimate.html                  301
 /tivimate-android-tv        /tivimate.html                  301
 /iptv-smarters              /iptv-smarters-pro.html         301
