@@ -1820,3 +1820,16 @@
 /raspberry-pi-iptv            /iptv-raspberry-pi.html                 301
 /iptv-anmeldelse              /anmeldelser.html                       301
 
+
+# ── CORE PAGES – 200 rewrites (clean URLs) ───────────────────────────────
+/anmeldelser                             /anmeldelser.html                        200
+/bestill                                 /bestill.html                            200
+/blogg                                   /blogg.html                              200
+/dmca                                    /dmca.html                               200
+/gratis-proveperiode                     /gratis-proveperiode.html                200
+/kanalliste                              /kanalliste.html                         200
+/om-oss                                  /om-oss.html                             200
+/personvern                              /personvern.html                         200
+/priser                                  /priser.html                             200
+/refusjon                                /refusjon.html                           200
+/vilkar                                  /vilkar.html                             200
