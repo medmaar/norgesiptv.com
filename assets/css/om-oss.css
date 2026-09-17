@@ -49,3 +49,105 @@ footer a{color:#8896b8;margin:0 .6rem}
 
 
 @keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
+
+/* SHARED FOOTER */
+footer{border-top:1px solid var(--br);padding:3rem clamp(1rem,4vw,2.5rem) 1.8rem;position:relative;z-index:1}
+.ftg{max-width:var(--W);margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:2rem;margin-bottom:2rem}
+.fsoc{display:flex;gap:.55rem}
+.socbtn{width:32px;height:32px;border-radius:6px;background:var(--card);border:1px solid var(--br);display:flex;align-items:center;justify-content:center;font-size:.8rem;transition:all .2s}
+.fcol h4{font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.88rem}
+.fls{display:flex;flex-direction:column;gap:.5rem}
+.fls a{font-size:.76rem;color:var(--t3);transition:color .2s}
+.fls a:hover{color:var(--t1)}
+.fct{font-size:.76rem;color:var(--t3);line-height:1.88}
+.fct a{color:var(--cyan)}
+.fbot{max-width:var(--W);margin:0 auto;padding-top:1.6rem;border-top:1px solid var(--br);display:flex;justify-content:space-between;align-items:center;font-size:.72rem;color:var(--t3);flex-wrap:wrap;gap:.7rem;font-weight:600;letter-spacing:.03em}
+.flg{display:flex;gap:1.1rem;flex-wrap:wrap}
+.flg a{color:var(--t3);transition:color .2s}
+.flg a:hover{color:var(--t1)}
+.fpay{margin-top:1.4rem;padding-top:1.4rem;border-top:1px solid var(--br);display:flex;flex-direction:column;align-items:center;gap:.65rem}
+.fpay-label{font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--t3)}
+.fpay img{max-width:340px;width:100%;height:auto;opacity:.85;transition:opacity .2s}
+.fpay img:hover{opacity:1}
+  .ftg{grid-template-columns:1fr 1fr;gap:1.2rem .6rem}
+  .fbr{grid-column:1/-1;flex-direction:column;align-items:flex-start}
+  .fcol h4{font-size:.68rem;margin-bottom:.55rem}
+  .fls{gap:.38rem}
+  .fls a,.fct{font-size:.71rem}
+  .fbot{flex-direction:column;align-items:flex-start;gap:.6rem;padding-top:1.2rem}
+  .flg{flex-wrap:wrap;gap:.4rem .75rem}
+  .flg a{font-size:.68rem}
+  .ftg{grid-template-columns:1fr 1fr;gap:1.8rem 1.4rem}
+  .fbr{grid-column:1/-1}
+  .ftg{grid-template-columns:1fr 1fr;gap:1.2rem .8rem}
+  .fbr{grid-column:1/-1;margin-bottom:.5rem}
+  .fcol h4{font-size:.67rem;margin-bottom:.5rem}
+  .fls a{font-size:.7rem}
+  .fct{font-size:.7rem}
+  .fbot{flex-direction:column;align-items:flex-start;gap:.5rem;padding-top:1rem}
+  .flg{flex-wrap:wrap;gap:.35rem .6rem}
+  .flg a{font-size:.66rem}
+  .fpay img{max-width:240px}
+  .ftg{grid-template-columns:1fr 1fr}
+  .ftg{grid-template-columns:1fr}
+@media(max-width:500px){.fpay img{max-width:260px}}
+
+@media(max-width:540px){
+  .ftg{grid-template-columns:1fr 1fr;gap:1.2rem .6rem}
+  .fbr{grid-column:1/-1;flex-direction:column;align-items:flex-start}
+  .fcol h4{font-size:.68rem;margin-bottom:.55rem}
+  .fls{gap:.38rem}
+  .fls a,.fct{font-size:.71rem}
+  .fbot{flex-direction:column;align-items:flex-start;gap:.6rem;padding-top:1.2rem}
+  .flg{flex-wrap:wrap;gap:.4rem .75rem}
+  .flg a{font-size:.68rem}
+}
+@media(max-width:900px){
+  .ftg{grid-template-columns:1fr 1fr;gap:1.8rem 1.4rem}
+  .fbr{grid-column:1/-1}
+}
+@media(max-width:480px){
+  .ftg{grid-template-columns:1fr 1fr;gap:1.2rem .8rem}
+  .fbr{grid-column:1/-1;margin-bottom:.5rem}
+  .fbr p{font-size:.72rem}
+  .fcol h4{font-size:.67rem;margin-bottom:.5rem}
+  .fls a{font-size:.7rem}
+  .fct{font-size:.7rem}
+  .fbot{flex-direction:column;align-items:flex-start;gap:.5rem;padding-top:1rem}
+  .flg{flex-wrap:wrap;gap:.35rem .6rem}
+  .flg a{font-size:.66rem}
+  .fpay img{max-width:240px}
+}
+@media(max-width:860px){
+  .hgrid{grid-template-columns:1fr;padding-top:0;align-items:flex-end;min-height:100svh}
+  .hpanel{display:none}
+  .spg{grid-template-columns:repeat(2,1fr)}
+  .dvg{grid-template-columns:1fr}
+  .tstg{grid-template-columns:1fr 1fr}
+  .fqg{grid-template-columns:1fr}
+  .ftg{grid-template-columns:1fr 1fr}
+  .ginn{flex-direction:column;text-align:center}
+  .gtxt p{margin:0 auto 1.3rem}
+  h2{font-size:1.6rem}
+  .hero h1{font-size:2rem}
+}
+@media(max-width:640px){
+  .nlinks{display:none}
+  .ham{display:flex}
+  .fg{grid-template-columns:1fr}
+  .hwg{grid-template-columns:1fr}
+  .hwg::after{display:none}
+  .pgrid{grid-template-columns:1fr}
+  .spg{grid-template-columns:repeat(2,1fr)}
+  .ftg{grid-template-columns:1fr}
+  .hero h1{font-size:1.8rem}
+  h2{font-size:1.5rem}
+  .ctabot h2{font-size:1.7rem}
+  .hero{min-height:auto;padding-top:80px;padding-bottom:50px}
+  .wa-grid{grid-template-columns:1fr}
+  .tp-card{padding:22px 18px}
+  .fqg{grid-template-columns:1fr}
+}
+
+/* SNACK BANNER */
+@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}
