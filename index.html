@@ -210,8 +210,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
 
 <!-- Preload hero images -->
-<link rel="preload" as="image" href="haaland-cl-trophy.webp" type="image/webp" media="(min-width:861px)" fetchpriority="high"/>
-<link rel="preload" as="image" href="haaland-cl-trophy-mobile.webp" type="image/webp" media="(max-width:860px)" fetchpriority="high"/>
+<link rel="preload" as="image" href="haaland-cl-trophy.webp" type="image/webp" media="(min-width:861px)" fetchpriority="high" imagesizes="100vw"/>
+<link rel="preload" as="image" href="haaland-cl-trophy-mobile.webp" type="image/webp" media="(max-width:860px)" fetchpriority="high" imagesizes="100vw"/>
 
 <!-- Icons -->
 <link rel="icon" type="image/png" href="favicon.png?v=2"/>
@@ -291,15 +291,15 @@
 <section class="hero" aria-label="Beste IPTV Norge – Nordic IPTV – IPTV Norway">
   <div class="hero-img-wrap" aria-hidden="true">
     <picture>
-      <source media="(max-width:860px)" srcset="haaland-cl-trophy-mobile.webp" type="image/webp"/>
-      <source media="(max-width:860px)" srcset="haaland-cl-trophy-mobile.jpg" type="image/jpeg"/>
-      <source media="(min-width:861px)" srcset="haaland-cl-trophy.webp" type="image/webp"/>
+      <source media="(max-width:860px)" srcset="haaland-cl-trophy-mobile.webp" type="image/webp" sizes="100vw"/>
+      <source media="(max-width:860px)" srcset="haaland-cl-trophy-mobile.jpg" type="image/jpeg" sizes="100vw"/>
+      <source media="(min-width:861px)" srcset="haaland-cl-trophy.webp" type="image/webp" sizes="100vw"/>
       <img src="haaland-cl-trophy.jpg"
            alt="IPTV Norge – Erling Haaland med Champions League-trofeet – NorgesIPTV 4K streaming"
-           width="1193" height="1800"
+           width="1440" height="2171"
            fetchpriority="high"
            decoding="async"
-           style="background:#06090f;image-rendering:-webkit-optimize-contrast;image-rendering:crisp-edges"
+           style="background:#06090f;filter:contrast(1.12) saturate(1.18) brightness(1.04)"
       />
     </picture>
   </div>
