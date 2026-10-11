@@ -19,6 +19,17 @@
 - TiviMate Premium: https://norgesiptv.com/tivimate-premium
 - IPTV Smarters Pro: https://norgesiptv.com/iptv-smarters-pro
 - Smarters Player Lite: https://norgesiptv.com/smarters-player-lite
+- IPTV Smarters Pro on Firestick: https://norgesiptv.com/iptv-smarters-pro-firestick
+- IPTV Smarters Pro for PC and Mac: https://norgesiptv.com/iptv-smarters-pro-pc
+- IPTV Smarters Pro on Samsung/LG Smart TV: https://norgesiptv.com/iptv-smarters-pro-smart-tv
+- TiviMate on PC, Samsung and Apple TV: https://norgesiptv.com/tivimate-pc-samsung
+- Smart IPTV (SIPTV) My List upload: https://norgesiptv.com/siptv-my-list
+- IPTV in Plex, Emby and Jellyfin: https://norgesiptv.com/iptv-plex-emby-jellyfin
+- IPTV in a web browser: https://norgesiptv.com/iptv-nettleser
+- IPTV URL (server URL, M3U and EPG links): https://norgesiptv.com/iptv-url
+- IPTV on mobile (Android and iPhone): https://norgesiptv.com/iptv-mobil
+- IPTV recording (DVR) and catch-up: https://norgesiptv.com/iptv-opptak
+- Customer service and support: https://norgesiptv.com/iptv-kundeservice
 - Smart IPTV (Samsung/LG): https://norgesiptv.com/smart-iptv
 - GSE Smart IPTV: https://norgesiptv.com/gse-iptv
 - STBEmu (MAG emulator): https://norgesiptv.com/stbemu
