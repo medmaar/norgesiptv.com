@@ -46,7 +46,7 @@
 /iptv-eliteserien                             /iptv-sport                                   301
 /m3u-iptv                                     /m3u                                          301
 /m3u-list                                     /m3u                                          301
-/m3u-url                                      /m3u                                          301
+/m3u-url                                      /iptv-url                                     301
 /iptv-m3u                                     /m3u                                          301
 /mag-box                                      /iptv-boks                                    301
 /formuler                                     /iptv-boks                                    301
@@ -275,7 +275,7 @@
 /iptv-samsung-smart-tv-reddit                 /iptv-reddit                                  301
 
 # ── EPG keyword redirects ───────────────────────────────────────────────────
-/iptv-dvr                                     /iptv-epg                                     301
+/iptv-dvr                                     /iptv-opptak                                  301
 /iptv-epg-guide                               /iptv-epg                                     301
 /epg-iptv                                     /iptv-epg                                     301
 /iptv-guide                                   /iptv-epg                                     301
@@ -345,7 +345,7 @@
 /hd-iptv                                      /iptv-4k                                      301
 /iptv-reviews                                 /anmeldelser                                  301
 /iptv-trustpilot                              /anmeldelser                                  301
-/iptv-customer-service                        /om-oss                                       301
+/iptv-customer-service                        /iptv-kundeservice                            301
 /iptv-isp                                     /hva-er-iptv                                  301
 /iptv-internet                                /hva-er-iptv                                  301
 /iptv-what-is-it                              /hva-er-iptv                                  301
@@ -386,14 +386,14 @@
 # ── SERVER keyword redirects ────────────────────────────────────────────────
 /iptv-servers                                 /iptv-server                                  301
 /iptv-source                                  /iptv-server                                  301
-/iptv-line                                    /iptv-server                                  301
+/iptv-line                                    /iptv-url                                     301
 /iptv-downloader                              /iptv-smarters-pro-firestick                  301
 /iptv-speed                                   /iptv-server                                  301
 /iptv-run                                     /iptv-server                                  301
 /iptv-id                                      /iptv-server                                  301
-/iptv-url-m3u                                 /iptv-server                                  301
+/iptv-url-m3u                                 /iptv-url                                     301
 /iptv-smarter-pro-downloader                  /iptv-smarters-pro-firestick                  301
-/iptv-smarters-customer-service               /iptv-smarters-pro                            301
+/iptv-smarters-customer-service               /iptv-kundeservice                            301
 /iptv-smarters-play-store                     /iptv-smarters-pro                            301
 /iptv-smasters-pro-google-play                /iptv-smarters-pro                            301
 /iptv-smasters-pro-fire-stick                 /iptv-smarters-pro-firestick                  301
@@ -475,8 +475,7 @@
 /iptv-planeta-pl                              /iptv-alternativer                            301
 /iptv-spanish                                 /iptv-alternativer                            301
 /iptv-kanali                                  /kanalliste                                   301
-/iptv-mobile                                  /iptv-android                                 301
-/iptv-mobil                                   /iptv-android                                 301
+/iptv-mobile                                  /iptv-mobil                                   301
 /iptv-danske-kanaler                          /nordic-iptv                                  301
 /ebay-iptv                                    /iptv-abonnement                              301
 /iptv-receiver                                /iptv-boks                                    301
@@ -606,7 +605,7 @@
 /xciptv-lg-tv                                 /xciptv                                       301
 /xciptv-player-pro                            /xciptv                                       301
 /xciptv-samsung                               /xciptv                                       301
-/xciptv-url                                   /xciptv                                       301
+/xciptv-url                                   /iptv-url                                     301
 /xiptv                                        /xciptv                                       301
 /xtream-tv                                    /xciptv                                       301
 /xtreamtv                                     /xciptv                                       301
@@ -670,7 +669,7 @@
 /tv-stick-iptv                                /iptv-firestick                               301
 /store-iptv                                   /bestill                                      301
 /url-iptv-player                              /iptv-nettleser                               301
-/url-m3u                                      /m3u                                          301
+/url-m3u                                      /iptv-url                                     301
 /web-iptv                                     /iptv-nettleser                               301
 /stream-iptv                                  /iptv-vod                                     301
 /stream-player-iptv                           /iptv-player                                  301
@@ -833,7 +832,6 @@
 /iptv-computer                                /iptv-mac                                     301
 /ip-tv-vlc                                    /iptv-vlc                                     301
 /iptv-web                                     /iptv-nettleser                               301
-/iptv-url                                     /m3u                                          301
 /iptv-playliste                               /m3u                                          301
 
 # smarters/smasters on specific platforms → iptv-smarters-pro
@@ -890,7 +888,7 @@
 # misc uncovered
 /iptv-new                                     /iptv-norge                                   301
 /iptv-top                                     /beste-iptv                                   301
-/iptv-telefon                                 /iptv-android                                 301
+/iptv-telefon                                 /iptv-mobil                                   301
 /iptv-tnt                                     /iptv-sport                                   301
 /iptv-tvfix                                   /iptv-alternativer                            301
 /mag-box-322                                  /iptv-mag                                     301
@@ -1560,3 +1558,12 @@
 /iptv-plex                                    /iptv-plex-emby-jellyfin                      301
 /iptv-emby                                    /iptv-plex-emby-jellyfin                      301
 /iptv-jellyfin                                /iptv-plex-emby-jellyfin                      301
+
+# ── PASS-5 cluster pages: keyword aliases ──────────────────────────────────
+/iptv-server-url                              /iptv-url                                     301
+/iptv-pa-mobil                                /iptv-mobil                                   301
+/iptv-recording                               /iptv-opptak                                  301
+/iptv-catch-up                                /iptv-opptak                                  301
+/iptv-catchup                                 /iptv-opptak                                  301
+/iptv-support                                 /iptv-kundeservice                            301
+/iptv-hjelp                                   /iptv-kundeservice                            301
