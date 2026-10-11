@@ -422,4 +422,14 @@
 
   <!-- BESTILL (order) page -->
   <url><loc>https://norgesiptv.com/bestill</loc><lastmod>2026-09-16</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
+
+  <!-- PASS-5 CLUSTER PAGES -->
+  <url><loc>https://norgesiptv.com/iptv-smarters-pro-firestick</loc><lastmod>2026-10-11</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://norgesiptv.com/iptv-smarters-pro-pc</loc><lastmod>2026-10-11</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://norgesiptv.com/iptv-smarters-pro-smart-tv</loc><lastmod>2026-10-11</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://norgesiptv.com/tivimate-pc-samsung</loc><lastmod>2026-10-11</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://norgesiptv.com/siptv-my-list</loc><lastmod>2026-10-11</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://norgesiptv.com/iptv-plex-emby-jellyfin</loc><lastmod>2026-10-11</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://norgesiptv.com/iptv-nettleser</loc><lastmod>2026-10-11</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+
 </urlset>
