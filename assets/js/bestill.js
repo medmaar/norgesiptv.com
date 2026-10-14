@@ -4,7 +4,7 @@
   var params = new URLSearchParams(window.location.search);
   var plan = params.get('plan') || '1 Måned';
   var connections = parseInt(params.get('connections')) || 1;
-  var price = params.get('price') || '99';
+  var price = params.get('price') || '81';
 
   document.getElementById('ps-plan').textContent = plan;
   document.getElementById('ps-price').textContent = price;

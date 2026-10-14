@@ -4,10 +4,10 @@ var origPrices={1:[null,243,486,972],2:[null,486,972,1944],3:[null,729,1458,2916
 var plans=[{name:'1 Måned',badge:null,featured:false},{name:'3 Måneder',badge:null,featured:false},{name:'6 Måneder',badge:'Mest Populær',featured:true},{name:'12 Måneder',badge:'Beste Verdi',featured:false}];
 var planSave=[null,'Spar 14% – 3 måneder ekstra verdi','Spar 28% – Mest populær valg','Spar 55% – Beste verdi!'];
 var planFeatures=[
-  ['50 000+ kanaler + Netflix','120 000+ filmer &amp; serier','4K og HD kvalitet','Alle enheter støttet','VIP 24/7 support','Gratis Ibo Pro-aktivering','30-dagers garanti','Prioritert server'],
-  ['50 000+ kanaler + Netflix','120 000+ filmer &amp; serier','4K og HD kvalitet','Alle enheter støttet','VIP 24/7 support','Gratis Ibo Pro-aktivering','30-dagers garanti','Prioritert server'],
-  ['50 000+ kanaler + Netflix','120 000+ filmer &amp; serier','4K og HD kvalitet','Alle enheter støttet','VIP 24/7 support','Gratis Ibo Pro-aktivering','30-dagers garanti','Prioritert server'],
-  ['🎁 Gratis Ibo Player Pro abonnement','50 000+ kanaler + Netflix','120 000+ filmer &amp; serier','4K og HD kvalitet','Alle enheter støttet','VIP 24/7 support','Gratis Ibo Pro-aktivering','30-dagers garanti','Prioritert server']
+  ['50 000+ kanaler','300 000+ filmer &amp; serier','4K og HD kvalitet','Alle enheter støttet','VIP 24/7 support','Gratis Ibo Pro-aktivering','30-dagers garanti','Prioritert server'],
+  ['50 000+ kanaler','300 000+ filmer &amp; serier','4K og HD kvalitet','Alle enheter støttet','VIP 24/7 support','Gratis Ibo Pro-aktivering','30-dagers garanti','Prioritert server'],
+  ['50 000+ kanaler','300 000+ filmer &amp; serier','4K og HD kvalitet','Alle enheter støttet','VIP 24/7 support','Gratis Ibo Pro-aktivering','30-dagers garanti','Prioritert server'],
+  ['🎁 Gratis Ibo Player Pro abonnement','50 000+ kanaler','300 000+ filmer &amp; serier','4K og HD kvalitet','Alle enheter støttet','VIP 24/7 support','Gratis Ibo Pro-aktivering','30-dagers garanti','Prioritert server']
 ];
 var selConn=1;
 
@@ -43,7 +43,7 @@ function renderPricing(){
     origHtml+saveHtml+
     '<div class="p-conn">/ '+connLabel+'</div>'+
     bonusHtml+'<ul class="p-feats">'+feats+'</ul>'+
-    '<a href="bestill.html?plan='+encodeURIComponent(pl.name)+'&connections='+selConn+'&price='+pp[i]+'" class="pbuy-btn">Bestill nå</a>';
+    '<a href="/bestill?plan='+encodeURIComponent(pl.name)+'&connections='+selConn+'&price='+pp[i]+'" class="pbuy-btn">Bestill nå</a>';
    pg.appendChild(card);
   });
 }
