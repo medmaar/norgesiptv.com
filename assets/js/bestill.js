@@ -14,6 +14,14 @@
   // EmailJS
   emailjs.init('rXnp1UdbIWXEUMeFc');
 
+  /* the full-screen success screen is the only confirmation; the old inline one is a fallback */
+  function showDone() {
+    if (window.nipCelebrate) { window.nipCelebrate('order', document.getElementById('femail').value.trim()); return; }
+    document.getElementById('success-name').textContent = document.getElementById('fname').value.trim();
+    document.getElementById('form-area').style.display = 'none';
+    document.getElementById('success-area').style.display = 'block';
+  }
+
   document.getElementById('order-form').addEventListener('submit', function(e) {
    e.preventDefault();
    var btn = document.getElementById('submit-btn');
@@ -41,16 +49,10 @@
     site_name:  'NorgesIPTV.com',
     to_email:  'hjelp@norgesiptv.com',
    }).then(function(){
-    document.getElementById('success-name').textContent = name;
-    document.getElementById('form-area').style.display = 'none';
-    document.getElementById('success-area').style.display = 'block';
-    if (window.nipCelebrate) window.nipCelebrate('order', email);
+    showDone();
    }).catch(function(){
     // Show success anyway
-    document.getElementById('success-name').textContent = name;
-    document.getElementById('form-area').style.display = 'none';
-    document.getElementById('success-area').style.display = 'block';
-    if (window.nipCelebrate) window.nipCelebrate('order', email);
+    showDone();
    }).finally(function(){
     btn.disabled = false;
     btn.textContent = 'Send bestilling →';

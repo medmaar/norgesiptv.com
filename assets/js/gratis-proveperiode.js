@@ -75,10 +75,14 @@ document.addEventListener('DOMContentLoaded', function () {
    .then(function(res) {
     return res.json().then(function(data) {
       if (res.ok && data.success) {
-        formContent.style.display = 'none';
-        formSuccess.style.display = 'block';
-        document.getElementById('formCard').scrollIntoView({behavior:'smooth', block:'center'});
-        if (window.nipCelebrate) window.nipCelebrate('trial', emailVal);
+        if (window.nipCelebrate) {
+          /* the full-screen success screen is the only confirmation; the old inline one stays hidden */
+          window.nipCelebrate('trial', emailVal);
+        } else {
+          formContent.style.display = 'none';
+          formSuccess.style.display = 'block';
+          document.getElementById('formCard').scrollIntoView({behavior:'smooth', block:'center'});
+        }
       } else {
         showError('⚠️ Feil: ' + (data.error || 'Ukjent feil') + '. Kontakt oss: hjelp@norgesiptv.com');
       }
