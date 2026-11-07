@@ -44,11 +44,13 @@
     document.getElementById('success-name').textContent = name;
     document.getElementById('form-area').style.display = 'none';
     document.getElementById('success-area').style.display = 'block';
+    if (window.nipCelebrate) window.nipCelebrate('order', email);
    }).catch(function(){
     // Show success anyway
     document.getElementById('success-name').textContent = name;
     document.getElementById('form-area').style.display = 'none';
     document.getElementById('success-area').style.display = 'block';
+    if (window.nipCelebrate) window.nipCelebrate('order', email);
    }).finally(function(){
     btn.disabled = false;
     btn.textContent = 'Send bestilling →';

@@ -78,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
         formContent.style.display = 'none';
         formSuccess.style.display = 'block';
         document.getElementById('formCard').scrollIntoView({behavior:'smooth', block:'center'});
+        if (window.nipCelebrate) window.nipCelebrate('trial', emailVal);
       } else {
         showError('⚠️ Feil: ' + (data.error || 'Ukjent feil') + '. Kontakt oss: hjelp@norgesiptv.com');
       }
