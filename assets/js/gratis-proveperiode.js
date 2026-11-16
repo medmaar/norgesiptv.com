@@ -84,13 +84,13 @@ document.addEventListener('DOMContentLoaded', function () {
           document.getElementById('formCard').scrollIntoView({behavior:'smooth', block:'center'});
         }
       } else {
-        showError('⚠️ Feil: ' + (data.error || 'Ukjent feil') + '. Kontakt oss: hjelp@norgesiptv.com');
+        showError('⚠️ Våre gratis prøveperioder er midlertidig satt på pause.');
       }
     });
    })
    .catch(function(err) {
     console.error(err);
-    showError('⚠️ Nettverksfeil. Sjekk tilkoblingen eller kontakt oss: hjelp@norgesiptv.com');
+    showError('⚠️ Våre gratis prøveperioder er midlertidig satt på pause.');
     setLoading(false);
    });
   });
